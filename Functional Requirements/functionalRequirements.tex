@@ -2,6 +2,8 @@
 \usepackage{bookmark}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
@@ -13,23 +15,61 @@
 	\newpage
 	\section{Vision and Scope}
 	\subsection{Project Vision}
-	The development of a mobile monitoring application by the computer science department would assist in mobile device security and proactive measures. Mobile devices comprise of a mass heterogeneous data sources. This personal data can be accessed by criminals through various malicious means such as the use of malware, applications, internet browsers, and social media. To protect people, there are law against accessing personal information without permission from an individual. An example of a privacy law in place is the Protection of Personal Information Act 4 of 2013 of South Africa. It is noted that there is minimal research towards proactive measures to protect personal data on mobile devices. Digital forensics is an emerging field that focuses on such research in a proactive (readiness) and reactive (investigative) manner. 
-The proposal of a mobile monitoring application would promote readiness in digital forensics and protect mobile users from malicious entities and activities. Digital forensics is defined as the use of scientifically derived and proven methods towards the preservation, collection, validation, identification, analysis, interpretation and presentation of digital evidence derived from digital sources for the sole purpose of facilitating or furthering the reconstruction of events found to be criminal or helping to anticipate the unauthorized actions shown to be disruptive to planned operations [3].
-Readiness is considered as the process of being prepared for a digital investigation before an incident has occurred [2]. The mobile monitoring application aims to provide proactive measure that are undertaking by the mobile device user or mobile device owner. Having this application installed on mobile devices will proactively ensure that relevant digital evidence is made ready available before an incident occurs. The mobile monitoring application is expected to monitor user activities on a mobile device and report application data/logs to a dashboard on a desktop computer. The mobile monitoring application generates reports giving the investigator quick and comprehensive data/logs that provide a starting point during a mobile device investigation. 
-The objective of the mobile monitoring application is to display and assist in understanding the activities performed by a mobile user as well as shedding more light into the behaviour of the mobile user. Combining activities from the various applications promotes a proactive approach which in turn enforces proactive (readiness) measures. 
+	\vspace{0.3 cm}
+	  Digital forensics is defined as the use of scientifically derived and proven methods towards the preservation, collection, validation, identification, analysis, interpretation and presentation of digital evidence derived from digital sources for the sole purpose of facilitating or furthering the reconstruction of events found to be criminal or helping to anticipate the unauthorized actions shown to be disruptive to planned operations [3].
+Readiness is considered as the process of being prepared for a digital investigation before an incident has occurred [2]. \newline\newline
+The proposal of a mobile monitoring application will promote readiness in digital forensics and protect mobile users from malicious entities and activities. It aims to provide a proactive measure that is undertaking by the mobile device user or mobile device owner. Having this application installed on mobile devices will proactively ensure that relevant digital evidence is made ready and available before an incident occurs. The mobile monitoring application is expected to monitor user activities on a mobile device and report application data/logs to a dashboard on a desktop computer. It will generate reports giving the investigator quick and comprehensive data/logs that provide a starting point during a mobile device investigation. \newline\newline
+The objective of the mobile monitoring application is to collect data/logs and assist in understanding the activities performed by a mobile user as well as shedding more light into the behaviour of the mobile user. Combining activities from the various applications promotes a proactive approach which in turn enforces proactive (readiness) measures. 
 	\subsection{Project Scope}
 		{\centering
 		
-		%\includegraphics[width=300px]{img/}
-		\vspace{1cm}
+		\includegraphics[width=400px,height=220px]{img/highLevelSystem.jpg}
+		\newline
 		Figure 1: High level system modules
+		\newline\newline
+		The high level modules of the Mobile Monitoring App is as indicated on figure 1 above. The responsibilities of each module are also noted.
 		}
 	
 	\section{Application Requirements and Design}
+	The following section will explain each module in the Mobile Monitoring App. It will discuss the use-case design and  functional requirements extracted from the use-case; along with the selected service contracts.\newline
+	
+	\subsection{Modular System}
+	 The application is going to use a modular design. This will allow the following:
+	 \begin{itemize}
+	\item add new functionality in the future
+ 	\item decouple the system
+ 	\item archieve maintainability and testability quality requirements
+	\end{itemize}
+
+
+	
 	\subsection{MobileMonitoringApp - Accounts module}
+	%You will have to elaborate on what the module does (look at the high level module notes for help)
+	\subsubsection{Scope}
+	%The width and height of the image should not be changed. Just uncomment the line below and specify img source
+	\includegraphics[width=400px,height=220px]{img/scopeAccounts.jpg}
+		Figure : Scope of mmaAccounts module
+	\subsubsection{Use-Cases}
+		This section provides details on the use-case requirements for the use-cases offered by this module.
+	\paragraph{registerUser - priority: important}
+		This use-case registers a user on initial installation after user accepts terms and conditions of use.\newline
+	\subparagraph{Service Contract}
+		The service contract for registerUser is shown in the figure below. The pre-conditions are enforced (raises an exception if not met) and on
+		success the user is registered and the device and user data is persisted through the local database.\newline
+	\includegraphics[width=400px,height=220px]{img/serviceContractRegisterUser.jpg}
+		Figure : The service contract for registering a new user on the app\newline
+	\includegraphics[width=400px,height=220px]{img/functionalRequirementsRegister.jpg}
+		Figure : The functional requirements for registerUser\newline
+	
+	
 	
 	\subsection{MobileMonitoringApp - Data module}
+	%You will have to elaborate on what the module does (look at the high level module notes for help)
+	\subsubsection{Scope}
+	
+	
 	
 	\subsection{MobileMonitoringApp - Reports module}
-		
+	%You will have to elaborate on what the module does (look at the high level module notes for help)
+	\subsubsection{Scope}	
 \end{document}
