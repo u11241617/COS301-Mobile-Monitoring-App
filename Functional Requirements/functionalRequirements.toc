@@ -1,0 +1,18 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Vision and Scope}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Project Vision}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Project Scope}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Application Requirements and Design}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Modular System}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}MobileMonitoringApp - Accounts module}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Scope}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Use-Cases}{5}{subsubsection.2.2.2}
+\contentsline {paragraph}{\numberline {2.2.2.1}registerUser - priority: important}{5}{paragraph.2.2.2.1}
+\contentsline {subparagraph}{Service Contract}{5}{paragraph.2.2.2.1}
+\contentsline {subsection}{\numberline {2.3}MobileMonitoringApp - Data module}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Scope}{7}{subsubsection.2.3.1}
+\contentsline {subsection}{\numberline {2.4}MobileMonitoringApp - Reports module}{7}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Scope}{7}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Use-Cases}{7}{subsubsection.2.4.2}
+\contentsline {paragraph}{\numberline {2.4.2.1} processReport - priority: important}{7}{paragraph.2.4.2.1}
+\contentsline {subparagraph}{Service Contract}{7}{paragraph.2.4.2.1}

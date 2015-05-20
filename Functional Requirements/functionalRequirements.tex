@@ -71,5 +71,17 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	
 	\subsection{MobileMonitoringApp - Reports module}
 	%You will have to elaborate on what the module does (look at the high level module notes for help)
-	\subsubsection{Scope}	
+	\subsubsection{Scope}
+	\includegraphics[width=400px,height=220px]{img/ScopeReporting.jpg}
+			Figure : Scope of mmaReporting module
+	\subsubsection{Use-Cases}
+			This section provides details on the use-case requirements for the use-cases offered by this module.
+		\paragraph{ processReport - priority: important}
+			This use-case retrieves logs from the device and sends them onto a server where they will be saved on a database.\newline
+		\subparagraph{Service Contract}
+			The service contract for processReport is shown in the figure below. The pre-condition is not enforced i.e.If the app fails to estabilish a connection with the server, the report will be saved temoparily on the device until a connection is estabilished.\newline
+		\includegraphics[width=400px,height=220px]{img/serviceContractReporting.jpg}
+			Figure : The service contract for processing a report on the app\newline \newline \newline
+		\includegraphics[width=400px,height=220px]{img/FunctionalRequirementsReporting.jpg}
+			Figure : The functional requirements for processReport\newline	
 \end{document}
