@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="login_button">#3b4148</color>
+    <color name="register_botton">#26ae90</color>
+    <color name="white">#ffffff</color>
+</resources>
