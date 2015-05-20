@@ -53,6 +53,8 @@ The objective of the mobile monitoring application is to collect data/logs and a
 		This section provides details on the use-case requirements for the use-cases offered by this module.
 	\paragraph{registerUser - priority: important}
 		This use-case registers a user on initial installation after user accepts terms and conditions of use.\newline
+	\paragraph{loginUser - priority: important}
+		This use-case logins a user on initial installation after user accepts terms and conditions of use.\newline	
 	\subparagraph{Service Contract}
 		The service contract for registerUser is shown in the figure below. The pre-conditions are enforced (raises an exception if not met) and on
 		success the user is registered and the device and user data is persisted through the local database.\newline
@@ -66,7 +68,23 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	\subsection{MobileMonitoringApp - Data module}
 	%You will have to elaborate on what the module does (look at the high level module notes for help)
 	\subsubsection{Scope}
+		\includegraphics[width=400px,height=220px]{img/scopeData.jpg}
+		Figure : Scope of mmaAccounts module	
 	
+	\subsubsection{Use-Cases}
+		This section provides details on the use-case requirements for the use-cases offered by this module.	
+		
+	\paragraph{retrieveDeviceInfo - priority: important}
+		This use-case retrieves all the relevant device information from the device.\newline
+	\paragraph{retrieveCommunicationActivities - priority: important}
+		This use-case retrieves all the users communication activities from the various apps on the device.\newline
+\subparagraph{Service Contract}
+		The service contract for manageData is shown in the figure below. The pre-conditions are enforced (raises an exception if not met) and on
+		success the data is sent to the local database.\newline	
+	\includegraphics[width=400px,height=220px]{img/serviceContracManageData.jpg}
+		Figure : The service contract for manage data on the device\newline
+	\includegraphics[width=400px,height=220px]{img/functionalRequirementsRetrieveCommunicationActivities.jpg}
+		Figure : The functional requirements for retrieveCommunicationActivities\newline
 	
 	
 	\subsection{MobileMonitoringApp - Reports module}

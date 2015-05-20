@@ -8,11 +8,16 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Scope}{5}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Use-Cases}{5}{subsubsection.2.2.2}
 \contentsline {paragraph}{\numberline {2.2.2.1}registerUser - priority: important}{5}{paragraph.2.2.2.1}
-\contentsline {subparagraph}{Service Contract}{5}{paragraph.2.2.2.1}
+\contentsline {paragraph}{\numberline {2.2.2.2}loginUser - priority: important}{5}{paragraph.2.2.2.2}
+\contentsline {subparagraph}{Service Contract}{6}{paragraph.2.2.2.2}
 \contentsline {subsection}{\numberline {2.3}MobileMonitoringApp - Data module}{7}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Scope}{7}{subsubsection.2.3.1}
-\contentsline {subsection}{\numberline {2.4}MobileMonitoringApp - Reports module}{7}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Scope}{7}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Use-Cases}{7}{subsubsection.2.4.2}
-\contentsline {paragraph}{\numberline {2.4.2.1} processReport - priority: important}{7}{paragraph.2.4.2.1}
-\contentsline {subparagraph}{Service Contract}{7}{paragraph.2.4.2.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Use-Cases}{7}{subsubsection.2.3.2}
+\contentsline {paragraph}{\numberline {2.3.2.1}retrieveDeviceInfo - priority: important}{7}{paragraph.2.3.2.1}
+\contentsline {paragraph}{\numberline {2.3.2.2}retrieveCommunicationActivities - priority: important}{7}{paragraph.2.3.2.2}
+\contentsline {subparagraph}{Service Contract}{7}{paragraph.2.3.2.2}
+\contentsline {subsection}{\numberline {2.4}MobileMonitoringApp - Reports module}{9}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Scope}{9}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Use-Cases}{9}{subsubsection.2.4.2}
+\contentsline {paragraph}{\numberline {2.4.2.1} processReport - priority: important}{9}{paragraph.2.4.2.1}
+\contentsline {subparagraph}{Service Contract}{9}{paragraph.2.4.2.1}
