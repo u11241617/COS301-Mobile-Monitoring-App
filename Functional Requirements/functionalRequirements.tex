@@ -38,7 +38,6 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	 \begin{itemize}
 	\item add new functionality in the future
  	\item decouple the system
- 	\item archieve maintainability and testability quality requirements
 	\end{itemize}
 
 
@@ -70,6 +69,8 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	\subsubsection{Scope}
 		\includegraphics[width=400px,height=220px]{img/scopeData.jpg}
 		Figure : Scope of MMA dataModule	
+		
+		
 	
 	\subsubsection{Use-Cases}
 		This section provides details on the use-case requirements for the use-cases offered by this module.	
@@ -79,7 +80,7 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	\paragraph{retrieveCommunicationActivities - priority: important}
 		The retrieveCommunicationAcitivites use-case retrieves all the users communication activities from the various apps on the device.\newline
 \subparagraph{Service Contract}
-		The service contract for manageData is shown in the figure below. The retrieveCommunicationActivitiesRequest requests the data regardless of the data type and retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.\newline	
+		The service contract for manageData is shown in the figure below. The retrieveCommunicationActivitiesRequest requests the data regardless of the data type and retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.\newline\newline	
 	\includegraphics[width=400px,height=220px]{img/serviceContractRetrieveCommunicationActivities.jpg}
 		Figure : The service contract for manage data on the device\newline
 	\includegraphics[width=400px,height=220px]{img/functionalRequirementsRetrieveCommunicationActivities.jpg}
