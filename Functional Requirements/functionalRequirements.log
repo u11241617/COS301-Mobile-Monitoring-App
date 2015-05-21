@@ -1,13 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.20)  20 MAY 2015 21:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.21)  21 MAY 2015 18:14
 entering extended mode
 **functionalRequirements.tex
-("C:\Users\user\Desktop\Alu\Functional Requirements\functionalRequirements.tex"
-LaTeX2e <2014/05/01>
-Babel <3.9l> and hyphenation patterns for 68 languages loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+
+("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
+ements\functionalRequirements.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -21,27 +32,27 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdfescape.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\pdfescape.sty"
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -50,21 +61,21 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -97,26 +108,26 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count87
 \Hy@pagecounter=\count88
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+("C:\Program Files (x86)\MiKTeX\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count89
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -128,7 +139,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count90
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -153,44 +164,44 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+("C:\Program Files (x86)\MiKTeX\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count95
 \c@bookmark@seq@number=\count96
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip43
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\bkm-pdftex.def"
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count97
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files (x86)\MiKTeX\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count98
 ))
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+("C:\Program Files (x86)\MiKTeX\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box26
 \beforetitleunit=\skip44
@@ -202,20 +213,20 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen112
 \titlewidthfirst=\dimen113
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -364,8 +375,8 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -395,8 +406,8 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -421,20 +432,20 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel\babel.sty"
-Package: babel 2014/09/25 3.9l The Babel package
+("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
-Language: english 2012/08/20 v3.3p English support from the babel system
+("C:\Program Files (x86)\MiKTeX\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel\babel.def"
-File: babel.def 2014/09/25 3.9l Babel common definitions
+("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count99
 \U@D=\dimen114
 )
@@ -442,8 +453,8 @@ File: babel.def 2014/09/25 3.9l Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Users\user\Desktop\Alu\Functional Requirements\functionalRequirements.aux"
-)
+("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
+ements\functionalRequirements.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
@@ -460,10 +471,11 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 \AtBeginShipoutBox=\box27
 Package hyperref Info: Link coloring OFF on input line 11.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+
+("C:\Program Files (x86)\MiKTeX\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count100
@@ -472,7 +484,7 @@ LaTeX Info: Redefining \ref on input line 11.
 LaTeX Info: Redefining \pageref on input line 11.
 LaTeX Info: Redefining \nameref on input line 11.
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("C:\Program Files (x86)\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
 \scratchdimen=\dimen115
@@ -485,18 +497,21 @@ LaTeX Info: Redefining \nameref on input line 11.
 \MPnumerator=\count105
 \makeMPintoPDFobject=\count106
 \everyMPtoPDFconversion=\toks19
-) ("C:\Users\user\Desktop\Alu\Functional Requirements\titlepage.tex"
-<img/UP_Logo.png, id=3, 900.36375pt x 269.50688pt>
+)
+("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
+ements\titlepage.tex" <img/UP_Logo.png, id=3, 900.36375pt x 269.50688pt>
 File: img/UP_Logo.png Graphic file (type png)
- <use img/UP_Logo.png>
+
+<use img/UP_Logo.png>
 Package pdftex.def Info: img/UP_Logo.png used on input line 5.
 (pdftex.def)             Requested size: 301.1261pt x 90.13423pt.
+ [1
 
-[1
-
-{C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/use
-r/Desktop/Alu/Functional Requirements/img/UP_Logo.png>])
-("C:\Users\user\Desktop\Alu\Functional Requirements\functionalRequirements.toc"
+{C:/Users/Matt/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Mat
+t/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/UP_
+Logo.png>])
+("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
+ements\functionalRequirements.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -539,14 +554,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
- [4 <C:/Users/user/Desktop/Alu/Functional Requirements/img/highLevelSystem.jpg>
-]
-<img/scopeAccounts.jpg, id=54, 542.025pt x 296.10625pt>
+ [4 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
+uirements/img/highLevelSystem.jpg>] <img/scopeAccounts.jpg, id=54, 542.025pt x 
+296.10625pt>
 File: img/scopeAccounts.jpg Graphic file (type jpg)
 
 <use img/scopeAccounts.jpg>
@@ -597,7 +612,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--65
 
  []
 
-[5 <C:/Users/user/Desktop/Alu/Functional Requirements/img/scopeAccounts.jpg>]
+[5 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requ
+irements/img/scopeAccounts.jpg>]
 <img/scopeData.jpg, id=63, 573.14125pt x 366.36874pt>
 File: img/scopeData.jpg Graphic file (type jpg)
  <use img/scopeData.jpg>
@@ -608,17 +624,18 @@ Overfull \hbox (11.51097pt too wide) in paragraph at lines 71--73
 []
  []
 
-[6 <C:/Users/user/Desktop/Alu/Functional Requirements/img/serviceContractRegist
-erUser.jpg> <C:/Users/user/Desktop/Alu/Functional Requirements/img/functionalRe
-quirementsRegister.jpg>]
+[6 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requ
+irements/img/serviceContractRegisterUser.jpg> <C:/Users/Matt/Documents/GitHub/C
+OS301-Mobile-Monitoring-App/Functional Requirements/img/functionalRequirementsR
+egister.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Overfull \hbox (15.01495pt too wide) in paragraph at lines 80--81
+Overfull \hbox (12.3386pt too wide) in paragraph at lines 80--81
 [] |\OT1/cmr/bx/n/12 2.3.2.2 re-trieveCom-mu-ni-ca-tion-Ac-tiv-i-ties - pri-or-
-ity: im-por-tant \OT1/cmr/m/n/12 This
+ity: im-por-tant \OT1/cmr/m/n/12 The
  []
 
 
@@ -633,7 +650,7 @@ File: img/serviceContractRetrieveCommunicationActivities.jpg Graphic file (type
  jpg)
  <use img/serviceContractRetrieveCommunicationActivities.jpg>
 Package pdftex.def Info: img/serviceContractRetrieveCommunicationActivities.jpg
- used on input line 84.
+ used on input line 83.
 (pdftex.def)             Requested size: 401.49191pt x 220.83325pt.
 
 <img/functionalRequirementsRetrieveCommunicationActivities.jpg, id=69, 744.7825
@@ -643,39 +660,41 @@ e (type jpg)
 
 <use img/functionalRequirementsRetrieveCommunicationActivities.jpg>
 Package pdftex.def Info: img/functionalRequirementsRetrieveCommunicationActivit
-ies.jpg used on input line 86.
+ies.jpg used on input line 85.
 (pdftex.def)             Requested size: 401.51743pt x 220.82736pt.
 
-Overfull \hbox (11.49191pt too wide) in paragraph at lines 82--88
+Overfull \hbox (11.49191pt too wide) in paragraph at lines 82--87
 []
  []
 
 
-Overfull \hbox (11.51743pt too wide) in paragraph at lines 82--88
+Overfull \hbox (11.51743pt too wide) in paragraph at lines 82--87
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--88
+Underfull \hbox (badness 10000) in paragraph at lines 82--87
 
  []
 
-[7 <C:/Users/user/Desktop/Alu/Functional Requirements/img/scopeData.jpg>]
+[7 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requ
+irements/img/scopeData.jpg>]
 <img/scopeReports.jpg, id=77, 526.96875pt x 238.8925pt>
 File: img/scopeReports.jpg Graphic file (type jpg)
 
 <use img/scopeReports.jpg>
-Package pdftex.def Info: img/scopeReports.jpg used on input line 93.
+Package pdftex.def Info: img/scopeReports.jpg used on input line 92.
 (pdftex.def)             Requested size: 401.52159pt x 220.82628pt.
 
-Overfull \hbox (11.52159pt too wide) in paragraph at lines 93--95
+Overfull \hbox (11.52159pt too wide) in paragraph at lines 92--94
 []
  []
 
-[8 <C:/Users/user/Desktop/Alu/Functional Requirements/img/serviceContractRetrie
-veCommunicationActivities.jpg> <C:/Users/user/Desktop/Alu/Functional Requiremen
-ts/img/functionalRequirementsRetrieveCommunicationActivities.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+[8 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requ
+irements/img/serviceContractRetrieveCommunicationActivities.jpg> <C:/Users/Matt
+/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/func
+tionalRequirementsRetrieveCommunicationActivities.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
@@ -684,7 +703,7 @@ File: img/serviceContractSendReportToDashboard.jpg Graphic file (type jpg)
 
 <use img/serviceContractSendReportToDashboard.jpg>
 Package pdftex.def Info: img/serviceContractSendReportToDashboard.jpg used on i
-nput line 103.
+nput line 102.
 (pdftex.def)             Requested size: 401.50682pt x 220.82713pt.
 
 <img/functionalRequirementsSendReportToDashboard.jpg, id=83, 618.31pt x 316.181
@@ -693,59 +712,60 @@ File: img/functionalRequirementsSendReportToDashboard.jpg Graphic file (type jp
 g)
  <use img/functionalRequirementsSendReportToDashboard.jpg>
 Package pdftex.def Info: img/functionalRequirementsSendReportToDashboard.jpg us
-ed on input line 105.
+ed on input line 104.
 (pdftex.def)             Requested size: 401.50992pt x 220.82843pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
 
-Overfull \hbox (11.50682pt too wide) in paragraph at lines 102--107
+Overfull \hbox (11.50682pt too wide) in paragraph at lines 101--106
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--107
+Underfull \hbox (badness 10000) in paragraph at lines 101--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--107
+Underfull \hbox (badness 10000) in paragraph at lines 101--106
 
  []
 
 
-Overfull \hbox (11.50992pt too wide) in paragraph at lines 102--107
+Overfull \hbox (11.50992pt too wide) in paragraph at lines 101--106
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--107
+Underfull \hbox (badness 10000) in paragraph at lines 101--106
 
  []
 
-[9 <C:/Users/user/Desktop/Alu/Functional Requirements/img/scopeReports.jpg>]
-[10 <C:/Users/user/Desktop/Alu/Functional Requirements/img/serviceContractSendR
-eportToDashboard.jpg> <C:/Users/user/Desktop/Alu/Functional Requirements/img/fu
-nctionalRequirementsSendReportToDashboard.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
+[9 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requ
+irements/img/scopeReports.jpg>] [10 <C:/Users/Matt/Documents/GitHub/COS301-Mobi
+le-Monitoring-App/Functional Requirements/img/serviceContractSendReportToDashbo
+ard.jpg> <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functiona
+l Requirements/img/functionalRequirementsSendReportToDashboard.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
 
-("C:\Users\user\Desktop\Alu\Functional Requirements\functionalRequirements.aux"
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 107.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
+("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
+ements\functionalRequirements.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 106.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 6199 strings out of 493705
- 91519 string characters out of 3144573
- 176329 words of memory out of 3000000
- 9414 multiletter control sequences out of 15000+200000
+ 6096 strings out of 493921
+ 90567 string characters out of 3146483
+ 168520 words of memory out of 3000000
+ 9287 multiletter control sequences out of 15000+200000
  7894 words of font info for 28 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
+ 841 hyphenation exceptions out of 8191
  35i,4n,33p,788b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on functionalRequirements.pdf (10 pages, 1015748 bytes).
+<C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
+Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
+ Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files 
+(x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on functionalRequirements.pdf (10 pages, 1015859 bytes).
 PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)

@@ -69,18 +69,17 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	%You will have to elaborate on what the module does (look at the high level module notes for help)
 	\subsubsection{Scope}
 		\includegraphics[width=400px,height=220px]{img/scopeData.jpg}
-		Figure : Scope of mmaAccounts module	
+		Figure : Scope of MMA dataModule	
 	
 	\subsubsection{Use-Cases}
 		This section provides details on the use-case requirements for the use-cases offered by this module.	
 		
 	\paragraph{retrieveDeviceInfo - priority: important}
-		This use-case retrieves all the relevant device information from the device.\newline
+		The retrieveDeviceInfo use case retrieves all the relevant device information from the device.\newline
 	\paragraph{retrieveCommunicationActivities - priority: important}
-		This use-case retrieves all the users communication activities from the various apps on the device.\newline
+		The retrieveCommunicationAcitivites use-case retrieves all the users communication activities from the various apps on the device.\newline
 \subparagraph{Service Contract}
-		The service contract for manageData is shown in the figure below. The pre-conditions are enforced (raises an exception if not met) and on
-		success the data is sent to the local database.\newline	
+		The service contract for manageData is shown in the figure below. The retrieveCommunicationActivitiesRequest requests the data regardless of the data type and retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.\newline	
 	\includegraphics[width=400px,height=220px]{img/serviceContractRetrieveCommunicationActivities.jpg}
 		Figure : The service contract for manage data on the device\newline
 	\includegraphics[width=400px,height=220px]{img/functionalRequirementsRetrieveCommunicationActivities.jpg}
