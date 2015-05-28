@@ -1,0 +1,147 @@
+\documentclass[hidelinks, 12pt, oneside]{article}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+\begin{document}
+
+	\input{./titlepage.tex}
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	
+	This document contains the software (application) architectural requirements specification which is the infrastructure upon which the application will be developed.\\\\
+	The following requirements will be addressed:
+	\begin{itemize}
+		\item Quality requirements
+		\item Technologies
+	\end{itemize}	 
+	\newpage
+	\section{Architectural Requirements}
+		\subsection{Critical Quality Requirements} 
+			\subsubsection{Auditability}
+			\textbf{Description} \\\\
+			Auditability refers to the ability to account for a system's usage by the user and be able to monitor events and create logs on what are the user's actions within the system.\\\\
+			\textbf{Justification}\\\\
+			The Mobile Monitoring Application main functionality is to monitor the user's device activities and report all logs within a particular device.\\\\
+			\textbf{Mechanism}
+				\begin{enumerate}
+					\item Strategy: \\\\
+						Auditability can be achieved by:
+						\begin{itemize}
+							\item Resource Monitoring: A tactic that registers all the events and resources that the application uses and creates logs for the resources usage.  
+						\end{itemize}
+					\item Architectural Pattern(s):
+						\begin{itemize}
+							\item To monitor the application events and resources a design pattern such as the observer pattern can be implemented by the application that can register all events and resources usage. 
+						\end{itemize}
+				\end{enumerate}	
+			\newpage
+			\subsubsection{Security}
+				\textbf{Description} \\\\
+				Security is a critical aspect of any system that deals with critical and confidential data, the strategies used for security provides mechanisms to protect data from unauthorized access and modification. For the Mobile Monitoring Application this means the following:
+				\begin{itemize}
+					\item No one (person or program) should be able to delete the data collected on device.
+					\item When the data is transferred over the network, data should be protected from being intercepted and hacked.    
+				\end{itemize}
+				\textbf{Justification} \\\\
+				Security is a critical for any system that deals with critical and confidential data as in the Mobile Monitoring Application. User collected data need to be protected from being tampered with and accessed by unauthorized individuals to keep data reliable and confidential.\\\\
+				\textbf{Mechanism}
+				\begin{enumerate}
+					\item Strategy: \\\\
+						Security can be achieved by:
+						\begin{itemize}
+							\item Authentication: The strategy is used to identify and confirm a user's identity.  
+							\item Encryption: Data is converted to a secure format that cannot be easily read by unauthorized individuals. 
+						\end{itemize}
+					\item Architectural Pattern(s):
+						\begin{itemize}
+							\item Layering: This pattern decouples the system by dividing it into components (layers) that communicate with each other through message requests and responses, this control the access of the user level layer from directly make request to lower layers that provides critical data. 
+						\end{itemize}
+				\end{enumerate}		
+		%New Page
+		\subsection{Important Quality Requirements}
+			\subsubsection{Maintainability}
+			\textbf{Description}\\\\
+			A modular system design is used for this system so that components can be easily added and removed.\\\\
+			\textbf{Justification}\\\\
+			A modular design decouples a system into components that are easy to maintain and makes the system more adaptable. Decoupling the system will also ensure that it easy to do unit testing and integration testing.\\\\
+			\textbf{Mechanism}
+			\begin{enumerate}
+				\item Strategy:\\\\
+				Maintainability ca be achieved by:
+				\begin{itemize}
+				\item Decoupling: This strategy break the system into manageable components to achieve a proper structure and maintainable system.  
+				\end{itemize}
+				\item Architectural Patterns(s):
+				\begin{itemize}
+				\item Microkernel: The microkernel pattern improves maintainability because is separates high level services  from low level services that is, it divides the systems into components that are maintainable and also allow for components to be easily removed or added to the system.
+				\end{itemize}
+			\end{enumerate}
+			\newpage
+			\subsubsection{Performance}
+			\textbf{Description}\\\\
+			Performance is a measure of a system responsiveness when executing some action.\\\\
+			\textbf{Justification}\\\\
+			The Mobile Monitoring Application need use the devices resources efficiently to increase the performance of the application which is an important quality requirement that will also make the system more reliable and increase throughput of the application.\\\\
+			\textbf{Mechanism}
+			\begin{enumerate}
+				\item Strategy:\\\\
+				Performance can be achieved by:
+				\begin{itemize}
+				\item Dynamic code optimization: This strategy focuses on the code design, quality and efficiency to improve performance on the system.  
+				\end{itemize}
+				\item Architectural Patterns(s):
+				\begin{itemize}
+				\item The best way to achieve performance is manages the system's resources efficiently and use design patterns to optimize code and improve efficiency.   
+				\end{itemize}
+			\end{enumerate}	
+			
+		\newpage
+		%New Page
+		\subsection{Nice-To-Have Quality Requirements}
+			\subsubsection{Testability}
+			\textbf{Description}\\\\
+			Testability is a measure of how well a system allow one to test if a certain criteria is met by the system. This allows fault detection in the system easy and also the faults can be isolated in a timely manner.\\\\
+			\textbf{Justification}\\\\
+			It is vital the every component that is deployed on the system can be tested using unit testing and also integration testing so that faults can be detected as soon as possible and be fixed. \\\\
+			\textbf{Mechanism}
+			\begin{enumerate}
+				\item Strategy:\\\\
+				\begin{itemize}
+				\item White-box: This tactic is mainly used for unit testing and require the knowledge of the the application internal structure to create test cases for the application components.
+				\item Black-box: This tactic is mainly used for integration testing, it examines the functionality of the application against the specification and simplifies system components testing when plugged in a modular system.
+				\end{itemize}
+				\item Architectural Patterns(s):
+				\begin{itemize}
+				\item Model View Controller: This pattern promotes separation of concern in a system by decoupling the system into components that can be tested independently.   
+				\end{itemize}
+			\end{enumerate}	
+	\newpage
+	\section{Technologies}
+	\subsection{Platform and IDE}
+	\begin{itemize}
+	\item Android
+	\item Android Studio
+	\end{itemize}
+	\subsection{Programming Languages}
+	\begin{itemize}
+	\item Java
+	\end{itemize}
+	\subsection{Frameworks}
+	\begin{itemize}
+	\item JUnit
+	\end{itemize}
+	\subsection{Others}
+	\begin{itemize}
+	\item AJAX
+	\item JSON
+	\end{itemize}					        		 
+	 
+\end{document}
