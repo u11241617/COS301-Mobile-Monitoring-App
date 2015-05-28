@@ -20,6 +20,8 @@
 	The following requirements will be addressed:
 	\begin{itemize}
 		\item Quality requirements
+		\item Architectural Patterns or Styles
+		\item Access and Integration Channels
 		\item Technologies
 	\end{itemize}	 
 	\newpage
@@ -123,6 +125,57 @@
 				\item Model View Controller: This pattern promotes separation of concern in a system by decoupling the system into components that can be tested independently.   
 				\end{itemize}
 			\end{enumerate}	
+    \newpage
+    \section{Architectural Patterns or Styles}
+    \subsection{Model View Controller (MVC)}
+    \textbf{Description}\\\\
+    Separates the applications concerns by separating the following responsibilities:
+    \begin{itemize}
+    \item Model: Provide business services and data.
+    \item View: Provide view for information.
+    \item Controller: Reacts to user events. 
+    \end{itemize}
+    \textbf{Justification}\\\\
+    This pattern separate the system's concerns into components that can evolve independently which reduce the applications complexity. The Mobile Monitoring Application is to have low complexity and as a modular system it also needs to be maintainable which can be best achieved using the MVC pattern. \\\\
+    \textbf{Benefits}
+    \begin{itemize}
+    \item Simplification
+    \item Improve maintainability
+    \item Improve reuse
+    \item Improve testability 
+	\end{itemize} 
+	
+	\newpage
+	\subsection{Layered Architecture}
+	\textbf{Description}\\\\
+	Partitions the applications concerns into a stacked group of layers.\\\\
+	\textbf{Justification}\\\\
+	Provides high level of abstraction which allows the application components to vary, this decouples the system which reduce complexity and improve the systems performance which is the objective for the Mobile Monitoring Application.\\\\
+	\textbf{Benefits}
+	\begin{itemize}
+	\item Improve cohesion
+	\item Reduce complexity
+	\item Improve maintainability
+	\item Loose coupling
+	\item Improve testability
+	\item Improve reuse
+	\end{itemize}
+	\newpage
+	\section{Access and Integration Channels}
+	\subsection{Access Channels}
+	\subsubsection{Human Access Channel}
+	Human access channels addresses all the different ways in which a human can interact with the Mobile Monitoring Application.
+	\begin{itemize}
+		\item Mobile device: The application only run on android mobile devices where only minimal functionality presented to the user as the application runs on the background.   
+	\end{itemize}
+	\subsection{Integration Channels}
+	\subsubsection{Channels}
+	The Mobile Monitoring Application will need to access a MySQL database to store user information and data logs from device.    	\subsubsection{Protocols}
+	The Mobile Monitoring Application will use the following protocols:
+	\begin{itemize}
+	\item HTTPS: This protocol will be used for security to ensure that secure connection maintained between the device and server and also that transported data can not be easily intercepted.
+	\item SMTP: Notifications for user forgotten password will use this protocol to allow user recover their information.  
+	\end{itemize}	 
 	\newpage
 	\section{Technologies}
 	\subsection{Platform and IDE}
@@ -137,6 +190,10 @@
 	\subsection{Frameworks}
 	\begin{itemize}
 	\item JUnit
+	\end{itemize}
+	\subsection{Databases}
+	\begin{itemize}
+	\item MySQL relational database
 	\end{itemize}
 	\subsection{Others}
 	\begin{itemize}
