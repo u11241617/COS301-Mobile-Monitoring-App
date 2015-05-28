@@ -14,11 +14,15 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Scope}{7}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Use-Cases}{7}{subsubsection.2.3.2}
 \contentsline {paragraph}{\numberline {2.3.2.1}retrieveDeviceInfo - priority: important}{7}{paragraph.2.3.2.1}
-\contentsline {paragraph}{\numberline {2.3.2.2}retrieveCommunicationActivities - priority: important}{7}{paragraph.2.3.2.2}
-\contentsline {subparagraph}{Service Contract}{7}{paragraph.2.3.2.2}
-\contentsline {subsection}{\numberline {2.4}MobileMonitoringApp - Reports module}{9}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Scope}{9}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Use-Cases}{9}{subsubsection.2.4.2}
-\contentsline {paragraph}{\numberline {2.4.2.1} createReport - priority: important}{9}{paragraph.2.4.2.1}
-\contentsline {paragraph}{\numberline {2.4.2.2} sendReportToDashboard - priority: important}{9}{paragraph.2.4.2.2}
-\contentsline {subparagraph}{Service Contract}{9}{paragraph.2.4.2.2}
+\contentsline {subparagraph}{Service Contract}{7}{paragraph.2.3.2.1}
+\contentsline {paragraph}{\numberline {2.3.2.2}Process specification}{8}{paragraph.2.3.2.2}
+\contentsline {paragraph}{\numberline {2.3.2.3}retrieveCommunicationActivities - priority: important}{9}{paragraph.2.3.2.3}
+\contentsline {subparagraph}{Service Contract}{9}{paragraph.2.3.2.3}
+\contentsline {paragraph}{\numberline {2.3.2.4}Process specification}{10}{paragraph.2.3.2.4}
+\contentsline {subsubsection}{\numberline {2.3.3}Domain Model}{11}{subsubsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4}MobileMonitoringApp - Reports module}{12}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Scope}{12}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Use-Cases}{13}{subsubsection.2.4.2}
+\contentsline {paragraph}{\numberline {2.4.2.1} createReport - priority: important}{13}{paragraph.2.4.2.1}
+\contentsline {paragraph}{\numberline {2.4.2.2} sendReportToDashboard - priority: important}{13}{paragraph.2.4.2.2}
+\contentsline {subparagraph}{Service Contract}{13}{paragraph.2.4.2.2}

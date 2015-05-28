@@ -77,16 +77,44 @@ The objective of the mobile monitoring application is to collect data/logs and a
 		
 	\paragraph{retrieveDeviceInfo - priority: important}
 		The retrieveDeviceInfo use case retrieves all the relevant device information from the device.\newline
+		
+		\subparagraph{Service Contract}
+		The service contract for retrieveDeviceInfo is shown in the figure below. The retrieveDeviceInfo recieves a retrieveDeviceInfoRequest object that specifies the type of data to be retrieved and stored locally on to a database.
+		
+		\includegraphics[width=400px,height=220px]{img/serviceContractRetrieveDeviceInfo.jpg}
+		Figure : The service contract for retrieveDeviceInfo on the device
+		\newline
+		\includegraphics[width=400px,height=220px]{img/functionalRequirementsRetrieveDeviceInfo.jpg}
+		Figure : The functional requirements for retrieveDeviceInfo
+		\newline
+		
+		\paragraph{Process specification}
+		When a request is made for device data to be retrieve. The service checks for the type of data to be retrieved and follows the required channels to retrieve the data.If the service is not successful then an exeption is raised. If the service is successfull then an object with the required data is returned as a result of the query.\newline\newline
+		\includegraphics[width=400px,height=220px]{img/processSpecificationRetrieveDeviceInfo.jpg}
+		Figure : The process specification for the retrieveDeviceInfo use case.
+		
 	\paragraph{retrieveCommunicationActivities - priority: important}
 		The retrieveCommunicationAcitivites use-case retrieves all the users communication activities from the various apps on the device.\newline
 \subparagraph{Service Contract}
-		The service contract for manageData is shown in the figure below. The retrieveCommunicationActivitiesRequest requests the data regardless of the data type and retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.\newline\newline	
+		The service contract for retrieveCommunicationAcitivites is shown in the figure below. The retrieveCommunicationActivitiesRequest requests the data regardless of the data type and retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.\newline\newline	
 	\includegraphics[width=400px,height=220px]{img/serviceContractRetrieveCommunicationActivities.jpg}
-		Figure : The service contract for manage data on the device\newline
+		Figure :The service contract for retrieveCommunicationAcitivites on the device\newline
 	\includegraphics[width=400px,height=220px]{img/functionalRequirementsRetrieveCommunicationActivities.jpg}
 		Figure : The functional requirements for retrieveCommunicationActivities\newline
+		
+			
+			\paragraph{Process specification}
+			The  service recieves a request that specifies the type of activity the service needs to collect data from.The service will retrieve the data from that activity and if it fails then an exption will be raised.The result from the function will be an object that wraps the required data.\newline
+			\includegraphics[width=400px,height=220px]{img/processSpecificationRetrieveCommunicationActivities.jpg}
+			Figure : The process specification for the retrieveDeviceInfo use case.
+			
 	
-	
+		\subsubsection{Domain Model}
+		
+		The domain model for this module is very simple and straight foward.It only requires a vailid service request.\newline
+		\includegraphics[width=400px,height=220px]{img/DomainModelDataModule.jpg}
+		Figure : The domain model for the Data module.
+		
 	\subsection{MobileMonitoringApp - Reports module}
 	%You will have to elaborate on what the module does (look at the high level module notes for help)
 	\subsubsection{Scope}
