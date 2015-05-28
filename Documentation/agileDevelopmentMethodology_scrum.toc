@@ -1,0 +1,15 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Overview}{3}{section.1}
+\contentsline {section}{\numberline {2}Roles}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Product Owner}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Development Team}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Scrum Master}{4}{subsection.2.3}
+\contentsline {section}{\numberline {3}Events}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Sprint}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Daily Scrum}{5}{subsection.3.2}
+\contentsline {section}{\numberline {4}Artifacts}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Product backlog}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Sprint backlog}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Product increment}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Sprint burn-down chart}{6}{subsection.4.4}
+\contentsline {section}{\numberline {5}Terminology}{7}{section.5}
