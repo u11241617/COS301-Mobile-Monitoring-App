@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.30)  29 MAY 2015 18:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.30)  29 MAY 2015 17:29
 entering extended mode
 **functionalRequirements.tex
 
@@ -532,7 +532,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
-<img/highLevelSystem.jpg, id=46, 928.46875pt x 467.7475pt>
+<img/highLevelSystem.jpg, id=48, 928.46875pt x 467.7475pt>
 File: img/highLevelSystem.jpg Graphic file (type jpg)
 
 <use img/highLevelSystem.jpg>
@@ -560,7 +560,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
 
-<img/scopeAccounts.jpg, id=51, 542.025pt x 296.10625pt>
+<img/scopeAccounts.jpg, id=53, 542.025pt x 296.10625pt>
 File: img/scopeAccounts.jpg Graphic file (type jpg)
 
 <use img/scopeAccounts.jpg>
@@ -582,7 +582,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-<img/serviceContractRegisterUser.jpg, id=57, 688.5725pt x 351.3125pt>
+<img/serviceContractRegisterUser.jpg, id=59, 688.5725pt x 351.3125pt>
 File: img/serviceContractRegisterUser.jpg Graphic file (type jpg)
 
 <use img/serviceContractRegisterUser.jpg>
@@ -590,7 +590,7 @@ Package pdftex.def Info: img/serviceContractRegisterUser.jpg used on input line
  60.
 (pdftex.def)             Requested size: 401.50519pt x 220.83485pt.
 
-<img/functionalRequirementsRegister.jpg, id=58, 619.31375pt x 317.185pt>
+<img/functionalRequirementsRegister.jpg, id=60, 619.31375pt x 317.185pt>
 File: img/functionalRequirementsRegister.jpg Graphic file (type jpg)
 
 <use img/functionalRequirementsRegister.jpg>
@@ -614,7 +614,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--64
 
 [5 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
 equirements/img/scopeAccounts.jpg>]
-<img/scopeData.jpg, id=65, 573.14125pt x 366.36874pt>
+<img/scopeData.jpg, id=67, 573.14125pt x 366.36874pt>
 File: img/scopeData.jpg Graphic file (type jpg)
  <use img/scopeData.jpg>
 Package pdftex.def Info: img/scopeData.jpg used on input line 70.
@@ -632,7 +632,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-<img/serviceContractRetrieveDeviceInfo.jpg, id=70, 625.33624pt x 351.3125pt>
+<img/serviceContractRetrieveDeviceInfo.jpg, id=72, 625.33624pt x 351.3125pt>
 File: img/serviceContractRetrieveDeviceInfo.jpg Graphic file (type jpg)
 
 <use img/serviceContractRetrieveDeviceInfo.jpg>
@@ -640,7 +640,7 @@ Package pdftex.def Info: img/serviceContractRetrieveDeviceInfo.jpg used on inpu
 t line 84.
 (pdftex.def)             Requested size: 401.51152pt x 220.83485pt.
 
-<img/functionalRequirementsRetrieveDeviceInfo.jpg, id=71, 570.13pt x 338.26375p
+<img/functionalRequirementsRetrieveDeviceInfo.jpg, id=73, 570.13pt x 338.26375p
 t>
 File: img/functionalRequirementsRetrieveDeviceInfo.jpg Graphic file (type jpg)
  <use img/functionalRequirementsRetrieveDeviceInfo.jpg>
@@ -664,7 +664,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--90
 
 [7 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
 equirements/img/scopeData.jpg>]
-<img/processSpecificationRetrieveDeviceInfo.jpg, id=78, 910.40125pt x 394.47375
+<img/processSpecificationRetrieveDeviceInfo.jpg, id=80, 910.40125pt x 394.47375
 pt>
 File: img/processSpecificationRetrieveDeviceInfo.jpg Graphic file (type jpg)
  <use img/processSpecificationRetrieveDeviceInfo.jpg>
@@ -696,7 +696,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
  []
 
 
-<img/serviceContractRetrieveCommunicationActivities.jpg, id=84, 786.94pt x 244.
+<img/serviceContractRetrieveCommunicationActivities.jpg, id=86, 786.94pt x 244.
 915pt>
 File: img/serviceContractRetrieveCommunicationActivities.jpg Graphic file (type
  jpg)
@@ -705,7 +705,7 @@ Package pdftex.def Info: img/serviceContractRetrieveCommunicationActivities.jpg
  used on input line 100.
 (pdftex.def)             Requested size: 401.49019pt x 220.83252pt.
 
-<img/functionalRequirementsRetrieveCommunicationActivities.jpg, id=85, 744.7825
+<img/functionalRequirementsRetrieveCommunicationActivities.jpg, id=87, 744.7825
 pt x 282.05376pt>
 File: img/functionalRequirementsRetrieveCommunicationActivities.jpg Graphic fil
 e (type jpg)
@@ -736,7 +736,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--104
 
 [9 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
 equirements/img/processSpecificationRetrieveDeviceInfo.jpg>]
-<img/processSpecificationRetrieveCommunicationActivities.jpg, id=91, 1064.97874
+<img/processSpecificationRetrieveCommunicationActivities.jpg, id=93, 1064.97874
 pt x 442.65375pt>
 File: img/processSpecificationRetrieveCommunicationActivities.jpg Graphic file 
 (type jpg)
@@ -754,7 +754,7 @@ Overfull \hbox (11.49483pt too wide) in paragraph at lines 107--110
 Requirements/img/serviceContractRetrieveCommunicationActivities.jpg> <C:/Users/
 Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/i
 mg/functionalRequirementsRetrieveCommunicationActivities.jpg>]
-<img/DomainModelDataModule.jpg, id=97, 738.76pt x 422.57875pt>
+<img/DomainModelDataModule.jpg, id=99, 738.76pt x 422.57875pt>
 File: img/DomainModelDataModule.jpg Graphic file (type jpg)
 
 <use img/DomainModelDataModule.jpg>
@@ -767,7 +767,7 @@ Overfull \hbox (11.50586pt too wide) in paragraph at lines 114--117
 
 [11 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
 Requirements/img/processSpecificationRetrieveCommunicationActivities.jpg>]
-<img/scopeReports.jpg, id=102, 526.96875pt x 238.8925pt>
+<img/scopeReports.jpg, id=104, 526.96875pt x 238.8925pt>
 File: img/scopeReports.jpg Graphic file (type jpg)
 
 <use img/scopeReports.jpg>
@@ -785,7 +785,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-<img/serviceContractcreateReport.jpg, id=107, 681.54625pt x 338.26375pt>
+<img/serviceContractcreateReport.jpg, id=109, 681.54625pt x 338.26375pt>
 File: img/serviceContractcreateReport.jpg Graphic file (type jpg)
 
 <use img/serviceContractcreateReport.jpg>
@@ -793,7 +793,7 @@ Package pdftex.def Info: img/serviceContractcreateReport.jpg used on input line
  129.
 (pdftex.def)             Requested size: 401.50563pt x 220.83401pt.
 
-<img/FunctionalRequirementscreateReport.jpg, id=108, 662.475pt x 275.0275pt>
+<img/FunctionalRequirementscreateReport.jpg, id=110, 662.475pt x 275.0275pt>
 File: img/FunctionalRequirementscreateReport.jpg Graphic file (type jpg)
 
 <use img/FunctionalRequirementscreateReport.jpg>
@@ -801,7 +801,7 @@ Package pdftex.def Info: img/FunctionalRequirementscreateReport.jpg used on inp
 ut line 131.
 (pdftex.def)             Requested size: 401.50116pt x 220.83223pt.
 
-<img/processSpecificationcreateReport.jpg, id=109, 1025.8325pt x 303.1325pt>
+<img/processSpecificationcreateReport.jpg, id=111, 1025.8325pt x 303.1325pt>
 File: img/processSpecificationcreateReport.jpg Graphic file (type jpg)
 
 <use img/processSpecificationcreateReport.jpg>
@@ -838,7 +838,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 Requirements/img/FunctionalRequirementscreateReport.jpg> <C:/Users/Thabang/Docu
 ments/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/processSp
 ecificationcreateReport.jpg>]
-<img/serviceContractSendReportToDashboard.jpg, id=121, 744.7825pt x 365.365pt>
+<img/serviceContractSendReportToDashboard.jpg, id=123, 744.7825pt x 365.365pt>
 File: img/serviceContractSendReportToDashboard.jpg Graphic file (type jpg)
 
 <use img/serviceContractSendReportToDashboard.jpg>
@@ -846,7 +846,7 @@ Package pdftex.def Info: img/serviceContractSendReportToDashboard.jpg used on i
 nput line 140.
 (pdftex.def)             Requested size: 401.51743pt x 220.8263pt.
 
-<img/functionalRequirementsSendReportToDashboard.jpg, id=122, 618.31pt x 316.18
+<img/functionalRequirementsSendReportToDashboard.jpg, id=124, 618.31pt x 316.18
 124pt>
 File: img/functionalRequirementsSendReportToDashboard.jpg Graphic file (type jp
 g)
@@ -855,7 +855,7 @@ Package pdftex.def Info: img/functionalRequirementsSendReportToDashboard.jpg us
 ed on input line 142.
 (pdftex.def)             Requested size: 401.50992pt x 220.82843pt.
 
-<img/ProcessSpecificationSendResportToDashboard.jpg, id=123, 1103.12125pt x 501
+<img/ProcessSpecificationSendResportToDashboard.jpg, id=125, 1103.12125pt x 501
 .875pt>
 File: img/ProcessSpecificationSendResportToDashboard.jpg Graphic file (type jpg
 )
@@ -895,7 +895,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--146
 
 [15 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
 Requirements/img/serviceContractSendReportToDashboard.jpg>]
-<img/domainModelReportModule.jpg, id=128, 913.4125pt x 588.1975pt>
+<img/domainModelReportModule.jpg, id=130, 913.4125pt x 588.1975pt>
 File: img/domainModelReportModule.jpg Graphic file (type jpg)
 
 <use img/domainModelReportModule.jpg>
@@ -928,20 +928,23 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 153.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 6158 strings out of 493921
- 92794 string characters out of 3147276
+ 6159 strings out of 493921
+ 92813 string characters out of 3147276
  168520 words of memory out of 3000000
  9328 multiletter control sequences out of 15000+200000
  7894 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  35i,4n,33p,788b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on functionalRequirements.pdf (17 pages, 1939445 bytes).
+pdfTeX warning (dest): name{subsubsection.2.4.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on functionalRequirements.pdf (17 pages, 1936555 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
+ 212 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
