@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.21)  29 MAY 2015 17:44
 entering extended mode
 **functionalRequirements.tex
 
 ("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
 ements\functionalRequirements.tex"
+=======
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.30)  29 MAY 2015 17:29
+entering extended mode
+**functionalRequirements.tex
+
+("C:\Users\Thabang\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Req
+uirements\functionalRequirements.tex"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,9 +24,15 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\size12.clo"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -108,7 +123,11 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\keyval.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
@@ -180,10 +199,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count97
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphics.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\trig.sty"
@@ -213,19 +239,31 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen112
 \titlewidthfirst=\dimen113
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\inputenc.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\utf8.def"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1enc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -375,7 +413,11 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\ot1enc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -406,7 +448,11 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\omsenc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -432,7 +478,11 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
@@ -441,10 +491,17 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\generic\babel\english.ldf"
 Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.def"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count99
 \U@D=\dimen114
@@ -453,8 +510,13 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
+<<<<<<< HEAD
 ("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
 ements\functionalRequirements.aux")
+=======
+("C:\Users\Thabang\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Req
+uirements\functionalRequirements.aux")
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
@@ -498,8 +560,13 @@ LaTeX Info: Redefining \nameref on input line 11.
 \makeMPintoPDFobject=\count106
 \everyMPtoPDFconversion=\toks19
 )
+<<<<<<< HEAD
 ("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
 ements\titlepage.tex" <img/UP_Logo.png, id=3, 900.36375pt x 269.50688pt>
+=======
+("C:\Users\Thabang\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Req
+uirements\titlepage.tex" <img/UP_Logo.png, id=3, 900.36375pt x 269.50688pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/UP_Logo.png Graphic file (type png)
 
 <use img/UP_Logo.png>
@@ -507,11 +574,19 @@ Package pdftex.def Info: img/UP_Logo.png used on input line 5.
 (pdftex.def)             Requested size: 301.1261pt x 90.13423pt.
  [1
 
+<<<<<<< HEAD
 {C:/Users/Matt/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Mat
 t/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/UP_
 Logo.png>])
 ("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Requir
 ements\functionalRequirements.toc"
+=======
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Thabang/Document
+s/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/UP_Logo.png>]
+)
+("C:\Users\Thabang\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Req
+uirements\functionalRequirements.toc"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -554,7 +629,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
+<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\latex\base\omscmr.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -571,8 +650,22 @@ Overfull \hbox (11.514pt too wide) in paragraph at lines 49--51
 []
  []
 
+<<<<<<< HEAD
 [4 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requ
 irements/img/highLevelSystem.jpg>]
+=======
+[4 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
+equirements/img/highLevelSystem.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 <img/serviceContractRegisterUser.jpg, id=59, 688.5725pt x 351.3125pt>
 File: img/serviceContractRegisterUser.jpg Graphic file (type jpg)
 
@@ -699,9 +792,15 @@ Overfull \hbox (11.50005pt too wide) in paragraph at lines 88--91
 []
  []
 
+<<<<<<< HEAD
 [9 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requ
 irements/img/processSpecificationLoginUser.jpg>]
 <img/scopeData.jpg, id=91, 573.14125pt x 366.36874pt>
+=======
+[5 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
+equirements/img/scopeAccounts.jpg>]
+<img/scopeData.jpg, id=67, 573.14125pt x 366.36874pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/scopeData.jpg Graphic file (type jpg)
  <use img/scopeData.jpg>
 Package pdftex.def Info: img/scopeData.jpg used on input line 95.
@@ -711,6 +810,7 @@ Overfull \hbox (11.51097pt too wide) in paragraph at lines 95--97
 []
  []
 
+<<<<<<< HEAD
 [10 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
 uirements/img/DomainModelAccountModule.jpg> <C:/Users/Matt/Documents/GitHub/COS
 301-Mobile-Monitoring-App/Functional Requirements/img/scopeData.jpg>]
@@ -719,6 +819,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
  []
 
 <img/serviceContractRetrieveDeviceInfo.jpg, id=96, 625.33624pt x 351.3125pt>
+=======
+[6 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
+equirements/img/serviceContractRegisterUser.jpg> <C:/Users/Thabang/Documents/Gi
+tHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/functionalRequire
+mentsRegister.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+<img/serviceContractRetrieveDeviceInfo.jpg, id=72, 625.33624pt x 351.3125pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/serviceContractRetrieveDeviceInfo.jpg Graphic file (type jpg)
 
 <use img/serviceContractRetrieveDeviceInfo.jpg>
@@ -726,7 +837,11 @@ Package pdftex.def Info: img/serviceContractRetrieveDeviceInfo.jpg used on inpu
 t line 109.
 (pdftex.def)             Requested size: 401.51152pt x 220.83485pt.
 
+<<<<<<< HEAD
 <img/functionalRequirementsRetrieveDeviceInfo.jpg, id=97, 570.13pt x 338.26375p
+=======
+<img/functionalRequirementsRetrieveDeviceInfo.jpg, id=73, 570.13pt x 338.26375p
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 t>
 File: img/functionalRequirementsRetrieveDeviceInfo.jpg Graphic file (type jpg)
  <use img/functionalRequirementsRetrieveDeviceInfo.jpg>
@@ -748,10 +863,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--115
 
  []
 
+<<<<<<< HEAD
 [11 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
 uirements/img/serviceContractRetrieveDeviceInfo.jpg>]
 <img/processSpecificationRetrieveDeviceInfo.jpg, id=103, 910.40125pt x 394.4737
 5pt>
+=======
+[7 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
+equirements/img/scopeData.jpg>]
+<img/processSpecificationRetrieveDeviceInfo.jpg, id=80, 910.40125pt x 394.47375
+pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/processSpecificationRetrieveDeviceInfo.jpg Graphic file (type jpg)
  <use img/processSpecificationRetrieveDeviceInfo.jpg>
 Package pdftex.def Info: img/processSpecificationRetrieveDeviceInfo.jpg used on
@@ -767,9 +889,17 @@ Overfull \hbox (11.50851pt too wide) in paragraph at lines 117--120
 []
  []
 
+<<<<<<< HEAD
 [12 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
 uirements/img/functionalRequirementsRetrieveDeviceInfo.jpg>]
 Overfull \hbox (12.3386pt too wide) in paragraph at lines 122--123
+=======
+[8 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
+equirements/img/serviceContractRetrieveDeviceInfo.jpg> <C:/Users/Thabang/Docume
+nts/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/functionalR
+equirementsRetrieveDeviceInfo.jpg>]
+Overfull \hbox (12.3386pt too wide) in paragraph at lines 97--98
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 [] |\OT1/cmr/bx/n/12 2.3.2.3 re-trieveCom-mu-ni-ca-tion-Ac-tiv-i-ties - pri-or-
 ity: im-por-tant \OT1/cmr/m/n/12 The
  []
@@ -780,8 +910,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--123
  []
 
 
+<<<<<<< HEAD
 <img/serviceContractRetrieveCommunicationActivities.jpg, id=109, 786.94pt x 244
 .915pt>
+=======
+<img/serviceContractRetrieveCommunicationActivities.jpg, id=86, 786.94pt x 244.
+915pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/serviceContractRetrieveCommunicationActivities.jpg Graphic file (type
  jpg)
  <use img/serviceContractRetrieveCommunicationActivities.jpg>
@@ -789,8 +924,13 @@ Package pdftex.def Info: img/serviceContractRetrieveCommunicationActivities.jpg
  used on input line 125.
 (pdftex.def)             Requested size: 401.49019pt x 220.83252pt.
 
+<<<<<<< HEAD
 <img/functionalRequirementsRetrieveCommunicationActivities.jpg, id=110, 744.782
 5pt x 282.05376pt>
+=======
+<img/functionalRequirementsRetrieveCommunicationActivities.jpg, id=87, 744.7825
+pt x 282.05376pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/functionalRequirementsRetrieveCommunicationActivities.jpg Graphic fil
 e (type jpg)
 
@@ -818,10 +958,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--129
 
  []
 
+<<<<<<< HEAD
 [13 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
 uirements/img/processSpecificationRetrieveDeviceInfo.jpg>]
 <img/processSpecificationRetrieveCommunicationActivities.jpg, id=117, 1064.9787
 4pt x 442.65375pt>
+=======
+[9 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional R
+equirements/img/processSpecificationRetrieveDeviceInfo.jpg>]
+<img/processSpecificationRetrieveCommunicationActivities.jpg, id=93, 1064.97874
+pt x 442.65375pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/processSpecificationRetrieveCommunicationActivities.jpg Graphic file 
 (type jpg)
 
@@ -834,11 +981,19 @@ Overfull \hbox (11.49483pt too wide) in paragraph at lines 132--135
 []
  []
 
+<<<<<<< HEAD
 [14 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
 uirements/img/serviceContractRetrieveCommunicationActivities.jpg> <C:/Users/Mat
 t/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/fun
 ctionalRequirementsRetrieveCommunicationActivities.jpg>]
 <img/DomainModelDataModule.jpg, id=123, 738.76pt x 422.57875pt>
+=======
+[10 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
+Requirements/img/serviceContractRetrieveCommunicationActivities.jpg> <C:/Users/
+Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/i
+mg/functionalRequirementsRetrieveCommunicationActivities.jpg>]
+<img/DomainModelDataModule.jpg, id=99, 738.76pt x 422.57875pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/DomainModelDataModule.jpg Graphic file (type jpg)
 
 <use img/DomainModelDataModule.jpg>
@@ -849,9 +1004,15 @@ Overfull \hbox (11.50586pt too wide) in paragraph at lines 139--142
 []
  []
 
+<<<<<<< HEAD
 [15 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
 uirements/img/processSpecificationRetrieveCommunicationActivities.jpg>]
 <img/scopeReports.jpg, id=128, 526.96875pt x 238.8925pt>
+=======
+[11 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
+Requirements/img/processSpecificationRetrieveCommunicationActivities.jpg>]
+<img/scopeReports.jpg, id=104, 526.96875pt x 238.8925pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/scopeReports.jpg Graphic file (type jpg)
 
 <use img/scopeReports.jpg>
@@ -862,52 +1023,175 @@ Overfull \hbox (11.52159pt too wide) in paragraph at lines 146--148
 []
  []
 
+<<<<<<< HEAD
 [16 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Req
 uirements/img/DomainModelDataModule.jpg> <C:/Users/Matt/Documents/GitHub/COS301
 -Mobile-Monitoring-App/Functional Requirements/img/scopeReports.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
+=======
+[12 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
+Requirements/img/DomainModelDataModule.jpg> <C:/Users/Thabang/Documents/GitHub/
+COS301-Mobile-Monitoring-App/Functional Requirements/img/scopeReports.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
+<img/serviceContractcreateReport.jpg, id=109, 681.54625pt x 338.26375pt>
+File: img/serviceContractcreateReport.jpg Graphic file (type jpg)
 
+<use img/serviceContractcreateReport.jpg>
+Package pdftex.def Info: img/serviceContractcreateReport.jpg used on input line
+ 129.
+(pdftex.def)             Requested size: 401.50563pt x 220.83401pt.
+
+<img/FunctionalRequirementscreateReport.jpg, id=110, 662.475pt x 275.0275pt>
+File: img/FunctionalRequirementscreateReport.jpg Graphic file (type jpg)
+
+<use img/FunctionalRequirementscreateReport.jpg>
+Package pdftex.def Info: img/FunctionalRequirementscreateReport.jpg used on inp
+ut line 131.
+(pdftex.def)             Requested size: 401.50116pt x 220.83223pt.
+
+<img/processSpecificationcreateReport.jpg, id=111, 1025.8325pt x 303.1325pt>
+File: img/processSpecificationcreateReport.jpg Graphic file (type jpg)
+
+<use img/processSpecificationcreateReport.jpg>
+Package pdftex.def Info: img/processSpecificationcreateReport.jpg used on input
+ line 133.
+(pdftex.def)             Requested size: 401.49748pt x 220.82697pt.
+
+Overfull \hbox (11.50563pt too wide) in paragraph at lines 128--135
+[]
+ []
+
+
+Overfull \hbox (11.50116pt too wide) in paragraph at lines 128--135
+[]
+ []
+
+
+Overfull \hbox (11.49748pt too wide) in paragraph at lines 128--135
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--135
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
+
+ []
+
+[13 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
+Requirements/img/serviceContractcreateReport.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+<<<<<<< HEAD
 <img/serviceContractSendReportToDashboard.jpg, id=133, 744.7825pt x 365.365pt>
+=======
+ []
+
+[14 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
+Requirements/img/FunctionalRequirementscreateReport.jpg> <C:/Users/Thabang/Docu
+ments/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/processSp
+ecificationcreateReport.jpg>]
+<img/serviceContractSendReportToDashboard.jpg, id=123, 744.7825pt x 365.365pt>
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 File: img/serviceContractSendReportToDashboard.jpg Graphic file (type jpg)
 
 <use img/serviceContractSendReportToDashboard.jpg>
 Package pdftex.def Info: img/serviceContractSendReportToDashboard.jpg used on i
+<<<<<<< HEAD
 nput line 156.
 (pdftex.def)             Requested size: 401.51743pt x 220.8263pt.
 
 <img/functionalRequirementsSendReportToDashboard.jpg, id=134, 618.31pt x 316.18
+=======
+nput line 140.
+(pdftex.def)             Requested size: 401.51743pt x 220.8263pt.
+
+<img/functionalRequirementsSendReportToDashboard.jpg, id=124, 618.31pt x 316.18
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 124pt>
 File: img/functionalRequirementsSendReportToDashboard.jpg Graphic file (type jp
 g)
  <use img/functionalRequirementsSendReportToDashboard.jpg>
 Package pdftex.def Info: img/functionalRequirementsSendReportToDashboard.jpg us
+<<<<<<< HEAD
 ed on input line 158.
 (pdftex.def)             Requested size: 401.50992pt x 220.82843pt.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
 
 Overfull \hbox (11.51743pt too wide) in paragraph at lines 155--160
+=======
+ed on input line 142.
+(pdftex.def)             Requested size: 401.50992pt x 220.82843pt.
+
+<img/ProcessSpecificationSendResportToDashboard.jpg, id=125, 1103.12125pt x 501
+.875pt>
+File: img/ProcessSpecificationSendResportToDashboard.jpg Graphic file (type jpg
+)
+ <use img/ProcessSpecificationSendResportToDashboard.jpg>
+Package pdftex.def Info: img/ProcessSpecificationSendResportToDashboard.jpg use
+d on input line 144.
+(pdftex.def)             Requested size: 401.49974pt x 220.82567pt.
+
+Overfull \hbox (11.51743pt too wide) in paragraph at lines 139--146
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 []
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 155--160
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 139--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--160
+Underfull \hbox (badness 10000) in paragraph at lines 139--146
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 
  []
 
 
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 155--160
+=======
+Overfull \hbox (11.50992pt too wide) in paragraph at lines 139--146
+[]
+ []
+
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
+
+Overfull \hbox (11.49974pt too wide) in paragraph at lines 139--146
+[]
+ []
+
+
+<<<<<<< HEAD
 Overfull \hbox (11.50992pt too wide) in paragraph at lines 155--160
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 139--146
+
+ []
+
+[15 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
+Requirements/img/serviceContractSendReportToDashboard.jpg>]
+<img/domainModelReportModule.jpg, id=130, 913.4125pt x 588.1975pt>
+File: img/domainModelReportModule.jpg Graphic file (type jpg)
+
+<use img/domainModelReportModule.jpg>
+Package pdftex.def Info: img/domainModelReportModule.jpg used on input line 149
+.
+(pdftex.def)             Requested size: 401.49855pt x 220.82481pt.
+
+Overfull \hbox (11.49855pt too wide) in paragraph at lines 148--151
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 []
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 155--160
 
  []
@@ -941,4 +1225,45 @@ PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  45 named destinations out of 1000 (max. 500000)
  234 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
+
+ []
+
+[16 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional 
+Requirements/img/functionalRequirementsSendReportToDashboard.jpg> <C:/Users/Tha
+bang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional Requirements/img/
+ProcessSpecificationSendResportToDashboard.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+ [17 <C:/Users/Thabang/Documents/GitHub/COS301-Mobile-Monitoring-App/Functional
+ Requirements/img/domainModelReportModule.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
+
+("C:\Users\Thabang\Documents\GitHub\COS301-Mobile-Monitoring-App\Functional Req
+uirements\functionalRequirements.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
+ ) 
+Here is how much of TeX's memory you used:
+ 6159 strings out of 493921
+ 92813 string characters out of 3147276
+ 168520 words of memory out of 3000000
+ 9328 multiletter control sequences out of 15000+200000
+ 7894 words of font info for 28 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 35i,4n,33p,788b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{subsubsection.2.4.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on functionalRequirements.pdf (17 pages, 1936555 bytes).
+PDF statistics:
+ 212 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 6ad89d061d5ee8ebe306c1ee3465e0686a36a5a3
 

@@ -148,7 +148,16 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	\subsubsection{Use-Cases}
 			This section provides details on the use-case requirements for the use-cases offered by this module.
 		\paragraph{ createReport - priority: important}
-		This use-case retrieves logs from the device.
+		This use-case retrieves logs from the device and creates a report from those specific logs.\newline
+		\subparagraph{Service Contract}
+					The service create report is shown in the figure below. The pre-condition is enforced.  \newline
+				\includegraphics[width=400px,height=220px]{img/serviceContractcreateReport.jpg}
+					Figure : The service contract for createReport\newline
+				\includegraphics[width=400px,height=220px]{img/FunctionalRequirementscreateReport.jpg}
+					Figure : The functional requirements for createReport \newline
+				\includegraphics[width=400px,height=220px]{img/processSpecificationcreateReport.jpg}
+								Figure : The Process Specification for createReport\newline
+								
 		\paragraph{ sendReportToDashboard - priority: important}
 		This module sends the report onto a server where they will be saved on a database to de displayed later on a dashboard .\newline
 		\subparagraph{Service Contract}
@@ -156,5 +165,14 @@ The objective of the mobile monitoring application is to collect data/logs and a
 		\includegraphics[width=400px,height=220px]{img/serviceContractSendReportToDashboard.jpg}
 			Figure : The service contract for sendReportToDashboard\newline \newline \newline
 		\includegraphics[width=400px,height=220px]{img/functionalRequirementsSendReportToDashboard.jpg}
-			Figure : The functional requirements for sendReportToDashboard\newline	
+			Figure : The functional requirements for sendReportToDashboard\newline
+		\includegraphics[width=400px,height=220px]{img/ProcessSpecificationSendResportToDashboard.jpg}
+						Figure : The Process Specification for sendReportToDashboard\newline
+						
+			\paragraph{Domain Model}
+			This section contains the domain model for the reporting module. This module retrieves logs from the data module. 
+			\includegraphics[width=400px,height=220px]{img/domainModelReportModule.jpg}
+			     Figure : The domain model for the reporting module.\newline
+			  
+		
 \end{document}

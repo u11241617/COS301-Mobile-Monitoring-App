@@ -1,0 +1,40 @@
+﻿Merge branch 'master' of https://github.com/u11241617/COS301-Mobile-Monitoring-App
+
+Conflicts:
+	Functional Requirements/functionalRequirements.aux
+	Functional Requirements/functionalRequirements.log
+	Functional Requirements/functionalRequirements.pdf
+	Functional Requirements/functionalRequirements.synctex.gz
+	Functional Requirements/functionalRequirements.toc
+	Functional Requirements/magic draw package/301MainProject2.mdzip
+	Functional Requirements/magic draw package/301MainProject2.mdzip.bak
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 2 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   Functional Requirements/functionalRequirements.aux
+#	modified:   Functional Requirements/functionalRequirements.log
+#	modified:   Functional Requirements/functionalRequirements.tex
+#	modified:   Functional Requirements/functionalRequirements.toc
+#	new file:   Functional Requirements/img/FunctionalRequirementscreateReport.jpg
+#	new file:   Functional Requirements/img/ProcessSpecificationSendResportToDashboard.jpg
+#	new file:   Functional Requirements/img/domainModelReportModule.jpg
+#	new file:   Functional Requirements/img/processSpecificationcreateReport.jpg
+#	new file:   Functional Requirements/img/serviceContractcreateReport.jpg
+#	new file:   Functional Requirements/magic draw package/301MainProject2.mdzip
+#	new file:   Functional Requirements/magic draw package/301MainProject2.mdzip.bak
+#
+
