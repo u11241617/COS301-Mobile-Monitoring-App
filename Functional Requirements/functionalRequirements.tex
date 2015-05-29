@@ -51,9 +51,8 @@ The objective of the mobile monitoring application is to collect data/logs and a
 	\subsubsection{Use-Cases}
 		This section provides details on the use-case requirements for the use-cases offered by this module.
 	\paragraph{registerUser - priority: important}
-		This use-case registers a user on initial installation after user accepts terms and conditions of use.\newline
-	\paragraph{loginUser - priority: important}
-		This use-case logins a user on initial installation after user accepts terms and conditions of use.\newline	
+		This use-case registers a user on initial installation after user accepts terms and conditions of use.
+	
 	\subparagraph{Service Contract}
 		The service contract for registerUser is shown in the figure below. The pre-conditions are enforced (raises an exception if not met) and on
 		success the user is registered and the device and user data is persisted through the local database.\newline
@@ -61,8 +60,34 @@ The objective of the mobile monitoring application is to collect data/logs and a
 		Figure : The service contract for registering a new user on the app\newline
 	\includegraphics[width=400px,height=220px]{img/functionalRequirementsRegister.jpg}
 		Figure : The functional requirements for registerUser\newline
+		\paragraph{Process specification}
+
+		
+		When a request is made for a user to register a connection to the database must be established. If no connection to the database can be made then an exception is thrown. Once the connection to the database is made then validateUserExistance is called to ensure that the user does exist on the database already. If the user does exist on the database then and exception is thrown. After everything checks out the user is registered.\newline\newline	
+		\includegraphics[width=400px,height=220px]{img/processSpecificationRegisterUser.jpg}
+		Figure : The process specification for the registerUser use case.		
 	
+	\paragraph{loginUser - priority: important}
+		This use-case logins a user on initial installation after user accepts terms and conditions of use.
+	\subparagraph{Service Contract}
+		The service contract for loginUser is shown in the figure below. The pre-conditions that are enforced(raises and exception if not met) and on success the user is logged in and the device and user data is persisted through the local database.\newline 	
 	
+\includegraphics[width=400px,height=220px]{img/serviceContractLoginUser.jpg}
+		Figure : The service contract for logging in a user on the app\newline
+\includegraphics[width=400px,height=220px]{img/functionalRequirementsLoginUser.jpg}
+		Figure : The functional requirements for loginUser\newline		
+				
+		\paragraph{Process specification}
+		When a request is made for a user to login a connection to the database must be established. If no connection to the database can be made then an exception is thrown. Once the connection to the database is made then validateUserExistance is called to ensure that the user is not already logged in. If the user does not exist on the database then and exception is thrown. After everything checks out the user is then logged in.\newline\newline			
+		
+		\includegraphics[width=400px,height=220px]{img/processSpecificationLoginUser.jpg}
+		Figure : The process specification for the loginUser use case.	
+
+		\subsubsection{Domain Model}
+		
+		The domain model for this module is very simple and straight foward.It only requires a vailid service request.\newline
+		\includegraphics[width=400px,height=220px]{img/DomainModelAccountModule.jpg}
+		Figure : The domain model for the Account module.
 	
 	\subsection{MobileMonitoringApp - Data module}
 	%You will have to elaborate on what the module does (look at the high level module notes for help)
@@ -79,7 +104,7 @@ The objective of the mobile monitoring application is to collect data/logs and a
 		The retrieveDeviceInfo use case retrieves all the relevant device information from the device.\newline
 		
 		\subparagraph{Service Contract}
-		The service contract for retrieveDeviceInfo is shown in the figure below. The retrieveDeviceInfo recieves a retrieveDeviceInfoRequest object that specifies the type of data to be retrieved and stored locally on to a database.
+		The service contract for retrieveDeviceInfo is shown in the figure below. The retrieveDeviceInfo 			recieves a retrieveDeviceInfoRequest object that specifies the type of data to be retrieved and 			stored locally on to a database.
 		
 		\includegraphics[width=400px,height=220px]{img/serviceContractRetrieveDeviceInfo.jpg}
 		Figure : The service contract for retrieveDeviceInfo on the device
@@ -89,14 +114,14 @@ The objective of the mobile monitoring application is to collect data/logs and a
 		\newline
 		
 		\paragraph{Process specification}
-		When a request is made for device data to be retrieve. The service checks for the type of data to be retrieved and follows the required channels to retrieve the data.If the service is not successful then an exeption is raised. If the service is successfull then an object with the required data is returned as a result of the query.\newline\newline
+		When a request is made for device data to be retrieve. The service checks for the type of data to 			be retrieved and follows the required channels to retrieve the data.If the service is not 					successful then an exeption is raised. If the service is successfull then an object with the 				required data is returned as a result of the query.\newline\newline
 		\includegraphics[width=400px,height=220px]{img/processSpecificationRetrieveDeviceInfo.jpg}
 		Figure : The process specification for the retrieveDeviceInfo use case.
 		
-	\paragraph{retrieveCommunicationActivities - priority: important}
-		The retrieveCommunicationAcitivites use-case retrieves all the users communication activities from the various apps on the device.\newline
-\subparagraph{Service Contract}
-		The service contract for retrieveCommunicationAcitivites is shown in the figure below. The retrieveCommunicationActivitiesRequest requests the data regardless of the data type and retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.\newline\newline	
+		\paragraph{retrieveCommunicationActivities - priority: important}
+		The retrieveCommunicationAcitivites use-case retrieves all the users communication activities from 		the various apps on the device.\newline
+		\subparagraph{Service Contract}
+		The service contract for retrieveCommunicationAcitivites is shown in the figure below. The 					retrieveCommunicationActivitiesRequest requests the data regardless of the data type and 		retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.\newline\newline	
 	\includegraphics[width=400px,height=220px]{img/serviceContractRetrieveCommunicationActivities.jpg}
 		Figure :The service contract for retrieveCommunicationAcitivites on the device\newline
 	\includegraphics[width=400px,height=220px]{img/functionalRequirementsRetrieveCommunicationActivities.jpg}
