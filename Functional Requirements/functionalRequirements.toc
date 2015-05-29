@@ -24,5 +24,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Scope}{12}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Use-Cases}{13}{subsubsection.2.4.2}
 \contentsline {paragraph}{\numberline {2.4.2.1} createReport - priority: important}{13}{paragraph.2.4.2.1}
-\contentsline {paragraph}{\numberline {2.4.2.2} sendReportToDashboard - priority: important}{13}{paragraph.2.4.2.2}
-\contentsline {subparagraph}{Service Contract}{13}{paragraph.2.4.2.2}
+\contentsline {subparagraph}{Service Contract}{13}{paragraph.2.4.2.1}
+\contentsline {paragraph}{\numberline {2.4.2.2} sendReportToDashboard - priority: important}{14}{paragraph.2.4.2.2}
+\contentsline {subparagraph}{Service Contract}{15}{paragraph.2.4.2.2}
+\contentsline {paragraph}{\numberline {2.4.2.3}Domain Model}{16}{paragraph.2.4.2.3}
