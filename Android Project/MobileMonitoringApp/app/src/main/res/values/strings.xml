@@ -6,6 +6,8 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="no_account">Don\'t have account? Register</string>
+    <string name="have_account">Have account? Login</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="terms_and_conditions"> Terms and conditions</string>
 
@@ -16,4 +18,5 @@
     <string name="terms_and_conditions_content">These are the terms are the terms and conditions for MMA (Mobile Moniroting App)</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="or">or</string>
 </resources>
