@@ -2,12 +2,15 @@ package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class RegisterActivity extends Activity {
@@ -16,17 +19,36 @@ public class RegisterActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        overridePendingTransition(R.animator.activity_open_transition, R.animator.activity_close_scale);
 
+        final Typeface arialRoundedBoldFont = Typeface.createFromAsset(getAssets(), "fonts/Arial_Rounded_Bold.TTF");
+        final Typeface calibriFont = Typeface.createFromAsset(getAssets(), "fonts/calibri.ttf");
+
+        final EditText registerEmail;
+        final EditText registerPassword;
+        final EditText confirmRegisterPassword;
         final Button loginButton;
         final Button registerButton;
-
         final SessionManager sessionManager;
+
+        final TextView registerTitle = (TextView) findViewById(R.id.register_title);
+
+        registerTitle.setTypeface(arialRoundedBoldFont);
+
 
         sessionManager = new SessionManager(getApplicationContext());
 
+        registerEmail = (EditText) findViewById(R.id.register_email);
+        registerPassword = (EditText) findViewById(R.id.register_password);
+        confirmRegisterPassword = (EditText) findViewById(R.id.confirm_register_password);
         loginButton = (Button) findViewById(R.id.login_button);
         registerButton = (Button) findViewById(R.id.register_button);
 
+        registerEmail.setTypeface(calibriFont);
+        registerPassword.setTypeface(calibriFont);
+        confirmRegisterPassword.setTypeface(calibriFont);
+        loginButton.setTypeface(arialRoundedBoldFont);
+        registerButton.setTypeface(arialRoundedBoldFont);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -54,24 +76,10 @@ public class RegisterActivity extends Activity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_register, menu);
-        return true;
+    protected void onPause() {
+
+        super.onPause();
+        overridePendingTransition(R.animator.activity_open_scale, R.animator.activity_close_transition);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

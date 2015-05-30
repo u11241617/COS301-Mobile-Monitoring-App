@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f5f0f0"
     android:orientation="vertical"
     android:gravity="center"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -9,38 +10,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="the5concurrentnodes.mobilemonitoringapp.LoginActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/icon"/>
 
         <TextView
+            android:id="@+id/login_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="80dp"
-            android:textSize="38sp"
-            android:textStyle="bold"
+            android:layout_marginBottom="40dp"
+            android:textSize="36sp"
+            android:textColor="@color/login_button"
             android:text="@string/login"/>
 
-        <EditText
-            android:id="@+id/login_email"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            android:hint="@string/email"
-            android:singleLine="true"/>
+            android:orientation="vertical" >
 
-        <EditText
-            android:id="@+id/login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            android:hint="@string/password"
-            android:singleLine="true"/>
+            <EditText
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/form_container_bg"
+                android:textSize="20sp"
+                android:hint="@string/email"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/form_container_bg"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:hint="@string/password"
+                android:singleLine="true"/>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/login_button"
@@ -48,18 +60,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
+            android:textSize="22sp"
             android:text="@string/login"
-            android:background="@color/login_button"/>
+            android:background="@color/register_botton"/>
 
         <Button
             android:id="@+id/register_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:textColor="@color/white"
-            android:text="@string/register"
-            android:background="@color/register_botton"/>
-
-    </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:textColor="@color/login_button"
+            android:textSize="22sp"
+            android:text="@string/no_account"
+            android:background="@null"/>
 
 </LinearLayout>
