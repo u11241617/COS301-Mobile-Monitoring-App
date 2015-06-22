@@ -5,10 +5,12 @@ import the5concurrentnodes.entities.User;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.util.List;
 
 @Stateless
 public class UserManager{
@@ -43,6 +45,27 @@ public class UserManager{
         Root<User> userRoot = query.from(User.class);
         query.where(cb.equal(userRoot.get("email"), email));
 
-        return em.createQuery(query).getSingleResult() != null;
+        User user = null;
+
+        try {
+            user = em.createQuery(query).getSingleResult();
+        }catch(NoResultException e){}
+
+        return user!= null;
+    }
+
+    /**
+     *
+     * @return return all users in database
+     */
+    public List<User> getAllUser() {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> query = cb.createQuery(User.class);
+
+        Root<User> userRoot = query.from(User.class);
+        query.select(userRoot);
+
+        return em.createQuery(query).getResultList();
     }
 }

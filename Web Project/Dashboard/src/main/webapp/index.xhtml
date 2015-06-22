@@ -6,6 +6,11 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, concurrent node"/>
+    <h:dataTable value="#{usersBean.users}" var="user">
+        <h:column>
+            <f:facet name="header">Email</f:facet>
+            #{user.email}
+        </h:column>
+    </h:dataTable>
 </f:view>
 </html>

@@ -4,7 +4,10 @@ import the5concurrentnodes.managers.UserManager;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 
 @Path("/account")
 @Stateless
