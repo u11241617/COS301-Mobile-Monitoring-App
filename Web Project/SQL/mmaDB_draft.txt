@@ -41,13 +41,15 @@ callTb
 -duration
 
 browserTb
--browser
--url
--date&time
+-(priKey)browserID
+-(forKey)visitedWebsiteID
+-name
 
-bluetoothTb
--device_name
--paired_devices
+visitedWebsiteTb
+-(priKey)visitedWebsiteID
+-(forKey)deviceID
+-dateTime
+-frequency
 
 wifiTb
 -saved_networks
