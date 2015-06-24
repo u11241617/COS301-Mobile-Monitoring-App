@@ -70,6 +70,9 @@ public class RegisterActivity extends Activity {
 
                 Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
                 startActivity(intent);
+
+
+
                 finish();
             }
         });
