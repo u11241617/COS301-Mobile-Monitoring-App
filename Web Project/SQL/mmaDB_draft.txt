@@ -2,28 +2,24 @@ mmaDB (v22/06/2015)
 
 userTb
 -(priKey)userID
+-(forKey)accessLevel
 -email
 -password
--(forKey)accessLevel
+-firstLogin
 
 accesslevelTb
 -(priKey)accessLevelID
 -description
 
-profileTb
--(priKey)profileID
--(forKey)userID
--name
--surname
--gender
-
 deviceTb
 -(priKey)deviceID
--(forKey)profileID
+-(forKey)userID
+-(forKey)smsID
+-(forKey)callID
+-(forKey)visitedWebsiteID
 -make
 -model
 -os
--network
 
 smsTb
 -(priKey)smsID

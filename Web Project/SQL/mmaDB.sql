@@ -93,7 +93,7 @@ INSERT INTO `devicetb` (`deviceID`, `profileID`, `make`, `model`, `os`, `network
 --
 -- Table structure for table `profiletb`
 --
-
+/*
 CREATE TABLE IF NOT EXISTS `profiletb` (
 `profileID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
@@ -101,15 +101,15 @@ CREATE TABLE IF NOT EXISTS `profiletb` (
   `surname` varchar(300) COLLATE utf16_bin NOT NULL,
   `gender` varchar(2) COLLATE utf16_bin NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf16 COLLATE=utf16_bin COMMENT='Stores the user details';
-
+*/
 --
 -- Dumping data for table `profiletb`
 --
-
+/*
 INSERT INTO `profiletb` (`profileID`, `userID`, `name`, `surname`, `gender`) VALUES
 (3, 1, 'Khathutshelo Shaun', 'Matidza', 'M'),
 (4, 2, 'Sylvester', 'Mpangane', 'M');
-
+*/
 -- --------------------------------------------------------
 
 --
@@ -134,7 +134,8 @@ CREATE TABLE IF NOT EXISTS `usertb` (
 `userID` int(15) NOT NULL,
   `email` varchar(300) COLLATE utf16_bin NOT NULL,
   `password` varchar(300) COLLATE utf16_bin NOT NULL,
-  `accessLevel` int(5) NOT NULL
+  `accessLevel` int(5) NOT NULL,
+  `firstLogin` boolean NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
@@ -183,14 +184,14 @@ ALTER TABLE `calltb`
 -- Indexes for table `devicetb`
 --
 ALTER TABLE `devicetb`
- ADD PRIMARY KEY (`deviceID`), ADD KEY `profileID` (`profileID`);
-
+ ADD PRIMARY KEY (`deviceID`), ADD KEY `userID` (`userID`);
+/*
 --
 -- Indexes for table `profiletb`
 --
 ALTER TABLE `profiletb`
  ADD PRIMARY KEY (`profileID`), ADD KEY `userID` (`userID`);
-
+*/
 --
 -- Indexes for table `smstb`
 --
@@ -221,8 +222,8 @@ MODIFY `accessLevelID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `profiletb`
 --
-ALTER TABLE `profiletb`
-MODIFY `profileID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+/*ALTER TABLE `profiletb`
+MODIFY `profileID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;*/
 --
 -- AUTO_INCREMENT for table `usertb`
 --
@@ -242,14 +243,16 @@ ADD CONSTRAINT `browsertb_ibfk_1` FOREIGN KEY (`visitedWebsiteID`) REFERENCES `v
 -- Constraints for table `devicetb`
 --
 ALTER TABLE `devicetb`
-ADD CONSTRAINT `devicetb_ibfk_1` FOREIGN KEY (`profileID`) REFERENCES `profiletb` (`profileID`) ON UPDATE NO ACTION;
+ADD CONSTRAINT `devicetb_ibfk_1` FOREIGN KEY (`smsID`) REFERENCES `smstb` (`smsID`) ON UPDATE NO ACTION;
+ADD CONSTRAINT `devicetb_ibfk_2` FOREIGN KEY (`callID`) REFERENCES `calltb` (`callID`) ON UPDATE NO ACTION;
+ADD CONSTRAINT `devicetb_ibfk_3` FOREIGN KEY (`visitedWebsiteID`) REFERENCES `visitedWebsitetb` (`visitedWebsiteID`) ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `usertb`
 --
 ALTER TABLE `usertb`
 ADD CONSTRAINT `usertb_ibfk_1` FOREIGN KEY (`accessLevel`) REFERENCES `accessleveltb` (`accessLevelID`) ON UPDATE NO ACTION,
-ADD CONSTRAINT `usertb_ibfk_2` FOREIGN KEY (`userID`) REFERENCES `profiletb` (`userID`) ON UPDATE NO ACTION;
+ADD CONSTRAINT `usertb_ibfk_2` FOREIGN KEY (`deviceID`) REFERENCES `devicetb` (`deviceID`) ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
