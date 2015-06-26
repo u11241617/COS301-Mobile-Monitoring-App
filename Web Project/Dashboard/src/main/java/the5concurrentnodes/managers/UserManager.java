@@ -68,4 +68,21 @@ public class UserManager{
 
         return em.createQuery(query).getResultList();
     }
+
+    public User getUserByEmail(String email) {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> query = cb.createQuery(User.class);
+
+        Root<User> userRoot = query.from(User.class);
+        query.where(cb.equal(userRoot.get("email"), email));
+
+        User user = null;
+
+        try {
+            user = em.createQuery(query).getSingleResult();
+        }catch(NoResultException e){}
+
+        return user;
+    }
 }

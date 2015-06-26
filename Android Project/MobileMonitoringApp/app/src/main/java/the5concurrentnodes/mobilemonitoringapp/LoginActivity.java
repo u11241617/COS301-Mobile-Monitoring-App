@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import the5concurrentnodes.account.Utility;
+
 
 public class LoginActivity extends Activity {
 
@@ -57,16 +59,21 @@ public class LoginActivity extends Activity {
                 String userEmail = loginEmail.getText().toString();
                 String userPassword = loginPassword.getText().toString();
 
-                sessionManager.createSession(true);
+                if(Utility.isEmpty(userEmail) || Utility.isEmpty(userPassword)) {
 
-                Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Empty email or password", Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-                startActivity(intent);
+                }else {
 
-                Intent DataPullIntent = new Intent(getApplicationContext(), DataPullService.class);
-                startActivity(DataPullIntent);
-                finish();
+                    sessionManager.createSession(true);
+
+                    Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
             }
         });
 
@@ -87,9 +94,6 @@ public class LoginActivity extends Activity {
             Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
             startActivity(intent);
-
-            Intent DataPullIntent = new Intent(getApplicationContext(), DataPullService.class);
-            startActivity(DataPullIntent);
             finish();
         }
     }
