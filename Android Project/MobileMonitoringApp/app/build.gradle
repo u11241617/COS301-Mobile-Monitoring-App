@@ -23,5 +23,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.github.amlcurran.showcaseview:library:5.0.0'
     testCompile 'junit:junit:4.12'
+    compile files('libs/volley.jar')
 }

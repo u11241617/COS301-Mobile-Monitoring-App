@@ -1,5 +1,6 @@
 package the5concurrentnodes.rest;
 
+import the5concurrentnodes.entities.User;
 import the5concurrentnodes.managers.UserManager;
 
 import javax.ejb.Stateless;
@@ -20,15 +21,32 @@ public class Account {
     @Produces("application/json")
     public String register(@QueryParam("email") String email, @QueryParam("password") String password) {
 
-        userManager.persist(email, password);
+        if(userManager.userExist(email)) {
 
-        return Utility.createJSON("register", true).toString();
+            return Utility.createJSON("register", false).toString();
+
+        }else {
+
+            userManager.persist(email, password);
+
+            return Utility.createJSON("register", true).toString();
+        }
     }
 
-    @GET @Path("/validateAccount")
+    @GET @Path("/login")
     @Produces("application/json")
-    public String validateAccount(@QueryParam("email") String email) {
+    public String validateAccount(@QueryParam("email") String email, @QueryParam("password") String password) {
 
-        return Utility.createJSON("validateUser", userManager.userExist(email)).toString();
+        if(userManager.userExist(email)) {
+
+            User user = userManager.getUserByEmail(email);
+
+            if(user.getEmail().equals(email) && user.getPassword().equals(password)) {
+
+                return Utility.createJSON("login", true).toString();
+            }
+        }
+
+        return Utility.createJSON("login", false).toString();
     }
 }

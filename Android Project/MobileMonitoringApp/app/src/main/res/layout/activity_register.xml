@@ -13,6 +13,7 @@
 
 
         <ImageView
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -39,9 +40,11 @@
                 android:id="@+id/register_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/form_container_bg"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@drawable/group_selector"
+                android:ellipsize="end"
                 android:padding="10dp"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:hint="@string/email"
                 android:singleLine="true"/>
 
@@ -49,10 +52,11 @@
                 android:id="@+id/register_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/form_container_bg"
-                android:layout_marginTop="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@drawable/group_selector"
+                android:ellipsize="end"
                 android:padding="10dp"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:hint="@string/password"
                 android:singleLine="true"/>
 
@@ -60,10 +64,11 @@
                 android:id="@+id/confirm_register_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/form_container_bg"
-                android:layout_marginTop="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@drawable/group_selector"
+                android:ellipsize="end"
                 android:padding="10dp"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:hint="@string/confirm_password"
                 android:singleLine="true"/>
 
@@ -75,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:padding="10dp"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:text="@string/register"

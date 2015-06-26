@@ -3,4 +3,5 @@
     <color name="login_button">#3b4148</color>
     <color name="register_botton">#26ae90</color>
     <color name="white">#ffffff</color>
+    <color name="group_stroke">#E6E6E6</color>
 </resources>
