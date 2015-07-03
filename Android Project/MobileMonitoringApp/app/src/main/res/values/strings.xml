@@ -6,17 +6,22 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="no_account">Don\'t have account? Register</string>
-    <string name="have_account">Have account? Login</string>
     <string name="title_activity_about">AboutActivity</string>
-    <string name="terms_and_conditions"> Terms and conditions</string>
-
-    <string name="hello_world">Hello world!</string>
+    <string name="terms_and_conditions"> Terms and Conditions</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="accept_terms_and_conditions">Accept Terms and Conditions</string>
     <string name="next">Next</string>
-    <string name="terms_and_conditions_content">These are the terms are the terms and conditions for MMA (Mobile Moniroting App)</string>
+    <string name="or">or</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="confirm_password">Confirm password</string>
-    <string name="or">or</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="signup_link"><u>Sign up</u></string>
+    <string name="signin_link"><u>Sign in</u></string>
+    <string name="have_account"><u>I have an account</u></string>
+    <string name="create_account"><u>Create account</u></string>
+    <string name="empty_input_error_message">Please fill out this field.</string>
+    <string name="icon_description">App icon</string>
+    <string name="forgot_password"><u>Forgot password?</u></string>
+
 </resources>

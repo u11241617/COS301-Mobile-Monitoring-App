@@ -25,9 +25,10 @@
 		\item Technologies
 	\end{itemize}	 
 	\newpage
-	\section{Architectural Requirements}
-		\subsection{Critical Quality Requirements} 
-			\subsubsection{Auditability}
+	\section{Android Application Requirements}
+	\subsection{Architectural Requirements}
+		\subsubsection{Critical Quality Requirements} 
+			\subsubsection*{Auditability}
 			\textbf{Description} \\\\
 			Auditability refers to the ability to account for a system's usage by the user and be able to monitor events and create logs on what are the user's actions within the system.\\\\
 			\textbf{Justification}\\\\
@@ -45,7 +46,7 @@
 						\end{itemize}
 				\end{enumerate}	
 			\newpage
-			\subsubsection{Security}
+			\subsubsection*{Security}
 				\textbf{Description} \\\\
 				Security is a critical aspect of any system that deals with critical and confidential data, the strategies used for security provides mechanisms to protect data from unauthorized access and modification. For the Mobile Monitoring Application this means the following:
 				\begin{itemize}
@@ -68,8 +69,8 @@
 						\end{itemize}
 				\end{enumerate}		
 		%New Page
-		\subsection{Important Quality Requirements}
-			\subsubsection{Maintainability}
+		\subsubsection{Important Quality Requirements}
+			\subsubsection*{Maintainability}
 			\textbf{Description}\\\\
 			A modular system design is used for this system so that components can be easily added and removed.\\\\
 			\textbf{Justification}\\\\
@@ -87,7 +88,7 @@
 				\end{itemize}
 			\end{enumerate}
 			\newpage
-			\subsubsection{Performance}
+			\subsubsection*{Performance}
 			\textbf{Description}\\\\
 			Performance is a measure of a system responsiveness when executing some action.\\\\
 			\textbf{Justification}\\\\
@@ -107,8 +108,8 @@
 			
 		\newpage
 		%New Page
-		\subsection{Nice-To-Have Quality Requirements}
-			\subsubsection{Testability}
+		\subsubsection{Nice-To-Have Quality Requirements}
+			\subsubsection*{Testability}
 			\textbf{Description}\\\\
 			Testability is a measure of how well a system allows one to test if a certain criteria is met by the system. This makes fault detection in the system easy and also the faults can be isolated in a timely manner.\\\\
 			\textbf{Justification}\\\\
@@ -126,8 +127,8 @@
 				\end{itemize}
 			\end{enumerate}	
     \newpage
-    \section{Architectural Patterns or Styles}
-    \subsection{Model View Controller (MVC)}
+    \subsubsection{Architectural Patterns or Styles}
+    \subsubsection*{Model View Controller (MVC)}
     \textbf{Description}\\\\
     Separates the applications concerns by separating the following responsibilities:
     \begin{itemize}
@@ -146,7 +147,7 @@
 	\end{itemize} 
 	
 	\newpage
-	\subsection{Layered Architecture}
+	\subsubsection{Layered Architecture}
 	\textbf{Description}\\\\
 	Partitions the applications concerns into a stacked group of layers.\\\\
 	\textbf{Justification}\\\\
@@ -161,44 +162,248 @@
 	\item Improve reuse
 	\end{itemize}
 	\newpage
-	\section{Access and Integration Channels}
-	\subsection{Access Channels}
-	\subsubsection{Human Access Channel}
+	\subsection{Access and Integration Channels}
+	\subsubsection{Access Channels}
+	\subsubsection*{Human Access Channel}
 	Human access channels addresses all the different ways in which a human can interact with the Mobile Monitoring Application.
 	\begin{itemize}
 		\item Mobile device: The application only runs on android mobile devices, only minimal functionality is presented to the user as the application runs on the background.   
 	\end{itemize}
-	\subsection{Integration Channels}
-	\subsubsection{Channels}
-	The Mobile Monitoring Application will need to access a MySQL database to store user information and data logs from device.    	\subsubsection{Protocols}
+	\subsubsection{Integration Channels}
+	\subsubsection*{Channels}
+	The Mobile Monitoring Application will need to access a MySQL database to store user information and data logs from device.    	\subsubsection*{Protocols}
 	The Mobile Monitoring Application will use the following protocols:
 	\begin{itemize}
 	\item HTTPS: This protocol will be used for security to ensure that a secure connection is maintained between the device and server and also that transported data cannot be easily intercepted.
 	\item SMTP: Notifications for user forgotten password will use this protocol to allow user recover their information.  
 	\end{itemize}	 
 	\newpage
-	\section{Technologies}
-	\subsection{Platform and IDE}
+	\subsection{Technologies}
+	\subsubsection{Platform and IDE}
 	\begin{itemize}
 	\item Android
 	\item Android Studio
 	\end{itemize}
-	\subsection{Programming Languages}
+	\subsubsection{Programming Languages}
 	\begin{itemize}
 	\item Java
 	\end{itemize}
-	\subsection{Frameworks}
+	\subsubsection{Frameworks}
 	\begin{itemize}
 	\item JUnit
 	\end{itemize}
-	\subsection{Databases}
+	\subsubsection{Databases}
 	\begin{itemize}
 	\item MySQL relational database
 	\end{itemize}
-	\subsection{Others}
+	\subsubsection{Web services}
+	\begin{itemize}
+	\item REST
+	\end{itemize}
+	\subsubsection{Others}
 	\begin{itemize}
 	\item AJAX
 	\item JSON
-	\end{itemize}					        		 
-	 
+	\end{itemize}		
+	
+\newpage
+%DASHBOARD			        		 
+\section{Web Application (Dashboard) Requirements}
+\subsection{Architectural Requirements}
+		\subsubsection{Critical Quality Requirements} 
+			\subsubsection*{Scalability}
+			\textbf{Description} \\\\
+			Scalability refers to the ability of a system to easily accommodate and handle a large amount of work at a single instance \\\\
+			\textbf{Justification}\\\\
+			The Mobile Monitoring Application dashboard needs to be able to handle as many concurrent users as possible without breaking.\\\\
+			\textbf{Mechanism}
+				\begin{enumerate}
+					\item Strategy: \\\\
+						Scalability can be achieved by:
+						\begin{itemize}
+							\item Clustering: Ensures that resources are not strained by running or maintaining many instances of the application over a cluster of servers.  
+							\item Caching: Will reduce database workload by maintaining database query results on the application within a user session to avoid querying the database every time. 
+						\end{itemize}
+				\end{enumerate}	
+			\newpage
+			\subsubsection*{Security}
+				\textbf{Description} \\\\
+				Security is a critical aspect of any system that deals with critical and confidential data, the strategies used for security provides mechanisms to protect data from unauthorized access and modification. For the Mobile Monitoring Application dashboard this means the following:
+				\begin{itemize}
+					\item Only authorized individuals may have access to the relevant data.
+					\item Users should strictly be restricted by access levels    
+				\end{itemize}
+				\textbf{Justification} \\\\
+				Security is a critical for any system that deals with critical and confidential data as in the Mobile Monitoring Application. User collected data need to be protected from being tampered with and accessed by unauthorized individuals to keep data reliable and confidential.\\\\
+				\textbf{Mechanism}
+				\begin{enumerate}
+					\item Strategy: \\\\
+						Security can be achieved by:
+						\begin{itemize}
+							\item Authentication: The strategy is used to identify and confirm a user's identity.  
+							\item Encryption: Data is converted to a secure format that cannot be easily read by unauthorized individuals. 
+						\end{itemize}
+					\item Architectural Pattern(s):
+						\begin{itemize}
+							\item Layering: This pattern decouples the system by dividing it into components (layers) that communicate with each other through message requests and responses, this control the access of the user level layer from directly make request to lower layers that provides critical data. 
+						\end{itemize}
+				\end{enumerate}		
+		%New Page
+		\subsubsection{Important Quality Requirements}
+			\subsubsection*{Maintainability}
+			\textbf{Description}\\\\
+			A modular system design is used for this system so that components can be easily added and removed.\\\\
+			\textbf{Justification}\\\\
+			The dashboard application must be decoupled into components that are easy to maintain and makes the system more adaptable. Decoupling the system will also ensure that it easy to do unit testing and integration testing.\\\\
+			\textbf{Mechanism}
+			\begin{enumerate}
+				\item Strategy:\\\\
+				Maintainability ca be achieved by:
+				\begin{itemize}
+				\item Decoupling: This strategy break the system into manageable components to achieve a proper structure and maintainable system.  
+				\end{itemize}
+				\item Architectural Patterns(s):
+				\begin{itemize}
+				\item Microkernel: The microkernel pattern improves maintainability because is separates high level services  from low level services that is, it divides the systems into components that are maintainable and also allow for components to be easily removed or added to the system.
+				\end{itemize}
+			\end{enumerate}
+			\newpage
+			\subsubsection*{Performance}
+			\textbf{Description}\\\\
+			Performance is a measure of a system responsiveness when executing some action.\\\\
+			\textbf{Justification}\\\\
+			The dashboard application need use resources efficiently to increase the performance of the application which is an important quality requirement that will also make the system more reliable and increase throughput of the application.\\\\
+			\textbf{Mechanism}
+			\begin{enumerate}
+				\item Strategy:\\\\
+				Performance can be achieved by:
+				\begin{itemize}
+				\item Dynamic code optimization: This strategy focuses on the code design, quality and efficiency to improve performance on the system.  
+				\end{itemize}
+			\end{enumerate}	
+			
+		\newpage
+		%New Page
+		\subsubsection{Nice-To-Have Quality Requirements}
+			\subsubsection*{Testability}
+			\textbf{Description}\\\\
+			Testability is a measure of how well a system allows one to test if a certain criteria is met by the system. This makes fault detection in the system easy and also the faults can be isolated in a timely manner.\\\\
+			\textbf{Justification}\\\\
+			It is vital that every component that is deployed on the system can be tested using unit testing and also integration testing so that faults can be detected as soon as possible and be fixed. \\\\
+			\textbf{Mechanism}
+			\begin{enumerate}
+				\item Strategy:\\\\
+				\begin{itemize}
+				\item White-box: This tactic is mainly used for unit testing and require the knowledge of the the application internal structure to create test cases for the application components.
+				\item Black-box: This tactic is mainly used for integration testing, it examines the functionality of the application against the specification and simplifies system components testing when plugged in a modular system.
+				\end{itemize}
+				\item Architectural Patterns(s):
+				\begin{itemize}
+				\item Model View Controller: This pattern promotes separation of concern in a system by decoupling the system into components that can be tested independently.   
+				\end{itemize}
+			\end{enumerate}	
+    \newpage
+    \subsection{Architectural Patterns or Styles}
+    \subsubsection{Model View Controller (MVC)}
+    \textbf{Description}\\\\
+    Separates the applications concerns by separating the following responsibilities:
+    \begin{itemize}
+    \item Model: Provide business services and data.
+    \item View: Provide view for information.
+    \item Controller: Reacts to user events. 
+    \end{itemize}
+    \textbf{Justification}\\\\
+    This pattern separate the system's concerns into components that can evolve independently which reduce the applications complexity.\\\\
+    \textbf{Benefits}
+    \begin{itemize}
+    \item Simplification
+    \item Improve maintainability
+    \item Improve reuse
+    \item Improve testability 
+	\end{itemize} 
+	
+	\newpage
+	\subsubsection{Layered Architecture}
+	\textbf{Description}\\\\
+	Partitions the applications concerns into a stacked group of layers.\\\\
+	\textbf{Justification}\\\\
+	Provides high level of abstraction which allows the application components to vary, this decouples the system which reduce complexity and improve the systems performance which is the objective for the Mobile Monitoring Application dashboard\\\\
+	\textbf{Benefits}
+	\begin{itemize}
+	\item Improve cohesion
+	\item Reduce complexity
+	\item Improve maintainability
+	\item Loose coupling
+	\item Improve testability
+	\item Improve reuse
+	\end{itemize}
+	\newpage
+	\subsection{Access and Integration Channels}
+	\subsubsection{Access Channels}
+	\subsubsection*{Human Access Channel}
+	Human access channels addresses all the different ways in which a human can interact with the Mobile Monitoring Application.\\\\ The dashboard application is accessible through a web browser, hence can be access using any of the following devices: 
+	\begin{itemize}
+		\item Desktop Computer
+		\item Mobile Device
+		\item Tablet
+		\item Laptop  
+	\end{itemize}
+	\subsubsection{Integration Channels}
+	\subsubsection*{Channels}
+	The dashboard application will need to access a MySQL database to read user information and data logs from device.    	\subsubsection*{Protocols}
+	The dashboard application will use the following protocols:
+	\begin{itemize}
+	\item HTTPS: This protocol will be used for security to ensure that a secure connection is maintained between the application and server and also that transported data cannot be easily intercepted.
+	\item SMTP: Notifications for user forgotten password will use this protocol to allow user recover their information.  
+	\end{itemize}	 
+	\newpage
+	\subsection{Technologies}
+	\subsubsection{Platform}
+	\begin{itemize}
+	\item JavaEE
+	\end{itemize}
+	\subsubsection{APIs}
+	\begin{itemize}
+	\item JAX-RS 2.0
+	\item JPA (Java Persistence API)
+	\item JTA (Java Transition API)
+	\end{itemize}
+	\subsubsection{Persistence Provider}
+	\begin{itemize}
+	\item Hibernate
+	\end{itemize}
+	\subsubsection{Application Server}
+	\begin{itemize}
+	\item GlassFish 
+	\end{itemize}
+	\subsubsection{Programming Languages}
+	\begin{itemize}
+	\item Java
+	\end{itemize}
+	\subsubsection{Frameworks}
+	\begin{itemize}
+	\item JUnit
+	\end{itemize}
+	\subsubsection{Dependency Injector}
+	\begin{itemize}
+	\item CDI (Context and Dependency Injector)
+	\end{itemize}
+	\subsubsection{Dependency Management}
+	\begin{itemize}
+	\item Apache Maven
+	\end{itemize}
+	\subsubsection{Databases}
+	\begin{itemize}
+	\item MySQL relational database
+	\end{itemize}
+	\subsubsection{Web services}
+	\begin{itemize}
+	\item REST
+	\end{itemize}
+	\subsubsection{Others}
+	\begin{itemize}
+	\item JSON
+	\item Java Server Faces
+	\item Servlets
+	\end{itemize}		
 \end{document}
