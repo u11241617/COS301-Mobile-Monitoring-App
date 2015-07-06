@@ -13,6 +13,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import the5concurrentnodes.controllers.SmsServiceHandler;
+
 
 public class MainActivity extends Activity {
 
@@ -81,6 +83,7 @@ public class MainActivity extends Activity {
             finish();
         }
 
+        SmsServiceHandler.getInstance().startService(getApplicationContext());
     }
 
 }
