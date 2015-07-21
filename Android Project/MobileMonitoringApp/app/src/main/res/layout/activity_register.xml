@@ -140,8 +140,9 @@
         android:textColor="@color/white"
         android:textSize="22sp"
         android:text="@string/sign_in"
-        android:background="@color/green"
+        android:background="@drawable/button_selector"
         android:layout_marginTop="10dp"
+        android:enabled="false"
         android:layout_marginBottom="10dp"/>
 
     <LinearLayout
