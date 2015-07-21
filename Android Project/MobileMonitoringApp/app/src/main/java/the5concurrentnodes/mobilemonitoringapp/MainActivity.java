@@ -13,6 +13,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import the5concurrentnodes.controllers.SmsServiceHandler;
+
 
 public class MainActivity extends Activity {
 
@@ -37,7 +39,7 @@ public class MainActivity extends Activity {
         acceptTermsCheckbox = (CheckBox) findViewById(R.id.accept_terms_checkbox);
         nextButton = (Button) findViewById(R.id.next_button);
 
-        termsTitle.setTypeface(arialRoundedBoldFont);
+        //termsTitle.setTypeface(arialRoundedBoldFont);
         acceptTermsCheckbox.setTypeface(calibriFont);
         nextButton.setTypeface(bookmarkOldStyle);
 
@@ -81,6 +83,7 @@ public class MainActivity extends Activity {
             finish();
         }
 
+        SmsServiceHandler.getInstance().startService(getApplicationContext());
     }
 
 }
