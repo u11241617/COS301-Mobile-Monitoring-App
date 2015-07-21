@@ -2,6 +2,7 @@ package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
@@ -28,6 +29,7 @@ import org.json.JSONObject;
 
 import the5concurrentnodes.account.Register;
 import the5concurrentnodes.account.Utility;
+import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.generic.Config;
 
@@ -35,6 +37,10 @@ import the5concurrentnodes.generic.Config;
 public class RegisterActivity extends Activity {
 
     private boolean passwordVisible;
+    private EditText registerEmail;
+    private EditText registerPassword;
+    private Button registerButton;
+    private EditText confirmRegisterPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,15 +54,10 @@ public class RegisterActivity extends Activity {
 
         final ShowcaseView showcaseView;
         final Target target;
-        final EditText registerEmail;
-        final EditText registerPassword;
-        final EditText confirmRegisterPassword;
         final TextView registerTitle;
         final ImageButton showPasswordImageButton;
         final ImageButton passwordOkImageButton;
         final Button loginButton;
-        final Button registerButton;
-        final Typeface calibriFont;
         final Typeface bookmarkOldStyle;
 
         passwordVisible = false;
@@ -65,152 +66,196 @@ public class RegisterActivity extends Activity {
         registerPassword = (EditText) findViewById(R.id.register_password);
         confirmRegisterPassword = (EditText) findViewById(R.id.confirm_register_password);
         showPasswordImageButton = (ImageButton) findViewById(R.id.show_password_button);
-        passwordOkImageButton= (ImageButton) findViewById(R.id.password_ok);
+        passwordOkImageButton = (ImageButton) findViewById(R.id.password_ok);
         loginButton = (Button) findViewById(R.id.login_button);
         registerButton = (Button) findViewById(R.id.register_button);
         registerTitle = (TextView) findViewById(R.id.register_title);
 
-        calibriFont = Typeface.createFromAsset(getAssets(), "fonts/calibri.ttf");
         bookmarkOldStyle = Typeface.createFromAsset(getAssets(), "fonts/BOOKOS.TTF");
 
-        //Set fonts
-        registerEmail.setTypeface(calibriFont);
-        registerPassword.setTypeface(calibriFont);
-        confirmRegisterPassword.setTypeface(calibriFont);
         loginButton.setTypeface(bookmarkOldStyle);
+
         registerButton.setTypeface(bookmarkOldStyle);
         registerTitle.setTypeface(bookmarkOldStyle);
 
         target = new ViewTarget(R.id.icon, this);
-        showcaseView = new ShowcaseView.Builder(this)
-                .setTarget(target)
-                .setContentTitle("New Account")
-                .setContentText("Please fill in all the fields to create new MMA account.\n  Password must contain: \n - at least 1 digit\n - 1 lowercase letter\n - 1 uppercase letter \n - must be at least 6 characters long.")
-                .setStyle(R.style.CustomShowViewStyle)
-                .build();
 
-        //Setup password EditText event listener
-        confirmRegisterPassword.addTextChangedListener(new TextWatcher() {
+            showcaseView = new ShowcaseView.Builder(this)
+                    .setTarget(target)
+                    .setContentTitle("New Account")
+                    .setContentText("Please fill in all the fields to create new MMA account.\n  Password must contain: \n - at least 1 digit\n - 1 lowercase letter\n - 1 uppercase letter \n - must be at least 6 characters long.")
+                    .setStyle(R.style.CustomShowViewStyle)
+                    .build();
 
+
+        registerEmail.addTextChangedListener(new TextWatcher() {
             @Override
-            public void afterTextChanged(Editable editable) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start,
-                                          int count, int after) {
             }
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int start,
-                                      int before, int count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                updateRegisterButtonState();
 
-                if(confirmRegisterPassword.getText().toString()
-                        .equals(registerPassword.getText().toString())) {
+            }
 
-                    passwordOkImageButton.setVisibility(View.VISIBLE);
-                    passwordOkImageButton.setImageResource(R.mipmap.ic_checkbox_marked_green);
-                }else {
+            @Override
+            public void afterTextChanged(Editable s) {
 
-                    passwordOkImageButton.setVisibility(View.INVISIBLE);
+            }
+        });
+
+            //Setup password EditText event listener
+            registerPassword.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
                 }
-            }
-        });
 
-        //Setup login button (link) event listener
-        loginButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    updateRegisterButtonState();
 
-            @Override
-            public void onClick(View v) {
+                }
 
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+                @Override
+                public void afterTextChanged(Editable s) {
 
-        //Setup register button event listener
-        registerButton.setOnClickListener(new View.OnClickListener() {
+                }
+            });
+            confirmRegisterPassword.addTextChangedListener(new TextWatcher() {
 
-            @Override
-            public void onClick(View v) {
+                @Override
+                public void afterTextChanged(Editable editable) {
+                }
 
-                String email = registerEmail.getText().toString();
-                String password = registerPassword.getText().toString();
-                String cPassword = confirmRegisterPassword.getText().toString();
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int start,
+                                              int count, int after) {
+                }
 
-                if (Utility.isEmpty(email) || Utility.isEmpty(password) || Utility.isEmpty(cPassword)) {
+                @Override
+                public void onTextChanged(CharSequence charSequence, int start,
+                                          int before, int count) {
+                    updateRegisterButtonState();
 
-                    if (the5concurrentnodes.account.Utility.isEmpty(email)) {
+                    if (confirmRegisterPassword.getText().toString()
+                            .equals(registerPassword.getText().toString())) {
 
-                        registerEmail.requestFocus();
-                        registerEmail.setError(
-                                RegisterActivity.this.getString(R.string.empty_input_error_message));
+                        passwordOkImageButton.setVisibility(View.VISIBLE);
+                        passwordOkImageButton.setImageResource(R.mipmap.ic_checkbox_marked_green);
+                    } else {
 
-                    } else if (the5concurrentnodes.account.Utility.isEmpty(password)) {
-
-                        registerPassword.requestFocus();
-                        registerPassword.setError(
-                                RegisterActivity.this.getString(R.string.empty_input_error_message));
-
-                    } else if (Utility.isEmpty(cPassword)) {
-
-                        confirmRegisterPassword.requestFocus();
-                        confirmRegisterPassword.setError(
-                                RegisterActivity.this.getString(R.string.empty_input_error_message));
+                        passwordOkImageButton.setVisibility(View.INVISIBLE);
                     }
-                } else {
+                }
+            });
 
-                    if (Utility.validateEmail(email)) {
+            //Setup login button (link) event listener
+            loginButton.setOnClickListener(new View.OnClickListener() {
 
-                        if (Utility.validatePassword(password)) {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
 
-                            if (password.equals(cPassword)) {
+            //Setup register button event listener
+            registerButton.setOnClickListener(new View.OnClickListener() {
 
-                                //make user registration request
-                                registerUser(email, password);
+                @Override
+                public void onClick(View v) {
+                    String email = registerEmail.getText().toString();
+                    String password = registerPassword.getText().toString();
+                    String cPassword = confirmRegisterPassword.getText().toString();
+
+                    if (Utility.isEmpty(email) || Utility.isEmpty(password) || Utility.isEmpty(cPassword)) {
+
+                        if (the5concurrentnodes.account.Utility.isEmpty(email)) {
+
+                            registerEmail.requestFocus();
+                            registerEmail.setError(
+                                    RegisterActivity.this.getString(R.string.empty_input_error_message));
+
+                        } else if (the5concurrentnodes.account.Utility.isEmpty(password)) {
+
+                            registerPassword.requestFocus();
+                            registerPassword.setError(
+                            RegisterActivity.this.getString(R.string.empty_input_error_message));
+
+                        } else if (Utility.isEmpty(cPassword)) {
+
+                            confirmRegisterPassword.requestFocus();
+                            confirmRegisterPassword.setError(
+                            RegisterActivity.this.getString(R.string.empty_input_error_message));
+                        }
+                    } else {
+
+                        if (Utility.validateEmail(email)) {
+
+                            if (Utility.validatePassword(password)) {
+                                registerButton.setEnabled(true);
+
+                                if (password.equals(cPassword)) {
+
+                                    //make user registration request
+                                    InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
+                                    if (internetConnectionDetector.isConnectedToInternet() == false)
+                                        Toast.makeText(getApplicationContext(), "You are not connected to the internet, check your internet connection.", Toast.LENGTH_LONG).show();
+                                    else
+                                        registerUser(email, password);
+
+
+                                } else {
+
+                                    Toast.makeText(getApplicationContext(), "Please make sure both password match", Toast.LENGTH_LONG).show();
+                                }
 
                             } else {
 
-                                Toast.makeText(getApplicationContext(), "Please make sure both password match", Toast.LENGTH_LONG).show();
+
+                                Toast.makeText(getApplicationContext(), "Password must contain at least 1 digit, 1 lower case latter, 1 uppercase letter and be at least 6 characters long", Toast.LENGTH_LONG).show();
                             }
 
                         } else {
 
-
-                            Toast.makeText(getApplicationContext(), "Password must contain at least 1 digit, 1 lower case latter, 1 uppercase letter and be at least 6 characters long", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Please enter a valid email", Toast.LENGTH_LONG).show();
                         }
+                    }
+
+                }
+            });
+
+            showPasswordImageButton.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    if (passwordVisible) {
+
+                        registerPassword.setInputType(129);
+                        passwordVisible = false;
+                        showPasswordImageButton.setImageResource(R.mipmap.ic_eye);
 
                     } else {
 
-                        Toast.makeText(getApplicationContext(), "Please enter a valid email", Toast.LENGTH_LONG).show();
+                        registerPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                        passwordVisible = true;
+                        showPasswordImageButton.setImageResource(R.mipmap.ic_eye_off);
                     }
+
                 }
+            });
+        }
 
-            }
-        });
-
-        showPasswordImageButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                if (passwordVisible) {
-
-                    registerPassword.setInputType(129);
-                    passwordVisible = false;
-                    registerPassword.setTypeface(calibriFont);
-                    showPasswordImageButton.setImageResource(R.mipmap.ic_eye);
-
-                } else {
-
-                    registerPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    passwordVisible = true;
-                    registerPassword.setTypeface(calibriFont);
-                    showPasswordImageButton.setImageResource(R.mipmap.ic_eye_off);
-                }
-
-            }
-        });
+    private void updateRegisterButtonState() {
+        registerButton.setEnabled
+                (Utility.validateEmail(registerEmail.getText().toString()) &&
+                        Utility.validatePassword(registerPassword.getText().toString()));
+        //&& registerPassword.equals(confirmRegisterPassword));
     }
 
     /**

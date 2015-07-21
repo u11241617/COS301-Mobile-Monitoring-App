@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
         acceptTermsCheckbox = (CheckBox) findViewById(R.id.accept_terms_checkbox);
         nextButton = (Button) findViewById(R.id.next_button);
 
-        termsTitle.setTypeface(arialRoundedBoldFont);
+        //termsTitle.setTypeface(arialRoundedBoldFont);
         acceptTermsCheckbox.setTypeface(calibriFont);
         nextButton.setTypeface(bookmarkOldStyle);
 
