@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2015 at 08:16 PM
+-- Generation Time: Jul 22, 2015 at 07:18 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -33,6 +33,14 @@ CREATE TABLE IF NOT EXISTS `accessleveltb` (
   `description` varchar(300) COLLATE utf16_bin NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
+--
+-- Dumping data for table `accessleveltb`
+--
+
+INSERT INTO `accessleveltb` (`accessLevelID`, `description`) VALUES
+(1, 'Administrator'),
+(2, 'User');
+
 -- --------------------------------------------------------
 
 --
@@ -40,10 +48,18 @@ CREATE TABLE IF NOT EXISTS `accessleveltb` (
 --
 
 CREATE TABLE IF NOT EXISTS `browsertb` (
-  `browserID` int(100) NOT NULL COMMENT 'This can be the browser release version',
-  `visitedWebsiteID` varchar(150) COLLATE utf16_bin NOT NULL,
+  `browserID` int(100) NOT NULL,
   `name` varchar(150) COLLATE utf16_bin NOT NULL COMMENT 'Actual name of browser'
-) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin COMMENT='The reason for seperating visitedWebsiteTb and browsertb is to eliminate a *..*';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 COLLATE=utf16_bin COMMENT='The reason for seperating visitedWebsiteTb and browsertb is to eliminate a *..*';
+
+--
+-- Dumping data for table `browsertb`
+--
+
+INSERT INTO `browsertb` (`browserID`, `name`) VALUES
+(1, 'Chrome'),
+(2, 'Opera Mini'),
+(3, 'Internet');
 
 -- --------------------------------------------------------
 
@@ -53,6 +69,8 @@ CREATE TABLE IF NOT EXISTS `browsertb` (
 
 CREATE TABLE IF NOT EXISTS `calltb` (
   `callID` int(100) NOT NULL,
+  `deviceID` int(100) NOT NULL,
+  `type` varchar(20) COLLATE utf16_bin NOT NULL COMMENT 'Recieved or Missed or Dailed',
   `source` int(15) NOT NULL,
   `destination` int(15) NOT NULL,
   `datetime` datetime NOT NULL,
@@ -67,28 +85,12 @@ CREATE TABLE IF NOT EXISTS `calltb` (
 
 CREATE TABLE IF NOT EXISTS `devicetb` (
   `deviceID` int(100) NOT NULL COMMENT 'This is the device IMEI number (cant be null)',
-  `smsID` int(100) NOT NULL COMMENT 'Reference to the table',
-  `callID` int(100) NOT NULL COMMENT 'Reference to the table',
-  `browserID` int(100) NOT NULL COMMENT 'Reference to the table',
+  `userID` int(100) NOT NULL,
   `make` varchar(300) COLLATE utf16_bin NOT NULL COMMENT 'e.g Samsung',
   `model` varchar(300) COLLATE utf16_bin NOT NULL COMMENT 'e.g Galaxy Note 2',
   `os` varchar(300) COLLATE utf16_bin NOT NULL COMMENT 'e.g Android',
   `network` varchar(300) COLLATE utf16_bin NOT NULL COMMENT 'e.g Vodacom'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin COMMENT='This table consists of the basic mobile device info';
-
--- --------------------------------------------------------
-
---
--- Table structure for table `profiletb`
---
-
-CREATE TABLE IF NOT EXISTS `profiletb` (
-  `profileID` int(11) NOT NULL,
-  `deviceID` int(100) NOT NULL,
-  `name` varchar(300) COLLATE utf16_bin NOT NULL,
-  `surname` varchar(300) COLLATE utf16_bin NOT NULL,
-  `gender` varchar(2) COLLATE utf16_bin NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf16 COLLATE=utf16_bin COMMENT='Stores the user details';
 
 -- --------------------------------------------------------
 
@@ -99,6 +101,7 @@ CREATE TABLE IF NOT EXISTS `profiletb` (
 CREATE TABLE IF NOT EXISTS `smstb` (
   `smsID` int(100) NOT NULL COMMENT 'Each sms needs to have an ID in order to track them',
   `deviceID` int(11) NOT NULL COMMENT 'References mobile device',
+  `type` varchar(20) COLLATE utf16_bin NOT NULL COMMENT 'Recieved or Sent',
   `source` varchar(300) COLLATE utf16_bin NOT NULL,
   `destination` varchar(300) COLLATE utf16_bin NOT NULL,
   `datetime` datetime NOT NULL
@@ -113,10 +116,9 @@ CREATE TABLE IF NOT EXISTS `smstb` (
 CREATE TABLE IF NOT EXISTS `usertb` (
   `userID` int(100) NOT NULL,
   `accessLevelID` int(100) NOT NULL,
-  `profileID` int(100) NOT NULL,
   `email` varchar(300) COLLATE utf16_bin NOT NULL,
   `password` varchar(300) COLLATE utf16_bin NOT NULL,
-  `firstLogin` tinyint(1) NOT NULL
+  `firstLogin` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
@@ -126,7 +128,10 @@ CREATE TABLE IF NOT EXISTS `usertb` (
 --
 
 CREATE TABLE IF NOT EXISTS `visitedwebsitetb` (
-  `visitedWebsiteID` varchar(150) COLLATE utf16_bin NOT NULL COMMENT 'The value here should be the website URL',
+  `visitedWebsiteID` int(150) NOT NULL COMMENT 'The value here should be the website URL',
+  `deviceID` int(11) NOT NULL,
+  `browserID` int(100) NOT NULL,
+  `url` varchar(150) COLLATE utf16_bin NOT NULL,
   `dateTime` datetime NOT NULL,
   `frequency` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin COMMENT='This table is needed in order to cross reference browsing activities';
@@ -145,43 +150,37 @@ ALTER TABLE `accessleveltb`
 -- Indexes for table `browsertb`
 --
 ALTER TABLE `browsertb`
-  ADD PRIMARY KEY (`browserID`), ADD KEY `visitedWebsiteID` (`visitedWebsiteID`);
+  ADD PRIMARY KEY (`browserID`);
 
 --
 -- Indexes for table `calltb`
 --
 ALTER TABLE `calltb`
-  ADD PRIMARY KEY (`callID`);
+  ADD PRIMARY KEY (`callID`), ADD KEY `deviceID` (`deviceID`);
 
 --
 -- Indexes for table `devicetb`
 --
 ALTER TABLE `devicetb`
-  ADD PRIMARY KEY (`deviceID`), ADD KEY `smsID` (`smsID`), ADD KEY `phoneID` (`callID`), ADD KEY `browserID` (`browserID`);
-
---
--- Indexes for table `profiletb`
---
-ALTER TABLE `profiletb`
-  ADD PRIMARY KEY (`profileID`), ADD KEY `deviceID` (`deviceID`), ADD KEY `deviceID_2` (`deviceID`);
+  ADD PRIMARY KEY (`deviceID`), ADD KEY `userID` (`userID`);
 
 --
 -- Indexes for table `smstb`
 --
 ALTER TABLE `smstb`
-  ADD PRIMARY KEY (`smsID`);
+  ADD PRIMARY KEY (`smsID`), ADD KEY `deviceID` (`deviceID`);
 
 --
 -- Indexes for table `usertb`
 --
 ALTER TABLE `usertb`
-  ADD PRIMARY KEY (`userID`), ADD KEY `accessLevelID` (`accessLevelID`), ADD KEY `profileID` (`profileID`);
+  ADD PRIMARY KEY (`userID`), ADD KEY `accessLevelID` (`accessLevelID`);
 
 --
 -- Indexes for table `visitedwebsitetb`
 --
 ALTER TABLE `visitedwebsitetb`
-  ADD PRIMARY KEY (`visitedWebsiteID`);
+  ADD PRIMARY KEY (`visitedWebsiteID`), ADD KEY `browserID` (`browserID`), ADD KEY `deviceID` (`deviceID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -196,7 +195,7 @@ ALTER TABLE `accessleveltb`
 -- AUTO_INCREMENT for table `browsertb`
 --
 ALTER TABLE `browsertb`
-  MODIFY `browserID` int(100) NOT NULL AUTO_INCREMENT COMMENT 'This can be the browser release version';
+  MODIFY `browserID` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `calltb`
 --
@@ -208,11 +207,6 @@ ALTER TABLE `calltb`
 ALTER TABLE `devicetb`
   MODIFY `deviceID` int(100) NOT NULL AUTO_INCREMENT COMMENT 'This is the device IMEI number (cant be null)';
 --
--- AUTO_INCREMENT for table `profiletb`
---
-ALTER TABLE `profiletb`
-  MODIFY `profileID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
 -- AUTO_INCREMENT for table `smstb`
 --
 ALTER TABLE `smstb`
@@ -223,35 +217,44 @@ ALTER TABLE `smstb`
 ALTER TABLE `usertb`
   MODIFY `userID` int(100) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `visitedwebsitetb`
+--
+ALTER TABLE `visitedwebsitetb`
+  MODIFY `visitedWebsiteID` int(150) NOT NULL AUTO_INCREMENT COMMENT 'The value here should be the website URL';
+--
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `browsertb`
+-- Constraints for table `calltb`
 --
-ALTER TABLE `browsertb`
-ADD CONSTRAINT `browsertb_ibfk_1` FOREIGN KEY (`visitedWebsiteID`) REFERENCES `visitedwebsitetb` (`visitedWebsiteID`);
+ALTER TABLE `calltb`
+ADD CONSTRAINT `calltb_ibfk_1` FOREIGN KEY (`deviceID`) REFERENCES `devicetb` (`deviceID`);
 
 --
 -- Constraints for table `devicetb`
 --
 ALTER TABLE `devicetb`
-ADD CONSTRAINT `devicetb_ibfk_1` FOREIGN KEY (`smsID`) REFERENCES `smstb` (`smsID`),
-ADD CONSTRAINT `devicetb_ibfk_2` FOREIGN KEY (`callID`) REFERENCES `calltb` (`callID`),
-ADD CONSTRAINT `devicetb_ibfk_3` FOREIGN KEY (`browserID`) REFERENCES `browsertb` (`browserID`);
+ADD CONSTRAINT `devicetb_ibfk_4` FOREIGN KEY (`userID`) REFERENCES `usertb` (`userID`);
 
 --
--- Constraints for table `profiletb`
+-- Constraints for table `smstb`
 --
-ALTER TABLE `profiletb`
-ADD CONSTRAINT `profiletb_ibfk_1` FOREIGN KEY (`deviceID`) REFERENCES `devicetb` (`deviceID`);
+ALTER TABLE `smstb`
+ADD CONSTRAINT `smstb_ibfk_1` FOREIGN KEY (`deviceID`) REFERENCES `devicetb` (`deviceID`);
 
 --
 -- Constraints for table `usertb`
 --
 ALTER TABLE `usertb`
-ADD CONSTRAINT `usertb_ibfk_1` FOREIGN KEY (`accessLevelID`) REFERENCES `accessleveltb` (`accessLevelID`),
-ADD CONSTRAINT `usertb_ibfk_2` FOREIGN KEY (`profileID`) REFERENCES `profiletb` (`profileID`);
+ADD CONSTRAINT `usertb_ibfk_1` FOREIGN KEY (`accessLevelID`) REFERENCES `accessleveltb` (`accessLevelID`);
+
+--
+-- Constraints for table `visitedwebsitetb`
+--
+ALTER TABLE `visitedwebsitetb`
+ADD CONSTRAINT `visitedwebsitetb_ibfk_1` FOREIGN KEY (`browserID`) REFERENCES `browsertb` (`browserID`),
+ADD CONSTRAINT `visitedwebsitetb_ibfk_2` FOREIGN KEY (`deviceID`) REFERENCES `devicetb` (`deviceID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
