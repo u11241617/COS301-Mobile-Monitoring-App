@@ -36,8 +36,10 @@ import java.util.Map;
 import the5concurrentnodes.account.Register;
 import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
+import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.generic.Config;
+import the5concurrentnodes.models.DeviceInfo;
 
 
 public class RegisterActivity extends Activity {
@@ -236,27 +238,62 @@ public class RegisterActivity extends Activity {
      */
     public void registerUser(final String email, final String password) {
 
-        String url = "http://5e2a3fc1.ngrok.io/Dashboard/resources/account/register";
+        String url = Config.REST_API + "/register";
 
-        Map<String, String> jsonParams = new HashMap<>();
-        jsonParams.put("email", email);
-        jsonParams.put("password", password);
+        JSONObject jsonParams = new JSONObject();
+
+        try{
+
+            jsonParams.put("email", email);
+            jsonParams.put("password", password);
+
+            JSONObject deviceInfoParams = new JSONObject();
+            DeviceInfo deviceInfo = new DeviceInfo(getApplicationContext());
+
+            deviceInfoParams.put("model", deviceInfo.getModel());
+            deviceInfoParams.put("make", deviceInfo.getManufacturer());
+            deviceInfoParams.put("os", "Samsung");
+            deviceInfoParams.put("network", deviceInfo.getCarrierName());
+            deviceInfoParams.put("imeNumber", deviceInfo.getIMEI());
+
+            jsonParams.put("deviceInfo", deviceInfoParams.toString());
+
+
+        }catch(JSONException e){}
+
+
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
-                url, new JSONObject(jsonParams), new Response.Listener<JSONObject>() {
+                url, jsonParams, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject jsonObject) {
 
                 progressDialog.dismiss();
-                Toast.makeText(getApplicationContext(), "Account registered now!: " + jsonObject.toString() , Toast.LENGTH_LONG).show();
-                Log.d("ER_NET", jsonObject.toString());
+
+                try{
+
+                    if(jsonObject.getBoolean("status")) {
+
+                        UserSessionStorage userSessionStorage = new UserSessionStorage(getApplicationContext());
+                        userSessionStorage.createSession(jsonObject.getString("access_token"));
+
+                    }else {
+
+                        Toast.makeText(getApplicationContext(),
+                                jsonObject.getString("message"),
+                                Toast.LENGTH_LONG).show();
+                    }
+
+                }catch(JSONException e){}
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
 
                 progressDialog.dismiss();
-                Log.d("ERROR_NET", error.toString());
+                Toast.makeText(getApplicationContext(),
+                        RegisterActivity.this.getResources().getString(R.string.request_unknown_error),
+                        Toast.LENGTH_LONG).show();
             }
         });
 
@@ -292,7 +329,9 @@ public class RegisterActivity extends Activity {
                         Toast.makeText(getApplicationContext(), "Account registered!: " , Toast.LENGTH_LONG).show();
                     }else { //Provided email already registered
 
-                        Toast.makeText(getApplicationContext(), "Provided email is already registered, please login" , Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),
+                                RegisterActivity.this.getResources().getString(R.string.request_unknown_error),
+                                Toast.LENGTH_LONG).show();
                     }
                 }catch (JSONException e){}
             }
