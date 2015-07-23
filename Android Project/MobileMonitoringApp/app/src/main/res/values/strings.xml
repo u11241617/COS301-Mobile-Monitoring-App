@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mobile Monitoring App</string>
+    <string name="app_name">iCrawler</string>
 
     <string name="action_settings">Settings</string>
     <string name="email">Email</string>
@@ -23,5 +23,7 @@
     <string name="empty_input_error_message">Please fill out this field.</string>
     <string name="icon_description">App icon</string>
     <string name="forgot_password"><u>Forgot password?</u></string>
+    <string name="progress_signing_in">Signing in</string>
+    <string name="progress_signing_up">Signing up</string>
 
 </resources>
