@@ -7,7 +7,7 @@ import android.util.Log;
 
 import the5concurrentnodes.mmaData.sms.SmsListener;
 import the5concurrentnodes.mmaData.sms.SmsService;
-import the5concurrentnodes.models.Sms;
+import the5concurrentnodes.mmaData.sms.Sms;
 
 public class SmsServiceHandler implements SmsListener {
 

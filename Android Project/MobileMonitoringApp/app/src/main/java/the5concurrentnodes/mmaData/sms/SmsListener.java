@@ -1,7 +1,5 @@
 package the5concurrentnodes.mmaData.sms;
 
-import the5concurrentnodes.models.Sms;
-
 /**
  * Defines methods triggered when SMS's are sent or received
  */

