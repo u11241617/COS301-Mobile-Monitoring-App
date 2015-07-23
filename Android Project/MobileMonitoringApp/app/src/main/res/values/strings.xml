@@ -25,5 +25,6 @@
     <string name="forgot_password"><u>Forgot password?</u></string>
     <string name="progress_signing_in">Signing in</string>
     <string name="progress_signing_up">Signing up</string>
+    <string name="request_unknown_error">Unknown error occurred. Please check your internet connection</string>
 
 </resources>
