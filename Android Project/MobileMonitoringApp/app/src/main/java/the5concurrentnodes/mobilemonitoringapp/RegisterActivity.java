@@ -1,6 +1,7 @@
 package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
@@ -26,6 +29,9 @@ import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import the5concurrentnodes.account.Register;
 import the5concurrentnodes.account.Utility;
@@ -37,10 +43,12 @@ import the5concurrentnodes.generic.Config;
 public class RegisterActivity extends Activity {
 
     private boolean passwordVisible;
+    private Button registerButton;
     private EditText registerEmail;
     private EditText registerPassword;
-    private Button registerButton;
     private EditText confirmRegisterPassword;
+    private ImageButton passwordOkImageButton;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +64,6 @@ public class RegisterActivity extends Activity {
         final Target target;
         final TextView registerTitle;
         final ImageButton showPasswordImageButton;
-        final ImageButton passwordOkImageButton;
         final Button loginButton;
         final Typeface bookmarkOldStyle;
 
@@ -69,14 +76,8 @@ public class RegisterActivity extends Activity {
         passwordOkImageButton = (ImageButton) findViewById(R.id.password_ok);
         loginButton = (Button) findViewById(R.id.login_button);
         registerButton = (Button) findViewById(R.id.register_button);
-        registerTitle = (TextView) findViewById(R.id.register_title);
-
-        bookmarkOldStyle = Typeface.createFromAsset(getAssets(), "fonts/BOOKOS.TTF");
-
-        loginButton.setTypeface(bookmarkOldStyle);
-
-        registerButton.setTypeface(bookmarkOldStyle);
-        registerTitle.setTypeface(bookmarkOldStyle);
+        progressDialog = new ProgressDialog(RegisterActivity.this);
+        progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
 
         target = new ViewTarget(R.id.icon, this);
 
@@ -115,6 +116,7 @@ public class RegisterActivity extends Activity {
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    updatePasswordOkImageButtonState();
                     updateRegisterButtonState();
 
                 }
@@ -138,17 +140,8 @@ public class RegisterActivity extends Activity {
                 @Override
                 public void onTextChanged(CharSequence charSequence, int start,
                                           int before, int count) {
+                    updatePasswordOkImageButtonState();
                     updateRegisterButtonState();
-
-                    if (confirmRegisterPassword.getText().toString()
-                            .equals(registerPassword.getText().toString())) {
-
-                        passwordOkImageButton.setVisibility(View.VISIBLE);
-                        passwordOkImageButton.setImageResource(R.mipmap.ic_checkbox_marked_green);
-                    } else {
-
-                        passwordOkImageButton.setVisibility(View.INVISIBLE);
-                    }
                 }
             });
 
@@ -168,64 +161,19 @@ public class RegisterActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
+
                     String email = registerEmail.getText().toString();
                     String password = registerPassword.getText().toString();
-                    String cPassword = confirmRegisterPassword.getText().toString();
 
-                    if (Utility.isEmpty(email) || Utility.isEmpty(password) || Utility.isEmpty(cPassword)) {
+                    InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
 
-                        if (the5concurrentnodes.account.Utility.isEmpty(email)) {
+                    if (internetConnectionDetector.isConnectedToInternet() == false) {
+                        Toast.makeText(getApplicationContext(), "You are not connected to the internet, check your internet connection.", Toast.LENGTH_LONG).show();
+                    }else{
 
-                            registerEmail.requestFocus();
-                            registerEmail.setError(
-                                    RegisterActivity.this.getString(R.string.empty_input_error_message));
-
-                        } else if (the5concurrentnodes.account.Utility.isEmpty(password)) {
-
-                            registerPassword.requestFocus();
-                            registerPassword.setError(
-                            RegisterActivity.this.getString(R.string.empty_input_error_message));
-
-                        } else if (Utility.isEmpty(cPassword)) {
-
-                            confirmRegisterPassword.requestFocus();
-                            confirmRegisterPassword.setError(
-                            RegisterActivity.this.getString(R.string.empty_input_error_message));
-                        }
-                    } else {
-
-                        if (Utility.validateEmail(email)) {
-
-                            if (Utility.validatePassword(password)) {
-                                registerButton.setEnabled(true);
-
-                                if (password.equals(cPassword)) {
-
-                                    //make user registration request
-                                    InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
-                                    if (internetConnectionDetector.isConnectedToInternet() == false)
-                                        Toast.makeText(getApplicationContext(), "You are not connected to the internet, check your internet connection.", Toast.LENGTH_LONG).show();
-                                    else
-                                        registerUser(email, password);
-
-
-                                } else {
-
-                                    Toast.makeText(getApplicationContext(), "Please make sure both password match", Toast.LENGTH_LONG).show();
-                                }
-
-                            } else {
-
-
-                                Toast.makeText(getApplicationContext(), "Password must contain at least 1 digit, 1 lower case latter, 1 uppercase letter and be at least 6 characters long", Toast.LENGTH_LONG).show();
-                            }
-
-                        } else {
-
-                            Toast.makeText(getApplicationContext(), "Please enter a valid email", Toast.LENGTH_LONG).show();
-                        }
+                        progressDialog.show();
+                        registerUser(email, password);
                     }
-
                 }
             });
 
@@ -252,10 +200,33 @@ public class RegisterActivity extends Activity {
         }
 
     private void updateRegisterButtonState() {
-        registerButton.setEnabled
-                (Utility.validateEmail(registerEmail.getText().toString()) &&
-                        Utility.validatePassword(registerPassword.getText().toString()));
-        //&& registerPassword.equals(confirmRegisterPassword));
+
+        if((Utility.validateEmail(registerEmail.getText().toString())
+                && Utility.validatePassword(registerPassword.getText().toString()))
+                && (registerPassword.getText().toString().equals(confirmRegisterPassword.getText().toString()))) {
+
+            registerButton.setEnabled(true);
+
+        }else {
+
+            registerButton.setEnabled(false);
+        }
+    }
+
+    private void updatePasswordOkImageButtonState() {
+
+        if (confirmRegisterPassword.getText().toString()
+                .equals(registerPassword.getText().toString())
+                && !Utility.isEmpty(registerPassword.getText().toString())) {
+
+            passwordOkImageButton.setVisibility(View.VISIBLE);
+            passwordOkImageButton.setImageResource(R.mipmap.ic_checkbox_marked_green);
+
+        } else {
+
+            passwordOkImageButton.setVisibility(View.INVISIBLE);
+        }
+
     }
 
     /**
@@ -265,12 +236,33 @@ public class RegisterActivity extends Activity {
      */
     public void registerUser(final String email, final String password) {
 
-        String url = String.format(Config.REST_API + "/account/register?email=%s&password=%s",
-                email, password);
+        String url = "http://5e2a3fc1.ngrok.io/Dashboard/resources/account/register";
+
+        Map<String, String> jsonParams = new HashMap<>();
+        jsonParams.put("email", email);
+        jsonParams.put("password", password);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+                url, new JSONObject(jsonParams), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "Account registered now!: " + jsonObject.toString() , Toast.LENGTH_LONG).show();
+                Log.d("ER_NET", jsonObject.toString());
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                progressDialog.dismiss();
+                Log.d("ERROR_NET", error.toString());
+            }
+        });
+
 
         RequestQueue requestQueue = VolleyRequestQueue.getRequestQueue();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,requestSuccessListener(), requestErrorListener());
-        requestQueue.add(stringRequest);
+        requestQueue.add(jsonObjectRequest);
 
     }
 

@@ -1,6 +1,7 @@
 package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -40,6 +41,7 @@ public class LoginActivity extends Activity {
     private Button loginButton;
     private EditText loginEmail;
     private EditText loginPassword;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +49,9 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         overridePendingTransition(R.animator.activity_open_transition, R.animator.activity_close_scale);
 
-        final Typeface bookmarkOldStyle = Typeface.createFromAsset(getAssets(), "fonts/BOOKOS.TTF");
-
-
         final Button registerButton;
         final ImageButton showPasswordButton;
 
-
-
-        final TextView logonTitle = (TextView) findViewById(R.id.login_title);
 
         passwordVisible = false;
         sessionManager = new SessionManager(getApplicationContext());
@@ -65,11 +61,9 @@ public class LoginActivity extends Activity {
         loginButton = (Button) findViewById(R.id.login_button);
         registerButton = (Button) findViewById(R.id.register_button);
         showPasswordButton = (ImageButton) findViewById(R.id.show_password_button);
-
-        logonTitle.setTypeface(bookmarkOldStyle);
-
-        loginButton.setTypeface(bookmarkOldStyle);
-        registerButton.setTypeface(bookmarkOldStyle);
+        progressDialog = new ProgressDialog(LoginActivity.this);
+        progressDialog.setMessage(LoginActivity.this.getString(R.string.progress_signing_in));
+        progressDialog.setCancelable(false);
 
         loginEmail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -116,37 +110,22 @@ public class LoginActivity extends Activity {
 
         loginButton.setOnClickListener(new View.OnClickListener() {
 
-            String email = loginEmail.getText().toString();
-            String password = loginPassword.getText().toString();
-
             @Override
             public void onClick(View v) {
 
                 String userEmail = loginEmail.getText().toString();
                 String userPassword = loginPassword.getText().toString();
 
-                if (Utility.isEmpty(userEmail) || Utility.isEmpty(userPassword)) {
 
-                    if (Utility.isEmpty(userEmail)) {
 
-                        loginEmail.requestFocus();
-                        loginEmail.setError(
-                                LoginActivity.this.getString(R.string.empty_input_error_message));
-                    } else if (Utility.isEmpty(userPassword)) {
+                InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
+                if (internetConnectionDetector.isConnectedToInternet() == false) {
 
-                        loginPassword.requestFocus();
-                        loginPassword.setError(
-                                LoginActivity.this.getString(R.string.empty_input_error_message));
-                    }
+                    Toast.makeText(getApplicationContext(), "You are not connected to the internet, check your internet connection.", Toast.LENGTH_LONG).show();
+                }else {
 
-                } else
-                {
-                    InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
-                    if (internetConnectionDetector.isConnectedToInternet() == false)
-                        Toast.makeText(getApplicationContext(), "You are not connected to the internet, check your internet connection.", Toast.LENGTH_LONG).show();
-                    else
-                        loginUser(email, password);
-
+                    progressDialog.show();
+                    loginUser(userEmail, userPassword);
                 }
 
             }
@@ -230,6 +209,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onResponse(String response) {
 
+                progressDialog.dismiss();
                 try {
 
                     JSONObject jsonObject = new JSONObject(response);
@@ -265,6 +245,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
+                progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Error while making request.", Toast.LENGTH_LONG).show();
             }
         };

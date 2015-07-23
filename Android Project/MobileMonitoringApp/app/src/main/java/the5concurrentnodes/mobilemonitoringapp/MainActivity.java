@@ -38,11 +38,6 @@ public class MainActivity extends Activity {
         webView = (WebView) findViewById(R.id.web_view);
         acceptTermsCheckbox = (CheckBox) findViewById(R.id.accept_terms_checkbox);
         nextButton = (Button) findViewById(R.id.next_button);
-
-        //termsTitle.setTypeface(arialRoundedBoldFont);
-        acceptTermsCheckbox.setTypeface(calibriFont);
-        nextButton.setTypeface(bookmarkOldStyle);
-
         webView.loadUrl("file:///android_asset/pages/terms.html");
 
         acceptTermsCheckbox.setOnClickListener(new View.OnClickListener() {

@@ -5,4 +5,5 @@
     <color name="white">#ffffff</color>
     <color name="grey">#cccccc</color>
     <color name="group_stroke">#E6E6E6</color>
+    <color name="disabled_btn">#d3d3d3</color>
 </resources>

@@ -9,17 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/terms_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="28dp"
-        android:text="@string/terms_and_conditions"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -40,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:textSize="18sp"
         android:textColor="@color/black"
         android:text="@string/accept_terms_and_conditions"/>
@@ -50,6 +40,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_selector"
         android:enabled="false"
+        android:textColor="@color/white"
         android:text="@string/next"/>
 
     </LinearLayout>
