@@ -1,4 +1,4 @@
-package the5concurrentnodes.models;
+package the5concurrentnodes.mmaData.deviceInfo;
 
 import android.content.Context;
 import android.os.Build;
