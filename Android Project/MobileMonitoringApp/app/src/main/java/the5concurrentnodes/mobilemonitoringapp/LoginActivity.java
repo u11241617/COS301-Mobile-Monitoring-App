@@ -26,6 +26,7 @@ import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
+import the5concurrentnodes.dialogs.RegisterLoginDialog;
 import the5concurrentnodes.generic.Config;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
@@ -201,6 +202,9 @@ public class LoginActivity extends Activity {
                     {
                         UserSessionStorage userSessionStorage = new UserSessionStorage(getApplicationContext());
                         userSessionStorage.createSession(jsonObject.getString("access_token"));
+
+                        RegisterLoginDialog dialog = new RegisterLoginDialog();
+                        dialog.show(getFragmentManager(), null);
 
                     } else
                         Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_LONG).show();

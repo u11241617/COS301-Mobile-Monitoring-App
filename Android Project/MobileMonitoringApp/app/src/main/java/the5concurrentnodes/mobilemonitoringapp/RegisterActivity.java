@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +33,8 @@ import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
+import the5concurrentnodes.dialogs.HelpDialog;
+import the5concurrentnodes.dialogs.RegisterLoginDialog;
 import the5concurrentnodes.generic.Config;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
@@ -55,9 +59,6 @@ public class RegisterActivity extends Activity {
         VolleyRequestQueue.init(getApplicationContext());
 
 
-        final ShowcaseView showcaseView;
-        final Target target;
-        final TextView registerTitle;
         final ImageButton showPasswordImageButton;
         final Button loginButton;
         final Typeface bookmarkOldStyle;
@@ -74,127 +75,124 @@ public class RegisterActivity extends Activity {
         progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
 
-        target = new ViewTarget(R.id.icon, this);
-
-            showcaseView = new ShowcaseView.Builder(this)
-                    .setTarget(target)
-                    .setContentTitle("New Account")
-                    .setContentText("Please fill in all the fields to create new MMA account.\n  Password must contain: \n - at least 1 digit\n - 1 lowercase letter\n - 1 uppercase letter \n - must be at least 6 characters long.")
-                    .setStyle(R.style.CustomShowViewStyle)
-                    .build();
-
-
         registerEmail.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                updateRegisterButtonState();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        //Setup password EditText event listener
+        registerPassword.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+
+                updatePasswordOkImageButtonState();
                 updateRegisterButtonState();
 
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
+            public void afterTextChanged(Editable s) {}
+        });
 
+        confirmRegisterPassword.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable editable) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start,
+                                          int before, int count) {
+
+                    updatePasswordOkImageButtonState();
+                    updateRegisterButtonState();
             }
         });
 
-            //Setup password EditText event listener
-            registerPassword.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        //Setup login button (link) event listener
+        loginButton.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        //Setup register button event listener
+        registerButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                String email = registerEmail.getText().toString();
+                String password = registerPassword.getText().toString();
+
+                InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
+
+                if(internetConnectionDetector.isConnectedToInternet() == false) {
+
+                    Toast.makeText(getApplicationContext(),
+                            RegisterActivity.this.getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
+                }else{
+
+                    progressDialog.show();
+                    registerUser(email, password);
                 }
+            }
+        });
 
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    updatePasswordOkImageButtonState();
-                    updateRegisterButtonState();
+        showPasswordImageButton.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+
+                if (passwordVisible) {
+
+                    registerPassword.setInputType(129);
+                    passwordVisible = false;
+                    showPasswordImageButton.setImageResource(R.mipmap.ic_eye);
+
+                } else {
+
+                    registerPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    passwordVisible = true;
+                    showPasswordImageButton.setImageResource(R.mipmap.ic_eye_off);
                 }
+            }
+        });
+    }
 
-                @Override
-                public void afterTextChanged(Editable s) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_register, menu);
+        return true;
+    }
 
-                }
-            });
-            confirmRegisterPassword.addTextChangedListener(new TextWatcher() {
-
-                @Override
-                public void afterTextChanged(Editable editable) {
-                }
-
-                @Override
-                public void beforeTextChanged(CharSequence charSequence, int start,
-                                              int count, int after) {
-                }
-
-                @Override
-                public void onTextChanged(CharSequence charSequence, int start,
-                                          int before, int count) {
-                    updatePasswordOkImageButtonState();
-                    updateRegisterButtonState();
-                }
-            });
-
-            //Setup login button (link) event listener
-            loginButton.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
-
-            //Setup register button event listener
-            registerButton.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-
-                    String email = registerEmail.getText().toString();
-                    String password = registerPassword.getText().toString();
-
-                    InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
-
-                    if (internetConnectionDetector.isConnectedToInternet() == false) {
-
-                        Toast.makeText(getApplicationContext(),
-                                RegisterActivity.this.getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
-                    }else{
-
-                        progressDialog.show();
-                        registerUser(email, password);
-                    }
-                }
-            });
-
-            showPasswordImageButton.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-
-                    if (passwordVisible) {
-
-                        registerPassword.setInputType(129);
-                        passwordVisible = false;
-                        showPasswordImageButton.setImageResource(R.mipmap.ic_eye);
-
-                    } else {
-
-                        registerPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                        passwordVisible = true;
-                        showPasswordImageButton.setImageResource(R.mipmap.ic_eye_off);
-                    }
-
-                }
-            });
-        }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        return super.onOptionsItemSelected(item);
+    }
 
     private void updateRegisterButtonState() {
 
@@ -272,6 +270,9 @@ public class RegisterActivity extends Activity {
                         UserSessionStorage userSessionStorage = new UserSessionStorage(getApplicationContext());
                         userSessionStorage.createSession(jsonObject.getString("access_token"));
 
+                        RegisterLoginDialog dialog = new RegisterLoginDialog();
+                        dialog.show(getFragmentManager(), null);
+
                     }else {
 
                         Toast.makeText(getApplicationContext(),
@@ -305,47 +306,11 @@ public class RegisterActivity extends Activity {
         overridePendingTransition(R.animator.activity_open_scale, R.animator.activity_close_transition);
     }
 
-    /**
-     * Handle successful user registration responses
-     * @return request response
-     */
-    private Response.Listener<String> requestSuccessListener() {
-        return new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
+    public void helpButton(View view) {
 
-                try {
-
-                    JSONObject jsonObject = new JSONObject(response);
-
-                    //Account successfully created
-                    if(jsonObject.getBoolean("status")) {
-
-                        Toast.makeText(getApplicationContext(), "Account registered!: " , Toast.LENGTH_LONG).show();
-                    }else { //Provided email already registered
-
-                        Toast.makeText(getApplicationContext(),
-                                RegisterActivity.this.getResources().getString(R.string.request_unknown_error),
-                                Toast.LENGTH_LONG).show();
-                    }
-                }catch (JSONException e){}
-            }
-        };
+        HelpDialog dialog = new HelpDialog();
+        dialog.show(getFragmentManager(), null);
     }
 
-
-    /**
-     * Handle errors occurred while trying to register a new user account
-     * @return request response
-     */
-    private Response.ErrorListener requestErrorListener() {
-        return new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-                Toast.makeText(getApplicationContext(), "Error while making request", Toast.LENGTH_LONG).show();
-            }
-        };
-    }
 }
 
