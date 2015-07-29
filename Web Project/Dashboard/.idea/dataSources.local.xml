@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - DashboardDS" uuid="edfc17e9-af28-4bf4-8504-32056dc530cb">
-      <secret-storage>memory</secret-storage>
-      <user-name>root</user-name>
-      <schema-pattern>mma.*</schema-pattern>
-      <default-schemas>mma.*</default-schemas>
+    <data-source name="MySQL - mmadb@localhost" uuid="dbf836cd-c24e-4403-9746-99ee3b91f9c4">
+      <secret-storage>master_key</secret-storage>
+      <user-name>mmaUser</user-name>
+      <schema-pattern>mmadb.*</schema-pattern>
+      <default-schemas>mmadb.*</default-schemas>
     </data-source>
   </component>
 </project>

@@ -1,52 +1,157 @@
 package the5concurrentnodes.rest;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+import the5concurrentnodes.entities.Device;
 import the5concurrentnodes.entities.User;
+import the5concurrentnodes.managers.AccessLevelManager;
+import the5concurrentnodes.managers.DeviceManager;
 import the5concurrentnodes.managers.UserManager;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
-@Path("/account")
+@Path("/")
 @Stateless
 public class Account {
 
     @Inject
     UserManager userManager;
 
-    @GET @Path("/register")
-    @Produces("application/json")
-    public String register(@QueryParam("email") String email, @QueryParam("password") String password) {
+    @Inject
+    AccessLevelManager accessLevelManager;
 
-        if(userManager.userExist(email)) {
+    @Inject
+    DeviceManager deviceManager;
 
-            return Utility.createJSON("register", false).toString();
 
-        }else {
+    /**
+     *
+     * @param cType Request content type
+     * @param rBody Request body
+     * @return Response
+     */
+    @POST @Path("/register")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response doTry(String rBody,
+                          @HeaderParam("Content-Type") String cType) {
 
-            userManager.persist(email, password);
+        JSONObject response = Utility.accountResponse("register", false, "Request forbidden", "null");
+        Response.Status status = Response.Status.FORBIDDEN;
 
-            return Utility.createJSON("register", true).toString();
+        if(cType.equals(Constants.KEY_VOLLEY_APPLICATION_JSON)
+                || cType.equals(MediaType.APPLICATION_JSON)) {
+
+
+            String email = null;
+            String password = null;
+            JSONObject deviceInfo = null;
+            try {
+
+                JSONObject jsonObject = new JSONObject(rBody);
+                email = jsonObject.getString("email");
+                password = jsonObject.getString("password");
+                deviceInfo = new JSONObject(jsonObject.getString("deviceInfo"));
+
+            }catch(JSONException e){}
+
+            if(email != null && userManager.userExist(email)) {
+
+                response = Utility.accountResponse("register", false, "Provided email already registered", "null");
+                status = Response.Status.OK;
+
+            }else {
+
+                User user = userManager.persist(email, password,
+                        accessLevelManager.getAccessLevel("admin"));
+
+                Device device = deviceManager.persist(deviceInfo, user);
+
+                JSONWebToken jsonWebToken = JSONWebToken.getInstance();
+                response = Utility.accountResponse("register", true, "Account created",
+                        jsonWebToken.createJWT(user.getUserId(), device.getImeNumber(), "user"));
+
+                status = Response.Status.CREATED;
+            }
+
         }
+
+        return Response.status(status)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(response.toString()).build();
     }
 
-    @GET @Path("/login")
-    @Produces("application/json")
-    public String validateAccount(@QueryParam("email") String email, @QueryParam("password") String password) {
 
-        if(userManager.userExist(email)) {
+    @POST @Path("/login")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response doLogin(String rBody,
+                          @HeaderParam("Content-Type") String cType) {
 
-            User user = userManager.getUserByEmail(email);
 
-            if(user.getEmail().equals(email) && user.getPassword().equals(password)) {
+        JSONObject response = Utility.accountResponse("login", false, "Request forbidden", "null");
+        Response.Status status = Response.Status.FORBIDDEN;
 
-                return Utility.createJSON("login", true).toString();
-            }
+        if(cType.equals(Constants.KEY_VOLLEY_APPLICATION_JSON)
+                || cType.equals(MediaType.APPLICATION_JSON)) {
+
+
+            String email = null;
+            String password = null;
+            JSONObject deviceInfo = null;
+            try {
+
+                JSONObject jsonObject = new JSONObject(rBody);
+
+                email = jsonObject.getString("email");
+                password = jsonObject.getString("password");
+                deviceInfo = new JSONObject(jsonObject.getString("deviceInfo"));
+
+            }catch(JSONException e){}
+
+            if(email != null && password != null) {
+
+                User user = userManager.getUserByEmail(email);
+                Device device = deviceManager.findUserByIMENumber(deviceInfo.getString("imeNumber"));
+
+                if(user != null && password.equals(user.getPassword())) {
+
+                    if(device == null) {
+
+                        device = deviceManager.persist(deviceInfo, user);
+                    }
+
+                    JSONWebToken jsonWebToken = JSONWebToken.getInstance();
+                    response = Utility.accountResponse("login", true, "Logged in",
+                            jsonWebToken.createJWT(user.getUserId(), device.getImeNumber(), "user"));
+
+                    status = Response.Status.OK;
+                }else {
+
+                        response = Utility.accountResponse("login", false, "Invalid Email or Password", "null");
+
+                        status = Response.Status.OK;
+                    }
+                }
+
         }
 
-        return Utility.createJSON("login", false).toString();
+        return Response.status(status)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(response.toString()).build();
+    }
+
+    @POST @Path("/signin")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response loginWeb(String rBody, @HeaderParam("email") String email) {
+
+
+        return Response.status(200)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(rBody + " " + email).build();
     }
 }
