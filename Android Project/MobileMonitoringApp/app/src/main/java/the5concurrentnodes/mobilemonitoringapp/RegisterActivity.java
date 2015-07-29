@@ -3,13 +3,11 @@ package the5concurrentnodes.mobilemonitoringapp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +20,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
@@ -30,16 +27,12 @@ import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import the5concurrentnodes.account.Register;
 import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.generic.Config;
-import the5concurrentnodes.models.DeviceInfo;
+import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
 public class RegisterActivity extends Activity {
@@ -170,7 +163,9 @@ public class RegisterActivity extends Activity {
                     InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
 
                     if (internetConnectionDetector.isConnectedToInternet() == false) {
-                        Toast.makeText(getApplicationContext(), "You are not connected to the internet, check your internet connection.", Toast.LENGTH_LONG).show();
+
+                        Toast.makeText(getApplicationContext(),
+                                RegisterActivity.this.getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
                     }else{
 
                         progressDialog.show();

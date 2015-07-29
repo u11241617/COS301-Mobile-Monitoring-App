@@ -35,14 +35,7 @@ public class VolleyJsonObjectRequest extends JsonObjectRequest {
 
         UserSessionStorage userSessionStorage = new UserSessionStorage(context);
 
-        String token = null;
-
-        try{
-
-            JSONObject jsonObject = new JSONObject(userSessionStorage.getSessionValues());
-
-            token = jsonObject.getString("access_token");
-        }catch (JSONException e){}
+        String token = userSessionStorage.getSessionValues();
 
         headers.put("Authorization", "Bearer "+ token);
 

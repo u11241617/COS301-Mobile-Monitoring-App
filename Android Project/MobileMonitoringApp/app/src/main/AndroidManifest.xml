@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
 
     <application
         android:allowBackup="true"
@@ -38,15 +40,16 @@
             android:windowSoftInputMode="stateHidden" >
         </activity>
 
+        <service
+            android:name="the5concurrentnodes.controllers.DataPushService"
+            android:exported="false" />
+
         <receiver android:name="the5concurrentnodes.controllers.StartupServicesBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
-        <service
-            android:name="the5concurrentnodes.mmaData.sms.SmsService"
-            android:exported="false"/>
     </application>
 
 </manifest>

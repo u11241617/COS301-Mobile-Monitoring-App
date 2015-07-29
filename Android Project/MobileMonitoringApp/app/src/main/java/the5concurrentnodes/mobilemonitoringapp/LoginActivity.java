@@ -3,35 +3,31 @@ package the5concurrentnodes.mobilemonitoringapp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
+import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.generic.Config;
+import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
 public class LoginActivity extends Activity {
@@ -121,7 +117,7 @@ public class LoginActivity extends Activity {
                 InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
                 if (internetConnectionDetector.isConnectedToInternet() == false) {
 
-                    Toast.makeText(getApplicationContext(), "You are not connected to the internet, check your internet connection.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
                 }else {
 
                     progressDialog.show();
@@ -170,6 +166,63 @@ public class LoginActivity extends Activity {
             }
         });
     }
+    /**
+     * Consume REST api to login user account
+     * @param email user email
+     * @param password user password
+     */
+    public void loginUser(final String email, final String password) {
+
+        String url = Config.REST_API + "/login";
+
+        JSONObject jsonParams = new JSONObject();
+        try {
+            jsonParams.put("email", email);
+            jsonParams.put("password", password);
+            JSONObject deviceInfoParams = new JSONObject();
+            DeviceInfo deviceInfo = new DeviceInfo(getApplicationContext());
+            deviceInfoParams.put("model", deviceInfo.getModel());
+            deviceInfoParams.put("make", deviceInfo.getManufacturer());
+            deviceInfoParams.put("os", "Samsung");
+            deviceInfoParams.put("network", deviceInfo.getCarrierName());
+            deviceInfoParams.put("imeNumber", deviceInfo.getIMEI());
+
+            jsonParams .put("deviceInfo", deviceInfoParams.toString());
+
+        }catch (JSONException e){}
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+                url, jsonParams , new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                progressDialog.dismiss();
+                try {
+                    if (jsonObject.getBoolean("status"))
+                    {
+                        UserSessionStorage userSessionStorage = new UserSessionStorage(getApplicationContext());
+                        userSessionStorage.createSession(jsonObject.getString("access_token"));
+
+                    } else
+                        Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+
+
+                } catch (JSONException e){}
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(),
+                        LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        RequestQueue requestQueue = VolleyRequestQueue.getRequestQueue();
+        requestQueue.add(jsonObjectRequest);
+
+    }
+
 
     @Override
     protected void onPause() {
@@ -178,76 +231,13 @@ public class LoginActivity extends Activity {
         overridePendingTransition(R.animator.activity_open_scale, R.animator.activity_close_transition);
     }
 
-
+    /**
+     * Updates login button state
+     */
     private void updateLoginInButtonState() {
         loginButton.setEnabled
                 (Utility.validateEmail(loginEmail.getText().toString()) &&
                         Utility.validatePassword(loginPassword.getText().toString()));
     }
-    /**
-     * Consume REST api to login user
-     * @param email user email
-     * @param password user password
-     */
-    public void loginUser(final String email, final String password) {
 
-        String url = String.format(Config.REST_API + "/account/login?email=%s&password=%s",
-                email, password);
-
-        RequestQueue requestQueue = VolleyRequestQueue.getRequestQueue();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,requestSuccessListener(), requestErrorListener());
-        requestQueue.add(stringRequest);
-
-    }
-
-    /**
-     * Handle successful user login responses
-     * @return request response
-     */
-    private Response.Listener<String> requestSuccessListener() {
-        return new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-
-                progressDialog.dismiss();
-                try {
-
-                    JSONObject jsonObject = new JSONObject(response);
-                    boolean error = jsonObject.getBoolean("error");
-                    if (!error)
-                    {
-                        //successful login
-                        Toast.makeText(getApplicationContext(), "Login successful " , Toast.LENGTH_LONG).show();
-                        sessionManager.createSession(true);
-                        Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                    else
-                    {
-                    //error in login
-                        String errorMsg = jsonObject.getString("error_msg");
-                        Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
-                    }
-                }catch (JSONException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        };
-    }
-    /**
-     * Handle errors occurred while trying to register a new user account
-     * @return request response
-     */
-    private Response.ErrorListener requestErrorListener() {
-        return new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-                progressDialog.dismiss();
-                Toast.makeText(getApplicationContext(), "Error while making request.", Toast.LENGTH_LONG).show();
-            }
-        };
-    }
 }

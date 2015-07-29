@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -13,7 +11,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import the5concurrentnodes.controllers.SmsServiceHandler;
+import the5concurrentnodes.controllers.DataPushServiceHandler;
 
 
 public class MainActivity extends Activity {
@@ -23,21 +21,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Typeface calibriFont;
-        final Typeface arialRoundedBoldFont;
-        final Typeface bookmarkOldStyle;
-        final TextView termsTitle;
         final WebView webView;
         final CheckBox acceptTermsCheckbox;
         final Button nextButton;
 
-        arialRoundedBoldFont = Typeface.createFromAsset(getAssets(), "fonts/Arial_Rounded_Bold.TTF");
-        calibriFont = Typeface.createFromAsset(getAssets(), "fonts/calibri.ttf");
-        bookmarkOldStyle = Typeface.createFromAsset(getAssets(), "fonts/BOOKOS.TTF");
-        termsTitle =(TextView) findViewById(R.id.terms_title);
         webView = (WebView) findViewById(R.id.web_view);
         acceptTermsCheckbox = (CheckBox) findViewById(R.id.accept_terms_checkbox);
         nextButton = (Button) findViewById(R.id.next_button);
+
         webView.loadUrl("file:///android_asset/pages/terms.html");
 
         acceptTermsCheckbox.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +69,7 @@ public class MainActivity extends Activity {
             finish();
         }
 
-        SmsServiceHandler.getInstance().startService(getApplicationContext());
+        DataPushServiceHandler.getInstance().startService(getApplicationContext());
     }
 
 }
