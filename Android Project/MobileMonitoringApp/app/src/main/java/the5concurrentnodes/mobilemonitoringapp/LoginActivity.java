@@ -26,7 +26,8 @@ import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
-import the5concurrentnodes.dialogs.RegisterLoginDialog;
+import the5concurrentnodes.dialogs.LoginRegisterDialog;
+import the5concurrentnodes.dialogs.RecoverPasswordDialog;
 import the5concurrentnodes.generic.Config;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
@@ -203,8 +204,9 @@ public class LoginActivity extends Activity {
                         UserSessionStorage userSessionStorage = new UserSessionStorage(getApplicationContext());
                         userSessionStorage.createSession(jsonObject.getString("access_token"));
 
-                        RegisterLoginDialog dialog = new RegisterLoginDialog();
+                        LoginRegisterDialog dialog = new LoginRegisterDialog();
                         dialog.show(getFragmentManager(), null);
+
 
                     } else
                         Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_LONG).show();
@@ -242,6 +244,12 @@ public class LoginActivity extends Activity {
         loginButton.setEnabled
                 (Utility.validateEmail(loginEmail.getText().toString()) &&
                         Utility.validatePassword(loginPassword.getText().toString()));
+    }
+
+    public void recoverPassword(View view) {
+
+        RecoverPasswordDialog dialog = new RecoverPasswordDialog();
+        dialog.show(getFragmentManager(), null);
     }
 
 }

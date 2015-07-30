@@ -26,14 +26,17 @@
     <string name="progress_signing_in">Signing in</string>
     <string name="progress_signing_up">Signing up</string>
     <string name="request_unknown_error">Unknown error occurred. Please check your internet connection</string>
+    <string name="help_dialog_content">To register, the following requirements must be met:\n-Provided email must be valid.\n-Password must be at least 6 characters long with at least 1 digit, 1 lowercase and 1 uppercase.</string>
+    <string name="got_it_text">Got it!</string>
+    <string name="help_dialog_title">Form Completion</string>
+    <string name="in_need_help"><u>I need help</u></string>
     <string name="action_help">Help</string>
-    <string name="register_login_dialog_title">You\'re all set</string>
-    <string name="register_login_content">Thank you for using iCrawler, Would you like to learn more about iCrawler App?</string>
+    <string name="login_register_dialog_title">You\'re all set!</string>
+    <string name="login_register_dialog_content">Thank you for using iCrawler, Would you like to learn more about iCrawler App?</string>
     <string name="no_thanks">No, Thanks</string>
     <string name="yes">Yes</string>
-    <string name="form_completion">Form Completion</string>
-    <string name="form_help_content">To register the following requirements must be met:\n-Provided email must be valid.\n-Password must be at least 6 characters long with at least 1 digit, 1 lowercase and 1 uppercase.</string>
-    <string name="got_it">Got it</string>
-    <string name="need_help"><u>I need help</u></string>
+    <string name="recover_password">Recover Password</string>
+    <string name="recover">Recover</string>
+    <string name="cancel">Cancel</string>
 
 </resources>

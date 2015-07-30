@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/abc_text_size_large_material"
         android:textColor="@color/green"
-        android:text="@string/help_dialog_title"
+        android:text="@string/login_register_dialog_title"
         android:layout_margin="8dp"/>
 
     <View
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/abc_text_size_medium_material"
-        android:text="@string/help_dialog_content"
+        android:text="@string/login_register_dialog_content"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="6dp"
