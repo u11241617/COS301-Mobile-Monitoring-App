@@ -32,67 +32,67 @@
 			\textbf{Description} \\\\
 			Auditability refers to the ability to account for a system's usage by the user and be able to monitor events and create logs on what are the user's actions within the system.\\\\
 			\textbf{Justification}\\\\
-			The Mobile Monitoring Application main functionality is to monitor the user's device activities and report all logs within a particular device.\\\\
+			iCrawler's main functionality is to monitor the user's device activities and report all logs of that particular device.\\\\
 			\textbf{Mechanism}
 				\begin{enumerate}
 					\item Strategy: \\\\
 						Auditability can be achieved by:
 						\begin{itemize}
-							\item Resource Monitoring: A tactic that registers all the events and resources that the application uses and creates logs for the resources usage.  
+							\item Resource Monitoring: A tactic that registers all the events and resources that the application uses; a log of these resource usage is then created.  
 						\end{itemize}
 					\item Architectural Pattern(s):
 						\begin{itemize}
-							\item To monitor the application events and resources a design pattern such as the observer pattern can be implemented by the application that can register all events and resources usage. 
+							\item To monitor the application events and resources a design pattern such as the \emph{Observer} pattern can be implemented by the application that can register all events and resource usage. 
 						\end{itemize}
 				\end{enumerate}	
 			\newpage
 			\subsubsection*{Security}
 				\textbf{Description} \\\\
-				Security is a critical aspect of any system that deals with critical and confidential data, the strategies used for security provides mechanisms to protect data from unauthorized access and modification. For the Mobile Monitoring Application this means the following:
+				Security is the degree of resistance to, or protection from, harm. It applies to any vulnerable and valuable asset, such as a person, dwelling, community, nation, or organization.\\\\
+				\textbf{Justification} \\\\
+				Security is a critical aspect of any system that deals with critical and confidential data, the strategies used for security provides mechanisms to protect data from unauthorized access and modification. For our mobile monitoring application this means the following:
 				\begin{itemize}
 					\item No one (person or program) should be able to delete the data collected on device.
-					\item When the data is transferred over the network, data should be protected from being intercepted and hacked.    
+					\item When the data is transferred over the network, data should be protected from being intercepted or hacked.    
 				\end{itemize}
-				\textbf{Justification} \\\\
-				Security is a critical for any system that deals with critical and confidential data as in the Mobile Monitoring Application. User collected data need to be protected from being tampered with and accessed by unauthorized individuals to keep data reliable and confidential.\\\\
 				\textbf{Mechanism}
 				\begin{enumerate}
 					\item Strategy: \\\\
 						Security can be achieved by:
 						\begin{itemize}
-							\item Authentication: The strategy is used to identify and confirm a user's identity.  
+							\item Authentication: This strategy is used to identify and confirm a user's identity.  
 							\item Encryption: Data is converted to a secure format that cannot be easily read by unauthorized individuals. 
 						\end{itemize}
 					\item Architectural Pattern(s):
 						\begin{itemize}
-							\item Layering: This pattern decouples the system by dividing it into components (layers) that communicate with each other through message requests and responses, this control the access of the user level layer from directly make request to lower layers that provides critical data. 
+							\item Layering: This pattern decouples the system by dividing it into components (layers) that communicate with each other through message requests and responses, this prevents direct requests to critical data from the application to the database. 
 						\end{itemize}
 				\end{enumerate}		
 		%New Page
 		\subsubsection{Important Quality Requirements}
 			\subsubsection*{Maintainability}
 			\textbf{Description}\\\\
-			A modular system design is used for this system so that components can be easily added and removed.\\\\
+			This is the ease with which a product can be maintained in order to isolate defects or their cause, maximize a product's useful life, meet new requirements, maximize efficiency, reliability, and safety.\\\\
 			\textbf{Justification}\\\\
-			A modular design decouples a system into components that are easy to maintain and makes the system more adaptable. Decoupling the system will also ensure that it easy to do unit testing and integration testing.\\\\
+			A modular design decouples a system into components that are easy to maintain and makes the system more adaptable. Decoupling the system will also ensure that it is easy to do unit testing and integration testing.\\\\
 			\textbf{Mechanism}
 			\begin{enumerate}
 				\item Strategy:\\\\
-				Maintainability ca be achieved by:
+				Maintainability can be achieved by:
 				\begin{itemize}
-				\item Decoupling: This strategy break the system into manageable components to achieve a proper structure and maintainable system.  
+				\item Decoupling: This strategy breaks the system into manageable components to achieve a proper structure and maintainable system.  
 				\end{itemize}
 				\item Architectural Patterns(s):
 				\begin{itemize}
-				\item Microkernel: The microkernel pattern improves maintainability because is separates high level services  from low level services that is, it divides the systems into components that are maintainable and also allow for components to be easily removed or added to the system.
+				\item Microkernel: The \emph{Microkernel} pattern improves maintainability because it separates high level services  from low level services that is, it divides the systems into components that are maintainable and also allow for components to be easily removed or added to the system.
 				\end{itemize}
 			\end{enumerate}
 			\newpage
 			\subsubsection*{Performance}
 			\textbf{Description}\\\\
-			Performance is a measure of a system responsiveness when executing some action.\\\\
+			Performance is a measure of a system's responsiveness when executing some action.\\\\
 			\textbf{Justification}\\\\
-			The Mobile Monitoring Application need use the devices resources efficiently to increase the performance of the application which is an important quality requirement that will also make the system more reliable and increase throughput of the application.\\\\
+			iCrawler needs to use the devices resources efficiently to increase the performance of the application which is an important quality requirement that will also make the system more reliable and increase throughput of the application.\\\\
 			\textbf{Mechanism}
 			\begin{enumerate}
 				\item Strategy:\\\\
@@ -118,7 +118,7 @@
 			\begin{enumerate}
 				\item Strategy:\\\\
 				\begin{itemize}
-				\item White-box: This tactic is mainly used for unit testing and require the knowledge of the the application internal structure to create test cases for the application components.
+				\item White-box: This tactic is mainly used for unit testing and requires the knowledge of the internal structure to create test cases for the application components.
 				\item Black-box: This tactic is mainly used for integration testing, it examines the functionality of the application against the specification and simplifies system components testing when plugged in a modular system.
 				\end{itemize}
 				\item Architectural Patterns(s):
@@ -132,12 +132,12 @@
     \textbf{Description}\\\\
     Separates the applications concerns by separating the following responsibilities:
     \begin{itemize}
-    \item Model: Provide business services and data.
-    \item View: Provide view for information.
+    \item Model: Provides business services and data.
+    \item View: Provides a view for information.
     \item Controller: Reacts to user events. 
     \end{itemize}
     \textbf{Justification}\\\\
-    This pattern separate the system's concerns into components that can evolve independently which reduce the applications complexity. The Mobile Monitoring Application is to have low complexity and as a modular system it also needs to be maintainable which can be best achieved using the MVC pattern. \\\\
+    This pattern separate the system's concerns into components that can evolve independently which reduces the application's complexity. The iCrawler mobile monitoring application is intended to have low complexity, to be a modular system and it also needs to be maintainable which can all be achieved best by using the MVC pattern. \\\\
     \textbf{Benefits}
     \begin{itemize}
     \item Simplification
@@ -149,9 +149,9 @@
 	\newpage
 	\subsubsection{Layered Architecture}
 	\textbf{Description}\\\\
-	Partitions the applications concerns into a stacked group of layers.\\\\
+	Partitions the application's concerns into a stacked group of layers.\\\\
 	\textbf{Justification}\\\\
-	Provides high level of abstraction which allows the application components to vary, this decouples the system which reduce complexity and improve the systems performance which is the objective for the Mobile Monitoring Application.\\\\
+	It will provide a high level of abstraction which will allow the application components to vary; this decouples the system, reduce complexity and improve the systems performance which is the objective for the mobile monitoring application.\\\\
 	\textbf{Benefits}
 	\begin{itemize}
 	\item Improve cohesion
@@ -167,22 +167,22 @@
 	\subsubsection*{Human Access Channel}
 	Human access channels addresses all the different ways in which a human can interact with the Mobile Monitoring Application.
 	\begin{itemize}
-		\item Mobile device: The application only runs on android mobile devices, only minimal functionality is presented to the user as the application runs on the background.   
+		\item Mobile device: The application only runs on android mobile devices, only minimal user-interaction is presented to the user as the application runs on the background.   
 	\end{itemize}
 	\subsubsection{Integration Channels}
 	\subsubsection*{Channels}
-	The Mobile Monitoring Application will need to access a MySQL database to store user information and data logs from device.    	\subsubsection*{Protocols}
-	The Mobile Monitoring Application will use the following protocols:
+	The mobile monitoring application will need to access a MySQL database to store user information and data logs collected from the device.    	\subsubsection*{Protocols}
+	The protocols the application will use are the following:
 	\begin{itemize}
 	\item HTTPS: This protocol will be used for security to ensure that a secure connection is maintained between the device and server and also that transported data cannot be easily intercepted.
-	\item SMTP: Notifications for user forgotten password will use this protocol to allow user recover their information.  
+	\item SMTP: Notifications for a user who forgets his/her password will use this protocol to allow that user to recover their credentials.  
 	\end{itemize}	 
 	\newpage
 	\subsection{Technologies}
 	\subsubsection{Platform and IDE}
 	\begin{itemize}
-	\item Android
-	\item Android Studio
+	\item Android Device(s)
+	\item Android Studio IDE
 	\end{itemize}
 	\subsubsection{Programming Languages}
 	\begin{itemize}
@@ -194,7 +194,7 @@
 	\end{itemize}
 	\subsubsection{Databases}
 	\begin{itemize}
-	\item MySQL relational database
+	\item MySQL Relational Database
 	\end{itemize}
 	\subsubsection{Web services}
 	\begin{itemize}
@@ -215,7 +215,7 @@
 			\textbf{Description} \\\\
 			Scalability refers to the ability of a system to easily accommodate and handle a large amount of work at a single instance \\\\
 			\textbf{Justification}\\\\
-			The Mobile Monitoring Application dashboard needs to be able to handle as many concurrent users as possible without breaking.\\\\
+			The iCrawler mobile monitoring application dashboard needs to be able to handle as many concurrent users as possible without breaking.\\\\
 			\textbf{Mechanism}
 				\begin{enumerate}
 					\item Strategy: \\\\
@@ -228,13 +228,13 @@
 			\newpage
 			\subsubsection*{Security}
 				\textbf{Description} \\\\
-				Security is a critical aspect of any system that deals with critical and confidential data, the strategies used for security provides mechanisms to protect data from unauthorized access and modification. For the Mobile Monitoring Application dashboard this means the following:
+				Security is a critical aspect of any system that deals with critical and confidential data, the strategies used for security provides mechanisms to protect data from unauthorized access and modification; this means the following for our application dashboard:
 				\begin{itemize}
 					\item Only authorized individuals may have access to the relevant data.
 					\item Users should strictly be restricted by access levels    
 				\end{itemize}
 				\textbf{Justification} \\\\
-				Security is a critical for any system that deals with critical and confidential data as in the Mobile Monitoring Application. User collected data need to be protected from being tampered with and accessed by unauthorized individuals to keep data reliable and confidential.\\\\
+				Security is a high priority feature for any system that deals with critical and confidential data, this is the case with the iCrawler application. User collected data needs to be protected from being tampered with and accessed by unauthorized individuals to maintain its integrity and confidentiality.\\\\
 				\textbf{Mechanism}
 				\begin{enumerate}
 					\item Strategy: \\\\
@@ -252,19 +252,19 @@
 		\subsubsection{Important Quality Requirements}
 			\subsubsection*{Maintainability}
 			\textbf{Description}\\\\
-			A modular system design is used for this system so that components can be easily added and removed.\\\\
+			This is the ease with which a product can be maintained in order to isolate defects or their cause, maximize a product's useful life, meet new requirements, maximize efficiency, reliability, and safety.\\\\
 			\textbf{Justification}\\\\
-			The dashboard application must be decoupled into components that are easy to maintain and makes the system more adaptable. Decoupling the system will also ensure that it easy to do unit testing and integration testing.\\\\
+			The dashboard application must be decoupled into components that are easy to maintain and make the system more adaptable.\\\\
 			\textbf{Mechanism}
 			\begin{enumerate}
 				\item Strategy:\\\\
 				Maintainability ca be achieved by:
 				\begin{itemize}
-				\item Decoupling: This strategy break the system into manageable components to achieve a proper structure and maintainable system.  
+				\item Readability: The dashboard code should be easy to read for whoever is maintaining it. This means that it should be indented properly and make use of comments. 
 				\end{itemize}
 				\item Architectural Patterns(s):
 				\begin{itemize}
-				\item Microkernel: The microkernel pattern improves maintainability because is separates high level services  from low level services that is, it divides the systems into components that are maintainable and also allow for components to be easily removed or added to the system.
+				\item Microkernel: The \emph{Microkernel} pattern improves maintainability because is separates high level services  from low level services that is, it divides the systems into components that are maintainable and also allow for components to be easily removed or added to the system.
 				\end{itemize}
 			\end{enumerate}
 			\newpage
@@ -272,13 +272,13 @@
 			\textbf{Description}\\\\
 			Performance is a measure of a system responsiveness when executing some action.\\\\
 			\textbf{Justification}\\\\
-			The dashboard application need use resources efficiently to increase the performance of the application which is an important quality requirement that will also make the system more reliable and increase throughput of the application.\\\\
+			The dashboard application needs to use resources efficiently to increase its performance and provide quality experience to the user.\\\\
 			\textbf{Mechanism}
 			\begin{enumerate}
 				\item Strategy:\\\\
 				Performance can be achieved by:
 				\begin{itemize}
-				\item Dynamic code optimization: This strategy focuses on the code design, quality and efficiency to improve performance on the system.  
+				\item Dynamic code optimization: This strategy focuses on the code design, quality and efficiency to improve performance on the dashboard system.  
 				\end{itemize}
 			\end{enumerate}	
 			
@@ -289,13 +289,12 @@
 			\textbf{Description}\\\\
 			Testability is a measure of how well a system allows one to test if a certain criteria is met by the system. This makes fault detection in the system easy and also the faults can be isolated in a timely manner.\\\\
 			\textbf{Justification}\\\\
-			It is vital that every component that is deployed on the system can be tested using unit testing and also integration testing so that faults can be detected as soon as possible and be fixed. \\\\
+			It is vital that every component that is deployed on the dashboard system can be tested in some way so that faults can be detected as soon as possible and be fixed. \\\\
 			\textbf{Mechanism}
 			\begin{enumerate}
 				\item Strategy:\\\\
 				\begin{itemize}
-				\item White-box: This tactic is mainly used for unit testing and require the knowledge of the the application internal structure to create test cases for the application components.
-				\item Black-box: This tactic is mainly used for integration testing, it examines the functionality of the application against the specification and simplifies system components testing when plugged in a modular system.
+				\item Userbility testing: This is a technique used in user-centered interaction design to evaluate a product by testing it on users. This can be seen as an irreplaceable usability practice, since it gives direct input on how real users use the system.
 				\end{itemize}
 				\item Architectural Patterns(s):
 				\begin{itemize}
@@ -313,7 +312,7 @@
     \item Controller: Reacts to user events. 
     \end{itemize}
     \textbf{Justification}\\\\
-    This pattern separate the system's concerns into components that can evolve independently which reduce the applications complexity.\\\\
+    This pattern separate the system's concerns into components that can evolve independently which reduce the dashboard systems complexity.\\\\
     \textbf{Benefits}
     \begin{itemize}
     \item Simplification
@@ -325,9 +324,9 @@
 	\newpage
 	\subsubsection{Layered Architecture}
 	\textbf{Description}\\\\
-	Partitions the applications concerns into a stacked group of layers.\\\\
+	Partitions the dashboard system's concerns into a stacked group of layers.\\\\
 	\textbf{Justification}\\\\
-	Provides high level of abstraction which allows the application components to vary, this decouples the system which reduce complexity and improve the systems performance which is the objective for the Mobile Monitoring Application dashboard\\\\
+	Provides high level of abstraction which allows the dashboard components to vary, this decouples the system,reduces its complexity and improve the systems performance which is also the objective for the iCrawler mobile monitoring application dashboard\\\\
 	\textbf{Benefits}
 	\begin{itemize}
 	\item Improve cohesion
@@ -341,20 +340,20 @@
 	\subsection{Access and Integration Channels}
 	\subsubsection{Access Channels}
 	\subsubsection*{Human Access Channel}
-	Human access channels addresses all the different ways in which a human can interact with the Mobile Monitoring Application.\\\\ The dashboard application is accessible through a web browser, hence can be access using any of the following devices: 
+	Human access channels addresses all the different ways in which a human can interact with the iCrawler dashboard system.\\\\ The dashboard is accessible through a web browser but it is restricted to only the following: 
 	\begin{itemize}
 		\item Desktop Computer
-		\item Mobile Device
 		\item Tablet
 		\item Laptop  
 	\end{itemize}
 	\subsubsection{Integration Channels}
 	\subsubsection*{Channels}
-	The dashboard application will need to access a MySQL database to read user information and data logs from device.    	\subsubsection*{Protocols}
-	The dashboard application will use the following protocols:
+	The dashboard will need to access a MySQL database to read user information and data logs from the device. 
+	\subsubsection*{Protocols}
+	The dashboard system will use the following protocols:
 	\begin{itemize}
 	\item HTTPS: This protocol will be used for security to ensure that a secure connection is maintained between the application and server and also that transported data cannot be easily intercepted.
-	\item SMTP: Notifications for user forgotten password will use this protocol to allow user recover their information.  
+	\item SMTP: Notifications for a user who has forgotten his/her password will use this protocol to allow the user  to recover their login information.  
 	\end{itemize}	 
 	\newpage
 	\subsection{Technologies}
@@ -394,7 +393,7 @@
 	\end{itemize}
 	\subsubsection{Databases}
 	\begin{itemize}
-	\item MySQL relational database
+	\item MySQL Relational Database
 	\end{itemize}
 	\subsubsection{Web services}
 	\begin{itemize}
