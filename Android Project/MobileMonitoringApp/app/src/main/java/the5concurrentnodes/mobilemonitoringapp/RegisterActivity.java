@@ -230,13 +230,15 @@ public class RegisterActivity extends Activity {
             JSONObject deviceInfoParams = new JSONObject();
             DeviceInfo deviceInfo = new DeviceInfo(getApplicationContext());
 
+			
+			/*
             deviceInfoParams.put("model", deviceInfo.getModel());
             deviceInfoParams.put("make", deviceInfo.getManufacturer());
             deviceInfoParams.put("os", "Samsung");
             deviceInfoParams.put("network", deviceInfo.getCarrierName());
             deviceInfoParams.put("imeNumber", deviceInfo.getIMEI());
-
-            jsonParams.put("deviceInfo", deviceInfoParams.toString());
+			*/
+            jsonParams.put("deviceInfo",deviceInfo.toJSONObject().toString());
 
 
         }catch(JSONException e){}

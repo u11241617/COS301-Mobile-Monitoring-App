@@ -4,7 +4,12 @@ import android.content.Context;
 import android.os.Build;
 import android.telephony.TelephonyManager;
 
-public class DeviceInfo {
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import the5concurrentnodes.mmaData.interfaces.ConvertToJSON;
+
+public class DeviceInfo implements ConvertToJSON {
 
     private String version;
     private String model;
@@ -52,5 +57,22 @@ public class DeviceInfo {
     public String getCarrierName()
     {
         return this.carrierName;
+    }
+	@Override
+    public JSONObject toJSONObject() {
+
+        JSONObject jsonObject = new JSONObject();
+
+        try{
+
+            jsonObject.put("model", model);
+            jsonObject.put("make", manufacturer);
+            jsonObject.put("os", manufacturer);
+            jsonObject.put("network", carrierName);
+            jsonObject.put("imeNumber", IMEI);
+
+        }catch(JSONException e){}
+
+        return jsonObject;
     }
 }
