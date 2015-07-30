@@ -3,16 +3,16 @@ package the5concurrentnodes.mobilemonitoringapp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -20,9 +20,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.github.amlcurran.showcaseview.ShowcaseView;
-import com.github.amlcurran.showcaseview.targets.Target;
-import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,6 +28,8 @@ import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
+import the5concurrentnodes.dialogs.HelpDialog;
+import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
@@ -54,13 +53,8 @@ public class RegisterActivity extends Activity {
         //Initialize RequestQueue
         VolleyRequestQueue.init(getApplicationContext());
 
-
-        final ShowcaseView showcaseView;
-        final Target target;
-        final TextView registerTitle;
         final ImageButton showPasswordImageButton;
         final Button loginButton;
-        final Typeface bookmarkOldStyle;
 
         passwordVisible = false;
 
@@ -73,16 +67,6 @@ public class RegisterActivity extends Activity {
         registerButton = (Button) findViewById(R.id.register_button);
         progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
-
-        target = new ViewTarget(R.id.icon, this);
-
-            showcaseView = new ShowcaseView.Builder(this)
-                    .setTarget(target)
-                    .setContentTitle("New Account")
-                    .setContentText("Please fill in all the fields to create new MMA account.\n  Password must contain: \n - at least 1 digit\n - 1 lowercase letter\n - 1 uppercase letter \n - must be at least 6 characters long.")
-                    .setStyle(R.style.CustomShowViewStyle)
-                    .build();
-
 
         registerEmail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -162,7 +146,7 @@ public class RegisterActivity extends Activity {
 
                     InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
 
-                    if (internetConnectionDetector.isConnectedToInternet() == false) {
+                    if (!internetConnectionDetector.isConnectedToInternet()) {
 
                         Toast.makeText(getApplicationContext(),
                                 RegisterActivity.this.getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
@@ -194,7 +178,8 @@ public class RegisterActivity extends Activity {
 
                 }
             });
-        }
+    }
+
 
     private void updateRegisterButtonState() {
 
@@ -272,6 +257,9 @@ public class RegisterActivity extends Activity {
                         UserSessionStorage userSessionStorage = new UserSessionStorage(getApplicationContext());
                         userSessionStorage.createSession(jsonObject.getString("access_token"));
 
+                        LoginRegisterDialog dialog = new LoginRegisterDialog();
+                        dialog.show(getFragmentManager(), null);
+
                     }else {
 
                         Toast.makeText(getApplicationContext(),
@@ -305,47 +293,26 @@ public class RegisterActivity extends Activity {
         overridePendingTransition(R.animator.activity_open_scale, R.animator.activity_close_transition);
     }
 
-    /**
-     * Handle successful user registration responses
-     * @return request response
-     */
-    private Response.Listener<String> requestSuccessListener() {
-        return new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
 
-                try {
-
-                    JSONObject jsonObject = new JSONObject(response);
-
-                    //Account successfully created
-                    if(jsonObject.getBoolean("status")) {
-
-                        Toast.makeText(getApplicationContext(), "Account registered!: " , Toast.LENGTH_LONG).show();
-                    }else { //Provided email already registered
-
-                        Toast.makeText(getApplicationContext(),
-                                RegisterActivity.this.getResources().getString(R.string.request_unknown_error),
-                                Toast.LENGTH_LONG).show();
-                    }
-                }catch (JSONException e){}
-            }
-        };
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_register, menu);
+        return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-    /**
-     * Handle errors occurred while trying to register a new user account
-     * @return request response
-     */
-    private Response.ErrorListener requestErrorListener() {
-        return new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
+        int id = item.getItemId();
 
-                Toast.makeText(getApplicationContext(), "Error while making request", Toast.LENGTH_LONG).show();
-            }
-        };
+        if (id == R.id.action_help) {
+
+            HelpDialog dialog = new HelpDialog();
+            dialog.show(getFragmentManager(),null);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
 
