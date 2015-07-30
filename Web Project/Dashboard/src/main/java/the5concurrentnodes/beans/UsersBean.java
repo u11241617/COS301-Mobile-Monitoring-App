@@ -6,7 +6,6 @@ import the5concurrentnodes.managers.UserManager;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Named
