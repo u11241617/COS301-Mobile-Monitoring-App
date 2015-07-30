@@ -1,6 +1,7 @@
 package the5concurrentnodes.managers;
 
 
+import the5concurrentnodes.entities.AccessLevel;
 import the5concurrentnodes.entities.User;
 
 import javax.ejb.Stateless;
@@ -23,13 +24,16 @@ public class UserManager{
      * @param email  user email
      * @param password user password
      */
-    public void persist(String email, String password) {
+    public User persist(String email, String password,AccessLevel ac) {
 
         User user = new User();
         user.setEmail(email);
         user.setPassword(password);
+        user.setAccessleveltbByAccessLevelId(ac);
 
         em.persist(user);
+
+        return getUserByEmail(email);
     }
 
     /**
@@ -85,4 +89,29 @@ public class UserManager{
 
         return user;
     }
+
+    public int login(String email, String password) {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> query = cb.createQuery(User.class);
+
+        Root<User> userRoot = query.from(User.class);
+        query.where(cb.equal(userRoot.get("email"), email));
+
+        int id = -1;
+        try {
+            User user = em.createQuery(query).getSingleResult();
+
+            if(user != null) {
+
+                if(user.getPassword().equals(password)) {
+
+                    id = user.getUserId();
+                }
+            }
+        }catch(NoResultException e){}
+
+        return id;
+    }
+
 }

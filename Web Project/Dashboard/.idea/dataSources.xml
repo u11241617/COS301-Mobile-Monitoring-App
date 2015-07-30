@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="555732039">
-    <data-source source="LOCAL" name="MySQL - DashboardDS" uuid="edfc17e9-af28-4bf4-8504-32056dc530cb">
+  <component name="DataSourceManagerImpl" format="xml" hash="2865204468">
+    <data-source source="LOCAL" name="iCrawlerDataSource" uuid="26189e8a-7f3e-441a-8a52-e6638f2d251f">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/mma</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/mmadb</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
@@ -13,11 +13,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar</url>
-        </library>
-      </libraries>
+      <libraries />
     </data-source>
   </component>
 </project>
