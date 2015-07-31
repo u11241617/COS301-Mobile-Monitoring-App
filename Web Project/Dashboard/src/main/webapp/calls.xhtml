@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+    <ui:composition template="commons/dashboard.xhtml">
+        <ui:define name="content">
+            <div>
+                <h1 class="page-header"> <i class="fa fa-phone fa-fw"></i>Calls</h1>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" id="custom-panel-heading">
+                    Call Logs
+                </div>
+                <div class="panel-body">
+                    <div class="dataTable_wrapper">
+                        <h:dataTable class="table table-striped table-bordered table-hover" id="log-table" value="#{callsBean.callLogs}" var="call">
+                            <h:column>
+                                <f:facet name="header">Type</f:facet>
+                                #{call.type}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Source</f:facet>
+                                #{call.source}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Destination</f:facet>
+                                #{call.destination}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Datetime</f:facet>
+                                #{call.datetime}
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

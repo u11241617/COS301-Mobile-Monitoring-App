@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>iCrawler</title>
+    </f:facet>
+
+    <f:facet name="middle">
+        <h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+        <h:outputStylesheet name="css/dataTables.bootstrap.css" />
+        <h:outputStylesheet name="css/dataTables.responsive.css" />
+        <h:outputStylesheet name="css/metisMenu.css"/>
+        <h:outputStylesheet name="css/dashboard.css" />
+        <h:outputStylesheet name="webjars/font-awesome/4.2.0/css/font-awesome.min-jsf.css"/>
+        <h:outputScript name="bootstrap/js/bootstrap.js" target="head"/>
+        <h:outputScript name="js/jquery.js" target="head"/>
+        <h:outputScript name="js/jquery.dataTables.js"  target="head"/>
+        <h:outputScript name="js/dataTables.bootstrap.js" target="head"/>
+        <h:outputScript name="js/metisMenu.js" target="head"/>
+        <h:outputScript name="js/app.js" target="head"/>
+    </f:facet>
+</h:head>
+<h:body>
+    <ui:insert name="header" >
+        <ui:include src="header.xhtml"/>
+    </ui:insert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ui:insert name="side">
+                    <ui:include src="sideMenu.xhtml" />
+                </ui:insert>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <ui:insert name="content">
+                </ui:insert>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
