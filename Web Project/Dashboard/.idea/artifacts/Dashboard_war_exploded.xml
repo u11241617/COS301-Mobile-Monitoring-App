@@ -29,6 +29,7 @@
           <element id="library" level="project" name="Maven: org.webjars:font-awesome:4.2.0" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:2.3.2" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:1.9.0" />
+          <element id="library" level="project" name="Maven: net.bootsfaces:bootsfaces:0.6.6" />
         </element>
       </element>
       <element id="directory" name="META-INF">

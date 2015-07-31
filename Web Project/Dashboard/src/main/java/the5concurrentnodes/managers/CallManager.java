@@ -2,12 +2,17 @@ package the5concurrentnodes.managers;
 
 import the5concurrentnodes.entities.Call;
 import the5concurrentnodes.entities.Device;
+import the5concurrentnodes.entities.Sms;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Stateless
 public class CallManager {
@@ -30,5 +35,16 @@ public class CallManager {
         call.setDevicetbByDeviceId(device);
 
         em.persist(call);
+    }
+
+    public List<Call> getAllCallLogs() {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Call> query = cb.createQuery(Call.class);
+
+        Root<Call> callRoot = query.from(Call.class);
+        query.select(callRoot);
+
+        return em.createQuery(query).getResultList();
     }
 }
