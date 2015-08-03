@@ -16,11 +16,10 @@
 	\newpage
 	
 	\section{Overview}
-	\emph{iCrawler} is a monitoring app available for Android only. The app
-	 uses your device's internet connection to send data logs collected from your phone to a desktop-dashboard
-	 for review. The app is absolutely free to download.\newline\newline
+	\emph{iCrawler} is a monitoring app available for Android only.The objective of the mobile monitoring application is to display and assist in understanding the activities performed by a mobile user as well as shedding more light into the behaviour of the mobile user.The mobile monitoring application generates reports giving the investigator quick and comprehensive data/logs. The app
+uses the device's internet connection to send the data logs collected from the phone to a desktop-dashboard for review. The app is absolutely free to download.\newline\newline
 	 
-	 \uppercase{Why use iCrawler:}\newline
+	 \uppercase{Why use \MakeLowercase iCrawler:}\newline
 	 \begin{itemize}
 		\item Child monitoring\newline
 		\emph{iCrawler} can be use by parents/guardians to monitor activities that their minor
@@ -46,9 +45,65 @@
 	  \\\\ \noalign{\smallskip}\textbf{Website}& www.github.com/u11241617/COS301-Mobile-Monitoring-App
 	  %\hline
 	 \end{tabular}\newpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Installation}
+\begin{itemize}
+  \item\textbf{App installation}
+  
+	Installation of the mobile iCrawler application is as follows. For the mobile iCrawler application all that is required is for the apk (Android 			Application Kit) file to be downloaded onto the device and installed. The user then needs to read the terms and conditions and register on the 				application or login if already registered.
+\end{itemize}	
+
+\begin{itemize}
+  \item\textbf{Server installation}
+  
+ iCrawler uses Java EE and glassfish 4 on the server side. Download and install MySql and xampp. Then download the glassfish4 files. Once finished downloading and installing MySql and xampp download MySql connector and place it in the glassfish lib folder.
+\end{itemize}	
 	
-	\section{Installation}\newpage
-	
+\begin{figure}[!htb]
+\begin{center}
+\caption{Download and add the MySql connector in the glassfish lib folder.}
+\includegraphics[width=150mm,scale=0.8]{img/mysql.png}
+\end{center}
+\label{Img:MySqlConnector}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\caption{Create pool in glassfish localhost.}
+\includegraphics[width=150mm,scale=0.6]{img/creatingPool1.png}
+\end{center}
+\label{Img:CreatingPool}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\caption{Create pool in glassfish localhost.}
+\includegraphics[width=150mm,scale=0.6]{img/creatingPool3.png}
+\end{center}
+\label{Img:CreatingPool}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\caption{Create pool in glassfish localhost.}
+\includegraphics[width=150mm,scale=0.6]{img/creatingPool2.png}
+\end{center}
+\label{Img:CreatingPool}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\caption{Setup glassfish in intellij project.}
+\includegraphics[width=150mm,scale=0.6]{img/intellijSetup.png}
+\end{center}
+\label{Img:CreatingPool}
+\end{figure}
+\clearpage
+\newpage
+
+	The files necessary to be installed on the server so that iCrawler can run can be retrieved from The 5 Concurrent Node Git-hub repository. The iCrawler 	application sends all its data/logs to a dashboard that is a xhtml website. The file necessary to run the dashboard can be downloaded from The 5 Concurrent Node Git-hub repository. The files need only be copy pasted onto the server. On access of the dashboard the user will be presented with a 			login page where the user will have to be registered on the iCrawler mobile application first before being able to login on the dashboard.\newpage
+
+
 	\section{Getting Started}
 	After successful installation, locate the iCrawler app icon and click on it to run the app.\
 	
@@ -93,13 +148,14 @@
 	\newline\newline
 	
 	\section{Troubleshooting}
-	The following section lists some common issues and their resolutions.
-	\textbf{iCrawler does not launch.}
-	Restart your phone and try to launch the application again.
-	\textbf{iCrawler crashes immediately after launch.}
-	Ensure that your device meets the minimum specifications to run iCrawler (See configurations).
-	Go to Settings -> Apps -> Manage Apps ->Running, to check if your apps are not using up all your memory. Try to end all processes you do not need and re-start your phone.
-	\textbf{Other unknown causes.}
-	 If problems continue, delete the app completely and then reinstall it from Google Play. And if this does not solve the issue, contact our support: support@iCrawler.co.za\
-			
+	The following section lists some of the iCrawler app's possible issues and resolutions:
+	
+	\begin{itemize}
+		\item \textbf{Does not launch.} Restart your phone and try to launch the application again.
+		\item\textbf{Crashes immediately after launch.} Ensure that your device meets the minimum specifications to run
+		 iCrawler (See configurations). Go to Settings $\rightarrow$ Apps $\rightarrow$ Manage Apps $\rightarrow$ Running, to check if your apps are not using up all
+		  your memory. Try to end all processes you do not need and re-start your phone.
+		\item \textbf{Other unknown causes.} If problems continue, delete the app completely and then reinstall it from Google Play Store.\
+	\end{itemize}
+		
 \end{document}
