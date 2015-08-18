@@ -1,0 +1,92 @@
+<div id="home">
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">iCrawler</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active">
+                        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>
+                    <li class="g">
+                        <a href="http://localhost:8080/Dashboard/messages.xhtml"><i class="fa fa-phone fa-fw"></i> Calls</a>
+                    </li>
+                    <li class="g">
+                        <a href="http://localhost:8080/Dashboard/messages.xhtml"><i class="fa fa-envelope fa-fw"></i> Messages</a>
+                    </li>
+                    <li class="g">
+                        <a href="#"><i class="fa fa-globe fa-fw"></i> Browser</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-offset-1 col-md-10 col-md-offset-1 main">
+                <div>
+                    <h1 class="page-header"> <i class="fa fa-dashboard fa-fw"></i>Dashboard</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-5">
+                        <div class="panel panel-primary custom-panel-device">
+                            <div class="panel-heading text-center">
+                                <div class="huge device-make"></div>
+                                <div class="device-model"></div>
+                            </div>
+                            <div class="panel-footer custom-panel-footer text-center">
+                                <span class="device-ime"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="panel panel-default custom-panel-primary">
+                            <div class="custom-panel-heading panel-heading">
+                                Messages Summary
+                            </div>
+                            <div class="panel-body">
+                                <canvas style="width: 100%;" id="lineChart" height="80"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div><!-- /.box-body -->
+                            <div class="panel panel-default custom-panel-secondary">
+                            <div class="custom-panel-heading panel-heading">
+                                Broswer
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-8">
+                                    <canvas id="doughnutChart" height="180"></canvas>
+                                </div>
+
+                                </div>
+                            </div><!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#wrapper -->
