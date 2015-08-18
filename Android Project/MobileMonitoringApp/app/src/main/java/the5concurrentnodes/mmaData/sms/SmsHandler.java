@@ -3,6 +3,7 @@ package the5concurrentnodes.mmaData.sms;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
 
 import org.json.JSONObject;
 
@@ -19,6 +20,8 @@ public class SmsHandler implements LogHandler {
         String date = cursor.getString(cursor.getColumnIndex(SmsConstants.DATE_COLUMN_NAME));
         String msg = cursor.getString(cursor.getColumnIndex(SmsConstants.BODY_COLUMN_NAME));
         String type = cursor.getString(cursor.getColumnIndex(SmsConstants.TYPE_COLUMN_NAME));
+
+        Log.d("SHORT SMS", address);
 
         return new Sms(type, address, msg,date);
     }
