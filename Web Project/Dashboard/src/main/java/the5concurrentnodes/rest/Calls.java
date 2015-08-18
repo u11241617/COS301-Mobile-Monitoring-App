@@ -2,6 +2,7 @@ package the5concurrentnodes.rest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import the5concurrentnodes.entities.Call;
 import the5concurrentnodes.entities.Device;
 import the5concurrentnodes.managers.CallManager;
 import the5concurrentnodes.managers.DeviceManager;
@@ -11,6 +12,7 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 import java.util.StringTokenizer;
 
 @Path("/")
@@ -75,6 +77,14 @@ public class Calls {
 
         return Response.status(status)
                 .type(MediaType.APPLICATION_JSON).build();
+    }
+
+
+    @GET @Path("/{deviceId}/calls")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Call> getMessages(@PathParam("deviceId") int deviceId) {
+
+        return callManager.getCallsByDeviceId(deviceId);
     }
 
 }

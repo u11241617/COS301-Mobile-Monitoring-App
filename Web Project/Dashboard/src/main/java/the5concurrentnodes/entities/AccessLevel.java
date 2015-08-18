@@ -2,9 +2,7 @@ package the5concurrentnodes.entities;
 
 import javax.persistence.*;
 
-/**
- * Created by GASwipper Gcc on 7/23/2015.
- */
+
 @Entity
 @Table(name = "accessleveltb", schema = "", catalog = "mmadb")
 public class AccessLevel {

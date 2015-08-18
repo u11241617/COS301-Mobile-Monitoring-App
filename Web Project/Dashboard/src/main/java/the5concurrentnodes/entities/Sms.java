@@ -3,9 +3,7 @@ package the5concurrentnodes.entities;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-/**
- * Created by GASwipper Gcc on 7/22/2015.
- */
+
 @Entity
 @Table(name = "smstb", schema = "", catalog = "mmadb")
 public class Sms {
