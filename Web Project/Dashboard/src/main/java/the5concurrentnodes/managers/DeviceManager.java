@@ -13,6 +13,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.util.List;
 
 
 @Stateless
@@ -26,6 +27,7 @@ public class DeviceManager {
         Device device = new Device();
 
         try{
+
             device.setMake(deviceInfo.getString("make"));
             device.setModel(deviceInfo.getString("model"));
             device.setOs(deviceInfo.getString("os"));
@@ -72,5 +74,22 @@ public class DeviceManager {
         }catch(NoResultException e){}
 
         return device;
+    }
+
+    public List<Device> findDeviceByUser(User user) {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Device> query = cb.createQuery(Device.class);
+
+        Root<Device> deviceRoot = query.from(Device.class);
+        query.where(cb.equal(deviceRoot.get("usertbByUserId"), user));
+
+        List<Device> devices = null;
+
+        try {
+            devices = em.createQuery(query).getResultList();
+        }catch(NoResultException e){}
+
+        return devices;
     }
 }

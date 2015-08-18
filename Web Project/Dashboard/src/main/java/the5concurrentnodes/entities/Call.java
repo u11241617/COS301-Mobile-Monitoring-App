@@ -4,9 +4,7 @@ import javax.persistence.*;
 import java.sql.Time;
 import java.sql.Timestamp;
 
-/**
- * Created by GASwipper Gcc on 7/22/2015.
- */
+
 @Entity
 @Table(name = "calltb", schema = "", catalog = "mmadb")
 public class Call {
@@ -86,15 +84,25 @@ public class Call {
         Call call = (Call) o;
 
         if (callId != call.callId) return false;
-        if (source != call.source) return false;
-        if (destination != call.destination) return false;
         if (type != null ? !type.equals(call.type) : call.type != null) return false;
+        if (source != null ? !source.equals(call.source) : call.source != null) return false;
+        if (destination != null ? !destination.equals(call.destination) : call.destination != null) return false;
         if (datetime != null ? !datetime.equals(call.datetime) : call.datetime != null) return false;
         if (duration != null ? !duration.equals(call.duration) : call.duration != null) return false;
 
         return true;
     }
 
+    @Override
+    public int hashCode() {
+        int result = callId;
+        result = 31 * result + (type != null ? type.hashCode() : 0);
+        result = 31 * result + (source != null ? source.hashCode() : 0);
+        result = 31 * result + (destination != null ? destination.hashCode() : 0);
+        result = 31 * result + (datetime != null ? datetime.hashCode() : 0);
+        result = 31 * result + (duration != null ? duration.hashCode() : 0);
+        return result;
+    }
 
     @ManyToOne
     @JoinColumn(name = "deviceID", referencedColumnName = "deviceID", nullable = false)

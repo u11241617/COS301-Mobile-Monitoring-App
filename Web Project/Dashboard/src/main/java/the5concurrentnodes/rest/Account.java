@@ -96,8 +96,7 @@ public class Account {
         JSONObject response = Utility.accountResponse("login", false, "Request forbidden", "null");
         Response.Status status = Response.Status.FORBIDDEN;
 
-        if(cType.equals(Constants.KEY_VOLLEY_APPLICATION_JSON)
-                || cType.equals(MediaType.APPLICATION_JSON)) {
+        if(cType.contains(MediaType.APPLICATION_JSON)){
 
 
             String email = null;
@@ -146,12 +145,53 @@ public class Account {
     }
 
     @POST @Path("/signin")
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response loginWeb(String rBody, @HeaderParam("email") String email) {
+    public Response doLoginWeb(String rBody,
+                            @HeaderParam("Content-Type") String cType) {
 
 
-        return Response.status(200)
+        JSONObject response = Utility.accountResponse("login", false, "Request forbidden", "null");
+        Response.Status status = Response.Status.FORBIDDEN;
+
+        if(cType.contains(MediaType.APPLICATION_JSON)){
+
+
+            String email = null;
+            String password = null;
+            try {
+
+                JSONObject jsonObject = new JSONObject(rBody);
+
+                email = jsonObject.getString("email");
+                password = jsonObject.getString("password");
+
+            }catch(JSONException e){}
+
+            if(email != null && password != null) {
+
+                User user = userManager.getUserByEmail(email);
+
+                if(user != null && password.equals(user.getPassword())) {
+
+                    JSONWebToken jsonWebToken = JSONWebToken.getInstance();
+                    response = Utility.accountResponse("login", true, "Logged in",
+                            jsonWebToken.createJWT(user.getUserId(), "51", "user"));
+
+                    status = Response.Status.OK;
+                }else {
+
+                    response = Utility.accountResponse("login", false, "Invalid Email or Password", "null");
+
+                    status = Response.Status.OK;
+                }
+            }
+
+        }
+
+        return Response.status(status)
                 .type(MediaType.APPLICATION_JSON)
-                .entity(rBody + " " + email).build();
+                .entity(response.toString()).build();
     }
+
 }

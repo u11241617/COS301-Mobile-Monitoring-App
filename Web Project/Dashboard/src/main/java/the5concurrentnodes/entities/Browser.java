@@ -1,14 +1,12 @@
 package the5concurrentnodes.entities;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
-@Table(name = "browsertb")
-public class Browser implements Serializable{
+@Table(name = "browsertb", schema = "", catalog = "mmadb")
+public class Browser {
     private int browserId;
     private String name;
-    private int browserid;
 
     @Id
     @Column(name = "browserID")
@@ -48,15 +46,5 @@ public class Browser implements Serializable{
         int result = browserId;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
-    }
-
-    @Id
-    @Column(name = "browserID")
-    public int getBrowserid() {
-        return browserid;
-    }
-
-    public void setBrowserid(int browserid) {
-        this.browserid = browserid;
     }
 }
