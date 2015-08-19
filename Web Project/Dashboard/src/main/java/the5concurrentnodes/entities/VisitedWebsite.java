@@ -3,16 +3,15 @@ package the5concurrentnodes.entities;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-/**
- * Created by GASwipper Gcc on 7/22/2015.
- */
 @Entity
-@Table(name = "visitedwebsitetb")
+@Table(name = "visitedwebsitetb", schema = "", catalog = "mmadb")
 public class VisitedWebsite {
     private int visitedWebsiteId;
     private String url;
     private Timestamp dateTime;
     private int frequency;
+    private Browser browsertbByBrowserId;
+    private Device devicetbByDeviceId;
 
     @Id
     @Column(name = "visitedWebsiteID")
@@ -76,5 +75,25 @@ public class VisitedWebsite {
         result = 31 * result + (dateTime != null ? dateTime.hashCode() : 0);
         result = 31 * result + frequency;
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "browserID", referencedColumnName = "browserID", nullable = false)
+    public Browser getBrowsertbByBrowserId() {
+        return browsertbByBrowserId;
+    }
+
+    public void setBrowsertbByBrowserId(Browser browsertbByBrowserId) {
+        this.browsertbByBrowserId = browsertbByBrowserId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "deviceID", referencedColumnName = "deviceID", nullable = false)
+    public Device getDevicetbByDeviceId() {
+        return devicetbByDeviceId;
+    }
+
+    public void setDevicetbByDeviceId(Device devicetbByDeviceId) {
+        this.devicetbByDeviceId = devicetbByDeviceId;
     }
 }

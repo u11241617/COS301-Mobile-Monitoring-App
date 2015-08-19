@@ -16,7 +16,6 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @Stateless
-@Named
 public class SmsManager {
 
     @PersistenceContext

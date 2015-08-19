@@ -90,6 +90,24 @@ public class UserManager{
         return user;
     }
 
+
+    public User getUserById(int id) {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> query = cb.createQuery(User.class);
+
+        Root<User> userRoot = query.from(User.class);
+        query.where(cb.equal(userRoot.get("userId"), id));
+
+        User user = null;
+
+        try {
+            user = em.createQuery(query).getSingleResult();
+        }catch(NoResultException e){}
+
+        return user;
+    }
+
     public int login(String email, String password) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();

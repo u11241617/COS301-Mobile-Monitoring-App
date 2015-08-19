@@ -4,8 +4,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import the5concurrentnodes.entities.Device;
 import the5concurrentnodes.entities.Sms;
+import the5concurrentnodes.entities.User;
 import the5concurrentnodes.managers.DeviceManager;
 import the5concurrentnodes.managers.SmsManager;
+import the5concurrentnodes.managers.UserManager;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -24,6 +26,9 @@ public class Messages {
 
     @Inject
     DeviceManager deviceManager;
+
+    @Inject
+    UserManager userManager;
 
     @POST @Path("/message")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -79,10 +84,18 @@ public class Messages {
     }
 
 
-    @GET @Path("/messages/{deviceId}")
+    @GET @Path("/{deviceId}/messages")
+    @Produces(MediaType.APPLICATION_JSON)
     public List<Sms> getMessages(@PathParam("deviceId") int deviceId) {
 
         return smsManager.getMessageByDeviceId(deviceId);
+    }
+
+    @GET @Path("/user")
+    @Produces(MediaType.APPLICATION_JSON)
+    public User geUser() {
+
+        return userManager.getUserByEmail("ss@gmail.com");
     }
 
 }
