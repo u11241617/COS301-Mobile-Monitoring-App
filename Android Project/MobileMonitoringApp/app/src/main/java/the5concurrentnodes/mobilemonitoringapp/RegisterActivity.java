@@ -28,7 +28,6 @@ import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
-import the5concurrentnodes.dialogs.HelpDialog;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
@@ -68,6 +67,15 @@ public class RegisterActivity extends Activity {
         progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
 
+      /*  final PackageManager pm = getPackageManager();
+//get a list of installed apps.
+        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        for (ApplicationInfo packageInfo : packages) {
+            Log.d("TAG", "Installed package :" + packageInfo.packageName);
+            Log.d("TAG", "Source dir : " + packageInfo.sourceDir);
+            Log.d("TAG", "Launch Activity :" + pm.getLaunchIntentForPackage(packageInfo.packageName));
+        }*/
+
         registerEmail.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -97,6 +105,11 @@ public class RegisterActivity extends Activity {
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     updatePasswordOkImageButtonState();
                     updateRegisterButtonState();
+                    if (!Utility.validatePassword(registerPassword.getText().toString()))
+                    {
+                        registerPassword.setError(RegisterActivity.this.getResources().getString(R.string.help_dialog_content) , null);
+                       // registerPassword.setError("To view password requirements, tap the icon on the top right of your screen");
+                    }
 
                 }
 
@@ -300,19 +313,6 @@ public class RegisterActivity extends Activity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
 
-        int id = item.getItemId();
-
-        if (id == R.id.action_help) {
-
-            HelpDialog dialog = new HelpDialog();
-            dialog.show(getFragmentManager(),null);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
 
