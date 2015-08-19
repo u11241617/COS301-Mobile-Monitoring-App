@@ -68,15 +68,14 @@ html,body {
     font-size: 14pt;
 }
 .nav-sidebar > .active > a {
-    color: #fff;
-    background-color: #26ae90;
+    border-left: 6px solid #26ae90;
+    background-color: #FFFFFF !important;
 }
 
 .nav-sidebar > .active > a,
 .nav-sidebar > li > a:hover,
 .nav-sidebar > li > a:focus {
-    color: #fff;
-    background-color: #26ae90;
+    border-left: 6px solid #26ae90;
 }
 
 
@@ -124,30 +123,42 @@ html,body {
 
 .custom-panel-primary {
 
-    border-top: 3px solid seagreen !important;
-}
-
-.custom-panel-secondary {
-
-    border-top: 3px solid #2196F3!important;
+    border-top: 3px solid #26ae90 !important;
 }
 
 .chart-legend {
-
-    margin: 10px;
+    margin-top: 20px;
+    padding-top: 10px ;
     list-style: none;
+    border-top: 1px solid #cccccc;
 }
+
 .chart-legend li {
 
-    display: inline-block;
     margin-right: 10px;
+    display: inline-block;
 }
 
+a.device:hover {
+
+    cursor: pointer;
+    text-decoration: none;
+}
 .custom-panel-device {
 
+    background-color: #26ae90;
     border: none !important;
+    color: #FFFFFF;
 }
+
+.device-ime {
+
+    color: #111;
+}
+
 .custom-panel-footer {
 
     background-color: #FFFFFF;
 }
+
+

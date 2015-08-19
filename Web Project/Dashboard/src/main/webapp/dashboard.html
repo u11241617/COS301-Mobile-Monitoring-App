@@ -4,16 +4,18 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="panel panel-primary custom-panel-device">
-                            <div class="panel-heading text-center">
-                                <div class="huge device-make"></div>
-                                <div class="device-model"></div>
+                    <div ng-repeat="device in device_logs" class="col-md-3">
+                        <a class="device">
+                            <div class="panel custom-panel-device">
+                                <div class="panel-heading text-center">
+                                    <div class="huge">{{device.make}}</div>
+                                    <div>{{device.model}}</div>
+                                </div>
+                                <div class="panel-footer custom-panel-footer text-center">
+                                    <span class="device-ime">{{device.imeNumber}}</span>
+                                </div>
                             </div>
-                            <div class="panel-footer custom-panel-footer text-center">
-                                <span class="device-ime"></span>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -24,23 +26,31 @@
                                 Messages Summary
                             </div>
                             <div class="panel-body">
-                                <canvas style="width: 100%;" id="lineChart" height="80"></canvas>
+                                <canvas style="width: 100%;" id="lineChart" height="100"></canvas>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div><!-- /.box-body -->
-                            <div class="panel panel-default custom-panel-secondary">
+                            <div class="panel panel-default custom-panel-primary">
                                 <div class="custom-panel-heading panel-heading">
                                     Broswer
                                 </div>
                                 <div class="panel-body">
-                                    <div class="col-md-8">
-                                        <canvas id="doughnutChart" height="180"></canvas>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <canvas id="doughnutChart" height="180"></canvas>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <ul class="chart-legend">
+                                                <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+                                                <li><i class="fa fa-circle-o text-green"></i> Default</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div><!-- /.box-body -->
+                            </div>
                         </div>
                     </div>
                 </div>

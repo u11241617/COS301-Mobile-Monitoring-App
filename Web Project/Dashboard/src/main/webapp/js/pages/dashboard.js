@@ -34,38 +34,10 @@ angular.module('icrawlerApp.home', [
         });
 
 
-        $scope.devices =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
+        $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
 
-            for(var i = 0; i < data.length; i++)
-                console.log(data[i].imeNumber + " " + data[i].model)
-
-            $(".device-make").append(data[0].make);
-            $(".device-model").append(data[0].model);
-            $(".device-ime").append("IME #" + data[0].imeNumber);
-           // drawUserLineChart(data);
         });
 
-        $scope.callAnonymousApi = function() {
-            // Just call the API as you'd do using $http
-            callApi('Anonymous', 'http://localhost:3001/api/random-quote');
-        }
-
-        $scope.callSecuredApi = function() {
-            callApi('Secured', 'http://localhost:8080/Dashboard/resources/messages/51');
-        }
-
-        function callApi(type, url) {
-            $scope.response = null;
-            $scope.api = type;
-            $http({
-                url: url,
-                method: 'GET'
-            }).then(function(quote) {
-                $scope.response = quote.data;
-            }, function(error) {
-                $scope.response = error.data;
-            });
-        }
 
     });
 

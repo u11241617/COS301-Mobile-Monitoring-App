@@ -11,7 +11,6 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/angular/angular.min.js"></script>
-    <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
     <script type="text/javascript" src="js/angular/angular-resource.min.js"></script>
@@ -20,6 +19,7 @@
     <script type="text/javascript" src="js/angular/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="js/angular/angular-jwt.min.js"></script>
     <script type="text/javascript" src="js/angular/angular-storage.min.js"></script>
+    <script type="text/javascript" src="js/angular/angular-datatables.min.js"></script>
     <script type="text/javascript" src="js/services.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
@@ -27,6 +27,7 @@
     <script type="text/javascript" src="js/pages/dashboard.js"></script>
     <script type="text/javascript" src="js/pages/template.js"></script>
     <script type="text/javascript" src="js/pages/calls.js"></script>
+    <script type="text/javascript" src="js/pages/messages.js"></script>
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -53,14 +54,14 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active">
+                <li>
                     <a ui-sref="template.dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 <li>
                     <a ui-sref="template.calls"><i class="fa fa-phone fa-fw"></i> Calls</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-envelope fa-fw"></i> Messages</a>
+                    <a ui-sref="template.messages"><i class="fa fa-envelope fa-fw"></i> Messages</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-globe fa-fw"></i> Browser</a>

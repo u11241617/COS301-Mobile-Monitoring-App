@@ -11,6 +11,32 @@
                 </div>
                 <div class="panel-body">
 
+                    <div class="panel-body">
+                        <div class="dataTable_wrapper">
+                            <table datatable="ng" class="table table-striped table-bordered table-hover">
+
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Source</th>
+                                    <th>Destination</th>
+                                    <th>Duration (min)</th>
+                                    <th>DateTime</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="call in calls_data">
+                                        <td>{{ call.type }}</td>
+                                        <td>{{ call.source }}</td>
+                                        <td>{{ call.destination }}</td>
+                                        <td>{{ call.duration }}</td>
+                                        <td>{{ call.datetime }}</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
