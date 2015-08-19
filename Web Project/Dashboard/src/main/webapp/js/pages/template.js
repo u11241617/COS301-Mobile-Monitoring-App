@@ -20,6 +20,9 @@ appLogin.controller('TemplateCtrl', function LoginController( $scope, $http, sto
     }else if( $state.go('template.calls')) {
 
         $state.go('template.calls');
+    }else if( $state.go('template.messages')) {
+
+        $state.go('template.messages');
     }
 
 });

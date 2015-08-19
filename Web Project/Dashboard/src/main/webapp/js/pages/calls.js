@@ -1,6 +1,7 @@
 
 angular.module('icrawlerApp.calls', [
     'ui.router',
+    'datatables',
     'angular-jwt',
     'angular-storage',
     'icrawlerServices'

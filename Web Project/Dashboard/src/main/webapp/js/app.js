@@ -1,10 +1,12 @@
 var app = angular.module('icrawlerApp',
-    ['ui.router','angular-jwt', 'angular-storage', 'icrawlerServices',
-        'icrawlerApp.home' ,'icrawlerApp.login', 'icrawlerApp.template', 'icrawlerApp.calls']);
+    ['ui.router','angular-jwt', 'angular-storage', 'datatables', 'icrawlerServices',
+        'icrawlerApp.home' ,'icrawlerApp.login', 'icrawlerApp.template', 'icrawlerApp.calls',
+        'icrawlerApp.messages']);
 
 
 app.config(function myAppConfig ($urlRouterProvider, $httpProvider, jwtInterceptorProvider) {
-        $urlRouterProvider.otherwise('/');
+
+    $urlRouterProvider.otherwise('/');
 
     jwtInterceptorProvider.tokenGetter = function(store) {
         return store.get('jwt');
