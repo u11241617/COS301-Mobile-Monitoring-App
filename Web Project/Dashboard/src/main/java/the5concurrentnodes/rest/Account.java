@@ -73,7 +73,7 @@ public class Account {
 
                 JSONWebToken jsonWebToken = JSONWebToken.getInstance();
                 response = Utility.accountResponse("register", true, "Account created",
-                        jsonWebToken.createJWT(user.getUserId(), device.getImeNumber(), "user"));
+                        jsonWebToken.createJWT(user.getUserId(), device.getImeNumber(), "user", false));
 
                 status = Response.Status.CREATED;
             }
@@ -126,7 +126,7 @@ public class Account {
 
                     JSONWebToken jsonWebToken = JSONWebToken.getInstance();
                     response = Utility.accountResponse("login", true, "Logged in",
-                            jsonWebToken.createJWT(user.getUserId(), device.getImeNumber(), "user"));
+                            jsonWebToken.createJWT(user.getUserId(), device.getImeNumber(), "user", false));
 
                     status = Response.Status.OK;
                 }else {
@@ -176,7 +176,7 @@ public class Account {
 
                     JSONWebToken jsonWebToken = JSONWebToken.getInstance();
                     response = Utility.accountResponse("login", true, "Logged in",
-                            jsonWebToken.createJWT(user.getUserId(), "51", "user"));
+                            jsonWebToken.createJWT(user.getUserId(), "51", "user", true));
 
                     status = Response.Status.OK;
                 }else {

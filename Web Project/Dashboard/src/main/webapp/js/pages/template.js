@@ -17,12 +17,15 @@ appLogin.controller('TemplateCtrl', function LoginController( $scope, $http, sto
     if($state.is("template") || $state.is("template.dashboard")) {
 
         $state.go('template.dashboard');
-    }else if( $state.go('template.calls')) {
+    }else if( $state.is('template.calls')) {
 
         $state.go('template.calls');
-    }else if( $state.go('template.messages')) {
+    }else if( $state.is('template.messages')) {
 
         $state.go('template.messages');
+    }else if($state.is('template.browser')) {
+
+        $state.go('template.browser');
     }
 
 });

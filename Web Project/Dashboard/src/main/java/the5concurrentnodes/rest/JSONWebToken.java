@@ -43,7 +43,7 @@ public class JSONWebToken {
         return rsaJsonWebKey;
     }
 
-    private JwtClaims getClaims(int uId, String diD, String role) {
+    private JwtClaims getClaims(int uId, String diD, String role, boolean expire) {
 
         JwtClaims claims = new JwtClaims();
         claims.setIssuer(Constants.KEY_JWT_ISSUER);  // who creates the token and signs it
@@ -55,13 +55,20 @@ public class JSONWebToken {
         claims.setClaim(Constants.KEY_JWT_DEVICE_ID, diD);
         claims.setClaim(Constants.KEY_JWT_ROLE, role);
 
+        if(expire) {
+
+            claims.setExpirationTimeMinutesInTheFuture(3);
+        }
+
+
+
         return claims;
     }
 
-    public String createJWT(int uId, String diD, String role) {
+    public String createJWT(int uId, String diD, String role, boolean expire) {
 
         JsonWebSignature jsonWebSignature = new JsonWebSignature();
-        jsonWebSignature.setPayload(getClaims(uId, diD, role).toJson());
+        jsonWebSignature.setPayload(getClaims(uId, diD, role, expire).toJson());
         jsonWebSignature.setKey(getRsaJsonWebKey().getPrivateKey());
         jsonWebSignature.setKeyIdHeaderValue(getRsaJsonWebKey().getKeyId());
         jsonWebSignature.setAlgorithmHeaderValue(AlgorithmIdentifiers.RSA_USING_SHA256);

@@ -29,7 +29,6 @@ appLogin.controller('LoginCtrl', function LoginController( $scope, $http, store,
                 }
                 console.log(response.data.access_token);
             }, function (error) {
-                alert(error.data);
             });
         }
 });
