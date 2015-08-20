@@ -21,14 +21,14 @@ public class BrowserHandler implements LogHandler {
         String date=cursor.getString(cursor.getColumnIndex(BrowserConstants.DATE_COLUMN_NAME));
         String created=cursor.getString(cursor.getColumnIndex(BrowserConstants.CREATED_COLUMN_NAME));
 
-        Log.d("\n \n Browser", type + " " + url+ "\n Visits: "+ visits);// + " \n Title: "+ title + "\n date: "+date + " \n Created: "+ created);
+        Log.d("\n \n Browser****", type + " " + url+ "\n Visits: "+ visits);// + " \n Title: "+ title + "\n date: "+date + " \n Created: "+ created);
         return new Browser(type,url,title,visits,date,created);
 
     }
     @Override
     public void submitLog(Context context, JSONObject params) {
 
-        String url = Config.REST_API + "/browser";
+        String url = Config.REST_API + "/site";
         DataHandler.submitLog(context, url, params);
     }
 

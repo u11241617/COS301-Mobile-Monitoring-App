@@ -3,16 +3,20 @@ package the5concurrentnodes.mobilemonitoringapp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -24,12 +28,18 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
+import the5concurrentnodes.mmaData.AppInfo.AppInfo;
+import the5concurrentnodes.mmaData.AppInfo.ProcessAppInfo;
+import the5concurrentnodes.mmaData.Browser.BrowserHandler;
+import the5concurrentnodes.mmaData.Browser.BrowserObserver;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
@@ -42,6 +52,7 @@ public class RegisterActivity extends Activity {
     private EditText confirmRegisterPassword;
     private ImageButton passwordOkImageButton;
     private ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,14 +78,21 @@ public class RegisterActivity extends Activity {
         progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
 
-      /*  final PackageManager pm = getPackageManager();
-//get a list of installed apps.
-        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
-        for (ApplicationInfo packageInfo : packages) {
-            Log.d("TAG", "Installed package :" + packageInfo.packageName);
-            Log.d("TAG", "Source dir : " + packageInfo.sourceDir);
-            Log.d("TAG", "Launch Activity :" + pm.getLaunchIntentForPackage(packageInfo.packageName));
-        }*/
+
+       // ProcessAppInfo processAppInfo = new ProcessAppInfo(this.getApplicationContext());
+        //processAppInfo.doInBackground();
+        AppInfo appInfo = new AppInfo();
+        ArrayList<AppInfo> current = appInfo.getListOfInstalledApp(getApplicationContext());
+        Log.d("no of installed apps", String.valueOf(current.size()));
+        for (int i = 0; i < current.size(); i++) {
+            Log.d("installed apps ****", "name: " + current.get(i).getName() + " Package name: " + current.get(i).getPackageName()
+                    + "Version Name: " + current.get(i).getVersionName() + "Version Code: " + current.get(i).getVersionCode() +
+                    "Icon:" + current.get(i).getIcon());
+
+                ImageView imageView = new ImageView(getApplicationContext());
+                //Drawable d = getPackageManager().getApplicationIcon("com.AdhamiPiranJhandukhel.com");
+                imageView.setImageDrawable(current.get(i).getIcon());
+        }
 
         registerEmail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -108,7 +126,6 @@ public class RegisterActivity extends Activity {
                     if (!Utility.validatePassword(registerPassword.getText().toString()))
                     {
                         registerPassword.setError(RegisterActivity.this.getResources().getString(R.string.help_dialog_content) , null);
-                       // registerPassword.setError("To view password requirements, tap the icon on the top right of your screen");
                     }
 
                 }
