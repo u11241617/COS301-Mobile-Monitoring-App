@@ -1,7 +1,7 @@
 var app = angular.module('icrawlerApp',
     ['ui.router','angular-jwt', 'angular-storage', 'datatables', 'icrawlerServices',
         'icrawlerApp.home' ,'icrawlerApp.login', 'icrawlerApp.template', 'icrawlerApp.calls',
-        'icrawlerApp.messages']);
+        'icrawlerApp.messages', 'icrawlerApp.browser']);
 
 
 app.config(function myAppConfig ($urlRouterProvider, $httpProvider, jwtInterceptorProvider) {
