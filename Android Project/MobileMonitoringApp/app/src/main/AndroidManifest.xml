@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="the5concurrentnodes.splash.SplashActivity"
-            android:label="SplashActivity">
+            android:label="splash">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 

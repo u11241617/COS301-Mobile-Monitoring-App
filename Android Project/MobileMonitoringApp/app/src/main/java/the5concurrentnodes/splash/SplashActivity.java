@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.MotionEvent;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.VideoView;
 
 import the5concurrentnodes.mobilemonitoringapp.MainActivity;
@@ -18,7 +20,9 @@ public class SplashActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		try{
+		try{    requestWindowFeature(Window.FEATURE_NO_TITLE);
+			getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+					WindowManager.LayoutParams.FLAG_FULLSCREEN);
 	        videoHolder = new VideoView(this);
 			setContentView(videoHolder);
 			Uri video = Uri.parse("android.resource://" + getPackageName() + "/"
