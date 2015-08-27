@@ -37,7 +37,7 @@
 	The following section will explain each module in the mobile monitoring app. The use-case design, functional requirements extracted from the use-case along with the selected service contracts will also be discussed.\newline
 	
 	\subsection{Modular System}
-	 The application uses modular design approach. This allows the following to be archived:
+	 The application uses modular design approach. This allows the following to be achieved:
 	 \begin{itemize}
 	\item add new functionality in the future
  	\item decouple the system
@@ -131,7 +131,7 @@
 		\newpage
 		
 		\subsubsection{Domain Model}
-		The domain model for this module is very simple and straight foward.It only requires a vailid service request.
+		The domain model for this module is very simple and straight forward.It only requires a valid service request.
 		
 		
 		\begin{figure}[!htbp]
@@ -173,7 +173,7 @@
 		The retrieveDeviceInfo use case retrieves all the relevant device information from the device.\newline
 		
 		\subparagraph{Service Contract:}
-		The service contract for retrieveDeviceInfo is shown in the figure below. The retrieveDeviceInfo 			recieves a retrieveDeviceInfoRequest object that specifies the type of data to be retrieved and 			stored locally on to a database.
+		The service contract for retrieveDeviceInfo is shown in the figure below. The retrieveDeviceInfo 			receives a retrieveDeviceInfoRequest object that specifies the type of data to be retrieved and 			stored locally on to a database.
 		
 		
 		\begin{figure}[!htbp]
@@ -193,7 +193,7 @@
 		
 		
 		\paragraph{Process specification:}
-		When a request is made for device data to be retrieve. The service checks for the type of data to 			be retrieved and follows the required channels to retrieve the data.If the service is not 					successful then an exeption is raised. If the service is successfull then an object with the 				required data is returned as a result of the query.
+		When a request is made for device data to be retrieved. The service checks for the type of data to 			be retrieved and follows the required channels to retrieve the data. If the service is not 					successful then an exception is raised. If the service is successful then an object with the 				required data is returned as a result of the query.
 		
 		\begin{figure}[!htbp]
     		\centering
@@ -227,7 +227,7 @@
 		
 			\newpage
 			\paragraph{Process specification:}
-			The  service recieves a request that specifies the type of activity the service needs to collect data from.The service will retrieve the data from that activity and if it fails then an exption will be raised.The result from the function will be an object that wraps the required data.
+			The  service receives a request that specifies the type of activity the service needs to collect data from.The service will retrieve the data from that activity and if it fails then an exception will be raised.The result from the function will be an object that wraps the required data.
 			
 			
 			\begin{figure}[!htbp]
@@ -239,7 +239,7 @@
 		\newpage
 	
 		\subsubsection{Domain Model}
-		The domain model for this module is very simple and straight foward.It only requires a vailid service request.
+		The domain model for this module is very simple and straight forward.It only requires a valid service request.
 		
 		
 		\begin{figure}[!htbp]
@@ -301,7 +301,7 @@
 		\paragraph{ sendReportToDashboard - priority: important}
 		This module sends the report onto a server where they will be saved on a database to de displayed later on a dashboard .\newline
 		\subparagraph{Service Contract:}
-			The service contract for sendReportToDashboard is shown in the figure below. The pre-condition is not enforced i.e. If the app fails to estabilish a connection with the server, the report will be saved temoparily on the device until a connection is estabilished.
+			The service contract for sendReportToDashboard is shown in the figure below. The pre-condition is not enforced i.e. If the app fails to establish a connection with the server, the report will be saved temporarily on the device until a connection is established.
 			
 		
 		\begin{figure}[!htbp]
