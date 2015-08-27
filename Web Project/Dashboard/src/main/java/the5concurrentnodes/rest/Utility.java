@@ -25,4 +25,20 @@ public class Utility {
         return jsonObject;
     }
 
+    public static JSONObject accountResponse(
+            String tag , boolean status, String msg, String token) {
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+
+            jsonObject.put("tag", tag);
+            jsonObject.put("status", Boolean.valueOf(status));
+            jsonObject.put("message", msg);
+            jsonObject.put("access_token", token);
+
+        } catch (JSONException e) {}
+
+        return jsonObject;
+    }
+
 }

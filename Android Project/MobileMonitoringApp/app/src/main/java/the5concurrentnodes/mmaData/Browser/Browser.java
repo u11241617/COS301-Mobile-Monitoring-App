@@ -58,7 +58,7 @@ public class Browser implements ConvertToJSON {
 
         try{
 
-            jsonObject.put("type", type);
+            jsonObject.put("browser", type);
             jsonObject.put("url", url);
             jsonObject.put("title", title);
             jsonObject.put("visits", visits);

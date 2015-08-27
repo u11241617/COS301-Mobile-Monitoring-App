@@ -3,16 +3,20 @@ package the5concurrentnodes.mobilemonitoringapp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -24,13 +28,18 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
-import the5concurrentnodes.dialogs.HelpDialog;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
+import the5concurrentnodes.mmaData.AppInfo.AppInfo;
+import the5concurrentnodes.mmaData.AppInfo.ProcessAppInfo;
+import the5concurrentnodes.mmaData.Browser.BrowserHandler;
+import the5concurrentnodes.mmaData.Browser.BrowserObserver;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
@@ -43,6 +52,7 @@ public class RegisterActivity extends Activity {
     private EditText confirmRegisterPassword;
     private ImageButton passwordOkImageButton;
     private ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +77,22 @@ public class RegisterActivity extends Activity {
         registerButton = (Button) findViewById(R.id.register_button);
         progressDialog = new ProgressDialog(RegisterActivity.this);
         progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
+
+
+       // ProcessAppInfo processAppInfo = new ProcessAppInfo(this.getApplicationContext());
+        //processAppInfo.doInBackground();
+        AppInfo appInfo = new AppInfo();
+        ArrayList<AppInfo> current = appInfo.getListOfInstalledApp(getApplicationContext());
+        Log.d("no of installed apps", String.valueOf(current.size()));
+        for (int i = 0; i < current.size(); i++) {
+            Log.d("installed apps ****", "name: " + current.get(i).getName() + " Package name: " + current.get(i).getPackageName()
+                    + "Version Name: " + current.get(i).getVersionName() + "Version Code: " + current.get(i).getVersionCode() +
+                    "Icon:" + current.get(i).getIcon());
+
+                ImageView imageView = new ImageView(getApplicationContext());
+                //Drawable d = getPackageManager().getApplicationIcon("com.AdhamiPiranJhandukhel.com");
+                imageView.setImageDrawable(current.get(i).getIcon());
+        }
 
         registerEmail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -97,6 +123,10 @@ public class RegisterActivity extends Activity {
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     updatePasswordOkImageButtonState();
                     updateRegisterButtonState();
+                    if (!Utility.validatePassword(registerPassword.getText().toString()))
+                    {
+                        registerPassword.setError(RegisterActivity.this.getResources().getString(R.string.help_dialog_content) , null);
+                    }
 
                 }
 
@@ -230,15 +260,9 @@ public class RegisterActivity extends Activity {
             JSONObject deviceInfoParams = new JSONObject();
             DeviceInfo deviceInfo = new DeviceInfo(getApplicationContext());
 
-			
-			/*
-            deviceInfoParams.put("model", deviceInfo.getModel());
-            deviceInfoParams.put("make", deviceInfo.getManufacturer());
-            deviceInfoParams.put("os", "Samsung");
-            deviceInfoParams.put("network", deviceInfo.getCarrierName());
-            deviceInfoParams.put("imeNumber", deviceInfo.getIMEI());
-			*/
+
             jsonParams.put("deviceInfo",deviceInfo.toJSONObject().toString());
+
 
 
         }catch(JSONException e){}
@@ -302,19 +326,6 @@ public class RegisterActivity extends Activity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
 
-        int id = item.getItemId();
-
-        if (id == R.id.action_help) {
-
-            HelpDialog dialog = new HelpDialog();
-            dialog.show(getFragmentManager(),null);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
 

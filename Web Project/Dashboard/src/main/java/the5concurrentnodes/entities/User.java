@@ -1,18 +1,19 @@
 package the5concurrentnodes.entities;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+
 
 @Entity
-@Table(name = "user")
+@Table(name = "usertb", schema = "", catalog = "mmadb")
 public class User {
     private int userId;
     private String email;
     private String password;
-    private Timestamp registrationDate;
+    private byte firstLogin;
+    private AccessLevel accessleveltbByAccessLevelId;
 
     @Id
-    @Column(name = "user_id")
+    @Column(name = "userID")
     public int getUserId() {
         return userId;
     }
@@ -42,13 +43,13 @@ public class User {
     }
 
     @Basic
-    @Column(name = "registration_date")
-    public Timestamp getRegistrationDate() {
-        return registrationDate;
+    @Column(name = "firstLogin")
+    public byte getFirstLogin() {
+        return firstLogin;
     }
 
-    public void setRegistrationDate(Timestamp registrationDate) {
-        this.registrationDate = registrationDate;
+    public void setFirstLogin(byte firstLogin) {
+        this.firstLogin = firstLogin;
     }
 
     @Override
@@ -59,10 +60,9 @@ public class User {
         User user = (User) o;
 
         if (userId != user.userId) return false;
+        if (firstLogin != user.firstLogin) return false;
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (registrationDate != null ? !registrationDate.equals(user.registrationDate) : user.registrationDate != null)
-            return false;
 
         return true;
     }
@@ -72,7 +72,17 @@ public class User {
         int result = userId;
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (registrationDate != null ? registrationDate.hashCode() : 0);
+        result = 31 * result + (int) firstLogin;
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "accessLevelID", referencedColumnName = "accessLevelID", nullable = false)
+    public AccessLevel getAccessleveltbByAccessLevelId() {
+        return accessleveltbByAccessLevelId;
+    }
+
+    public void setAccessleveltbByAccessLevelId(AccessLevel accessleveltbByAccessLevelId) {
+        this.accessleveltbByAccessLevelId = accessleveltbByAccessLevelId;
     }
 }

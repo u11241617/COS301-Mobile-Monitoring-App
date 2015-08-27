@@ -58,7 +58,7 @@ public class DeviceInfo implements ConvertToJSON {
     {
         return this.carrierName;
     }
-	@Override
+    @Override
     public JSONObject toJSONObject() {
 
         JSONObject jsonObject = new JSONObject();
@@ -67,7 +67,7 @@ public class DeviceInfo implements ConvertToJSON {
 
             jsonObject.put("model", model);
             jsonObject.put("make", manufacturer);
-            jsonObject.put("os", manufacturer);
+            jsonObject.put("os", LineNumber);
             jsonObject.put("network", carrierName);
             jsonObject.put("imeNumber", IMEI);
 
