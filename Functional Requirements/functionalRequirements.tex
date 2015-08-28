@@ -131,7 +131,7 @@
 		\newpage
 		
 		\subsubsection{Domain Model}
-		The domain model for this module is very simple and straight forward.It only requires a valid service request.
+		The domain model for iCrawlerAccountModule.
 		
 		
 		\begin{figure}[!htbp]
@@ -139,18 +139,6 @@
     		\includegraphics[width=0.9\textwidth]{img/DomainModelAccountModule.jpg}
     		\caption{Domain Model - Account Module}
     		\label{fig:DomainMod_accountModule}
-		\end{figure}
-		\newpage
-				
-		\subsubsection{Design Pattern}
-		In order to depict the behavior of this module, we use a state design pattern. This highlights the transitions 
-		between a user login and user register.
-		
-		\begin{figure}[!htbp]
-    		\centering
-    		\includegraphics[width=0.9\textwidth]{img/design_patterns/AccountModule_StateDesignPattern.jpg}
-    		\caption{Design Pattern - State}
-    		\label{fig:DesignPat_state}
 		\end{figure}
 		\newpage
 		
@@ -193,7 +181,7 @@
 		
 		
 		\paragraph{Process specification:}
-		When a request is made for device data to be retrieved. The service checks for the type of data to 			be retrieved and follows the required channels to retrieve the data. If the service is not 					successful then an exception is raised. If the service is successful then an object with the 				required data is returned as a result of the query.
+		This activity diagram depicts the process specification for retrieving device information which includes IMEI number, device make and model
 		
 		\begin{figure}[!htbp]
     		\centering
@@ -203,11 +191,11 @@
 		\end{figure}
 		
 		
-		\paragraph{retrieveCommunicationActivities - priority: important}
-		The retrieveCommunicationAcitivites use-case retrieves all the users communication activities from 		the various apps on the device.\newpage
+		\paragraph{retrieveLogActivities - priority: important}
+		The retrieveLogAcitivites use-case retrieves all the users activity logs from the various apps on the device.\newpage
 		
 		\subparagraph{Service Contract:}
-		The service contract for retrieveCommunicationAcitivites is shown in the figure below. The 					retrieveCommunicationActivitiesRequest requests the data regardless of the data type and 		retrieveCommunicationActivitiesRequest retrieves the data where it packages the data and stores it on the database locally.
+		The service contract for retrieveLogAcitivites is shown in the figure below. The retrieveLogActivitiesRequest requests the data from the device's content provider and tries to send the data to the server.
 		
 		\begin{figure}[!htbp]
     		\centering
@@ -227,7 +215,7 @@
 		
 			\newpage
 			\paragraph{Process specification:}
-			The  service receives a request that specifies the type of activity the service needs to collect data from.The service will retrieve the data from that activity and if it fails then an exception will be raised.The result from the function will be an object that wraps the required data.
+			The  service receives a request that specifies the type of activity it needs to collect data from. The service will then try to retrieve the data from that activity. Upon retrieving the device logs, the service tries to persist the data logs to the database.
 			
 			
 			\begin{figure}[!htbp]
@@ -239,7 +227,7 @@
 		\newpage
 	
 		\subsubsection{Domain Model}
-		The domain model for this module is very simple and straight forward.It only requires a valid service request.
+		The diagram below depicts the domain model for the DataModule .
 		
 		
 		\begin{figure}[!htbp]
@@ -266,7 +254,7 @@
 	\subsubsection{Use-Cases}
 			This section provides details on the use-case requirements for the use-cases offered by this module.
 		\paragraph{ createReport - priority: important}
-		This use-case retrieves logs from the device and creates a report from those specific logs.
+		This use-case retrieves logs from the device's local database and creates a report from those specific logs.
 		\newpage
 		
 		\subparagraph{Service Contract:}
@@ -299,9 +287,9 @@
 					
 								
 		\paragraph{ sendReportToDashboard - priority: important}
-		This module sends the report onto a server where they will be saved on a database to de displayed later on a dashboard .\newline
+		This module sends the report onto a server where it will be saved on a database to be displayed later on a dashboard .\newline
 		\subparagraph{Service Contract:}
-			The service contract for sendReportToDashboard is shown in the figure below. The pre-condition is not enforced i.e. If the app fails to establish a connection with the server, the report will be saved temporarily on the device until a connection is established.
+			The service contract for sendReportToDashboard is shown in the figure below. The pre-condition is not enforced i.e. If the app fails to establish a connection with the server, the report will be saved temporarily on the device's local database until a connection is established.
 			
 		
 		\begin{figure}[!htbp]
@@ -325,17 +313,5 @@
     		\includegraphics[width=0.9\textwidth]{img/ProcessSpecificationSendResportToDashboard.jpg}
     		\caption{Process Specification - Send Report To Dashboard}
     		\label{fig:ProcessSpec_submitReport}
-		\end{figure}
-		\newpage
-		
-			\paragraph{Domain Model:}
-			This section contains the domain model for the reporting module. This module retrieves logs from the data module. 
-			
-			
-			\begin{figure}[!htbp]
-    		\centering
-    		\includegraphics[width=0.9\textwidth]{img/domainModelReportModule.jpg}
-    		\caption{Domain Model - mmaReporting Module}
-    		\label{fig:DomainModel_reportingModule}
 		\end{figure}	
 \end{document}
