@@ -85,7 +85,7 @@
 		
 		
 		\paragraph{Process specification:}		
-		When a request is made for a user to register, a connection to the database must be established. If no connection to the database can be made then an exception is thrown. Alternatively, validateUserExistance is called to check if that user exists or not. If the user does exist then an exception is thrown, if not then that user is registered.
+		When a request is made for a user to register, a connection to the database must be established. If no connection to the database can be made, then an exception is thrown. Alternatively, validateUserExistance is called to check if that user exists or not. If the user does exist then an exception is thrown, if not then that user is registered.
 		
 		\begin{figure}[!htbp]
     		\centering
@@ -96,10 +96,10 @@
 				
 	
 	\paragraph{loginUser - priority: important}
-		This use-case logins a user on initial installation after user accepts terms and conditions of use.
+		This use-case logs in a user on initial installation after user accepts terms and conditions of use.
 		
 	\subparagraph{Service Contract:}
-		The service contract for loginUser is shown in the figure below. The pre-conditions that are enforced(raises and exception if not met) and on success the user is logged in and the device and user data is persisted to the database.\newline 	
+		The service contract for loginUser is shown in the figure below. The pre-conditions that are enforced(raises an exception if not met) and on success the user is logged in and the device, including user data are persisted to the database.\newline 	
 	
 		\begin{figure}[!htbp]
     		\centering
@@ -143,7 +143,7 @@
 		\newpage
 				
 		\subsubsection{Design Pattern}
-		In order to depict the behavior of this module, we use a State design pattern. This highlights the transitions 
+		In order to depict the behavior of this module, we use a state design pattern. This highlights the transitions 
 		between a user login and user register.
 		
 		\begin{figure}[!htbp]
