@@ -1,10 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<div class="login-page-header">
-    <ul>
-        <li><img src="images/logo.png" width="64" height="64"/></li>
-        <li><img src="images/icrawler.png" height="46"/></li>
-    </ul>
-</div>
+
+
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="login.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="login.js"></script>
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css"/>
+        <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootst..." rel="stylesheet" id="bootstrap-css"/>
+    </h:head>
+
+<body>
+	<div class="panel-heading" style="background-color:#26ae90">
+		<img src="test.png"/>
+	</div>
 <section id="login">
     <div class="container">
         <div class="row">
@@ -17,7 +36,7 @@
 
                         <div class="form-group">
                             <div class="input-group">
-                                <input ng-model="user.email" class="form-control" placeholder="Email" name="loginname" type="text" autofocus="autofocus"/>
+                                <input class="form-control" placeholder="Email" name="loginname" type="text" autofocus="autofocus"/>
 								<span class="input-group-addon">
 									<i class="fa fa-envelope"></i>
 								</span>
@@ -25,7 +44,7 @@
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <input ng-model="user.password" class="form-control" placeholder="Password" name="password" type="password" id="pass" value=""/>
+                                <input class="form-control" placeholder="Password" name="password" type="password" id="pass" value=""/>
 								<span class="input-group-addon">
 									<i class="fa fa-lock fa-lg"></i>
 								</span>
@@ -35,7 +54,7 @@
                             <span class="character-checkbox" onclick="showPassword()"></span>
                             <span class="label">Show password</span>
                         </div>
-                        <input ng-click="login()" type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Sign in"/>
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in"/>
                     </form>
                     <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
                     <hr/>
@@ -81,3 +100,6 @@
         </div>
     </div>
 </footer>
+
+</body>
+</html>
