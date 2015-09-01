@@ -44,14 +44,25 @@ appServices.factory('Sites', ['$resource',
         });
     }]);
 
-/*
-appServices.factory('Login', ['$resource',
-    function($resource){
-        return $resource('http://localhost:8080/Dashboard/resources/signin', {}, {
-            login: {
-                method: 'POST',
-                isArray: false
-            }
-        });
-    }]);
-*/
+appServices.factory('CurrentDevice', function () {
+    var deviceId = 0;
+
+    return {
+        getDeviceId: function () {
+            return deviceId;
+        },
+        setdeviceId: function(d) {
+            deviceId = d;
+        }
+    };
+});
+
+
+appServices.factory('Logout', function () {
+
+    return {
+        out: function() {
+            alert("Hello");
+        }
+    };
+});

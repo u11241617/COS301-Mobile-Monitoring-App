@@ -15,13 +15,13 @@ angular.module('icrawlerApp.calls', [
             }
         });
     })
-    .controller('CallsCtrl', function HomeController($scope, $http, store, jwtHelper, Calls) {
+    .controller('CallsCtrl', function HomeController($scope, $http, store, jwtHelper, Calls, CurrentDevice) {
 
         $scope.jwt = store.get('jwt');
         $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
 
-        $scope.calls_data = Calls.query({device: $scope.decodedJwt.device_id}, function(data) {
-
+        var device_id = CurrentDevice.getDeviceId();
+        $scope.calls_data = Calls.query({device:device_id}, function(data) {
 
         });
 

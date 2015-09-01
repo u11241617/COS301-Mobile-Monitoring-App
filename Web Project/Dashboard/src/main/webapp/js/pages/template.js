@@ -10,7 +10,7 @@ var appLogin =  angular.module('icrawlerApp.template', [
         });
 });
 
-appLogin.controller('TemplateCtrl', function LoginController( $scope, $http, store, $state) {
+appLogin.controller('TemplateCtrl', function LoginController( $scope, $http, store, $state, Logout) {
 
     console.log("State: " + $state.get());
 
@@ -28,4 +28,14 @@ appLogin.controller('TemplateCtrl', function LoginController( $scope, $http, sto
         $state.go('template.browser');
     }
 
+    $scope.showlogoutDialog = function() {
+
+        $(".modal").modal('show');
+    }
+
+
+    $scope.logout = function() {
+
+        $(".modal").modal('show');
+    }
 });

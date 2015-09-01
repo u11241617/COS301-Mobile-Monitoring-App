@@ -127,16 +127,19 @@ html,body {
 }
 
 .chart-legend {
-    margin-top: 20px;
-    padding-top: 10px ;
+    width: 100%;
     list-style: none;
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-left: 0;
+    text-align: center;
     border-top: 1px solid #cccccc;
 }
 
-.chart-legend li {
+.chart-legend > li {
 
-    margin-right: 10px;
     display: inline-block;
+    margin-left: 8px;
 }
 
 a.device:hover {
@@ -160,6 +163,25 @@ a.device:hover {
 
     background-color: #FFFFFF;
 }
+
+.red {
+    color: #F7464A;
+}
+
+.blue {
+
+    color: #46BFBD;
+}
+
+.link:hover {
+
+    cursor: pointer;
+}
+
+/**
+Begin
+Login page Styling
+*/
 
 .login-page-header {
     width: 100%;

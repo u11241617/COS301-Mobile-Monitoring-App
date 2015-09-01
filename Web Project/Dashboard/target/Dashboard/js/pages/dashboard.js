@@ -13,33 +13,56 @@ angular.module('icrawlerApp.home', [
                 requiresLogin: true
             }
         });
-    })
-    .controller('HomeCtrl', function HomeController($scope, $http, store, jwtHelper, Sms, Device, Calls, Sites) {
+    }).controller('HomeCtrl', function HomeController($scope, $state, $http, store, jwtHelper, Sms, Device, Calls, Sites, CurrentDevice) {
 
         $scope.jwt = store.get('jwt');
         $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
 
-        $scope.sms = Sms.query({device: $scope.decodedJwt.device_id}, function(data) {
-
-            drawUserLineChart(data);
-        });
-
-        $scope.calls = Calls.query({device: $scope.decodedJwt.device_id}, function(data) {
-
-        });
-
-        $scope.sites = Sites.query({device: $scope.decodedJwt.device_id}, function(data) {
-
-            drawUserDoughnutChart(data);
-        });
-
-
         $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
 
+            CurrentDevice.setdeviceId(data[0].deviceId);
+
+            $scope.sms = Sms.query({device: data[0].deviceId}, function(data) {
+
+                drawUserLineChart(data);
+            });
+
+            $scope.calls = Calls.query({device: data[0].deviceId}, function(data) {
+
+            });
+
+            $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
+
+                drawUserDoughnutChart(data);
+            });
+
         });
+
+        $scope.load_data = function(device_id) {
+
+            $scope.sms = Sms.query({device: device_id}, function(data) {
+
+                drawUserLineChart(data);
+            });
+
+            $scope.calls = Calls.query({device: device_id}, function(data) {
+
+            });
+
+            $scope.sites = Sites.query({device: device_id}, function(data) {
+
+                drawUserDoughnutChart(data);
+            });
+
+            CurrentDevice.setdeviceId(device_id);
+            $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
+
+            });
+        }
 
 
     });
+
 
 function drawUserLineChart(data) {
 
@@ -62,7 +85,6 @@ function drawUserLineChart(data) {
         if(data[i].type == "Sent") {
 
             var date = new Date(data[i].datetime);
-            console.log(date.getMonth());
             smsSent[date.getMonth()] =  smsSent[date.getMonth()] + 1;
             numS++;
         }else {
@@ -115,8 +137,6 @@ function drawUserLineChart(data) {
 
 function drawUserDoughnutChart(data) {
 
-    console.log(data[0].source);
-
     var chrome = 0;
     var default_browser = 0;
 
@@ -127,15 +147,14 @@ function drawUserDoughnutChart(data) {
         if(data[i].browsertbByBrowserId.name == "Chrome") {
 
             chrome++;
-            console.log("Chone");
-
         }else {
 
             default_browser++;
-            console.log("default");
         }
     }
 
+    var canvas = $("#doughnutChart").get(0);
+    canvas.width = canvas.width
     var ctx = $("#doughnutChart").get(0).getContext("2d");
     var doughnutChart = new Chart(ctx);
 
