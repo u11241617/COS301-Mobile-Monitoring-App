@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.21)  4 AUG 2015 01:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.21)  1 SEP 2015 11:30
 entering extended mode
 **User_Manual.tex
 
@@ -462,17 +462,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 Package color Info: Driver file: pdftex.def on input line 130.
 )
 ("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\User Manual\User_
-Manual.aux"
-
-LaTeX Warning: Label `Img:CreatingPool' multiply defined.
-
-
-LaTeX Warning: Label `Img:CreatingPool' multiply defined.
-
-
-LaTeX Warning: Label `Img:CreatingPool' multiply defined.
-
-)
+Manual.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
@@ -551,13 +541,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
-
-Overfull \hbox (3.59401pt too wide) in paragraph at lines 27--30
-\OT1/cmr/m/n/12 Companies that give their em-ploy-ees mo-bile de-vices can use 
-the \OT1/cmr/m/it/12 iCrawler
- []
-
-[3]
+ [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -565,7 +549,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 36.
 File: img/icon.png Graphic file (type png)
- <use img/icon.png>
+
+<use img/icon.png>
 Package pdftex.def Info: img/icon.png used on input line 36.
 (pdftex.def)             Requested size: 39.00238pt x 39.00204pt.
 
@@ -573,129 +558,83 @@ Overfull \hbox (69.45367pt too wide) in paragraph at lines 36--47
 [] 
  []
 
-[4] <img/mysql.png, id=40, 800.23969pt x 375.65344pt>
-File: img/mysql.png Graphic file (type png)
- <use img/mysql.png>
-Package pdftex.def Info: img/mysql.png used on input line 65.
-(pdftex.def)             Requested size: 640.19263pt x 300.52315pt.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
-Overfull \hbox (36.78856pt too wide) in paragraph at lines 65--66
- [] 
  []
 
-<img/creatingPool1.png, id=41, 794.2172pt x 437.38406pt>
-File: img/creatingPool1.png Graphic file (type png)
 
-<use img/creatingPool1.png>
-Package pdftex.def Info: img/creatingPool1.png used on input line 73.
-(pdftex.def)             Requested size: 476.534pt x 262.43245pt.
-
-Overfull \hbox (36.7908pt too wide) in paragraph at lines 73--74
- [] 
+Overfull \hbox (7.32921pt too wide) in paragraph at lines 52--57
+[]\OT1/cmr/m/n/12 https://github.com/u11241617/COS301-Mobile-Monitoring-App/tre
+e/master 
  []
 
-<img/creatingPool3.png, id=42, 792.71156pt x 414.79968pt>
-File: img/creatingPool3.png Graphic file (type png)
 
-<use img/creatingPool3.png>
-Package pdftex.def Info: img/creatingPool3.png used on input line 81.
-(pdftex.def)             Requested size: 475.6306pt x 248.88173pt.
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
 
-Overfull \hbox (36.79456pt too wide) in paragraph at lines 81--82
- [] 
  []
 
-<img/creatingPool2.png, id=43, 801.74532pt x 432.86719pt>
-File: img/creatingPool2.png Graphic file (type png)
 
-<use img/creatingPool2.png>
-Package pdftex.def Info: img/creatingPool2.png used on input line 89.
-(pdftex.def)             Requested size: 481.0509pt x 259.7223pt.
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
 
-Overfull \hbox (36.80641pt too wide) in paragraph at lines 89--90
- [] 
  []
 
-<img/intellijSetup.png, id=44, 816.80156pt x 484.05844pt>
-File: img/intellijSetup.png Graphic file (type png)
-
-<use img/intellijSetup.png>
-Package pdftex.def Info: img/intellijSetup.png used on input line 97.
-(pdftex.def)             Requested size: 490.08472pt x 290.4373pt.
-
-Overfull \hbox (36.80504pt too wide) in paragraph at lines 97--98
- [] 
- []
-
-[5 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/img
-/mysql.png>] [6 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/Us
-er Manual/img/creatingPool1.png>] [7 <C:/Users/Matt/Documents/GitHub/COS301-Mob
-ile-Monitoring-App/User Manual/img/creatingPool3.png>] [8 <C:/Users/Matt/Docume
-nts/GitHub/COS301-Mobile-Monitoring-App/User Manual/img/creatingPool2.png>]
-[9 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/img
-/intellijSetup.png>] [10
-
-] <img/tnc2.png, id=75, 722.7pt x 1284.8pt>
+[5] <img/tnc2.png, id=55, 722.7pt x 1284.8pt>
 File: img/tnc2.png Graphic file (type png)
-
-<use img/tnc2.png>
-Package pdftex.def Info: img/tnc2.png used on input line 118.
+ <use img/tnc2.png>
+Package pdftex.def Info: img/tnc2.png used on input line 79.
 (pdftex.def)             Requested size: 195.0pt x 346.66539pt.
- [11 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/i
-mg/tnc2.png>] <img/reg.png, id=81, 722.7pt x 1284.8pt>
+ [6 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/im
+g/tnc2.png>]
+<img/reg.png, id=61, 722.7pt x 1284.8pt>
 File: img/reg.png Graphic file (type png)
-
-<use img/reg.png>
-Package pdftex.def Info: img/reg.png used on input line 129.
+ <use img/reg.png>
+Package pdftex.def Info: img/reg.png used on input line 90.
 (pdftex.def)             Requested size: 195.0pt x 346.66539pt.
- [12 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/i
-mg/reg.png>] <img/log.png, id=87, 722.7pt x 1284.8pt>
+ [7 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/im
+g/reg.png>]
+<img/log.png, id=68, 722.7pt x 1284.8pt>
 File: img/log.png Graphic file (type png)
-
-<use img/log.png>
-Package pdftex.def Info: img/log.png used on input line 139.
+ <use img/log.png>
+Package pdftex.def Info: img/log.png used on input line 100.
 (pdftex.def)             Requested size: 195.0pt x 346.66539pt.
- [13 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/i
-mg/log.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
+ [8 <C:/Users/Matt/Documents/GitHub/COS301-Mobile-Monitoring-App/User Manual/im
+g/log.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
-[14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
 
 ("C:\Users\Matt\Documents\GitHub\COS301-Mobile-Monitoring-App\User Manual\User_
 Manual.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 161.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 122.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 6096 strings out of 493921
- 89179 string characters out of 3146483
+ 6069 strings out of 493921
+ 88578 string characters out of 3146483
  168520 words of memory out of 3000000
- 9288 multiletter control sequences out of 15000+200000
+ 9268 multiletter control sequences out of 15000+200000
  7636 words of font info for 27 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,10n,33p,635b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,10n,33p,410b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
 Program Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
  Files (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files 
 (x86)/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on User_Manual.pdf (14 pages, 1950202 bytes).
+Output written on User_Manual.pdf (9 pages, 422912 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,23 +11,26 @@
     <h:head>
         <link rel="stylesheet" type="text/css" href="login.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-
         <script type="text/javascript" src="js/bootstrap.js"></script>
         <script type="text/javascript" src="login.js"></script>
         <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css"/>
         <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <link href="//netdna.bootstrapcdn.com/bootst..." rel="stylesheet" id="bootstrap-css"/>
     </h:head>
 
 <body>
+	<div class="panel-heading" style="background-color:#26ae90">
+		<img src="test.png"/>
+	</div>
 <section id="login">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+		            <div class="col-xs-12">
                 <div class="form-wrap">
                     <div class="row text-center" >
-                        <h1 style="font-size:35px;"><img class="profile-img" src="ic_launcher.png" alt=""/>iCrawler</h1>
+                        <h1 style="font-size:35px;color:#777777">Sign in</h1>
                     </div>
                     <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
 
@@ -35,7 +38,7 @@
                             <div class="input-group">
                                 <input class="form-control" placeholder="Email" name="loginname" type="text" autofocus="autofocus"/>
 								<span class="input-group-addon">
-									<i class="glyphicon glyphicon-user"></i>
+									<i class="fa fa-envelope"></i>
 								</span>
                             </div>
                         </div>
@@ -43,7 +46,7 @@
                             <div class="input-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password" id="pass" value=""/>
 								<span class="input-group-addon">
-									<i class="glyphicon glyphicon-lock"></i>
+									<i class="fa fa-lock fa-lg"></i>
 								</span>
                             </div>
                         </div>
