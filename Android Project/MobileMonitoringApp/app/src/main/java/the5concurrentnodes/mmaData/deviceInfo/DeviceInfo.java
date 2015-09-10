@@ -35,12 +35,10 @@ public class DeviceInfo implements ConvertToJSON {
     {
         return this.version;
     }
-
     public String getModel()
     {
         return this.model;
     }
-
     public String getManufacturer()
     {
         return this.manufacturer;
@@ -53,11 +51,11 @@ public class DeviceInfo implements ConvertToJSON {
     {
         return this.LineNumber;
     }
-
     public String getCarrierName()
     {
         return this.carrierName;
     }
+
     @Override
     public JSONObject toJSONObject() {
 
