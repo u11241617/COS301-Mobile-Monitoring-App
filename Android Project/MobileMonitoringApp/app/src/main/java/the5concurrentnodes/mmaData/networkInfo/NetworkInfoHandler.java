@@ -8,6 +8,8 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -31,41 +33,31 @@ public class NetworkInfoHandler implements LogHandler {
     private String TimeStamp;
     private String BSSID;
     private String ConnectionStatus;
+    private Context context;
 
-    public NetworkInfo getNetworkInfo (){
-        Context context = getContext();
+    public NetworkInfo getNetworkInfo (Context context){
 
-        DisplayWifiState();
+        this.context = context;
 
-        this.registerReceiver(this.myWifiReceiver,
-                new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        Log.d("heloow"," network infohandler create");
+        GetWifiState(context);
+        Toast.makeText(this.context, "taaaaaaaaaaaaaaaaaaaaaaaaaaaahis is my Toast message!!! =)",
+                Toast.LENGTH_LONG).show();
         return new NetworkInfo(SSID,MACADDRESS,IPaddress,TimeStamp,ConnectionStatus, BSSID);
     }
-    private BroadcastReceiver myWifiReceiver
-            = new BroadcastReceiver(){
 
-        @Override
-        public void onReceive(Context arg0, Intent arg1) {
-            // TODO Auto-generated method stub
-            android.net.NetworkInfo networkInfo = (android.net.NetworkInfo) arg1.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);
-            if(networkInfo.getType() == ConnectivityManager.TYPE_WIFI){
-                DisplayWifiState();
-            }
-        }};
 
-    private void DisplayWifiState(){
+    private void GetWifiState(Context context){
 
-        ConnectivityManager myConnManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+        ConnectivityManager myConnManager = (ConnectivityManager) context.getSystemService(context.CONNECTIVITY_SERVICE);
         android.net.NetworkInfo myNetworkInfo = myConnManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        WifiManager myWifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+        WifiManager myWifiManager = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
         WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
 
-        //textMac.setText(myWifiInfo.getMacAddress());
-        MACADDRESS = myWifiInfo.getMacAddress()
+        MACADDRESS = myWifiInfo.getMacAddress();
         if (myNetworkInfo.isConnected()){
             int myIp = myWifiInfo.getIpAddress();
 
-            //textConnected.setText("--- CONNECTED ---");
             ConnectionStatus = "CONNECTED";
             int intMyIp3 = myIp/0x1000000;
             int intMyIp3mod = myIp%0x1000000;
@@ -76,38 +68,22 @@ public class NetworkInfoHandler implements LogHandler {
             int intMyIp1 = intMyIp2mod/0x100;
             int intMyIp0 = intMyIp2mod%0x100;
 
-           /* textIp.setText(String.valueOf(intMyIp0)
-                            + "." + String.valueOf(intMyIp1)
-                            + "." + String.valueOf(intMyIp2)
-                            + "." + String.valueOf(intMyIp3)
-            );*/
             IPaddress=String.valueOf(intMyIp0)
                     + "." + String.valueOf(intMyIp1)
                     + "." + String.valueOf(intMyIp2)
                     + "." + String.valueOf(intMyIp3);
 
-            //textSsid.setText(myWifiInfo.getSSID());
+
             SSID = myWifiInfo.getSSID();
-            // textBssid.setText(myWifiInfo.getBSSID());
+
             BSSID = myWifiInfo.getBSSID();
-            //textSpeed.setText(String.valueOf(myWifiInfo.getLinkSpeed()) + " " + WifiInfo.LINK_SPEED_UNITS);
-            //textRssi.setText(String.valueOf(myWifiInfo.getRssi()));
-            //texttime.setText(String.valueOf(getTime()));
             TimeStamp = getTime();
         }
         else{
-            //textConnected.setText("--- DIS-CONNECTED! ---");
             ConnectionStatus = "DISCONNECTED";
-            //textIp.setText("---");
             IPaddress = "";
-
-            //textSsid.setText("---");
             SSID="";
-            //textBssid.setText("---");
             BSSID = "";
-            //textSpeed.setText("---");
-            //textRssi.setText("---");
-            //texttime.setText(String.valueOf(getTime()));
             TimeStamp = getTime();
         }
 
@@ -115,7 +91,6 @@ public class NetworkInfoHandler implements LogHandler {
     public String getTime()
     {
         Calendar c = Calendar.getInstance();
-
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String formattedDate = df.format(c.getTime());
         return formattedDate;
@@ -124,7 +99,8 @@ public class NetworkInfoHandler implements LogHandler {
     @Override
     public void submitLog(Context context, JSONObject params) {
 
-        String url = Config.REST_API + "/message";
+        String url = Config.REST_API + "/networkInfo";
+
         DataHandler.submitLog(context, url, params);
     }
 }

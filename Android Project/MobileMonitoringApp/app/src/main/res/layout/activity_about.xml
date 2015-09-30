@@ -16,6 +16,6 @@
     <TextView
         android:textSize="16pt"
         android:layout_height="wrap_content"
-       <!-- android:text=""@help_dialog_content"-->
+
         android:layout_width="wrap_content"/>
 </RelativeLayout>

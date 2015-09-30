@@ -1,7 +1,12 @@
 package the5concurrentnodes.mmaData.networkInfo;
 
+import android.app.Activity;
+import android.content.Context;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.security.Provider;
 
 import the5concurrentnodes.mmaData.interfaces.ConvertToJSON;
 

