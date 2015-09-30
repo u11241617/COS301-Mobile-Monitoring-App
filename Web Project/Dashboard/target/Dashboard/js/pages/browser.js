@@ -15,12 +15,13 @@ angular.module('icrawlerApp.browser', [
             }
         });
     })
-    .controller('BrowserCtrl', function HomeController($scope, $http, store, jwtHelper, Sites) {
+    .controller('BrowserCtrl', function HomeController($scope, $http, store, jwtHelper, Sites, CurrentDevice) {
 
         $scope.jwt = store.get('jwt');
         $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
 
-        $scope.sites = Sites.query({device: $scope.decodedJwt.device_id}, function(data) {
+        var device_id = CurrentDevice.getDeviceId();
+        $scope.sites = Sites.query({device: device_id}, function(data) {
 
         });
     });

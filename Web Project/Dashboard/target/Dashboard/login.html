@@ -1,5 +1,11 @@
-<div class="panel-heading" style="background-color:#26ae90">
-	<img src="resources\images\Logo.png"/>
+
+
+<div class="login-page-header">
+    <ul>
+        <li><img src="images/logo.png" width="64" height="64"/></li>
+        <li><img src="images/icrawler.png" height="46"/></li>
+    </ul>
+
 </div>
 <section id="login">
     <div class="container">
@@ -13,7 +19,9 @@
 
                         <div class="form-group">
                             <div class="input-group">
-                                <input class="form-control" placeholder="Email" name="loginname" type="text" autofocus="autofocus"/>
+
+                                <input ng-model="user.email" class="form-control" placeholder="Email" name="loginname" type="text" autofocus="autofocus"/>
+
 								<span class="input-group-addon">
 									<i class="fa fa-envelope"></i>
 								</span>
@@ -21,7 +29,9 @@
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <input class="form-control" placeholder="Password" name="password" type="password" id="pass" value=""/>
+
+                                <input ng-model="user.password" class="form-control" placeholder="Password" name="password" type="password" id="pass" value=""/>
+
 								<span class="input-group-addon">
 									<i class="fa fa-lock fa-lg"></i>
 								</span>
@@ -31,7 +41,9 @@
                             <span class="character-checkbox" onclick="showPassword()"></span>
                             <span class="label">Show password</span>
                         </div>
-                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in"/>
+
+                        <input ng-click="login()" type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Sign in"/>
+
                     </form>
                     <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
                     <hr/>

@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -81,7 +82,7 @@ public class RegisterActivity extends Activity {
 
        // ProcessAppInfo processAppInfo = new ProcessAppInfo(this.getApplicationContext());
         //processAppInfo.doInBackground();
-        AppInfo appInfo = new AppInfo();
+       /* AppInfo appInfo = new AppInfo();
         ArrayList<AppInfo> current = appInfo.getListOfInstalledApp(getApplicationContext());
         Log.d("no of installed apps", String.valueOf(current.size()));
         for (int i = 0; i < current.size(); i++) {
@@ -92,7 +93,7 @@ public class RegisterActivity extends Activity {
                 ImageView imageView = new ImageView(getApplicationContext());
                 //Drawable d = getPackageManager().getApplicationIcon("com.AdhamiPiranJhandukhel.com");
                 imageView.setImageDrawable(current.get(i).getIcon());
-        }
+        }*/
 
         registerEmail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -308,6 +309,11 @@ public class RegisterActivity extends Activity {
 
 
         RequestQueue requestQueue = VolleyRequestQueue.getRequestQueue();
+
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(5000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        
         requestQueue.add(jsonObjectRequest);
 
     }

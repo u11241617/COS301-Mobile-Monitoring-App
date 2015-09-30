@@ -15,12 +15,13 @@ angular.module('icrawlerApp.messages', [
             }
         });
     })
-    .controller('MessagesCtrl', function HomeController($scope, $http, store, jwtHelper, Sms) {
+    .controller('MessagesCtrl', function HomeController($scope, $http, store, jwtHelper, Sms, CurrentDevice) {
 
         $scope.jwt = store.get('jwt');
         $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
 
-        $scope.sms_data = Sms.query({device: $scope.decodedJwt.device_id}, function(data) {
+        var device_id = CurrentDevice.getDeviceId();
+        $scope.sms_data = Sms.query({device: device_id}, function(data) {
 
         });
 
