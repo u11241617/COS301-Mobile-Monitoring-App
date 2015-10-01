@@ -39,11 +39,10 @@ public class NetworkInfoHandler implements LogHandler {
 
         this.context = context;
 
-        Log.d("heloow"," network infohandler create");
         GetWifiState(context);
-        Toast.makeText(this.context, "taaaaaaaaaaaaaaaaaaaaaaaaaaaahis is my Toast message!!! =)",
-                Toast.LENGTH_LONG).show();
-        return new NetworkInfo(SSID,MACADDRESS,IPaddress,TimeStamp,ConnectionStatus, BSSID);
+       /* Toast.makeText(this.context,SSID + " " + MACADDRESS + " " + IPaddress + " " + TimeStamp + " " + ConnectionStatus + " " + BSSID ,
+                Toast.LENGTH_LONG).show();*/
+        return new NetworkInfo(context,SSID,MACADDRESS,IPaddress,TimeStamp,ConnectionStatus, BSSID);
     }
 
 
@@ -100,7 +99,6 @@ public class NetworkInfoHandler implements LogHandler {
     public void submitLog(Context context, JSONObject params) {
 
         String url = Config.REST_API + "/networkInfo";
-
         DataHandler.submitLog(context, url, params);
     }
 }

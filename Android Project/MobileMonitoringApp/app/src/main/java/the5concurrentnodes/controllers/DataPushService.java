@@ -71,7 +71,7 @@ public class DataPushService extends Service{
             return  START_STICKY;
         }
 
-    private BroadcastReceiver myWifiReceiver = new BroadcastReceiver(){
+   private BroadcastReceiver myWifiReceiver = new BroadcastReceiver(){
 
         @Override
         public void onReceive(Context arg0, Intent arg1) {
