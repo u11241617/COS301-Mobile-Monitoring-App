@@ -3,6 +3,7 @@ package the5concurrentnodes.mmaData.call;
 import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -20,12 +21,18 @@ public class CallHandler implements LogHandler {
         String date = cursor.getString(cursor.getColumnIndex(CallConstants.DATE_COLUMN_NAME));
 
         Log.d("Call", type + " " + number);
+
+
+
         return new Call(type, number, duration,date);
     }
 
     @Override
     public void submitLog(Context context, JSONObject params) {
         String url = Config.REST_API + "/call";
+
+
+
         DataHandler.submitLog(context, url, params);
     }
 }
