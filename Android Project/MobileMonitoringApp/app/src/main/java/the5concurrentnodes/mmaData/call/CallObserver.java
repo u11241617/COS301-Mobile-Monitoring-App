@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
+import android.widget.Toast;
 
 public class CallObserver extends ContentObserver {
     private Context context;
@@ -42,8 +43,6 @@ public class CallObserver extends ContentObserver {
                 }else{
                     call.setType("Missed");
                 }
-
-
 
                 callHandler.submitLog(context, call.toJSONObject());
             }
