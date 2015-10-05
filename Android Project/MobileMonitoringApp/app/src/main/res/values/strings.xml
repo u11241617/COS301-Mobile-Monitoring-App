@@ -26,7 +26,8 @@
     <string name="progress_signing_in">Signing in</string>
     <string name="progress_signing_up">Signing up</string>
     <string name="request_unknown_error">Unknown error occurred. Please check your internet connection</string>
-    <string name="help_dialog_content">Password must be at least 6 characters long with at least 1 digit, 1 lowercase and 1 uppercase.</string>
+    <string name="help_dialog_content">Password must be at least 6 characters log </string>
+    <string name="password_hint">Must be at least 6 characters long </string>
     <string name="got_it_text">Got it!</string>
     <string name="help_dialog_title">Form Completion</string>
     <string name="in_need_help"><u>I need help</u></string>
@@ -38,5 +39,7 @@
     <string name="recover_password">Recover Password</string>
     <string name="recover">Recover</string>
     <string name="cancel">Cancel</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
