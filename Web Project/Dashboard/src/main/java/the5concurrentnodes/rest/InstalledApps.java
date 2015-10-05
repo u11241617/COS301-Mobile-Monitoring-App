@@ -1,11 +1,16 @@
 package the5concurrentnodes.rest;
 
+
+import org.jose4j.json.internal.json_simple.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import the5concurrentnodes.entities.Call;
 import the5concurrentnodes.entities.Device;
-import the5concurrentnodes.managers.CallManager;
+import the5concurrentnodes.entities.DeviceApp;
+import the5concurrentnodes.entities.User;
+import the5concurrentnodes.managers.AppManager;
 import the5concurrentnodes.managers.DeviceManager;
+import the5concurrentnodes.managers.PermissionManager;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -17,15 +22,19 @@ import java.util.StringTokenizer;
 
 @Path("/")
 @Stateless
-public class Calls {
+public class InstalledApps {
 
     @Inject
-    CallManager callManager;
+    AppManager appManager;
+
+    @Inject
+    PermissionManager permissionManager;
 
     @Inject
     DeviceManager deviceManager;
 
-    @POST @Path("/call")
+    @POST
+    @Path("/app")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response addMessage(String rBody,
@@ -47,30 +56,38 @@ public class Calls {
 
             if(tokenClaims != null) {
 
-                String source = null;
-                String destination = null;
-                String type = null;
+                String appName = null;
+                String appVersion = null;
+                org.json.JSONArray appPermissions = null;
                 String deviceIME = null;
-                String duration = null;
 
                 try {
 
                     JSONObject jsonObject = new JSONObject(rBody);
 
-                    source = jsonObject.getString("source");
-                    destination = jsonObject.getString("destination");
-                    type = jsonObject.getString("type");
+                    appName = jsonObject.getString("appName");
+                    appVersion = jsonObject.getString("version");
+                    appPermissions = jsonObject.getJSONArray("permissions");
                     deviceIME = tokenClaims.getString(Constants.KEY_JWT_DEVICE_ID);
-                    duration = jsonObject.getString("duration");
 
-
-                } catch (JSONException e) {
-                }
+                }catch(JSONException e){}
 
                 Device device = deviceManager.findUserByIMENumber(deviceIME);
+                appManager.persist(appName, appVersion, device);
 
-                callManager.persist(source, destination, type, duration, device);
+                DeviceApp app = appManager.getAppByName(appName);
+
+                for(int i = 0; i < appPermissions.length(); i++) {
+
+                    org.json.JSONObject obj = appPermissions.getJSONObject(i);
+
+                    permissionManager.persist(
+                            obj.getString("label"), obj.getString("description"), app);
+                }
+
+
                 status = Response.Status.CREATED;
+
             }
 
         }
@@ -80,11 +97,10 @@ public class Calls {
     }
 
 
-    @GET @Path("/{deviceId}/calls")
+    @GET @Path("/{deviceId}/apps")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Call> getCalls(@PathParam("deviceId") int deviceId) {
+    public List<DeviceApp> getApps(@PathParam("deviceId") int deviceId) {
 
-        return callManager.getCallsByDeviceId(deviceId);
+        return appManager.getAppsByDeviceId(deviceId);
     }
-
 }
