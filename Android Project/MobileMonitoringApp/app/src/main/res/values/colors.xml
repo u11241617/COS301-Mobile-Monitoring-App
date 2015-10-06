@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#3b4148</color>
+
     <color name="green">#26ae90</color>
-    <color name="white">#ffffff</color>
     <color name="grey">#cccccc</color>
     <color name="group_stroke">#E6E6E6</color>
     <color name="disabled_btn">#d3d3d3</color>
+
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#004D40</color>
+    <color name="textColorPrimary">#cccccc</color>
+    <color name="windowBackground">#cccccc</color>
+    <color name="navigationBarColor">#cccccc</color>
+    <color name="colorAccent">#FFC107</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>

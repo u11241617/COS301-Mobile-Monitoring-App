@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_weight="12">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/home_logo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:text="iCrawler"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="Version 1.0"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+        <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+           android:layout_marginBottom="15dp"
+           android:background="@color/white"
+           android:textColor="@color/black"
+           android:text="@string/sign_in"
+            android:onClick="toLogin"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:onClick="toRegister"
+            android:text="@string/sign_up"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:text="By signing up or signing in, you agree to our Terms &amp; Privacy Policy"/>
+
+    <View
+        android:id="@+id/input_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/black"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:onClick="toTour"
+        android:text="TAKE TOUR"/>
+</LinearLayout>
