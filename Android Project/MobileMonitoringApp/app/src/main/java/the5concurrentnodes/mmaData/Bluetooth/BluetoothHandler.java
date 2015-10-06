@@ -67,7 +67,7 @@ public class BluetoothHandler implements LogHandler {
                 _mode = "unknown";
         }
 
-        Log.d("\nBluetooth agagaa"," **State: "+ _state + " ***mode: " +_mode + " ***LocalName: " +localName+ " ***Address: " +address+ " ***PairedDevices:  " +pairedDevices );
+       // Log.d("\nBluetooth agagaa"," **State: "+ _state + " ***mode: " +_mode + " ***LocalName: " +localName+ " ***Address: " +address+ " ***PairedDevices:  " +pairedDevices );
         return new Bluetooth(_state,_mode,localName,address,pairedDevices);
     }
     @Override
