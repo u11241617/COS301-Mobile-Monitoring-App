@@ -1,95 +1,235 @@
-/*    --------------------------------------------------
-	:: Login Section
-	-------------------------------------------------- */
-#login {
-    padding-top: 50px
+
+
+body,html{
+
+    width: 100%;
+    min-height: 100%;
+    font-family: Helvetica;
+    background-color: #eee;
+    -webkit-font-smoothing: antialiased;
 }
-#login .form-wrap {
-    width: 30%;
-    margin: 0 auto;
+
+
+hgroup {
+    text-align:center;
+    margin-top: 4em;
 }
-#login h1 {
-    color: #1fa67b;
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 20px;
+
+h1, h3 { font-weight: 300; }
+
+h1 { color: #636363; }
+
+h3 { color: #009688; }
+
+form {
+
+    width: 480px;
+    margin: 1em auto;
+    padding: 2em 2em 2em 2em;
 }
-#login .form-group {
-    margin-bottom: 25px;
-}
-#login .checkbox {
-    margin-bottom: 20px;
+
+.group {
     position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+    margin-bottom: 45px;
 }
-#login .checkbox.show:before {
-    content: '\e013';
-    color: #1fa67b;
-    font-size: 17px;
-    margin: 1px 0 0 3px;
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 40px;
+    -webkit-appearance: none;
+    display: block;
+    background: none;
+    color: #333333;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #333333;
+}
+
+input:focus { outline: none; border-bottom: 1px solid #FFC107; }
+
+
+/* Label */
+
+label {
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: normal;
     position: absolute;
     pointer-events: none;
-    font-family: 'Glyphicons Halflings';
+    left: 40px;
+    top: 15px;
+    transition: all 0.2s ease;
 }
-#login .checkbox .character-checkbox {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    vertical-align: middle;
+
+
+/* active */
+
+input:focus ~ label, input.used ~ label {
+    top: -20px;
+    transform: scale(.75); left: -2px;
+    /* font-size: 14px; */
+    color: #FFC107;
+}
+
+
+/* Underline */
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #FFC107;
+    transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight, .icon {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.icon {
+
+    width: 30px;
+    border-right: 1px solid #CCCCCC;
+
+}
+
+
+
+
+/* active */
+
+input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+/* Animations */
+
+@keyframes inputHighlighter {
+    from { background: #FFC107; }
+    to 	{ width: 0; background: transparent; }
+}
+
+
+/* Button */
+
+.button {
+    position: relative;
     display: inline-block;
+    padding: 12px 24px;
+    margin: .3em 0 1em 0;
+    width: 100%;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.15s ease;
 }
-#login .checkbox .label {
-    color: #6d6d6d;
-    font-size: 13px;
-    font-weight: normal;
-}
-#login .btn.btn-custom {
-    font-size: 14px;
-	margin-bottom: 20px;
-}
-#login .forget {
-    font-size: 13px;
-	text-align: center;
-	display: block;
+.button:focus { outline: 0; }
+
+
+/* Button modifiers */
+
+.buttonBlue {
+    background: #FFC107;
 }
 
-/*    --------------------------------------------------
-	:: Inputs & Buttons
-	-------------------------------------------------- */
-.form-control {
-    color: #212121;
-}
-.btn-custom {
-    color: #fff;
-	background-color: #1fa67b;
-}
-.btn-custom:hover,
-.btn-custom:focus {
-    color: #fff;
+.buttonBlue:hover { background: #FFB300; }
+
+
+/* Ripples container */
+
+.ripples {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
 }
 
-/*    --------------------------------------------------
-    :: Footer
-	-------------------------------------------------- */
-#footer {
-    color: #6d6d6d;
-    font-size: 12px;
+
+/* Ripples circle */
+
+.ripplesCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ripples.is-active .ripplesCircle {
+    animation: ripples .4s ease-in;
+}
+
+
+/* Ripples animation */
+
+@keyframes ripples {
+    0% { opacity: 0; }
+
+    25% { opacity: 1; }
+
+    100% {
+        width: 200%;
+        padding-bottom: 200%;
+        opacity: 0;
+    }
+}
+
+#login-error, .login-empty-field {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    color: red;
+}
+
+#login-error {
+    top: -30px;
     text-align: center;
 }
-#footer p {
-    margin-bottom: 0;
-}
-#footer a {
-    color: inherit;
-}
-h1
-{
-	font-size: 30px
+
+.login-empty-field {
+    top: 55px
 }
