@@ -17,7 +17,7 @@ public class NetworkInfoObserver extends ContentObserver {
         this.context = context;
         this.networkInfoHandler = new NetworkInfoHandler();
         NetworkInfo networkInfo = networkInfoHandler.getNetworkInfo(context);
-        networkInfoHandler.submitLog(context, networkInfo.toJSONObject());
+       // networkInfoHandler.submitLog(context, networkInfo.toJSONObject());
     }
 
     @Override
