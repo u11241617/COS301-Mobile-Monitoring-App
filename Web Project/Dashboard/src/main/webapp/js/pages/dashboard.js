@@ -3,6 +3,7 @@ angular.module('icrawlerApp.home', [
     'ui.router',
     'angular-jwt',
     'angular-storage',
+    'bm.bsTour',
     'icrawlerServices'
 ]).config(function($stateProvider) {
         $stateProvider.state('template.dashboard', {
@@ -34,6 +35,8 @@ angular.module('icrawlerApp.home', [
             $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
 
                 drawUserDoughnutChart(data);
+
+
             });
 
         });
@@ -59,7 +62,6 @@ angular.module('icrawlerApp.home', [
 
             });
         }
-
 
     });
 
@@ -174,4 +176,37 @@ function drawUserDoughnutChart(data) {
     ]
 
     doughnutChart.Doughnut(data);
+}
+
+
+function tour() {
+
+    //$(document).ready(function() {
+
+    localStorage.clear();
+        var tour = new Tour({
+            steps: [
+                {
+                    element: ".nav-sidebar",
+                    title: "Navigation",
+                    content: "This section allows you to navigate the site and view different content"
+                },
+                {
+                    element: "#summary",
+                    title: "Logs Summary",
+                    content: "A summary of some the the collected data on the current device"
+                }
+            ]});
+
+// Initialize the tour
+        tour.init();
+
+// Start the tour
+        tour.start();
+
+        alert("Hello");
+
+
+   // });
+
 }

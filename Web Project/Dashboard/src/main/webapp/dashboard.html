@@ -3,23 +3,23 @@
                     <h1 class="page-header"> <i class="fa fa-dashboard fa-fw"></i>Dashboard</h1>
                 </div>
 
-                <div class="row">
-                    <div ng-repeat="device in device_logs" mydd class="col-md-3">
-                        <a data-id={{device.deviceId}} ng-click='load_data(device.deviceId)' class="device">
-                            <div class="panel custom-panel-device">
-                                <div class="panel-heading text-center">
-                                    <div class="huge">{{device.make}}</div>
-                                    <div>{{device.model}}</div>
+                <div class="row" id="device-list" style="padding-top: 20px;">
+                        <div ng-repeat="device in device_logs" mydd class="col-md-3">
+                            <a data-id={{device.deviceId}} ng-click='load_data(device.deviceId)' class="device">
+                                <div class="panel custom-panel-device">
+                                    <div class="panel-heading text-center">
+                                        <div class="huge">{{device.make}}</div>
+                                        <div>{{device.model}}</div>
+                                    </div>
+                                    <div class="panel-footer custom-panel-footer text-center">
+                                        <span class="device-ime">IMEI {{device.imeNumber}}</span>
+                                    </div>
                                 </div>
-                                <div class="panel-footer custom-panel-footer text-center">
-                                    <span class="device-ime">IMEI {{device.imeNumber}}</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="summary" style="padding-top: 20px;">
                     <div class="col-md-8">
                         <div class="panel panel-default custom-panel-primary">
                             <div class="custom-panel-heading panel-heading">

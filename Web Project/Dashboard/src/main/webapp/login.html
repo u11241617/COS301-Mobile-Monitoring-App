@@ -1,83 +1,32 @@
-
 <div class="login-page-header">
     <ul>
-        <li><img src="images/logo.png" width="64" height="64"/></li>
-        <li><img src="images/icrawler.png" height="46"/></li>
+        <li><a href="http://localhost:8080/Dashboard/"><img src="images/logo.png"/></a></li>
     </ul>
 </div>
-<section id="login">
-    <div class="container">
-        <div class="row">
-		            <div class="col-xs-12">
-                <div class="form-wrap">
-                    <div class="row text-center" >
-                        <h1 style="font-size:35px;color:#777777">Sign in</h1>
-                    </div>
-                    <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
 
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input ng-model="user.email" class="form-control" placeholder="Email" name="loginname" type="text" autofocus="autofocus"/>
-								<span class="input-group-addon">
-									<i class="fa fa-envelope"></i>
-								</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input ng-model="user.password" class="form-control" placeholder="Password" name="password" type="password" id="pass" value=""/>
-								<span class="input-group-addon">
-									<i class="fa fa-lock fa-lg"></i>
-								</span>
-                            </div>
-                        </div>
-                        <div class="checkbox">
-                            <span class="character-checkbox" onclick="showPassword()"></span>
-                            <span class="label">Show password</span>
-                        </div>
-                        <input ng-click="login()" type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Sign in"/>
-                    </form>
-                    <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
-                    <hr/>
-                </div>
-            </div> <!-- /.col-xs-12 -->
-        </div> <!-- /.row -->
-    </div> <!-- /.container -->
-</section>
-<div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">x</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title">Recovery password</h4>
-            </div>
-            <div class="modal-body">
-                <p>Type your email account</p>
-                <input type="email" name="recovery-email" id="recovery-email" placeholder="Email" class="form-control" autocomplete="off"/>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-custom">Recover</button>
-            </div>
-        </div> <!-- /.modal-content -->
-    </div> <!-- /.modal-dialog -->
-</div> <!-- /.modal -->
+<hgroup>
+    <h1>Welcome, Login to your account</h1>
+</hgroup>
 
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p>
-                    <a href="">About &nbsp;</a>
-                    <a href="">Privacy &nbsp;</a>
-                    <a href="">Terms &nbsp;</a>
-                    <a href="">Copyright &nbsp;</a>
-                </p>
-                <p>&copy; 2015 <strong>iCrawler</strong> </p>
-            </div>
+<form>
+        <div class="group">
+            <input type="email" ng-model="user.email" autofocus="autofocus" required />
+            <span class="icon"><i class="fa fa-envelope fa-fw fa-lg"></i></span>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Email</label>
+            <p class="login-empty-field">{{emptyEmail}}</p>
         </div>
-    </div>
-</footer>
+        <div class="group">
+            <input type="password" ng-model="user.password" required />
+            <span class="icon"><i class="fa fa-lock fa-2x"></i></span>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Password</label>
+            <p class="login-empty-field">{{emptyPassword}}</p>
+        </div>
+        <div class="group">
+            <label id="login-error">{{loginError}}</label>
+        </div>
+        <button type="button" class="button buttonBlue" ng-click="login()">Login
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+    </form>

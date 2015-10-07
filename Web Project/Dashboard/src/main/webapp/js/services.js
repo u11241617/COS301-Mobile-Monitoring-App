@@ -44,6 +44,17 @@ appServices.factory('Sites', ['$resource',
         });
     }]);
 
+appServices.factory('Apps', ['$resource',
+    function($resource){
+        return $resource('http://localhost:8080/Dashboard/resources/:device/apps/', {
+            device: '@device'
+        }, {
+            create: {
+                method: 'POST'
+            }
+        });
+    }]);
+
 appServices.factory('CurrentDevice', function () {
     var deviceId = 0;
 
