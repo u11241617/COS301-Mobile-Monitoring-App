@@ -20,8 +20,8 @@ public class DataUsageObserver extends ContentObserver {
     public void onChange(boolean selfChange) {
         super.onChange(selfChange);
 
-        DataUsage dataUsage = dataUsageHandler.getDataUsageInformation();
-        dataUsageHandler.submitLog(context, dataUsage.toJSONObject());
+      //  DataUsage dataUsage = dataUsageHandler.getDataUsageInformation(nu);
+       // dataUsageHandler.submitLog(context, dataUsage.toJSONObject());
     }
 
 }

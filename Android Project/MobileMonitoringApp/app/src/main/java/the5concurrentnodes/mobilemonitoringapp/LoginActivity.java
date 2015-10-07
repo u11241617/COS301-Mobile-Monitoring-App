@@ -2,6 +2,7 @@ package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
@@ -26,12 +27,19 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
 
+import the5concurrentnodes.mmaData.DataUsage.DataUsage;
+import the5concurrentnodes.mmaData.DataUsage.DataUsageHandler;
+import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
@@ -56,6 +64,22 @@ public class LoginActivity extends AppCompatActivity {
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        //DataUsage dataUsage = new DataUsageHandler().getDataUsageInformation( this.getApplicationContext());
+        PushDataUsage pushDataUsage = new PushDataUsage (this.getApplicationContext());
+         pushDataUsage.execute();
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+        scheduler.schedule
+                (new Runnable() {
+                    @Override
+                    public void run() {
+                        PushDataUsage pushDataUsage = new PushDataUsage(new Activity().getApplicationContext());
+                        pushDataUsage.execute();
+                    }
+                }, 5, TimeUnit.SECONDS);
+
+
+
 
         progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);

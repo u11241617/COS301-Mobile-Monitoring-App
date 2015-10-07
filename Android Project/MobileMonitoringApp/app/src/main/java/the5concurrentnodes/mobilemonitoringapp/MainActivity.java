@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import the5concurrentnodes.controllers.DataPushServiceHandler;
+import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 
 
 public class MainActivity extends Activity {
@@ -26,12 +27,13 @@ public class MainActivity extends Activity {
         final Button nextButton;
 
         webView = (WebView) findViewById(R.id.web_view);
-        //acceptTermsCheckbox = (CheckBox) findViewById(R.id.accept_terms_checkbox);
-        //nextButton = (Button) findViewById(R.id.next_button);
+        acceptTermsCheckbox = (CheckBox) findViewById(R.id.accept_terms_checkbox);
+        nextButton = (Button) findViewById(R.id.next_button);
+
 
         webView.loadUrl("file:///android_asset/pages/terms.html");
 
-       /* acceptTermsCheckbox.setOnClickListener(new View.OnClickListener() {
+        acceptTermsCheckbox.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -45,9 +47,9 @@ public class MainActivity extends Activity {
                     nextButton.setEnabled(false);
                 }
             }
-        });*/
+        });
 
-       /* nextButton.setOnClickListener(new View.OnClickListener() {
+        nextButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -56,7 +58,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 finish();
             }
-        });*/
+        });
 
         SessionManager sessionManager;
         sessionManager = new SessionManager(getApplicationContext());
@@ -69,7 +71,7 @@ public class MainActivity extends Activity {
             finish();
         }
 
-
+        DataPushServiceHandler.getInstance().startService(getApplicationContext());
     }
 
 }
