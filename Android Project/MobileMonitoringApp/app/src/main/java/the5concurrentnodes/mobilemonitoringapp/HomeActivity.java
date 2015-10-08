@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class HomeActivity extends Activity {
@@ -54,6 +55,11 @@ public class HomeActivity extends Activity {
     public void toTour(View view) {
 
         Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
+        startActivity(intent);
+    }
+    public void toTermsAndCondtions(View view){
+
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
 }

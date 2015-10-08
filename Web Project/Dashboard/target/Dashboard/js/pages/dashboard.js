@@ -36,8 +36,6 @@ angular.module('icrawlerApp.home', [
             $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
 
                 drawUserDoughnutChart(data);
-
-                //$scope.dataLoaded = true;
             });
 
         });
@@ -178,4 +176,3 @@ function drawUserDoughnutChart(data) {
 
     doughnutChart.Doughnut(data);
 }
-

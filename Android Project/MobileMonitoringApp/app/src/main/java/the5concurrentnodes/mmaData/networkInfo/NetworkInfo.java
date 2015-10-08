@@ -30,8 +30,8 @@ public class NetworkInfo implements ConvertToJSON{
         this.ConnectionStatus = Connectionstatus;
         this.IPaddress = IPaddress;
 
-                Toast.makeText(this.context,SSID + " " + MACADDRESS + " " + IPaddress + " " + TimeStamp + " " + ConnectionStatus + " " + BSSID ,
-                Toast.LENGTH_LONG).show();
+              /*  Toast.makeText(this.context,SSID + " " + MACADDRESS + " " + IPaddress + " " + TimeStamp + " " + ConnectionStatus + " " + BSSID ,
+                Toast.LENGTH_LONG).show();*/
     }
 
     public String getSSID()
@@ -67,7 +67,6 @@ public class NetworkInfo implements ConvertToJSON{
                 jsonObject.put("bssid", BSSID);
                 jsonObject.put("connectionstatus", ConnectionStatus);
                 jsonObject.put("ipaddress", IPaddress);
-
 
         }catch(JSONException e){}
 
