@@ -4,13 +4,16 @@
 
     <title ng-bind="pageTitle"></title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-tour.min.css">
     <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/dataTables.responsive.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/angular/angular.min.js"></script>
+    <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-tour.min.js"></script>
+    <script type="text/javascript" src="js/angular-bootstrap-tour.js"></script>
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
     <script type="text/javascript" src="js/angular/angular-resource.min.js"></script>
@@ -29,6 +32,7 @@
     <script type="text/javascript" src="js/pages/calls.js"></script>
     <script type="text/javascript" src="js/pages/messages.js"></script>
     <script type="text/javascript" src="js/pages/browser.js"></script>
+    <script type="text/javascript" src="js/pages/apps.js"></script>
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -40,7 +44,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a ui-sref="template.dashboard" class="navbar-brand" >iCrawler</a>
+            <a ui-sref="template.dashboard" class="navbar-brand" >eyeCrawler</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -53,7 +57,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div class="col-sm-3 col-md-2 sidebar" id="left-menu">
             <ul class="nav nav-sidebar">
                 <li>
                     <a ui-sref="template.dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
@@ -69,6 +73,12 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-wifi fa-fw"></i> WI-FI</a>
+                </li>
+                <li>
+                    <a ui-sref="template.apps"><i class="fa fa-th-large fa-fw"></i> Apps</a>
+                </li>
+                <li>
+                    <a href="#"><i class=""></i> Others</a>
                 </li>
             </ul>
         </div>

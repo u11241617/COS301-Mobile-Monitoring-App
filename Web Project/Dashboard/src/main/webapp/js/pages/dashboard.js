@@ -3,6 +3,7 @@ angular.module('icrawlerApp.home', [
     'ui.router',
     'angular-jwt',
     'angular-storage',
+    'bm.bsTour',
     'icrawlerServices'
 ]).config(function($stateProvider) {
         $stateProvider.state('template.dashboard', {
@@ -25,6 +26,7 @@ angular.module('icrawlerApp.home', [
             $scope.sms = Sms.query({device: data[0].deviceId}, function(data) {
 
                 drawUserLineChart(data);
+
             });
 
             $scope.calls = Calls.query({device: data[0].deviceId}, function(data) {
@@ -34,6 +36,8 @@ angular.module('icrawlerApp.home', [
             $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
 
                 drawUserDoughnutChart(data);
+
+                //$scope.dataLoaded = true;
             });
 
         });
@@ -60,7 +64,6 @@ angular.module('icrawlerApp.home', [
             });
         }
 
-
     });
 
 
@@ -72,7 +75,7 @@ function drawUserLineChart(data) {
     var smsInMonths = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var smsSent = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var smsRe = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    var charLevel =  ["Jan", "Feb", "March", "April", "May", "June", "July", "August"];
+    var charLevel =  ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var current_month = new Date().getMonth();
     var current_year = new Date().getFullYear();
@@ -175,3 +178,4 @@ function drawUserDoughnutChart(data) {
 
     doughnutChart.Doughnut(data);
 }
+
