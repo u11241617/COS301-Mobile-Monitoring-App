@@ -4,7 +4,7 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    
 }
 
 .navbar {
@@ -852,9 +852,19 @@ h1
 
 }
 
+.footer
+{
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+}
 
-
-
+.article
+{
+    width: 90%;
+    margin-left: 5%;
+}
 
 
 

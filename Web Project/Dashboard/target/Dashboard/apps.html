@@ -5,14 +5,14 @@
 
     <div class="row">
         <div class="col-md-12">
-            <button style="display: none;" class="md-trigger" data-modal="modal-12">3D Slit</button>
+            <button style="display: none;" class="md-trigger" data-modal="modal-12"></button>
 
             <div class="col-sm-4 col-xs-6" ng-repeat="app in apps_data">
                 <div class="panel panel-default eyecrawler-panel-default">
                     <div class="ayecrawler-panel-header">
                         <h1>{{ app.name }}</h1>
                         <p>Version: {{ app.version }}</p>
-                    </div>
+                    </div>deviceapps
                     <div class="panel-body eyecrawler-panel-body-default">
                         <a  href="" class="lead" data-id={{app.id}} ng-click='getPermissions(app.id)'> <span> View permissions</span></a>
                     </div>

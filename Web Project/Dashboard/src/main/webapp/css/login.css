@@ -233,3 +233,14 @@ input:focus ~ .highlight {
 .login-empty-field {
     top: 55px
 }
+/*foot styling*/
+.footers
+{
+    margin-right: 5%;font-size: smaller;margin-top: 3%;
+}
+.footerClose
+{
+    width: 1%;
+    font-size: medium;
+    margin: 5% auto 5% auto;
+}
