@@ -82,7 +82,7 @@ public class Calls {
 
     @GET @Path("/{deviceId}/calls")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Call> getMessages(@PathParam("deviceId") int deviceId) {
+    public List<Call> getCalls(@PathParam("deviceId") int deviceId) {
 
         return callManager.getCallsByDeviceId(deviceId);
     }

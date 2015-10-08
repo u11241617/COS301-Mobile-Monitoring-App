@@ -3,7 +3,7 @@
   <component name="dataSourceStorageLocal">
     <data-source name="iCrawlerDataSource" uuid="26189e8a-7f3e-441a-8a52-e6638f2d251f">
       <secret-storage>master_key</secret-storage>
-      <user-name>mma</user-name>
+      <user-name>mmaUser</user-name>
       <schema-pattern>mmadb.*</schema-pattern>
       <default-schemas>mmadb.*</default-schemas>
     </data-source>

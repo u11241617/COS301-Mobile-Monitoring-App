@@ -1,17 +1,21 @@
 package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
+import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -23,24 +27,27 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import the5concurrentnodes.account.Utility;
-import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
-import the5concurrentnodes.dialogs.RecoverPasswordDialog;
 import the5concurrentnodes.generic.Config;
+
+import the5concurrentnodes.mmaData.DataUsage.DataUsage;
+import the5concurrentnodes.mmaData.DataUsage.DataUsageHandler;
+import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
-    private boolean passwordVisible;
-    private SessionManager sessionManager;
-    private Button loginButton;
-    private EditText loginEmail;
-    private EditText loginPassword;
     private ProgressDialog progressDialog;
+    private TextInputLayout emailWrapper;
+    private TextInputLayout passwordWrapper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,23 +55,38 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         overridePendingTransition(R.animator.activity_open_transition, R.animator.activity_close_scale);
 
-        final Button registerButton;
-        final ImageButton showPasswordButton;
+        VolleyRequestQueue.init(getApplicationContext());
+
+        emailWrapper = (TextInputLayout)  findViewById(R.id.loginEmailWrapper);
+        passwordWrapper = (TextInputLayout) findViewById(R.id.loginPasswordWrapper);
+
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        //DataUsage dataUsage = new DataUsageHandler().getDataUsageInformation( this.getApplicationContext());
+        PushDataUsage pushDataUsage = new PushDataUsage (this.getApplicationContext());
+         pushDataUsage.execute();
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+        scheduler.schedule
+                (new Runnable() {
+                    @Override
+                    public void run() {
+                        PushDataUsage pushDataUsage = new PushDataUsage(new Activity().getApplicationContext());
+                        pushDataUsage.execute();
+                    }
+                }, 5, TimeUnit.SECONDS);
 
 
-        passwordVisible = false;
-        sessionManager = new SessionManager(getApplicationContext());
 
-        loginEmail = (EditText) findViewById(R.id.login_email);
-        loginPassword = (EditText) findViewById(R.id.login_password);
-        loginButton = (Button) findViewById(R.id.login_button);
-        registerButton = (Button) findViewById(R.id.register_button);
-        showPasswordButton = (ImageButton) findViewById(R.id.show_password_button);
-        progressDialog = new ProgressDialog(LoginActivity.this);
+
+        progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme_Dark_Dialog);
+        progressDialog.setIndeterminate(true);
         progressDialog.setMessage(LoginActivity.this.getString(R.string.progress_signing_in));
         progressDialog.setCancelable(false);
 
-        loginEmail.addTextChangedListener(new TextWatcher() {
+        emailWrapper.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -73,24 +95,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                updateLoginInButtonState();
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        loginPassword.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                updateLoginInButtonState();
+                emailWrapper.setError(null);
 
             }
 
@@ -100,75 +105,34 @@ public class LoginActivity extends Activity {
             }
         });
 
-        if (sessionManager.isSessionActive())
-        {
-            Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-            startActivity(intent);
-            finish();
-        }
+        passwordWrapper.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+            }
 
             @Override
-            public void onClick(View v) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                String userEmail = loginEmail.getText().toString();
-                String userPassword = loginPassword.getText().toString();
+                passwordWrapper.setError(null);
 
+            }
 
-
-                InternetConnectionDetector internetConnectionDetector = new InternetConnectionDetector(getApplicationContext());
-                if (internetConnectionDetector.isConnectedToInternet() == false) {
-
-                    Toast.makeText(getApplicationContext(), LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
-                }else {
-
-                    progressDialog.show();
-                    loginUser(userEmail, userPassword);
-                }
+            @Override
+            public void afterTextChanged(Editable s) {
 
             }
         });
 
-
-        registerButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        if(sessionManager.isSessionActive()) {
-
-            Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-            startActivity(intent);
-            finish();
-        }
-
-        showPasswordButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                if(passwordVisible) {
-
-                    loginPassword.setInputType(129);
-                    passwordVisible = false;
-                    showPasswordButton.setImageResource(R.mipmap.ic_eye);
-
-                } else {
-                    loginPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    passwordVisible = true;
-                    showPasswordButton.setImageResource(R.mipmap.ic_eye_off);
-                }
-
-            }
-        });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_login, menu);
+        return true;
+    }
+
     /**
      * Consume REST api to login user account
      * @param email user email
@@ -179,6 +143,7 @@ public class LoginActivity extends Activity {
         String url = Config.REST_API + "/login";
 
         JSONObject jsonParams = new JSONObject();
+
         try {
             jsonParams.put("email", email);
             jsonParams.put("password", password);
@@ -208,9 +173,18 @@ public class LoginActivity extends Activity {
                         LoginRegisterDialog dialog = new LoginRegisterDialog();
                         dialog.show(getFragmentManager(), null);
 
+                        //new PushAppsInfo(getApplicationContext()).execute();
 
-                    } else
-                        Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+
+                    } else {
+                        CoordinatorLayout coordinatorLayout =  coordinatorLayout = (CoordinatorLayout) findViewById(R.id
+                                .coordinatorLayout);
+                        Snackbar snackbar = Snackbar
+                                .make(coordinatorLayout,  jsonObject.getString("message")
+                                        , Snackbar.LENGTH_LONG);
+                        snackbar.show();
+                    }
+                        //Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_LONG).show();
 
 
                 } catch (JSONException e){}
@@ -220,8 +194,15 @@ public class LoginActivity extends Activity {
             public void onErrorResponse(VolleyError error) {
 
                 progressDialog.dismiss();
-                Toast.makeText(getApplicationContext(),
-                        LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(),
+                        //LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
+
+                CoordinatorLayout coordinatorLayout =  coordinatorLayout = (CoordinatorLayout) findViewById(R.id
+                        .coordinatorLayout);
+                Snackbar snackbar = Snackbar
+                        .make(coordinatorLayout, LoginActivity.this.getResources().getString(R.string.request_unknown_error)
+                                , Snackbar.LENGTH_LONG);
+                snackbar.show();
             }
         });
 
@@ -238,19 +219,46 @@ public class LoginActivity extends Activity {
         overridePendingTransition(R.animator.activity_open_scale, R.animator.activity_close_transition);
     }
 
-    /**
-     * Updates login button state
-     */
-    private void updateLoginInButtonState() {
-        loginButton.setEnabled
-                (Utility.validateEmail(loginEmail.getText().toString()) &&
-                        Utility.validatePassword(loginPassword.getText().toString()));
+
+
+    public void onLoginButtonClicked(View view) {
+
+        String email = emailWrapper.getEditText().getText().toString();
+        String password = passwordWrapper.getEditText().getText().toString();
+
+        if (Utility.isEmpty(email) || Utility.isEmpty(password)) {
+
+            if(Utility.isEmpty(email)) {
+
+                emailWrapper.setError(LoginActivity.this.getString(R.string.empty_input_error_message));
+
+            }else if(Utility.isEmpty(password)) {
+
+                passwordWrapper.setError(LoginActivity.this.getString(R.string.empty_input_error_message));
+            }
+
+        }else {
+
+            if(!Utility.validateEmail(email)) {
+
+                emailWrapper.setError("Invalid email address");
+            }else {
+
+                InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(
+                        Activity.INPUT_METHOD_SERVICE);
+
+                inputMethodManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
+                progressDialog.show();
+                loginUser(email, password);
+            }
+        }
     }
 
-    public void recoverPassword(View view) {
+    public void toSignUp(View view) {
 
-        RecoverPasswordDialog dialog = new RecoverPasswordDialog();
-        dialog.show(getFragmentManager(), null);
+        Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+        startActivity(intent);
     }
 
 }

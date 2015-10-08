@@ -2,19 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="the5concurrentnodes.mobilemonitoringapp" >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
-    <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
-    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
-    <permission android:name="android.permission.BLUETOOTH" android:label="BLUETOOTH"></permission>
-    <permission android:name="android.permission.BLUETOOTH_ADMIN"></permission>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <permission
+        android:name="android.permission.BLUETOOTH"
+        android:label="BLUETOOTH" />
+    <permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <uses-permission android:name="android.permission.BLUETOOTH_MAP" />
     <uses-permission android:name="android.permission.ACCESS_BLUETOOTH_SHARE" />
     <uses-permission android:name="android.permission.BLUETOOTH_STACK" />
@@ -25,52 +28,53 @@
     <uses-permission android:name="android.permission.INTERNET"> </uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/EyeCrawlerTheme" >
         <activity
-            android:name="the5concurrentnodes.splash.SplashActivity"
-            android:label="splash">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/IntroTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
-		
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/sign_in"
-            android:windowSoftInputMode="stateHidden" >
+            android:label="@string/sign_in">
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/sign_up"
-            android:windowSoftInputMode="stateHidden">
+            android:label="@string/sign_up">
         </activity>
 
         <service
             android:name="the5concurrentnodes.controllers.DataPushService"
             android:exported="false" />
 
-        <receiver android:name="the5concurrentnodes.controllers.StartupServicesBroadcastReceiver">
+        <receiver android:name="the5concurrentnodes.controllers.StartupServicesBroadcastReceiver" >
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        </activity>
     </application>
 
 </manifest>

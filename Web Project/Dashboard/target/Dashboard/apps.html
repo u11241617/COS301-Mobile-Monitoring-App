@@ -1,0 +1,54 @@
+<div class="row">
+    <div >
+        <h1 class="page-header"> <i class="fa fa-th-large fa-fw"></i>Applications</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <button style="display: none;" class="md-trigger" data-modal="modal-12">3D Slit</button>
+
+            <div class="col-sm-4 col-xs-6" ng-repeat="app in apps_data">
+                <div class="panel panel-default eyecrawler-panel-default">
+                    <div class="ayecrawler-panel-header">
+                        <h1>{{ app.name }}</h1>
+                        <p>Version: {{ app.version }}</p>
+                    </div>
+                    <div class="panel-body eyecrawler-panel-body-default">
+                        <a  href="" class="lead" data-id={{app.id}} ng-click='getPermissions(app.id)'> <span> View permissions</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="md-modal md-effect-12" id="modal-12">
+    <div class="md-content">
+        <h3>Permissions</h3>
+        <div>
+            <ul>
+                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+                <li><strong>Close:</strong> click on the button below to close the modal.</li>
+                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+                <li><strong>Close:</strong> click on the button below to close the modal.</li>
+            </ul>
+            <button class="md-close">Close</button>
+        </div>
+    </div>
+</div>
+<div class="md-overlay"></div>
+
+<script src="modal/js/classie.js"></script>
+<script src="modal/js/modalEffects.js"></script>
+
+<!-- for the blur effect -->
+<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+<script>
+    // this is important for IEs
+    var polyfilter_scriptpath = '/modal/js/';
+</script>
+<script src="modal/js/cssParser.js"></script>
+<script src="modal/js/css-filters-polyfill.js"></script>
+

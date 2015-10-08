@@ -11,5 +11,6 @@ public class StartupServicesBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         DataPushServiceHandler.getInstance().startService(context);
+
     }
 }
