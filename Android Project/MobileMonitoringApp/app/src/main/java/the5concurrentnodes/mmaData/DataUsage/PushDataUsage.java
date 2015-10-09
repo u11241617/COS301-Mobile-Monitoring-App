@@ -3,6 +3,9 @@ package the5concurrentnodes.mmaData.DataUsage;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
+
+import the5concurrentnodes.mmaData.Location.Location;
 
 public class PushDataUsage extends AsyncTask <Void, Void, Void>
 {
@@ -16,6 +19,7 @@ public class PushDataUsage extends AsyncTask <Void, Void, Void>
 
     @Override
     protected Void doInBackground(Void... params) {
+
         DataUsageHandler dataUsageHandler = new DataUsageHandler();
         dataUsage = dataUsageHandler.getDataUsageInformation(context);
         dataUsageHandler.submitLog(context, dataUsage.toJSONObject());
