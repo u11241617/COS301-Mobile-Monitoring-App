@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33bfc85c-a90a-4324-b3ca-342d2ba998bc" name="Default" comment="" />
+    <list default="true" id="33bfc85c-a90a-4324-b3ca-342d2ba998bc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AccessLevelManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AccessLevelManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AccessLevelManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AccessLevelManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Account.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Account.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Account.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Account.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AppManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AppManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AppManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AppManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/BrowserManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/BrowserManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/BrowserManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/BrowserManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/CallManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/CallManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/CallManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/CallManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Calls.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Calls.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Calls.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Calls.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DeviceManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DeviceManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DeviceManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DeviceManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/InstalledApps.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/InstalledApps.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/InstalledApps.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/InstalledApps.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/JSONWebToken.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/JSONWebToken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/JSONWebToken.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/JSONWebToken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Messages.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Messages.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Messages.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Messages.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/beans/SessionBean.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/beans/SessionBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/beans/SessionBean.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/beans/SessionBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/SmsManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/SmsManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/SmsManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/SmsManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/TestDataInserter.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/TestDataInserter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/TestDataInserter.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/TestDataInserter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/UserManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/UserManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/UserManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/UserManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/VisistedSites.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/VisistedSites.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/VisistedSites.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/VisistedSites.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/WifiLogs.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/WifiLogs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/WifiLogs.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/WifiLogs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/WifiManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/WifiManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/WifiManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/WifiManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/generic/Config.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/generic/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dashboard.iml" afterPath="$PROJECT_DIR$/Dashboard.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/Dashboard/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/about.html" afterPath="$PROJECT_DIR$/src/main/webapp/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/about.html" afterPath="$PROJECT_DIR$/target/Dashboard/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/terms.html" afterPath="$PROJECT_DIR$/src/main/webapp/terms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,7 +85,7 @@
       <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
               <folding />
             </state>
@@ -54,16 +100,6 @@
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="58" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -88,11 +124,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstalledApps.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InstalledApps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69436204">
-              <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.3846154">
+              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="privacy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/privacy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="terms.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/terms.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.62738854">
+              <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -113,18 +181,39 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#419#420#0" expanded="false" />
+                <element signature="e#444#445#0" expanded="false" />
+                <element signature="e#477#478#0" expanded="false" />
+                <element signature="e#505#506#0" expanded="false" />
+                <element signature="e#574#575#0" expanded="false" />
+                <element signature="e#601#602#0" expanded="false" />
+                <element signature="e#641#642#0" expanded="false" />
+                <element signature="e#673#674#0" expanded="false" />
+                <element signature="e#740#741#0" expanded="false" />
+                <element signature="e#766#767#0" expanded="false" />
+                <element signature="e#804#805#0" expanded="false" />
+                <element signature="e#834#835#0" expanded="false" />
+                <element signature="e#903#904#0" expanded="false" />
+                <element signature="e#930#931#0" expanded="false" />
+                <element signature="e#970#971#0" expanded="false" />
+                <element signature="e#1002#1003#0" expanded="false" />
+                <element signature="e#1073#1074#0" expanded="false" />
+                <element signature="e#1101#1102#0" expanded="false" />
+                <element signature="e#1143#1144#0" expanded="false" />
+                <element signature="e#1177#1178#0" expanded="false" />
+                <element signature="e#1250#1251#0" expanded="false" />
+                <element signature="e#1279#1280#0" expanded="false" />
+                <element signature="e#1323#1324#0" expanded="false" />
+                <element signature="e#1359#1360#0" expanded="false" />
+                <element signature="e#1424#1425#0" expanded="false" />
+                <element signature="e#1449#1450#0" expanded="false" />
+                <element signature="e#1485#1486#0" expanded="false" />
+                <element signature="e#1513#1514#0" expanded="false" />
+                <element signature="e#2945#2946#0" expanded="false" />
+                <element signature="e#2986#2987#0" expanded="false" />
+                <element signature="e#3054#3055#0" expanded="false" />
+                <element signature="e#3114#3115#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -141,6 +230,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -149,8 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/dashboard.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Device.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AccessLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Browser.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Call.java" />
@@ -200,6 +290,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/dashboard.css" />
         <option value="dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..deviceapps" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/about.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/terms.html" />
       </list>
     </option>
   </component>
@@ -233,12 +325,12 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="726" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -261,6 +353,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -434,7 +527,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1011,9 +1103,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Unknown" factoryName="Unknown">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -1145,7 +1234,7 @@
         </option>
       </method>
     </configuration>
-    <configuration default="false" name="GS" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.0.0" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk1.7.0_40">
+    <configuration default="false" name="GS" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.0.0" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jre1.8.0_51">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -1261,19 +1350,21 @@
       <workItem from="1443804999398" duration="27395000" />
       <workItem from="1443874534681" duration="2178000" />
       <workItem from="1444486468911" duration="3987000" />
+      <workItem from="1444475274943" duration="949000" />
+      <workItem from="1444477743257" duration="2603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189917000" />
+    <option name="totallyTimeSpent" value="193469000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33724833" sideWeight="0.35222054" order="7" side_tool="true" content_ui="tabs" />
@@ -1281,14 +1372,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33963692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40359476" sideWeight="0.64777946" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40356565" sideWeight="0.64777946" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266369" sideWeight="0.3251634" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267776" sideWeight="0.6748366" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19807121" sideWeight="0.6748366" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15355521" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1491098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1331,9 +1422,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1352,13 +1447,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24147727">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
@@ -1501,30 +1596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..devicetb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..usertb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1621,7 +1692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1629,9 +1699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1639,7 +1706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1685,31 +1751,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..apppermissions">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Wifi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#444#445#0" expanded="false" />
+            <element signature="e#477#478#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="e#804#805#0" expanded="false" />
+            <element signature="e#834#835#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#930#931#0" expanded="false" />
+            <element signature="e#970#971#0" expanded="false" />
+            <element signature="e#1002#1003#0" expanded="false" />
+            <element signature="e#1073#1074#0" expanded="false" />
+            <element signature="e#1101#1102#0" expanded="false" />
+            <element signature="e#1143#1144#0" expanded="false" />
+            <element signature="e#1177#1178#0" expanded="false" />
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1279#1280#0" expanded="false" />
+            <element signature="e#1323#1324#0" expanded="false" />
+            <element signature="e#1359#1360#0" expanded="false" />
+            <element signature="e#1424#1425#0" expanded="false" />
+            <element signature="e#1449#1450#0" expanded="false" />
+            <element signature="e#1485#1486#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
+            <element signature="e#2945#2946#0" expanded="false" />
+            <element signature="e#2986#2987#0" expanded="false" />
+            <element signature="e#3054#3055#0" expanded="false" />
+            <element signature="e#3114#3115#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69436204">
-          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/privacy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3846154">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/terms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62738854">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1756,7 +1868,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1768,7 +1880,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Web|Dashboard</last-edited>
+          <last-edited>Dashboard</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
