@@ -136,9 +136,71 @@ CREATE TABLE IF NOT EXISTS `visitedwebsitetb` (
   `frequency` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin COMMENT='This table is needed in order to cross reference browsing activities';
 
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apppermissions`
+--
+
+CREATE TABLE IF NOT EXISTS `apppermissions` (
+  `id` int(11) NOT NULL,
+  `app_id` int(11) NOT NULL,
+  `label` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+
+--
+-- Table structure for table `wifitb`
+--
+
+CREATE TABLE IF NOT EXISTS `wifitb` (
+  `id` int(11) NOT NULL,
+  `ssid` varchar(255) NOT NULL,
+  `mac` varchar(255) NOT NULL,
+  `time` varchar(150) NOT NULL,
+  `bssid` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `deviceId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `deviceapps`
+--
+
+CREATE TABLE IF NOT EXISTS `deviceapps` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `version` varchar(100) NOT NULL,
+  `device_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=507 DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `wifitb`
+--
+ALTER TABLE `wifitb`
+  ADD PRIMARY KEY (`id`), ADD KEY `wifitb_ibfk_2` (`deviceId`);
+
+--
+-- Indexes for table `deviceapps`
+--
+ALTER TABLE `deviceapps`
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `unique_name` (`name`), ADD KEY `deviceapps._ibfk_1` (`device_id`);
+
+--
+-- Indexes for table `apppermissions`
+--
+ALTER TABLE `apppermissions`
+  ADD PRIMARY KEY (`id`), ADD KEY `apppermissions._ibfk_1` (`app_id`);
 
 --
 -- Indexes for table `accessleveltb`
