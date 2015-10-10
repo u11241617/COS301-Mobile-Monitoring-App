@@ -22,6 +22,7 @@
         <datasource-mapping>
           <factory-entry name="NewPersistenceUnit" value="edfc17e9-af28-4bf4-8504-32056dc530cb" />
           <factory-entry name="dashboardUnit" value="26189e8a-7f3e-441a-8a52-e6638f2d251f" />
+          <factory-entry name="noname-a.xml@0" value="26189e8a-7f3e-441a-8a52-e6638f2d251f" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
