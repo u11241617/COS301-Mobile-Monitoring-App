@@ -27,7 +27,7 @@ public class DataUsage {
     @Inject
     DeviceManager deviceManager;
 
-    @POST @Path("/datausage")
+    @POST @Path("/dataUsage")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response addMessage(String rBody,

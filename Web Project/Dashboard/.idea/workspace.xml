@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33bfc85c-a90a-4324-b3ca-342d2ba998bc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dashboard.iml" afterPath="$PROJECT_DIR$/Dashboard.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/terms.html" afterPath="$PROJECT_DIR$/src/main/webapp/terms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/DataUsage.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/DataUsage.java" />
     </list>
     <ignored path="Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataUsage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataUsage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/DataUsage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.5229357">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,7 +158,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mmadb.calltb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mmadb.calltb" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/5ac39975/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..calltb">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -259,9 +255,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/26189e8a-7f3e-441a-8a52-e6638f2d251f/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/DataUsage.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/DataUsage.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/DataUsageManager.java" />
         <option value="dbtable:/5ac39975/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..accessleveltb" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/DataUsage.java" />
       </list>
     </option>
   </component>
@@ -1309,12 +1305,12 @@
       <workItem from="1444486468911" duration="3987000" />
       <workItem from="1444475274943" duration="949000" />
       <workItem from="1444477743257" duration="2603000" />
-      <workItem from="1444485460810" duration="9255000" />
+      <workItem from="1444485460810" duration="10028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202724000" />
+    <option name="totallyTimeSpent" value="203497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="0" />
@@ -1698,16 +1694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/DataUsage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/5ac39975/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..accessleveltb">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1773,6 +1759,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/5ac39975/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..calltb">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/5ac39975/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..devicetb">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1786,16 +1785,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/5ac39975/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..calltb">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/DataUsage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5229357">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
