@@ -1,13 +1,19 @@
-Privacy Policy for Mobile Monitoring Application (MMA)
+iCrawler Privacy Policy
 
-This privacy governs your use of the software application MMA for mobile devices that was created by the University of Pretoria. The application monitors your activities on the mobile device and report application data/logs to a dashboard on a desktop computer. The objective of this application is to display and assist in understanding the activities performed by you (or the user of the device in the case where you are the owner of this device but not the user) on the device as well as shed more light into your behaviour as a user of this device.
-User Provided Information 
-The Application obtains the information you provide when you download and register the Application. Registration with us is non-optional. You have to register your application with us as part of the installation process.
-When you register with us and use the Application, you generally provide (a) your name, email address, password and other registration information; and (b) what you specifically will be using the application for;
-We may also use the information you provided us to contact you from time to time to provide you with important information and required notices. 
-We will not use the information you provided to us for marketing promotions.
+This privacy governs your use of the software application, iCrawler, which is a mobile monitoring app that was developed by the students from the Department of Computer Science at the 
+University of Pretoria. The application monitors your activities on the mobile device and report application data/logs to a dashboard on a desktop computer. The objective of this application
+is to display and assist in understanding the activities performed by you (or the user of the device in the case where you are the owner of this device but not the user) on the device as well
+as shed more light into your behaviour as a user of this device.
+
+User Provided Information
+
+The Application obtains the information you provide when you register on the application. Registration with us is non-optional. You have to register your application with us as part of the installation
+process. When you register with us and use the aapplication, you generally provide (a) your email address and password; and (b) what you specifically intend to use the application for; We may also
+use the information you provided us to contact you from time to time to provide you with important information and required notices. We will not use the information you provided to us for marketing promotions.
+
 Automatically Collected Information 
-In addition, the Application will collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile devices unique device ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browsers you use, and information about the way you use your device. 
+
+In addition, the application will collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile devices unique device ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browsers you use, and information about the way you use your device. 
 The mobile application will make use of GPS technology (or other similar technology) to determine your current location in order to determine the city you are located within and collect your call logs, Bluetooth and Wi-Fi logs, text messages including WhatsApp and/or Facebook conversations in the case where you are making use of WhatsApp and/or Facebook.
 Do third parties see and/or have access to information obtained by the Application?
 Yes. We will share your information with third parties only in the ways that are described in this privacy statement.

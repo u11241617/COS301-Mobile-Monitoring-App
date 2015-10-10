@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: GASwipper Gcc
+Built-By: Cartoo
 Created-By: IntelliJ IDEA
-Build-Jdk: 1.7.0_40
+Build-Jdk: 1.7.0_51
 
