@@ -75,7 +75,7 @@ public class InstalledApps {
                 Device device = deviceManager.getDeviceByIMENumber(deviceIME);
                 appManager.persist(appName, appVersion, device);
 
-                DeviceApp app = appManager.getAppByName(appName);
+                /*DeviceApp app = appManager.getAppByName(appName);
 
                 for(int i = 0; i < appPermissions.length(); i++) {
 
@@ -83,7 +83,7 @@ public class InstalledApps {
 
                     permissionManager.persist(
                             obj.getString("label"), obj.getString("description"), app);
-                }
+                }*/
 
 
                 status = Response.Status.CREATED;

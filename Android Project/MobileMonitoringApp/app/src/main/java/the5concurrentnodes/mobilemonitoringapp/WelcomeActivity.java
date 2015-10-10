@@ -32,6 +32,7 @@ public class WelcomeActivity extends AppIntro {
 
     private void goToMainActivity() {
 
+        finish();
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(intent);
     }

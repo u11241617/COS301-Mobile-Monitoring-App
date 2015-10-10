@@ -98,7 +98,7 @@ public class NetworkInfoHandler implements LogHandler {
     @Override
     public void submitLog(Context context, JSONObject params) {
 
-        String url = Config.REST_API + "/networkInfo";
+        String url = Config.REST_API + "/wifi";
         DataHandler.submitLog(context, url, params);
     }
 }
