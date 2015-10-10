@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -44,6 +45,7 @@ import the5concurrentnodes.mmaData.DataUsage.DataUsage;
 import the5concurrentnodes.mmaData.DataUsage.DataUsageHandler;
 import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 
+import the5concurrentnodes.mmaData.Location.Location;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
@@ -68,6 +70,9 @@ public class LoginActivity extends AppCompatActivity {
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        Location location = new Location(this.getApplicationContext());
+        Log.d("LocationDDDD: ", "Latitute: "+ ((Double.toString(location.getLatitude())) + "Longititute: "+ ((Double.toString(location.getLongitude()))))) ;
+
 
         //DataUsage dataUsage = new DataUsageHandler().getDataUsageInformation( this.getApplicationContext());
         PushDataUsage pushDataUsage = new PushDataUsage (this.getApplicationContext());
@@ -99,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                emailWrapper.getEditText().setError(null);
+                emailWrapper.setError(null);
 
             }
 
@@ -118,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                passwordWrapper.getEditText().setError(null);
+                passwordWrapper.setError(null);
 
             }
 
@@ -183,7 +188,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                     } else {
-                        CoordinatorLayout coordinatorLayout =  (CoordinatorLayout) findViewById(R.id
+                        CoordinatorLayout coordinatorLayout =  coordinatorLayout = (CoordinatorLayout) findViewById(R.id
                                 .coordinatorLayout);
                         Snackbar snackbar = Snackbar
                                 .make(coordinatorLayout,  jsonObject.getString("message")
@@ -199,8 +204,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
 
                 progressDialog.dismiss();
+               // Toast.makeText(getApplicationContext(),
+                        //LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
 
-                CoordinatorLayout coordinatorLayout =(CoordinatorLayout) findViewById(R.id
+                CoordinatorLayout coordinatorLayout =  coordinatorLayout = (CoordinatorLayout) findViewById(R.id
                         .coordinatorLayout);
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, LoginActivity.this.getResources().getString(R.string.request_unknown_error)
@@ -233,20 +240,18 @@ public class LoginActivity extends AppCompatActivity {
 
             if(Utility.isEmpty(email)) {
 
-                emailWrapper.getEditText().setError(LoginActivity.this.getString(R.string.empty_input_error_message), null);
+                emailWrapper.setError(LoginActivity.this.getString(R.string.empty_input_error_message));
 
             }else if(Utility.isEmpty(password)) {
 
-                passwordWrapper.getEditText().setError(LoginActivity.this.getString(R.string.empty_input_error_message), null);
-                passwordWrapper.getEditText().requestFocus();
+                passwordWrapper.setError(LoginActivity.this.getString(R.string.empty_input_error_message));
             }
 
         }else {
 
             if(!Utility.validateEmail(email)) {
 
-                emailWrapper.getEditText().setError("Invalid email address", null);
-                emailWrapper.getEditText().requestFocus();
+                emailWrapper.setError("Invalid email address");
             }else {
 
                 InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(
