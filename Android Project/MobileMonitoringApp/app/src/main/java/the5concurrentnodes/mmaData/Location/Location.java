@@ -1,14 +1,11 @@
 package the5concurrentnodes.mmaData.Location;
 
-import android.app.Activity;
 import android.content.Context;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import the5concurrentnodes.mmaData.DeviceApps.LocationTracker;
 import the5concurrentnodes.mmaData.interfaces.ConvertToJSON;
-import the5concurrentnodes.mobilemonitoringapp.LoginActivity;
 
 public class Location implements ConvertToJSON
 {
