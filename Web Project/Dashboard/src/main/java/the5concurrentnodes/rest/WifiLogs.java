@@ -73,7 +73,7 @@ public class WifiLogs {
                 } catch (JSONException e) {
                 }
 
-                Device device = deviceManager.findUserByIMENumber(deviceIME);
+                Device device = deviceManager.getDeviceByIMENumber(deviceIME);
 
                 wifiManager.persist(ip,ssid,bssid,time,connection_status,macAddress,device);
 

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
@@ -37,6 +39,7 @@ import java.util.ArrayList;
 
 import the5concurrentnodes.account.Register;
 import the5concurrentnodes.account.Utility;
+import the5concurrentnodes.controllers.DataPushServiceHandler;
 import the5concurrentnodes.controllers.InternetConnectionDetector;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
@@ -113,12 +116,8 @@ public class RegisterActivity extends ActionBarActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if(!pError) {
 
-                    pError = true;
-                    passwordWrapper.setError(RegisterActivity.this.getString(R.string.password_hint));
-                }
-
+                    passwordWrapper.getEditText().setError(RegisterActivity.this.getString(R.string.password_hint), null);
             }
 
             @Override
@@ -197,14 +196,15 @@ public class RegisterActivity extends ActionBarActivity {
 
             jsonParams.put("email", email);
             jsonParams.put("password", password);
-
             JSONObject deviceInfoParams = new JSONObject();
             DeviceInfo deviceInfo = new DeviceInfo(getApplicationContext());
+            deviceInfoParams.put("model", deviceInfo.getModel());
+            deviceInfoParams.put("make", deviceInfo.getManufacturer());
+            deviceInfoParams.put("os", "Samsung");
+            deviceInfoParams.put("network", deviceInfo.getCarrierName());
+            deviceInfoParams.put("imeNumber", deviceInfo.getIMEI());
 
-
-            jsonParams.put("deviceInfo",deviceInfo.toJSONObject().toString());
-
-
+            jsonParams .put("deviceInfo", deviceInfoParams.toString());
 
         }catch(JSONException e){}
 
@@ -226,6 +226,8 @@ public class RegisterActivity extends ActionBarActivity {
 
                         LoginRegisterDialog dialog = new LoginRegisterDialog();
                         dialog.show(getFragmentManager(), null);
+
+                        DataPushServiceHandler.getInstance().startService(getApplicationContext());
 
                     }else {
 
@@ -298,11 +300,13 @@ public class RegisterActivity extends ActionBarActivity {
             if(!Utility.validateEmail(email)) {
 
                 emailWrapper.setError("Invalid email address");
+
             }else if(password.length() < 6) {
                 passwordWrapper.setError(RegisterActivity.this.getString(R.string.password_hint));
             } else if(!password.equals(cPassword)) {
 
                 confirmPasswordWrapper.setError("Passwords do not match");
+
             }else {
 
                 registerUser(email, password);

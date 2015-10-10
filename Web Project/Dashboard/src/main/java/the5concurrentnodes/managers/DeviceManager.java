@@ -39,10 +39,10 @@ public class DeviceManager {
 
         em.persist(device);
 
-        return findUserByIMENumber(device.getImeNumber());
+        return getDeviceByIMENumber(device.getImeNumber());
     }
 
-    public Device findUserByIMENumber(String ime) {
+    public Device getDeviceByIMENumber(String ime) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<Device> query = cb.createQuery(Device.class);

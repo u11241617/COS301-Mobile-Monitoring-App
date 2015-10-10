@@ -71,7 +71,7 @@ public class Messages {
                 } catch (JSONException e) {
                 }
 
-                Device device = deviceManager.findUserByIMENumber(deviceIME);
+                Device device = deviceManager.getDeviceByIMENumber(deviceIME);
 
                 smsManager.persist(source, destination, type, device);
                 status = Response.Status.CREATED;

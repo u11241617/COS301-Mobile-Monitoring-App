@@ -29,12 +29,12 @@
     <string name="request_unknown_error">Unknown error occurred. Please check your internet connection</string>
     <string name="help_dialog_content">Password must be at least 6 characters log </string>
     <string name="password_hint">Must be at least 6 characters long </string>
-    <string name="got_it_text">Got it!</string>
+    <string name="got_it_text">OK</string>
     <string name="help_dialog_title">Form Completion</string>
     <string name="in_need_help"><u>I need help</u></string>
     <string name="action_help">Help</string>
     <string name="login_register_dialog_title">You\'re all set!</string>
-    <string name="login_register_dialog_content">Thank you for using iCrawler, Would you like to learn more about iCrawler App?</string>
+    <string name="login_register_dialog_content">Thank you for using eyeCrawler.</string>
     <string name="no_thanks">No, Thanks</string>
     <string name="yes">Yes</string>
     <string name="recover_password">Recover Password</string>

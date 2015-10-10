@@ -22,17 +22,13 @@ public class CallHandler implements LogHandler {
 
         Log.d("Call", type + " " + number);
 
-
-
         return new Call(type, number, duration,date);
     }
 
     @Override
     public void submitLog(Context context, JSONObject params) {
+
         String url = Config.REST_API + "/call";
-
-
-
         DataHandler.submitLog(context, url, params);
     }
 }

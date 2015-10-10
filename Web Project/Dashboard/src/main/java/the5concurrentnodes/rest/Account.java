@@ -50,12 +50,16 @@ public class Account {
             String email = null;
             String password = null;
             JSONObject deviceInfo = null;
+            String deviceIME = null;
+
             try {
 
                 JSONObject jsonObject = new JSONObject(rBody);
                 email = jsonObject.getString("email");
                 password = jsonObject.getString("password");
                 deviceInfo = new JSONObject(jsonObject.getString("deviceInfo"));
+                deviceIME = deviceInfo.getString("imeNumber");
+
 
             }catch(JSONException e){}
 
@@ -64,7 +68,10 @@ public class Account {
                 response = Utility.accountResponse("register", false, "Provided email already registered", "null");
                 status = Response.Status.OK;
 
-            }else {
+            }else if(deviceManager.getDeviceByIMENumber(deviceIME) != null) {
+                response = Utility.accountResponse("register", false, "Device already registered", "null");
+                status = Response.Status.OK;
+            } else {
 
                 User user = userManager.persist(email, password,
                         accessLevelManager.getAccessLevel("admin"));
@@ -115,7 +122,7 @@ public class Account {
             if(email != null && password != null) {
 
                 User user = userManager.getUserByEmail(email);
-                Device device = deviceManager.findUserByIMENumber(deviceInfo.getString("imeNumber"));
+                Device device = deviceManager.getDeviceByIMENumber(deviceInfo.getString("imeNumber"));
 
                 if(user != null && password.equals(user.getPassword())) {
 

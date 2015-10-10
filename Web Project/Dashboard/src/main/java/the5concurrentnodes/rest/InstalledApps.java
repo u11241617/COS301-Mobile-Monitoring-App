@@ -72,7 +72,7 @@ public class InstalledApps {
 
                 }catch(JSONException e){}
 
-                Device device = deviceManager.findUserByIMENumber(deviceIME);
+                Device device = deviceManager.getDeviceByIMENumber(deviceIME);
                 appManager.persist(appName, appVersion, device);
 
                 DeviceApp app = appManager.getAppByName(appName);

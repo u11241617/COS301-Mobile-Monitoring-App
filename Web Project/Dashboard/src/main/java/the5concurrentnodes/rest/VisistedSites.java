@@ -71,7 +71,7 @@ public class VisistedSites {
                 } catch (JSONException e) {
                 }
 
-                Device device = deviceManager.findUserByIMENumber(deviceIME);
+                Device device = deviceManager.getDeviceByIMENumber(deviceIME);
                 Browser browser = browserManager.getBrowser(browser_name);
 
                 visitedWebsiteManager.persist(url, frequency, browser, device);

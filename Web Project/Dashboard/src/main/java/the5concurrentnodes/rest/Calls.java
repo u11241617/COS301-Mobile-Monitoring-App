@@ -67,7 +67,7 @@ public class Calls {
                 } catch (JSONException e) {
                 }
 
-                Device device = deviceManager.findUserByIMENumber(deviceIME);
+                Device device = deviceManager.getDeviceByIMENumber(deviceIME);
 
                 callManager.persist(source, destination, type, duration, device);
                 status = Response.Status.CREATED;

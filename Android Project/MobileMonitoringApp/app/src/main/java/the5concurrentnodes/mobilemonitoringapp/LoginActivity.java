@@ -27,11 +27,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import the5concurrentnodes.account.Utility;
+import the5concurrentnodes.controllers.DataPushServiceHandler;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
 
+import the5concurrentnodes.mmaData.DeviceApps.PushAppsInfo;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 
 
@@ -149,7 +151,9 @@ public class LoginActivity extends AppCompatActivity {
                         LoginRegisterDialog dialog = new LoginRegisterDialog();
                         dialog.show(getFragmentManager(), null);
 
-                        //new PushAppsInfo(getApplicationContext()).execute();
+                        DataPushServiceHandler.getInstance().startService(getApplicationContext());
+
+                        new PushAppsInfo(getApplicationContext()).execute();
 
 
                     } else {
@@ -160,7 +164,6 @@ public class LoginActivity extends AppCompatActivity {
                                         , Snackbar.LENGTH_LONG);
                         snackbar.show();
                     }
-                        //Toast.makeText(getApplicationContext(), jsonObject.getString("message"),Toast.LENGTH_LONG).show();
 
 
                 } catch (JSONException e){}

@@ -1,8 +1,11 @@
 
 var appServices = angular.module('icrawlerServices', ['ngResource']);
+
+var HOST = 'http://localhost:8080'
+
 appServices.factory('Sms', ['$resource',
     function($resource){
-        return $resource('http://localhost:8080/Dashboard/resources/:device/messages/', {
+        return $resource(HOST + '/Dashboard/resources/:device/messages/', {
             device: '@device'
         }, {
             create: {
@@ -13,7 +16,7 @@ appServices.factory('Sms', ['$resource',
 
 appServices.factory('Device', ['$resource',
     function($resource){
-        return $resource('http://localhost:8080/Dashboard/resources/:userId/devices/', {
+        return $resource(HOST + '/Dashboard/resources/:userId/devices/', {
             userId: '@userId'
         }, {
             create: {
@@ -24,7 +27,7 @@ appServices.factory('Device', ['$resource',
 
 appServices.factory('Calls', ['$resource',
     function($resource){
-        return $resource('http://localhost:8080/Dashboard/resources/:device/calls/', {
+        return $resource(HOST + '/Dashboard/resources/:device/calls/', {
             device: '@device'
         }, {
             create: {
@@ -35,7 +38,7 @@ appServices.factory('Calls', ['$resource',
 
 appServices.factory('Sites', ['$resource',
     function($resource){
-        return $resource('http://localhost:8080/Dashboard/resources/:device/visitedSites/', {
+        return $resource(HOST + '/Dashboard/resources/:device/visitedSites/', {
             device: '@device'
         }, {
             create: {
@@ -46,7 +49,7 @@ appServices.factory('Sites', ['$resource',
 
 appServices.factory('Apps', ['$resource',
     function($resource){
-        return $resource('http://localhost:8080/Dashboard/resources/:device/apps/', {
+        return $resource(HOST + '/Dashboard/resources/:device/apps/', {
             device: '@device'
         }, {
             create: {
