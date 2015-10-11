@@ -9,8 +9,9 @@ public class DeviceApp {
     private int id;
     private String name;
     private String version;
-    //private Collection<AppPermission> apppermissionsesById;
     private Device devicetbByDeviceId;
+    private String apppackage;
+    private String status;
 
     @Id
     @Column(name = "id")
@@ -38,6 +39,7 @@ public class DeviceApp {
         return version;
     }
 
+
     public void setVersion(String version) {
         this.version = version;
     }
@@ -64,15 +66,6 @@ public class DeviceApp {
         return result;
     }
 
-   /* @OneToMany(mappedBy = "deviceappsByAppId")
-    public Collection<AppPermission> getApppermissionsesById() {
-        return apppermissionsesById;
-    }
-
-    public void setApppermissionsesById(Collection<AppPermission> apppermissionsesById) {
-        this.apppermissionsesById = apppermissionsesById;
-    }*/
-
     @ManyToOne
     @JoinColumn(name = "device_id", referencedColumnName = "deviceID", nullable = false)
     public Device getDevicetbByDeviceId() {
@@ -81,5 +74,25 @@ public class DeviceApp {
 
     public void setDevicetbByDeviceId(Device devicetbByDeviceId) {
         this.devicetbByDeviceId = devicetbByDeviceId;
+    }
+
+    @Basic
+    @Column(name = "apppackage")
+    public String getApppackage() {
+        return apppackage;
+    }
+
+    public void setApppackage(String apppackage) {
+        this.apppackage = apppackage;
+    }
+
+    @Basic
+    @Column(name = "status")
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
