@@ -34,8 +34,8 @@ public class DataUsage implements ConvertToJSON {
 
         try{
             jsonObject.put("name", name);
-            jsonObject.put("total", total);
-            jsonObject.put("overallTotal", overallTotal);
+            jsonObject.put("usage", total);
+            jsonObject.put("total", overallTotal);
         }catch(JSONException e){}
 
         return jsonObject;

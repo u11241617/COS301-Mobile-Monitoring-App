@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="iCrawlerDataSource" uuid="26189e8a-7f3e-441a-8a52-e6638f2d251f">
-    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+    <database-info product="MySQL" version="5.6.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
@@ -46,6 +46,17 @@
       <primary-key name="PRIMARY" columns="callID"/>
       <foreign-key name="calltb_ibfk_1" columns="deviceID" ref-table="devicetb" ref-schema="" ref-catalog="mmadb" ref-columns="deviceID" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
+	
+    <table name="datausagetb" schema="" catalog="mmadb" type="TABLE">
+      <column name="datausageid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="total" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="usage" sqlType="VARCHAR" precision="1000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="datetime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="deviceid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="datausageid"/>
+    </table>
+	
     <table name="deviceapps" schema="" catalog="mmadb" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
@@ -73,6 +84,7 @@
       <exported-key name="visitedwebsitetb_ibfk_2" table="visitedwebsitetb" schema="" catalog="mmadb" columns="deviceID"/>
       <exported-key name="wifitb_ibfk_2" table="wifitb" schema="" catalog="mmadb" columns="deviceId"/>
       <index name="imeNumber" unique="true" columns="imeNumber"/>
+
     </table>
     <table name="smstb" schema="" catalog="mmadb" type="TABLE">
       <column name="smsID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="RWFjaCBzbXMgbmVlZHMgdG8gaGF2ZSBhbiBJRCBpbiBvcmRlciB0byB0cmFjayB0aGVt" autoIncrement="true"/>
@@ -83,6 +95,19 @@
       <column name="datetime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="smsID"/>
       <foreign-key name="smstb_ibfk_1" columns="deviceID" ref-table="devicetb" ref-schema="" ref-catalog="mmadb" ref-columns="deviceID" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="user_pwd" schema="" catalog="mmadb" type="TABLE">
+      <column name="name" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="pass" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="name"/>
+    </table>
+    <table name="users" schema="" catalog="mmadb" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ime" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="email" unique="true" columns="email"/>
     </table>
     <table name="usertb" schema="" catalog="mmadb" type="TABLE">
       <column name="userID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>

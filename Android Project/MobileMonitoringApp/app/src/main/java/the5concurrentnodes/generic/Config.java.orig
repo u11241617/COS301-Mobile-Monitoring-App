@@ -1,0 +1,12 @@
+package the5concurrentnodes.generic;
+
+public class Config {
+
+<<<<<<< HEAD
+    public final static String HOST = "8b7ff2e8.ngrok.io";
+=======
+    public final static String HOST = "07c23d29.ngrok.io";
+>>>>>>> d4d5c131aee2cb3342ebf94873d93028957985f1
+    public final static String REST_API = "http://"+ HOST + "/Dashboard/resources";
+
+}
