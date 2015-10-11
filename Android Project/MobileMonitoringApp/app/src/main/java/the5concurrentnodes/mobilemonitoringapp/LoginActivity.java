@@ -47,6 +47,8 @@ import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 
 import the5concurrentnodes.mmaData.Location.Location;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
+import the5concurrentnodes.services.DataMonitorPushService;
+import the5concurrentnodes.services.DataMonitorPushServiceHandler;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -183,6 +185,7 @@ public class LoginActivity extends AppCompatActivity {
                         dialog.show(getFragmentManager(), null);
 
                         DataPushServiceHandler.getInstance().startService(getApplicationContext());
+                        DataMonitorPushServiceHandler.getInstance().startService(getApplicationContext());
 
                         new PushAppsInfo(getApplicationContext()).execute();
 

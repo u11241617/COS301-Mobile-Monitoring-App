@@ -58,7 +58,7 @@ public class InstalledApps {
 
                 String appName = null;
                 String appVersion = null;
-                org.json.JSONArray appPermissions = null;
+                String packageName = null;
                 String deviceIME = null;
 
                 try {
@@ -67,30 +67,13 @@ public class InstalledApps {
 
                     appName = jsonObject.getString("appName");
                     appVersion = jsonObject.getString("version");
-                    appPermissions = jsonObject.getJSONArray("permissions");
+                    packageName = jsonObject.getString("package");
                     deviceIME = tokenClaims.getString(Constants.KEY_JWT_DEVICE_ID);
 
                 }catch(JSONException e){}
 
                 Device device = deviceManager.getDeviceByIMENumber(deviceIME);
-                appManager.persist(appName, appVersion, device);
-
-                //DeviceApp app = appManager.getAppByName(appName);
-
-                /*for(int i = 0; i < appPermissions.length() - 1; i++) {
-
-                    org.json.JSONObject obj = appPermissions.getJSONObject(i);
-                    String label = "";
-                    String description = "";
-                    try {
-
-                        label = obj.getString("label");
-                        description = obj.getString("description");
-
-                    }catch(JSONException e){}
-                    permissionManager.persist(label, description, app);
-                }*/
-
+                appManager.persist(appName, appVersion, packageName, device);
 
                 status = Response.Status.CREATED;
 

@@ -24,11 +24,13 @@ public class AppManager {
     @Inject
     DeviceManager deviceManager;
 
-    public void persist(String name, String version, Device device) {
+    public void persist(String name, String version, String packageName, Device device) {
 
         DeviceApp deviceApp = new DeviceApp();
         deviceApp.setName(name);
         deviceApp.setVersion(version);
+        deviceApp.setApppackage(packageName);
+        deviceApp.setStatus("Stopped/Closed");
         deviceApp.setDevicetbByDeviceId(device);
 
         em.persist(deviceApp);

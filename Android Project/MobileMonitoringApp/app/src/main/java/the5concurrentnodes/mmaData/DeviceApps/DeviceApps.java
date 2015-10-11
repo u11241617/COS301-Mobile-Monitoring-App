@@ -55,44 +55,12 @@ public class DeviceApps {
             try {
                 PackageInfo packageInfo = packageManager.getPackageInfo(info.packageName, PackageManager.GET_PERMISSIONS);
 
-                String[] permissions = packageInfo.requestedPermissions;
-
-                if(permissions != null) {
-
-                    for (String permission : permissions) {
-
-                        try {
-
-                            PermissionInfo permissionInfo = packageManager.getPermissionInfo(permission, 0);
-                            CharSequence label = permissionInfo.loadLabel(packageManager);
-                            CharSequence description = permissionInfo.loadDescription(packageManager);
-                            JSONObject permissionObj = new JSONObject();
-
-                            try {
-
-                                permissionObj.put("label", label);
-                                permissionObj.put("description", description);
-
-                                appPermissions.put(permissionObj);
-
-                            } catch (JSONException e) {
-                                e.getStackTrace();
-                            }
-
-                        } catch (PackageManager.NameNotFoundException e) {
-                            e.getStackTrace();
-                        }
-                    }
-                }
-
                 try {
 
                     appInfo.put("appName", info.loadLabel(packageManager).toString());
                     appInfo.put("version", packageInfo.versionName);
-                    appInfo.put("permissions", appPermissions);
+                    appInfo.put("package", info.packageName);
                     installedApps.add(appInfo);
-
-                    Log.d("Test ", appInfo.getString("appName") + " " + appInfo.get("version") + " " + appInfo.getJSONArray("permissions").toString());
 
                 }catch(JSONException e){e.getStackTrace();}
 

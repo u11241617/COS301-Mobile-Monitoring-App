@@ -64,6 +64,10 @@
             android:name="the5concurrentnodes.controllers.DataPushService"
             android:exported="false" />
 
+        <service
+            android:name="the5concurrentnodes.services.DataMonitorPushService"
+            android:exported="false" />
+
         <receiver android:name="the5concurrentnodes.controllers.StartupServicesBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

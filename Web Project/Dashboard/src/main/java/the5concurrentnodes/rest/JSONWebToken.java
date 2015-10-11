@@ -57,7 +57,7 @@ public class JSONWebToken {
 
         if(expire) {
 
-            claims.setExpirationTimeMinutesInTheFuture(3);
+            claims.setExpirationTimeMinutesInTheFuture(30);
         }
 
 
