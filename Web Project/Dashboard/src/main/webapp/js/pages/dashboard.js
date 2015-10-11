@@ -21,6 +21,8 @@ angular.module('icrawlerApp.home', [
 
         $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
 
+            NProgress.start();
+
             CurrentDevice.setdeviceId(data[0].deviceId);
 
             $scope.sms = Sms.query({device: data[0].deviceId}, function(data) {
@@ -36,9 +38,12 @@ angular.module('icrawlerApp.home', [
             $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
 
                 drawUserDoughnutChart(data);
+                NProgress.done();
             });
 
         });
+
+
 
         $scope.load_data = function(device_id) {
 

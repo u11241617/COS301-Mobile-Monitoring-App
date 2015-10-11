@@ -30,11 +30,17 @@ appLogin.controller('LoginCtrl', function LoginController( $scope, $http, store,
 
             }else {
 
+                $("#spinner").removeClass("hide");
+                $("#spinner").addClass("show");
+
                 $http({
                     url: 'http://localhost:8080/Dashboard/resources/signin',
                     method: 'POST',
                     data: $scope.user
                 }).then(function (response) {
+
+                    $("#spinner").removeClass("show");
+                    $("#spinner").addClass("hide");
 
                     if (response.data.status) {
 

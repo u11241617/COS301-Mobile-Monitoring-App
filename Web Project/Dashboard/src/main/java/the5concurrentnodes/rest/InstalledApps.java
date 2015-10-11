@@ -75,14 +75,20 @@ public class InstalledApps {
                 Device device = deviceManager.getDeviceByIMENumber(deviceIME);
                 appManager.persist(appName, appVersion, device);
 
-                /*DeviceApp app = appManager.getAppByName(appName);
+                //DeviceApp app = appManager.getAppByName(appName);
 
-                for(int i = 0; i < appPermissions.length(); i++) {
+                /*for(int i = 0; i < appPermissions.length() - 1; i++) {
 
                     org.json.JSONObject obj = appPermissions.getJSONObject(i);
+                    String label = "";
+                    String description = "";
+                    try {
 
-                    permissionManager.persist(
-                            obj.getString("label"), obj.getString("description"), app);
+                        label = obj.getString("label");
+                        description = obj.getString("description");
+
+                    }catch(JSONException e){}
+                    permissionManager.persist(label, description, app);
                 }*/
 
 

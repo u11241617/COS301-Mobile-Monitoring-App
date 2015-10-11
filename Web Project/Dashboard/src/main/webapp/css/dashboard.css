@@ -854,10 +854,11 @@ h1
 
 .footer
 {
-    width: 30%;
+    width: 40%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 20%;
+    font-size: 12pt;
 }
 
 .article

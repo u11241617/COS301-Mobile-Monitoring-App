@@ -110,13 +110,25 @@ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
     top: 25%;
     left: 0;
     pointer-events: none;
-    opacity: 0.5;
+    color: #636363;
 }
 
 .icon {
 
     width: 30px;
     border-right: 1px solid #CCCCCC;
+
+}
+
+.view-password-icon {
+
+    width: 30px;
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    right: -65px;
+    cursor: pointer;
 
 }
 
@@ -236,11 +248,30 @@ input:focus ~ .highlight {
 /*foot styling*/
 .footers
 {
-    margin-right: 5%;font-size: smaller;margin-top: 3%;
+
+    margin-right: 6%;font-size: smaller;margin-top: 3%;
 }
 .footerClose
 {
     width: 1%;
     font-size: medium;
     margin: 5% auto 5% auto;
+}
+
+#spinner {
+    width:50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -220px;
+}
+
+.show {
+
+    display: block;
+}
+
+.hide {
+
+    display: none;
 }

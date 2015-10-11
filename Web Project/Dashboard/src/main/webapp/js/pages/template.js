@@ -40,8 +40,8 @@ appLogin.controller('TemplateCtrl', function LoginController( $scope, $http, sto
 
 
     $scope.logout = function() {
-
-        //$(".modal").modal('show');
-        tour();
+        $(".modal").modal('hide');
+        store.remove("jwt")
+        $state.go('login');
     }
 });
