@@ -60,6 +60,7 @@ appServices.factory('Apps', ['$resource',
 
 appServices.factory('CurrentDevice', function () {
     var deviceId = 0;
+    var name = "n/a"
 
     return {
         getDeviceId: function () {
@@ -67,6 +68,12 @@ appServices.factory('CurrentDevice', function () {
         },
         setdeviceId: function(d) {
             deviceId = d;
+        },
+        getDeviceName: function () {
+            return name;
+        },
+        setdeviceName: function(n) {
+            name = n;
         }
     };
 });

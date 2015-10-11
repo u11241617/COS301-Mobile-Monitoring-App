@@ -10,17 +10,17 @@
 
 <form>
         <div class="group">
-            <input type="email" ng-model="user.email" autofocus="autofocus" />
+            <input type="email" ng-model="user.email" class="input" autofocus="autofocus" />
             <span class="icon"><i class="fa fa-envelope fa-fw fa-lg"></i></span>
             <span class="highlight"></span><span class="bar"></span>
-            <label>Email</label>
+            <label class="label">Email</label>
             <p class="login-empty-field">{{emptyEmail}}</p>
         </div>
         <div class="group">
-            <input type="password" ng-model="user.password"/>
+            <input type="password" class="input" ng-model="user.password"/>
             <span class="icon"><i class="fa fa-lock fa-2x"></i></span>
             <span class="highlight"></span><span class="bar"></span>
-            <label>Password</label>
+            <label class="label">Password</label>
             <p class="login-empty-field">{{emptyPassword}}</p>
             <span class="view-password-icon"><i class="fa fa-eye fa-2x"></i></span>
         </div>

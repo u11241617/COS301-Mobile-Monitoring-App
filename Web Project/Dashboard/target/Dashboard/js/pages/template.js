@@ -11,10 +11,10 @@ var appLogin =  angular.module('icrawlerApp.template', [
         });
 });
 
-appLogin.controller('TemplateCtrl', function LoginController( $scope, $http, store, $state, Logout) {
+appLogin.controller('TemplateCtrl', function LoginController($rootScope, $scope, $http, store, $state, Logout) {
 
     console.log("State: " + $state.get());
-
+    $rootScope.deviceName = "";
     if($state.is("template") || $state.is("template.dashboard")) {
 
         $state.go('template.dashboard');

@@ -14,16 +14,20 @@ angular.module('icrawlerApp.home', [
                 requiresLogin: true
             }
         });
-    }).controller('HomeCtrl', function HomeController($scope, $state, $http, store, jwtHelper, Sms, Device, Calls, Sites, CurrentDevice) {
+    }).controller('HomeCtrl', function HomeController($rootScope, $scope, $state, $http, store, jwtHelper, Sms, Device, Calls, Sites, CurrentDevice) {
 
         $scope.jwt = store.get('jwt');
         $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
 
         $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
 
-            NProgress.start();
-
             CurrentDevice.setdeviceId(data[0].deviceId);
+            $rootScope.deviceName = data[0].model;
+            $scope.deviceModel = {
+
+                deviceName: data[0].model
+            }
+
 
             $scope.sms = Sms.query({device: data[0].deviceId}, function(data) {
 
@@ -38,7 +42,7 @@ angular.module('icrawlerApp.home', [
             $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
 
                 drawUserDoughnutChart(data);
-                NProgress.done();
+
             });
 
         });
@@ -64,6 +68,11 @@ angular.module('icrawlerApp.home', [
             CurrentDevice.setdeviceId(device_id);
             $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
 
+                    for(var i = 0; i < data.length; i++) {
+
+                        if(device_id == data[i].deviceId)
+                            $rootScope.deviceName = data[i].model;
+                    }
             });
         }
 

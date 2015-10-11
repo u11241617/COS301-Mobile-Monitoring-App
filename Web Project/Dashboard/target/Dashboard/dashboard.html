@@ -1,58 +1,87 @@
 <div class="row">
-    <div >
-        <h1 class="page-header"> <i class="fa fa-dashboard fa-fw"></i>Dashboard</h1>
-    </div>
+    <section class="content-header">
+        <h1>
+            <i class="fa fa-dashboard fa-fw"></i>
+            Dashboard
+        </h1>
+    </section>
 
     <div class="row" id="device-list" style="padding-top: 20px;">
-        <div ng-repeat="device in device_logs" mydd class="col-md-3">
-            <a data-id={{device.deviceId}} ng-click='load_data(device.deviceId)' class="device">
-                <div class="panel custom-panel-device">
-                    <div class="panel-heading text-center">
-                        <div class="huge">{{device.make}}</div>
-                        <div>{{device.model}}</div>
-                    </div>
-                    <div class="panel-footer custom-panel-footer text-center">
-                        <span class="device-ime">IMEI {{device.imeNumber}}</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
 
-    <div class="row" id="summary" style="padding-top: 20px;">
-        <div class="col-md-8">
-            <div class="panel panel-default custom-panel-primary">
+
+        <div ng-repeat="device in device_logs" class="col-md-3">
+            <!--<div class="panel panel-default custom-panel-primary">
                 <div class="custom-panel-heading panel-heading">
                     Messages Summary
                 </div>
                 <div class="panel-body">
                     <canvas style="width: 100%;" id="lineChart" height="100"></canvas>
                 </div>
-            </div>
+            </div>-->
+            <div class="nav-tabs-custom">
+
+                <div class="tab-content no-padding">
+
+                    <a data-id={{device.deviceId}} ng-click='load_data(device.deviceId)' class="device">
+                        <div class="panel custom-panel-device">
+                            <div class="panel-heading text-center">
+                                <div class="huge">{{device.make}}</div>
+                                <div>{{device.model}}</div>
+                            </div>
+                            <div class="panel-footer custom-panel-footer text-center">
+                                <span class="device-ime">IMEI {{device.imeNumber}}</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div><!-- /.nav-tabs-custom -->
+        </div>
+
+    </div>
+
+    <div class="row" id="summary" style="padding-top: 20px;">
+        <div class="col-md-8">
+            <div class="box box-default">
+                <!-- Tabs within a box -->
+                <div class="box-header with-border">
+                    <h3 class="box-title">Browser Usage</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <!-- Morris chart - Sales -->
+                    <canvas style="width: 98%; margin-left: 10px;" id="lineChart" height="120"></canvas>
+
+                </div>
+            </div><!-- /.nav-tabs-custom -->
         </div>
 
         <div class="col-md-4">
-            <div>
-                <div class="panel panel-default custom-panel-primary">
-                    <div class="custom-panel-heading panel-heading">
-                        Broswer
-                    </div>
-
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <canvas id="doughnutChart" style="width: 100%; height:180px;"></canvas>
-                            </div>
-                            <div class="col-md-12">
-                                <ul class="chart-legend">
-                                    <li><i class="fa fa-circle-o fa-lg red" id="chrome"></i> Chrome</li>
-                                    <li><i class="fa fa-circle-o fa-lg blue" id="internet"></i> Default</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Browser Usage</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="chart-responsive">
+                                <canvas id="doughnutChart" height="150"></canvas>
+                            </div><!-- ./chart-responsive -->
+                        </div><!-- /.col -->
+                        <div class="col-md-4">
+                            <ul class="chart-legend clearfix">
+                                <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+                                <li><i class="fa fa-circle-o text-green"></i> Default</li>
+                            </ul>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.box-body -->
+                <div class="box-footer no-padding">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#">Chrome  <span class="pull-right text-red"> 12%</span></a></li>
+                        <li><a href="#">Default <span class="pull-right text-green"> 4%</span></a></li>
+                    </ul>
+                </div><!-- /.footer -->
+            </div><!-- /.box -->
         </div>
     </div>
 </div>
