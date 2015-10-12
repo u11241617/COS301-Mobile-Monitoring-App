@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
 @Path("/")
 @Stateless
 public class Account {
-
+    //899256
     @Inject
     UserManager userManager;
 
@@ -189,6 +189,59 @@ public class Account {
 
         }
 
+        return Response.status(status)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(response.toString()).build();
+    }
+
+    @POST @Path("/recoverPassword")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response doRecoverPasswordWeb(String rBody,
+                               @HeaderParam("Content-Type") String cType) {
+
+        JSONObject response = Utility.accountResponse("Recover password", false, "Request forbidden", "null");
+        Response.Status status = Response.Status.FORBIDDEN;
+
+        if(cType.contains(MediaType.APPLICATION_JSON)){
+
+            String email = null;
+            String newPassword = null;
+            try {
+
+                JSONObject jsonObject = new JSONObject(rBody);
+                email = jsonObject.getString("emailRecover");
+
+            }catch(JSONException e){}
+
+            if(email != null) {
+
+                User user = userManager.getUserByEmail(email);
+
+                if(user != null) {
+
+                    newPassword = Email.sendEmail(email,Email.generate());
+
+                    if(newPassword.equals("FAIL"))
+                    {
+                        response = Utility.accountResponse("Recover password", false, "Email was not sent", "null");
+                    }
+                    else
+                    {
+                        user.setPassword(newPassword);
+                        response = Utility.accountResponse("Recover password", true, "Email sent successfully", "null");
+                    }
+
+                    status = Response.Status.OK;
+                }else {
+
+                    response = Utility.accountResponse("Recover passwords", false, "Email was not sent", "null");
+
+                    status = Response.Status.OK;
+                }
+            }
+
+        }
         return Response.status(status)
                 .type(MediaType.APPLICATION_JSON)
                 .entity(response.toString()).build();

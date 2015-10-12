@@ -3,6 +3,7 @@ package the5concurrentnodes.mmaData.deviceInfo;
 import android.content.Context;
 import android.os.Build;
 import android.telephony.TelephonyManager;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,7 +24,15 @@ public class DeviceInfo implements ConvertToJSON {
         String serviceName = Context.TELEPHONY_SERVICE;
         TelephonyManager teleManage = (TelephonyManager) context.getSystemService(serviceName);
 
-        this.version = Build.VERSION.SDK;
+        if (Build.VERSION.SDK.equals("14") || Build.VERSION.SDK.equals("15"))
+            this.version = "Ice Cream Sandwich";
+        else if (Build.VERSION.SDK.equals("16") || Build.VERSION.SDK.equals("17") || Build.VERSION.SDK.equals("18"))
+            this.version = "Jelly Bean";
+        else if (Build.VERSION.SDK.equals("19") )
+            this.version = "KitKat";
+        else if (Build.VERSION.SDK.equals("21") || Build.VERSION.SDK.equals("22") )
+            this.version = "Lollipop";
+
         this.model = Build.MODEL;
         this.manufacturer = Build.MANUFACTURER;
         this.IMEI = teleManage.getDeviceId();
@@ -65,7 +74,7 @@ public class DeviceInfo implements ConvertToJSON {
 
             jsonObject.put("model", model);
             jsonObject.put("make", manufacturer);
-            jsonObject.put("os", LineNumber);
+            jsonObject.put("os", version);
             jsonObject.put("network", carrierName);
             jsonObject.put("imeNumber", IMEI);
 
