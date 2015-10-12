@@ -2,75 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33bfc85c-a90a-4324-b3ca-342d2ba998bc" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\mobilemonitoringapp\DataPullService.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AccessLevelManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AccessLevelManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AccessLevelManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AccessLevelManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Account.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Account.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AppManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AppManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AppManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AppManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/BrowserManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/BrowserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/BrowserManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/BrowserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/CallManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/CallManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/CallManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/CallManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Calls.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Calls.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Calls.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Calls.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/DataUsage.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/DataUsage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/DataUsage.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/DataUsage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DataUsageManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DataUsageManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DataUsageManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DataUsageManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DeviceManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DeviceManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DeviceManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DeviceManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/InstalledApps.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/InstalledApps.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/JSONWebToken.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/JSONWebToken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/JSONWebToken.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/JSONWebToken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Messages.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Messages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Messages.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Messages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/beans/SessionBean.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/beans/SessionBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/beans/SessionBean.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/beans/SessionBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/SmsManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/SmsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/SmsManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/SmsManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/TestDataInserter.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/TestDataInserter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/TestDataInserter.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/TestDataInserter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/UserManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/UserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/UserManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/UserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/VisistedSites.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/VisistedSites.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/VisistedSites.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/VisistedSites.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/VisitedWebsiteManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/WifiLogs.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/WifiLogs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/WifiLogs.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/WifiLogs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/WifiManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/WifiManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/WifiManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/WifiManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/generic/Config.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/generic/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dashboard.iml" afterPath="$PROJECT_DIR$/Dashboard.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Device.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Device.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/DeviceApp.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/DeviceApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/JSONWebToken.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/JSONWebToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/LoginActivity.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/Dashboard/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/app.iml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/apps.html" afterPath="$PROJECT_DIR$/src/main/webapp/apps.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/apps.html" afterPath="$PROJECT_DIR$/target/Dashboard/apps.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/browser.html" afterPath="$PROJECT_DIR$/src/main/webapp/browser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/browser.html" afterPath="$PROJECT_DIR$/target/Dashboard/browser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/calls.html" afterPath="$PROJECT_DIR$/src/main/webapp/calls.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/calls.html" afterPath="$PROJECT_DIR$/target/Dashboard/calls.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/calls.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/calls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/calls.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/calls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/dashboard.html" afterPath="$PROJECT_DIR$/target/Dashboard/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/index.html" afterPath="$PROJECT_DIR$/target/Dashboard/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template.html" afterPath="$PROJECT_DIR$/src/main/webapp/template.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Dashboard.iws" />
@@ -99,14 +32,6 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="iCrawlerDataSource" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="mmadb" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -115,113 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="calls.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/calls.html">
+      <file leaf-file-name="template.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="68" column="24" selection-start-line="34" selection-start-column="4" selection-end-line="68" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="browser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/browser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8909092">
-              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="135" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mmadb.deviceapps" pinned="false" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..deviceapps">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstalledApps.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mmadb.apppermissions" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..apppermissions">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mmadb.smstb" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..smstb">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mmadb.calltb" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..calltb">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2924731">
+              <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -286,20 +109,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/modal/css/component.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/modal/css/default.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/pages/apps.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/template.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/dashboard.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/dashboard.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/pages/calls.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/apps.html" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/JSONWebToken.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/calls.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/browser.html" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java" />
         <option value="dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..deviceapps" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/DeviceApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/calls.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/template.html" />
       </list>
     </option>
   </component>
@@ -335,8 +158,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -362,6 +185,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -399,32 +223,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -565,7 +363,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1141,9 +938,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Unknown" factoryName="Unknown">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -1275,7 +1069,7 @@
         </option>
       </method>
     </configuration>
-    <configuration default="false" name="GS" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.0.0" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk1.7.0_40">
+    <configuration default="false" name="GS" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.0.0" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jre1.8.0_51">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -1391,41 +1185,42 @@
       <workItem from="1443804999398" duration="27395000" />
       <workItem from="1443874534681" duration="2178000" />
       <workItem from="1444584167775" duration="16360000" />
+      <workItem from="1444622351311" duration="308000" />
+      <workItem from="1444622727564" duration="303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202290000" />
+    <option name="totallyTimeSpent" value="202901000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33724833" sideWeight="0.35222054" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33963692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1452345" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33724833" sideWeight="0.35222054" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33963692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45261437" sideWeight="0.64777946" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45195353" sideWeight="0.64777946" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207262" sideWeight="0.3402985" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207262" sideWeight="0.65970147" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3203125" sideWeight="0.3402985" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3203125" sideWeight="0.65970147" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14479166" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1433,6 +1228,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22385621" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1457,6 +1253,50 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/calls.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/browser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap-tour.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1562,30 +1402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..devicetb">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..usertb">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1654,7 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1662,25 +1477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.knob.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13353115">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1688,7 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1696,7 +1491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1704,7 +1498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1712,7 +1505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.3076925">
           <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1720,9 +1512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
           <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1730,7 +1519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1738,64 +1526,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..visitedwebsitetb">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..browsertb">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..browserapp">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/calls.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="68" column="24" selection-start-line="34" selection-start-column="4" selection-end-line="68" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/browser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8909092">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="0.88577825">
+          <caret line="74" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1803,15 +1540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14454976">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="135" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1819,77 +1547,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding>
-            <element signature="e#1841#1842#0" expanded="true" />
-            <element signature="e#1901#1902#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..smstb">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..calltb">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/browser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.68533033">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44396082">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="0.11207835">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..apppermissions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24156693">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..deviceapps">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2924731">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
           <folding />
         </state>
       </provider>
