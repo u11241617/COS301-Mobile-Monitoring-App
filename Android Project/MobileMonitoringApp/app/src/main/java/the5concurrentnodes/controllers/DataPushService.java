@@ -1,6 +1,5 @@
 package the5concurrentnodes.controllers;
 
-import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -13,24 +12,16 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.IBinder;
 import android.provider.Browser;
-import android.util.Log;
-import android.widget.Toast;
 
 import java.util.Date;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
-import the5concurrentnodes.generic.Config;
-import the5concurrentnodes.mmaData.Bluetooth.Bluetooth;
 import the5concurrentnodes.mmaData.Bluetooth.BluetoothConstants;
 import the5concurrentnodes.mmaData.Bluetooth.BluetoothObserver;
 import the5concurrentnodes.mmaData.Browser.BrowserConstants;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
-import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 import the5concurrentnodes.mmaData.call.CallConstants;
 import the5concurrentnodes.mmaData.call.CallObserver;
-import the5concurrentnodes.mmaData.networkInfo.NetworkInfoObserver;
+import the5concurrentnodes.mmaData.wifiInfo.WifiInfoObserver;
 import the5concurrentnodes.mmaData.sms.SmsConstants;
 import the5concurrentnodes.mmaData.sms.SmsObserver;
 
@@ -42,7 +33,7 @@ public class DataPushService extends Service{
     private CallObserver callObserver;
     private BrowserObserver browserObserver;
     private BluetoothObserver bluetoothObserver;
-    private NetworkInfoObserver networkInfoObserver;
+    private WifiInfoObserver wifiInfoObserver;
 
     @Override
     public IBinder onBind(Intent intent) { return  null;}
@@ -85,7 +76,7 @@ public class DataPushService extends Service{
             // TODO Auto-generated method stub
             android.net.NetworkInfo networkInfo = (android.net.NetworkInfo) arg1.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);
             if(networkInfo.getType() == ConnectivityManager.TYPE_WIFI){
-                networkInfoObserver = new NetworkInfoObserver(getApplicationContext());
+                wifiInfoObserver = new WifiInfoObserver(getApplicationContext());
             }
         }
     };

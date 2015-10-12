@@ -58,4 +58,45 @@ appLogin.controller('LoginCtrl', function LoginController( $scope, $http, store,
 
             }
         }
+
+
+
+
+    $scope.recoverPassword = function(){
+        $scope.passwordRevocerError = null;
+
+        if($scope.user.emailRecover == null)
+            $scope.passwordRecoverError = "Please provide a email address.";
+        else
+        {
+            $http({
+                url: 'http://localhost:8080/Dashboard/resources/recoverPassword',
+                method: 'POST',
+                data: $scope.user
+            }).then(function (response) {
+
+                if (response.data.status) {
+
+                    $state.go('login');
+                    $scope.passwordRecoverError = null;
+                    $scope.passwordRecoverPass = response.data.message;
+                    $scope.button = "Ok";
+
+                }else {
+                    $scope.passwordRecoverPass = null;
+                    $scope.passwordRecoverError = response.data.message;
+                    $scope.button = "Cancel";
+
+                }
+
+            }, function (error) {
+            });
+        }
+    }
+    $scope.setupRecoverPassword = function(){
+        $scope.button = "Cancel";
+        $scope.emailRecover=null;
+        $scope.passwordRecoverError=null;
+        $scope.passwordRecoverPass=null;
+    }
 });

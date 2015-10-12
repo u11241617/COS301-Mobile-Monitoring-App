@@ -1,14 +1,9 @@
-package the5concurrentnodes.mmaData.networkInfo;
+package the5concurrentnodes.mmaData.wifiInfo;
 
-import android.app.Activity;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.util.Log;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -20,12 +15,7 @@ import the5concurrentnodes.controllers.DataHandler;
 import the5concurrentnodes.generic.Config;
 import the5concurrentnodes.mmaData.interfaces.LogHandler;
 
-/**
- * Created by Matt on 30/07/2015.
- */
-
-
-public class NetworkInfoHandler implements LogHandler {
+public class WifiInfoHandler implements LogHandler {
 
     private String SSID;
     private String MACADDRESS;
@@ -35,14 +25,11 @@ public class NetworkInfoHandler implements LogHandler {
     private String ConnectionStatus;
     private Context context;
 
-    public NetworkInfo getNetworkInfo (Context context){
+    public Wifi getWifiInfo (Context context){
 
         this.context = context;
-
         GetWifiState(context);
-       /* Toast.makeText(this.context,SSID + " " + MACADDRESS + " " + IPaddress + " " + TimeStamp + " " + ConnectionStatus + " " + BSSID ,
-                Toast.LENGTH_LONG).show();*/
-        return new NetworkInfo(context,SSID,MACADDRESS,IPaddress,TimeStamp,ConnectionStatus, BSSID);
+        return new Wifi(context,SSID,MACADDRESS,IPaddress,TimeStamp,ConnectionStatus, BSSID);
     }
 
 
@@ -72,7 +59,6 @@ public class NetworkInfoHandler implements LogHandler {
                     + "." + String.valueOf(intMyIp2)
                     + "." + String.valueOf(intMyIp3);
 
-
             SSID = myWifiInfo.getSSID();
 
             BSSID = myWifiInfo.getBSSID();
@@ -98,7 +84,7 @@ public class NetworkInfoHandler implements LogHandler {
     @Override
     public void submitLog(Context context, JSONObject params) {
 
-        String url = Config.REST_API + "/networkInfo";
+        String url = Config.REST_API + "/wifi";
         DataHandler.submitLog(context, url, params);
     }
 }
