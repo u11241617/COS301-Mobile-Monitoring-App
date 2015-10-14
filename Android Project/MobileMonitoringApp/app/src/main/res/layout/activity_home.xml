@@ -38,7 +38,7 @@
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:textSize="28sp"
-            android:text="iCrawler"/>
+            android:text="eyeCrawler"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,17 +62,18 @@
            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
            android:layout_marginBottom="15dp"
-           android:background="@color/white"
+           android:background="@drawable/button_selector"
            android:textColor="@color/black"
            android:text="@string/sign_in"
             android:onClick="toLogin"/>
 
         <Button
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginBottom="20dp"
-            android:background="@color/white"
+            android:background="@drawable/button_selector"
             android:textColor="@color/black"
             android:onClick="toRegister"
             android:text="@string/sign_up"/>
@@ -90,7 +91,9 @@
         android:paddingLeft="24dp"
         android:textColor="@color/grey"
         android:textSize="16sp"
-        android:text="By signing up or signing in, you agree to our Terms &amp; Privacy Policy"/>
+        android:clickable="true"
+        android:onClick="toTermsPrivacy"
+        android:text="@string/Terms"/>
 
     <View
         android:id="@+id/input_divider"

@@ -33,7 +33,7 @@ public class DataPushService extends Service{
     private CallObserver callObserver;
     private BrowserObserver browserObserver;
     private BluetoothObserver bluetoothObserver;
-    private WifiInfoObserver wifiInfoObserver;
+
 
     @Override
     public IBinder onBind(Intent intent) { return  null;}
@@ -42,11 +42,6 @@ public class DataPushService extends Service{
         public int onStartCommand(Intent intent, int flags, int startId) {
 
             if(!serviceInitialized) {
-
-                getApplication().registerReceiver(this.myWifiReceiver,
-                        new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
-
-
 
                 smsObserver = new SmsObserver(getApplicationContext());
                 callObserver = new CallObserver(getApplicationContext());
@@ -68,18 +63,6 @@ public class DataPushService extends Service{
 
             return  START_STICKY;
         }
-
-   private BroadcastReceiver myWifiReceiver = new BroadcastReceiver(){
-
-        @Override
-        public void onReceive(Context arg0, Intent arg1) {
-            // TODO Auto-generated method stub
-            android.net.NetworkInfo networkInfo = (android.net.NetworkInfo) arg1.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);
-            if(networkInfo.getType() == ConnectivityManager.TYPE_WIFI){
-                wifiInfoObserver = new WifiInfoObserver(getApplicationContext());
-            }
-        }
-    };
 
         @Override
         public void onDestroy() {

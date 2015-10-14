@@ -27,7 +27,7 @@ import the5concurrentnodes.mmaData.Browser.BrowserConstants;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
 import the5concurrentnodes.mmaData.call.CallConstants;
 import the5concurrentnodes.mmaData.call.CallObserver;
-import the5concurrentnodes.mmaData.networkInfo.NetworkInfoObserver;
+import the5concurrentnodes.mmaData.wifiInfo.WifiInfoObserver;
 import the5concurrentnodes.mmaData.sms.SmsConstants;
 import the5concurrentnodes.mmaData.sms.SmsObserver;
 

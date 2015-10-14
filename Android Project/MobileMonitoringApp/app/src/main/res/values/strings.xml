@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">iCrawler</string>
+    <string name="app_name">eyeCrawler</string>
 
     <string name="action_settings">Settings</string>
     <string name="email">Email</string>
@@ -40,6 +40,6 @@
     <string name="recover">Recover</string>
     <string name="cancel">Cancel</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="Terms">By signing up or signing in, you agree to our <u>Terms &amp; Privacy Policy</u></string>
 
 </resources>

@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                emailWrapper.setError(null);
+                emailWrapper.getEditText().setError(null);
 
             }
 
@@ -125,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                passwordWrapper.setError(null);
+                passwordWrapper.getEditText().setError(null);
 
             }
 
@@ -191,7 +191,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                     } else {
-                        CoordinatorLayout coordinatorLayout =  coordinatorLayout = (CoordinatorLayout) findViewById(R.id
+                        CoordinatorLayout coordinatorLayout =  (CoordinatorLayout) findViewById(R.id
                                 .coordinatorLayout);
                         Snackbar snackbar = Snackbar
                                 .make(coordinatorLayout,  jsonObject.getString("message")
@@ -210,7 +210,7 @@ public class LoginActivity extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(),
                         //LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
 
-                CoordinatorLayout coordinatorLayout =  coordinatorLayout = (CoordinatorLayout) findViewById(R.id
+                CoordinatorLayout coordinatorLayout =(CoordinatorLayout) findViewById(R.id
                         .coordinatorLayout);
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, LoginActivity.this.getResources().getString(R.string.request_unknown_error)
@@ -243,18 +243,21 @@ public class LoginActivity extends AppCompatActivity {
 
             if(Utility.isEmpty(email)) {
 
-                emailWrapper.setError(LoginActivity.this.getString(R.string.empty_input_error_message));
+                emailWrapper.getEditText().setError(LoginActivity.this.getString(R.string.empty_input_error_message), null);
+                emailWrapper.getEditText().requestFocus();
 
             }else if(Utility.isEmpty(password)) {
 
-                passwordWrapper.setError(LoginActivity.this.getString(R.string.empty_input_error_message));
+                passwordWrapper.getEditText().setError(LoginActivity.this.getString(R.string.empty_input_error_message), null);
+                passwordWrapper.getEditText().requestFocus();
             }
 
         }else {
 
             if(!Utility.validateEmail(email)) {
 
-                emailWrapper.setError("Invalid email address");
+                emailWrapper.getEditText().setError("Invalid email address", null);
+                emailWrapper.getEditText().requestFocus();
             }else {
 
                 InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(

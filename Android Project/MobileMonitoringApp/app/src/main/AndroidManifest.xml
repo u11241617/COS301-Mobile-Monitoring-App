@@ -79,6 +79,13 @@
             android:label="@string/title_activity_home"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
         </activity>
+
+        <receiver android:name="the5concurrentnodes.controllers.WifiBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

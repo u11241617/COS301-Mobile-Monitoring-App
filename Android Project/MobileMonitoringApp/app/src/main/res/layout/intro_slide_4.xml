@@ -46,7 +46,7 @@
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:text="Sign-up or Sign-in to get the most out of the iCrawler app."/>
+            android:text="Sign-up or Sign-in to get the most out of the eyeCrawler app."/>
 
     </LinearLayout>
 

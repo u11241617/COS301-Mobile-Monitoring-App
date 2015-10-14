@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -15,7 +17,7 @@ import the5concurrentnodes.controllers.DataPushServiceHandler;
 import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,30 +28,43 @@ public class MainActivity extends Activity {
         final CheckBox acceptTermsCheckbox;
         final Button nextButton;
 
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mToolbar.setNavigationIcon(getResources().getDrawable(R.mipmap.ic_action_back));
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         webView = (WebView) findViewById(R.id.web_view);
-        acceptTermsCheckbox = (CheckBox) findViewById(R.id.accept_terms_checkbox);
-        nextButton = (Button) findViewById(R.id.next_button);
+
+       // nextButton = (Button) findViewById(R.id.next_button);
 
 
         webView.loadUrl("file:///android_asset/pages/terms.html");
 
-        acceptTermsCheckbox.setOnClickListener(new View.OnClickListener() {
+       /* acceptTermsCheckbox.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                if(acceptTermsCheckbox.isChecked()) {
+                //if(acceptTermsCheckbox.isChecked()) {
                     
                     nextButton.setEnabled(true);
 
-                }else {
+               // }else {
 
-                    nextButton.setEnabled(false);
-                }
+               //     nextButton.setEnabled(false);
+               // }
             }
-        });
+        });*/
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
+       /* nextButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -58,7 +73,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
 
         SessionManager sessionManager;
         sessionManager = new SessionManager(getApplicationContext());

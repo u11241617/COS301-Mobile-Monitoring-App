@@ -8,6 +8,8 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -19,6 +21,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -117,7 +120,8 @@ public class RegisterActivity extends ActionBarActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
 
-                    passwordWrapper.getEditText().setError(RegisterActivity.this.getString(R.string.password_hint), null);
+                passwordWrapper.getEditText().setError(RegisterActivity.this.getString(R.string.password_hint), null);
+                passwordWrapper.getEditText().requestFocus();
             }
 
             @Override
@@ -135,8 +139,8 @@ public class RegisterActivity extends ActionBarActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                confirmPasswordWrapper.setError(null);
-                passwordWrapper.setError(null);
+                confirmPasswordWrapper.getEditText().setError(null);
+                passwordWrapper.getEditText().setError(null);
 
             }
 
@@ -146,7 +150,7 @@ public class RegisterActivity extends ActionBarActivity {
             }
         });
 
-        progressDialog = new ProgressDialog(RegisterActivity.this);
+        progressDialog = new ProgressDialog(RegisterActivity.this, R.style.AppDialogTheme);
         progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
     }
 
@@ -231,9 +235,11 @@ public class RegisterActivity extends ActionBarActivity {
 
                     }else {
 
-                        Toast.makeText(getApplicationContext(),
-                                jsonObject.getString("message"),
-                                Toast.LENGTH_LONG).show();
+                        CoordinatorLayout coordinatorLayout =  (CoordinatorLayout)findViewById(R.id.coordinatorLayout);
+                        Snackbar snackbar = Snackbar
+                                .make(coordinatorLayout, jsonObject.getString("message")
+                                        , Snackbar.LENGTH_LONG);
+                                                snackbar.show();
                     }
 
                 }catch(JSONException e){}
@@ -243,9 +249,10 @@ public class RegisterActivity extends ActionBarActivity {
             public void onErrorResponse(VolleyError error) {
 
                 progressDialog.dismiss();
-                Toast.makeText(getApplicationContext(),
-                        RegisterActivity.this.getResources().getString(R.string.request_unknown_error),
-                        Toast.LENGTH_LONG).show();
+                CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+                Snackbar snackbar = Snackbar.make(coordinatorLayout, RegisterActivity.this.getResources().getString(R.string.request_unknown_error)
+                                                        , Snackbar.LENGTH_LONG);
+                snackbar.show();
             }
         });
 
@@ -285,30 +292,38 @@ public class RegisterActivity extends ActionBarActivity {
 
             if(Utility.isEmpty(email)) {
 
-                emailWrapper.setError(RegisterActivity.this.getString(R.string.empty_input_error_message));
+                emailWrapper.getEditText().setError(RegisterActivity.this.getString(R.string.empty_input_error_message), null);
+                emailWrapper.getEditText().requestFocus();
 
             }else if(Utility.isEmpty(password)) {
 
-                passwordWrapper.setError(RegisterActivity.this.getString(R.string.empty_input_error_message));
+                passwordWrapper.getEditText().setError(RegisterActivity.this.getString(R.string.empty_input_error_message), null);
+                passwordWrapper.getEditText().requestFocus();
             }else if(Utility.isEmpty(cPassword)) {
 
-                confirmPasswordWrapper.setError(RegisterActivity.this.getString(R.string.empty_input_error_message));
+                confirmPasswordWrapper.getEditText().setError(RegisterActivity.this.getString(R.string.empty_input_error_message), null);
+                confirmPasswordWrapper.getEditText().requestFocus();
             }
 
         }else {
 
             if(!Utility.validateEmail(email)) {
 
-                emailWrapper.setError("Invalid email address");
+                emailWrapper.getEditText().setError("Invalid email address", null);
+                emailWrapper.getEditText().requestFocus();
 
             }else if(password.length() < 6) {
-                passwordWrapper.setError(RegisterActivity.this.getString(R.string.password_hint));
+                passwordWrapper.getEditText().setError(RegisterActivity.this.getString(R.string.password_hint), null);
+                passwordWrapper.getEditText().requestFocus();
             } else if(!password.equals(cPassword)) {
 
-                confirmPasswordWrapper.setError("Passwords do not match");
+                confirmPasswordWrapper.getEditText().setError("Passwords do not match", null);
+                confirmPasswordWrapper.getEditText().requestFocus();
 
             }else {
-
+                InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+                inputMethodManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                progressDialog.show();
                 registerUser(email, password);
             }
         }

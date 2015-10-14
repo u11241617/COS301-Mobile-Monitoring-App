@@ -56,4 +56,9 @@ public class HomeActivity extends Activity {
         Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
         startActivity(intent);
     }
+
+    public void toTermsPrivacy(View view) {
+        Intent intent = new Intent (getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
 }
