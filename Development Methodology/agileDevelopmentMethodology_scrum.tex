@@ -16,16 +16,17 @@
 	
 	\section{Overview}
 	\begin{flushleft}
-		This document is intended to serve as a reference for the development methodology used for the iCrawler App; which was proposed 
-	by Emilio Mumba for COS301 final year project.\newline\newline
-	The app is intended to promote readiness in digital forensics, protect users from malicious entities and activities, and provide proactive 
-	measures that are undertaking by the mobile device user/owner. It monitors the user's activities and collects data/logs from the device. The data
-	is then reported to a desktop computer which generates reports that give the investigator (parent/guardian/employer) a good starting point in his/her investigation.\newpage
+		This document is intended to serve as a reference for the development methodology used for the iCrawler mobile monitoring application,
+		 which was proposed 
+	by Mr. Emilio Mumba for Software Engineering (COS301) main project.\newline\newline
+	The application is primarily intended for parents who need to monitor the activities of their children on their mobile devices. Moreover it can be used to promote readiness in digital forensics, protect users from malicious entities and activities, and provide proactive 
+	measures that are undertaken by the mobile device user/owner. The application achieves this by monitoring the user's activities and collecting data logs from the device. The data
+	is then persisted onto a database which can be viewed by logging into the dasboard component of the application which generates reports that give the user/owner a good understanding of what their mobile device(s) have been used for.\newpage
 	\end{flushleft}
 
 	
 	\section{Roles}
-	There are three core roles[10] with a range of ancillary roles. These core roles are committed to the project in the scrum process.
+	There are three core roles with a range of ancillary roles. These core roles are committed to the project in the scrum process.
 	\subsection{Product Owner}
 	\textbf{Name:} Emilio Raymond Mumba\newline
 	\textbf{Responsibilities:} He is responsible for product vision; he accepts or rejects each product increment. He constantly re-prioritizes the Product Backlog, adjusting any longterm expectations such as release plans. He is the final arbiter of requirements questions.
@@ -33,7 +34,7 @@
  	\textbf{Name:} The 5 Concurrent Nodes\newline
 	\textbf{Responsibilities:} Intensely collaborative and cross-functional. They are responsible for delivering potentially shippable increments (PSIs) of product at the end of each sprint (the sprint goal). 
 	The team
-	is made up of four individuals who do the actual work.
+	was initially made up of five individuals, however one member had to discontinue the course leaving four individuals to do the actual work.
 	\subsection{Scrum Master}
  	\textbf{Name:} Khathutshelo Shaun Matidza\newline
 	\textbf{Responsibilities:} He is responsible for ensuring that the team follows the agreed scrum processes, facilitating key sessions, and encourages 
@@ -50,14 +51,13 @@
 	past sprint. We also present the completed work to the client/stakeholders (a.k.a \emph{demo}).\newline
 	The review is thus followed by a \emph{sprint retrospective}. On this event we reflect on the past sprint; we identify and agree on continuous process improvement actions. 
 	\subsection{Daily Scrum}
- 	We hold a \emph{daily scrum} (or stand-up) each day during a sprint to discuss what an individual did the day before, what they plan on doing today and also if they 
+ 	We hold a \emph{daily scrum} (or stand-up) each day during a sprint to discuss what an individual did the day before, what they plan on doing on the present day and additionally if they 
  	see any impediments that might prevent them from reaching the sprint goal. The best time we opted for is after a lecture that we all share; this is to try and have 
- 	all members	to attend the daily scrum (although attendances of all members is not compulsory). The length of the daily scrum is constrained to 15min max., which explains 
- 	why we stand.\newpage 
+ 	all members	to attend the daily scrum (although attendances of all members is not compulsory). The length of the daily scrum is constrained to 15 minutes at maximum., which explains why we stand.\newpage 
  	
  	\section{Artifacts}
  	\subsection{Product backlog}
- 	The \emph{product backlog} comprises an ordered list of \emph{requirements} that a scrum team maintains for a product. It consists of features, bug fixes, non-functional 
+ 	The \emph{product backlog} comprises pf an ordered list of \emph{requirements} that a scrum team maintains for a product. It consists of features, bug fixes, non-functional 
  	requirements, etc.-whatever needs doing in order to successfully deliver a viable product.\newline\newline 	
  	\begin{tabular}{|p{6cm}|p{4cm}|p{3cm}|}
 			\textbf{Item} & \textbf{Est. time} & \textbf{Priority}\\
@@ -94,7 +94,7 @@
 			\hline
 			Data encryption & 5hrs & High\\
 			\hline
-			Local storage & 10hrs & Low\\
+			Location monitor & 5hrs & low \\
 			\hline
 			Splash screen & 10hrs & Medium\\
 			\hline
@@ -129,7 +129,7 @@
 			\hline
 			REST api\newline password recovery & 24th Aug - 4th Sept & Completed\\
 			\hline
-			User manual\newline app tour guide & 7th Sept - 2nd Oct & Completed\\
+			Monitor device location\newline User manual\newline app tour guide & 7th Sept - 2nd Oct & Completed\\
 			\hline
 			Retrieve wireless activity\newline Data encryption\newline Data usage & 6th Oct - 16th Oct & In progress\\
 			\hline
