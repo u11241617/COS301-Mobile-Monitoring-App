@@ -15,7 +15,8 @@ angular.module('icrawlerApp.calls', [
             }
         });
     })
-    .controller('CallsCtrl', function HomeController($scope, $http, store, jwtHelper, Calls, CurrentDevice) {
+    .controller('CallsCtrl', function HomeController($rootScope, $scope, $http, store,
+                                                     jwtHelper, Calls, CurrentDevice) {
 
         $scope.jwt = store.get('jwt');
         $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
@@ -25,7 +26,7 @@ angular.module('icrawlerApp.calls', [
         $scope.callHistory = {dialed:0, missed:0, received:0};
 
         var device_id = CurrentDevice.getDeviceId();
-        $scope.calls_data = Calls.query({device:device_id}, function(data) {
+        $scope.calls_data = Calls.query({device:$rootScope.currentDeviceId}, function(data) {
 
             var total = 0;
             for(var i = 0; i < data.length; i++) {

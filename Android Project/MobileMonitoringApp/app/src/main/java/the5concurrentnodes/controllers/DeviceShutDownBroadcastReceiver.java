@@ -17,9 +17,7 @@ public class DeviceShutDownBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        DataPushServiceHandler.getInstance().startService(context);
-
-        String url = Config.REST_API + "/deviceStatus";
+        String url = Config.REST_API + "/deviceStatusUpdate";
         JSONObject params = new JSONObject();
         try {
             params.put("status", "OFF");

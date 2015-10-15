@@ -25,6 +25,17 @@ appServices.factory('Device', ['$resource',
         });
     }]);
 
+appServices.factory('DeviceState', ['$resource',
+    function($resource){
+        return $resource(HOST + '/Dashboard/resources/device/:deviceId/', {
+            deviceId: '@deviceId'
+        }, {
+            create: {
+                method: 'POST'
+            }
+        });
+    }]);
+
 appServices.factory('Calls', ['$resource',
     function($resource){
         return $resource(HOST + '/Dashboard/resources/:device/calls/', {

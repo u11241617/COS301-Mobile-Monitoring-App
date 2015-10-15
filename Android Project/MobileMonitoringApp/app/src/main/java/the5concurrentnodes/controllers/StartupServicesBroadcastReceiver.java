@@ -9,20 +9,26 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import the5concurrentnodes.generic.Config;
+import the5concurrentnodes.services.DataMonitorPushServiceHandler;
 
 public class StartupServicesBroadcastReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        DataPushServiceHandler.getInstance().startService(context);
+        VolleyRequestQueue.init(context);
 
-        String url = Config.REST_API + "/deviceStatus";
+        DataPushServiceHandler.getInstance().startService(context);
+        DataMonitorPushServiceHandler.getInstance().startService(context);
+
+        String url = Config.REST_API + "/deviceStatusUpdate";
         JSONObject params = new JSONObject();
         try {
             params.put("status", "ON");
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        DataHandler.submitLog(context, url, params);
     }
 }

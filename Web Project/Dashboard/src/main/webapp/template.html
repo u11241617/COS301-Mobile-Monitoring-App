@@ -6,8 +6,7 @@
 
         <!-- Logo -->
         <a href="#" class="logo">
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">eyeCrawler</span>
+            <span class="logo-lg">iCrawler</span>
         </a>
 
         <!-- Header Navbar -->
@@ -62,7 +61,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a ng-click='showlogoutDialog()' class="link"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                    <li><a ng-click='logout()' class="link"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
                 </ul>
             </div>
         </nav>
@@ -78,8 +77,8 @@
                     <img src="images/device.png" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
-                    <p>{{deviceName}}</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> ON</a>
+                    <p>{{currentDeviceName}}</p>
+                    <a href="#"><i id="currentDeviceStatusId"></i> {{currentDeviceStatus}}</a>
                 </div>
             </div>
 
@@ -116,10 +115,7 @@
     <div class="content-wrapper">
         <!-- Main content -->
         <section class="content">
-
             <div class="container-fluid" ui-view></div>
-            <!-- Your Page Content Here -->
-
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 

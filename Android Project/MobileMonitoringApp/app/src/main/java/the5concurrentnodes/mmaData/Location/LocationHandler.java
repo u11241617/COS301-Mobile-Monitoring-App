@@ -18,7 +18,7 @@ import java.util.Locale;
 
 import the5concurrentnodes.controllers.DataHandler;
 import the5concurrentnodes.generic.Config;
-import the5concurrentnodes.mmaData.call.Call;
+import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.mmaData.call.CallConstants;
 import the5concurrentnodes.mmaData.interfaces.LogHandler;
 
@@ -55,6 +55,8 @@ public class LocationHandler implements LocationListener, LogHandler {
 
 
             }
+
+           // String  data  = Utility.encryptData(params.toString());
 
             submitLog(context, params);
 

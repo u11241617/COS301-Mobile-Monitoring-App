@@ -2,7 +2,8 @@
 var appLogin =  angular.module('icrawlerApp.template', [
     'ui.router',
     'angular-storage',
-    'bm.bsTour'
+    'bm.bsTour',
+    'icrawlerServices'
 ]).config(function($stateProvider) {
         $stateProvider.state('template', {
             url: '/template',
@@ -11,37 +12,63 @@ var appLogin =  angular.module('icrawlerApp.template', [
         });
 });
 
-appLogin.controller('TemplateCtrl', function LoginController($rootScope, $scope, $http, store, $state, Logout) {
+appLogin.controller('TemplateCtrl',
+    function TemplateController($rootScope, $scope, $http, store,
+                             $state, $interval, DeviceState) {
 
-    console.log("State: " + $state.get());
-    $rootScope.deviceName = "";
-    if($state.is("template") || $state.is("template.dashboard")) {
+       $interval(function() {
+            updateDeviceState();
+        }, 300);
 
-        $state.go('template.dashboard');
-    }else if( $state.is('template.calls')) {
+       function updateDeviceState() {
 
-        $state.go('template.calls');
-    }else if( $state.is('template.messages')) {
+           $scope.deviceState = DeviceState.query({deviceId: $rootScope.currentDeviceId}, function(data) {
 
-        $state.go('template.messages');
-    }else if($state.is('template.browser')) {
+               $rootScope.currentDeviceStatus = data[0].status;
 
-        $state.go('template.browser');
+               if($rootScope.currentDeviceStatus == "ON") {
 
-    }else if($state.is('template.apps')) {
+                   angular.element('#currentDeviceStatusId').attr('class', "fa fa-circle text-success");
 
-        $state.go('template.apps');
-    }
+               }else {
 
-    $scope.showlogoutDialog = function() {
-
-        $(".modal").modal('show');
-    };
+                   angular.element('#currentDeviceStatusId').attr('class', "fa fa-circle text-red");
+               }
+               console.log(data + "");
+           });
 
 
-    $scope.logout = function() {
-        $(".modal").modal('hide');
-        store.remove("jwt")
-        $state.go('login');
-    }
+       }
+
+
+
+        if($state.is("template") || $state.is("template.dashboard")) {
+
+            $state.go('template.dashboard');
+        }else if( $state.is('template.calls')) {
+
+            $state.go('template.calls');
+        }else if( $state.is('template.messages')) {
+
+            $state.go('template.messages');
+        }else if($state.is('template.browser')) {
+
+            $state.go('template.browser');
+
+        }else if($state.is('template.apps')) {
+
+            $state.go('template.apps');
+        }
+
+        $scope.showlogoutDialog = function() {
+
+            $(".modal").modal('show');
+        };
+
+
+        $scope.logout = function() {
+            $(".modal").modal('hide');
+            store.remove('jwt');
+            $state.go('login');
+        }
 });

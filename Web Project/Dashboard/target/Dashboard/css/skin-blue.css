@@ -105,9 +105,11 @@
 .skin-black-light .sidebar-menu > li.active > a {
   color: #000000;
   background: #f4f4f5;
+  border-left-color: #009688;
+  border-left-width: 5px;
 }
 .skin-black-light .sidebar-menu > li.active {
-  border-left-color: #ffffff;
+  border-left-color: #009688;
 }
 .skin-black-light .sidebar-menu > li.active > a {
   font-weight: 600;
