@@ -59,7 +59,7 @@ public class DeviceApps {
 
                     appInfo.put("appName", info.loadLabel(packageManager).toString());
                     appInfo.put("version", packageInfo.versionName);
-                    appInfo.put("package", info.packageName);
+                    appInfo.put("package", info.processName);
                     installedApps.add(appInfo);
 
                 }catch(JSONException e){e.getStackTrace();}

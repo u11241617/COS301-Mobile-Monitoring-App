@@ -7,9 +7,9 @@ import org.json.JSONObject;
 
 import the5concurrentnodes.mmaData.interfaces.ConvertToJSON;
 
-public class Location implements ConvertToJSON
+public class Location
 {
-    private LocationTracker locationTracker;
+    /*private LocationTracker locationTracker;
     double latitude;
     double longitude;
 
@@ -44,6 +44,6 @@ public class Location implements ConvertToJSON
 
         return jsonObject;
     }
-
+*/
 
 }

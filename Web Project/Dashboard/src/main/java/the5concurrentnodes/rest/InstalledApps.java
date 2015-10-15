@@ -92,4 +92,49 @@ public class InstalledApps {
 
         return appManager.getAppsByDeviceId(deviceId);
     }
+
+    @POST @Path("/statusUpdate")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateAppStatus(String rBody,
+                                           @HeaderParam("Content-Type") String cType,
+                                           @HeaderParam("Authorization") String auth) {
+
+        Response.Status status = Response.Status.FORBIDDEN;
+
+        if(auth != null &&
+                cType.equals(Constants.KEY_VOLLEY_APPLICATION_JSON)
+                || cType.equals(MediaType.APPLICATION_JSON)) {
+
+            StringTokenizer tokens = new StringTokenizer(auth);
+            tokens.nextToken();
+            String access_token = tokens.nextToken();
+
+            JSONWebToken jwt = JSONWebToken.getInstance();
+            JSONObject tokenClaims = jwt.validateToken(access_token);
+
+            if(tokenClaims != null) {
+
+                String packageName = null;
+                String appStatus = null;
+
+                try {
+
+                    JSONObject jsonObject = new JSONObject(rBody);
+
+                    packageName = jsonObject.getString("packageName");
+                    appStatus = jsonObject.getString("status");
+
+                }catch(JSONException e){}
+
+
+                appManager.update(packageName, appStatus);
+                status = Response.Status.OK;
+
+            }
+
+        }
+
+        return Response.status(status)
+                .type(MediaType.APPLICATION_JSON).build();
+    }
 }
