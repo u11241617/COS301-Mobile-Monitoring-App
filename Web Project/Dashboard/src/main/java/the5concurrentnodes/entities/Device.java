@@ -13,6 +13,7 @@ public class Device {
     private String network;
     private String imeNumber;
     private User usertbByUserId;
+    private String status;
 
     @Id
     @Column(name = "deviceID")
@@ -110,5 +111,15 @@ public class Device {
 
     public void setUsertbByUserId(User usertbByUserId) {
         this.usertbByUserId = usertbByUserId;
+    }
+
+    @Basic
+    @Column(name = "status")
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

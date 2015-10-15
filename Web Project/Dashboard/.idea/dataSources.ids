@@ -67,6 +67,7 @@
       <column name="os" sqlType="VARCHAR" precision="300" scale="0" nullable="false" jdbcType="12" remarks="ZS5nIEFuZHJvaWQ="/>
       <column name="network" sqlType="VARCHAR" precision="300" scale="0" nullable="false" jdbcType="12" remarks="ZS5nIFZvZGFjb20="/>
       <column name="imeNumber" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="4" scale="0" nullable="false" jdbcType="12" def="J09OJw=="/>
       <primary-key name="PRIMARY" columns="deviceID"/>
       <foreign-key name="devicetb_ibfk_4" columns="userID" ref-table="usertb" ref-schema="" ref-catalog="mmadb" ref-columns="userID" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="calltb_ibfk_1" table="calltb" schema="" catalog="mmadb" columns="deviceID"/>

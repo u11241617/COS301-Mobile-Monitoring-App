@@ -4,6 +4,7 @@ package the5concurrentnodes.managers;
 import org.json.JSONException;
 import org.json.JSONObject;
 import the5concurrentnodes.entities.Device;
+import the5concurrentnodes.entities.DeviceApp;
 import the5concurrentnodes.entities.User;
 
 import javax.ejb.Stateless;
@@ -12,6 +13,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.CriteriaUpdate;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
@@ -91,5 +93,21 @@ public class DeviceManager {
         }catch(NoResultException e){}
 
         return devices;
+    }
+
+    public void update(String imeNumber, String status) {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaUpdate<Device> update = cb.
+                createCriteriaUpdate(Device.class);
+
+        Root deviceRoot = update.from(Device.class);
+
+        update.set(deviceRoot.get("status"), status).
+                where(cb.equal(deviceRoot.get("imeNumber"),
+                        imeNumber));
+
+        // perform update
+        em.createQuery(update).executeUpdate();
     }
 }

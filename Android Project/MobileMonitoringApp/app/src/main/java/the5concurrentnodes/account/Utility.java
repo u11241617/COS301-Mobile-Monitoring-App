@@ -1,8 +1,21 @@
 package the5concurrentnodes.account;
 
 
+import android.util.Log;
+
+import java.security.InvalidKeyException;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 public class Utility {
 
@@ -36,4 +49,28 @@ public class Utility {
         return matcher.matches();
     }
 
+
+    public static String encryptData(String plain) throws NoSuchAlgorithmException,
+            NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
+
+        KeyPairGenerator kpg;
+        KeyPair kp;
+        PublicKey publicKey;
+        byte[] encryptedBytes;
+        Cipher cipher;
+        String encrypted;
+
+        kpg = KeyPairGenerator.getInstance("RSA");
+        kpg.initialize(1024);
+        kp = kpg.genKeyPair();
+        publicKey = kp.getPublic();
+
+        cipher = Cipher.getInstance("RSA");
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+        encryptedBytes = cipher.doFinal(plain.getBytes());
+        encrypted = new String(encryptedBytes);
+        Log.d("encrypted", "" + encrypted);
+
+        return encrypted;
+    }
 }
