@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+
     <permission
         android:name="android.permission.BLUETOOTH"
         android:label="BLUETOOTH" />
@@ -21,12 +22,13 @@
     <uses-permission android:name="android.permission.BLUETOOTH_MAP" />
     <uses-permission android:name="android.permission.ACCESS_BLUETOOTH_SHARE" />
     <uses-permission android:name="android.permission.BLUETOOTH_STACK" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"> </uses-permission>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"> </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -53,19 +55,18 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/sign_in">
+            android:label="@string/sign_in" >
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/sign_up">
+            android:label="@string/sign_up" >
         </activity>
 
         <service
             android:name="the5concurrentnodes.controllers.DataPushService"
             android:exported="false" />
-
         <service
-            android:name="the5concurrentnodes.services.DataMonitorPushService"
+            android:name="the5concurrentnodes.mmaData.Location.LocationTracker"
             android:exported="false" />
 
         <receiver android:name="the5concurrentnodes.controllers.StartupServicesBroadcastReceiver" >
@@ -74,17 +75,17 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name="the5concurrentnodes.controllers.DeviceShutDownBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
         </activity>
-
-        <receiver android:name="the5concurrentnodes.controllers.WifiBroadcastReceiver" >
-            <intent-filter>
-                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
-            </intent-filter>
-        </receiver>
 
     </application>
 

@@ -94,10 +94,12 @@
 .skin-black-light .sidebar-menu > li.header {
   color: #848484;
   background: #f9fafc;
+  font-size: 13pt;
 }
 .skin-black-light .sidebar-menu > li > a {
   border-left: 3px solid transparent;
   font-weight: 600;
+  font-size: 13pt;
 }
 .skin-black-light .sidebar-menu > li:hover > a,
 .skin-black-light .sidebar-menu > li.active > a {

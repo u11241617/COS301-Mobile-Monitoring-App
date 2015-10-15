@@ -5,15 +5,15 @@ angular.module('icrawlerApp.apps', [
     'angular-storage',
     'icrawlerServices'
 ]).config(function($stateProvider) {
-        $stateProvider.state('template.apps', {
-            url: '/apps',
-            controller: 'AppsCtrl',
-            templateUrl: 'apps.html',
-            data: {
-                requiresLogin: true
-            }
-        });
-    })
+    $stateProvider.state('template.apps', {
+        url: '/apps',
+        controller: 'AppsCtrl',
+        templateUrl: 'apps.html',
+        data: {
+            requiresLogin: true
+        }
+    });
+})
     .controller('AppsCtrl', function HomeController($scope, $http, store, jwtHelper, Apps, CurrentDevice) {
 
         $scope.jwt = store.get('jwt');
@@ -27,8 +27,8 @@ angular.module('icrawlerApp.apps', [
 
         $scope.getPermissions = function(appId) {
 
-                alert(" " + appId);
-                $(".md-trigger").click();
+            alert(" " + appId);
+            $(".md-trigger").click();
         }
 
     });

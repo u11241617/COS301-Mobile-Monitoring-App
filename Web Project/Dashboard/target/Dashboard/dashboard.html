@@ -7,8 +7,6 @@
     </section>
 
     <div class="row" id="device-list" style="padding-top: 20px;">
-
-
         <div ng-repeat="device in device_logs" class="col-md-3">
             <div class="nav-tabs-custom">
 
@@ -69,8 +67,8 @@
                 </div><!-- /.box-body -->
                 <div class="box-footer no-padding">
                     <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#">Chrome  <span class="pull-right text-red"> 12%</span></a></li>
-                        <li><a href="#">Default <span class="pull-right text-green"> 4%</span></a></li>
+                        <li><p class="p-stacked">Chrome  <span class="pull-right text-red"> {{chromePercentage}}%</span></p></li>
+                        <li><p class="p-stacked">Default <span class="pull-right text-green">{{defaultPercentage}}%</span></p></li>
                     </ul>
                 </div><!-- /.footer -->
             </div><!-- /.box -->

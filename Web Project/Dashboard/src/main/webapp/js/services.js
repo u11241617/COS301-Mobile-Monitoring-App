@@ -58,6 +58,29 @@ appServices.factory('Apps', ['$resource',
         });
     }]);
 
+appServices.factory('WIFI', ['$resource',
+    function($resource){
+        return $resource(HOST + '/Dashboard/resources/:device/wifilogs/', {
+            device: '@device'
+        }, {
+            create: {
+                method: 'POST'
+            }
+        });
+    }]);
+
+appServices.factory('Location', ['$resource',
+    function($resource){
+        return $resource(HOST + '/Dashboard/resources/:device/locations/', {
+            device: '@device'
+        }, {
+            create: {
+                method: 'POST'
+            }
+        });
+    }]);
+
+
 appServices.factory('CurrentDevice', function () {
     var deviceId = 0;
     var name = "n/a"

@@ -1,7 +1,9 @@
 var app = angular.module('icrawlerApp',
-    ['ui.router','angular-jwt', 'angular-storage', 'datatables', 'icrawlerServices', 'bm.bsTour',
+    ['ui.router','uiGmapgoogle-maps','angular-jwt', 'angular-storage', 'datatables', 'icrawlerServices', 'bm.bsTour',
         'icrawlerApp.home' ,'icrawlerApp.login', 'icrawlerApp.template', 'icrawlerApp.calls',
-        'icrawlerApp.messages', 'icrawlerApp.browser', 'icrawlerApp.apps']);
+        'icrawlerApp.messages', 'icrawlerApp.browser', 'icrawlerApp.apps', 'icrawlerApp.wifi',
+        'icrawlerApp.location']);
+
 
 
 app.config(function myAppConfig ($urlRouterProvider, $httpProvider, jwtInterceptorProvider) {

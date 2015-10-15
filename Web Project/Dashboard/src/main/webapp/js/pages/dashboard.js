@@ -6,77 +6,80 @@ angular.module('icrawlerApp.home', [
     'bm.bsTour',
     'icrawlerServices'
 ]).config(function($stateProvider) {
-        $stateProvider.state('template.dashboard', {
-            url: '/dashboard',
-            controller: 'HomeCtrl',
-            templateUrl: 'dashboard.html',
-            data: {
-                requiresLogin: true
-            }
-        });
-    }).controller('HomeCtrl', function HomeController($rootScope, $scope, $state, $http, store, jwtHelper, Sms, Device, Calls, Sites, CurrentDevice) {
+    $stateProvider.state('template.dashboard', {
+        url: '/dashboard',
+        controller: 'HomeCtrl',
+        templateUrl: 'dashboard.html',
+        data: {
+            requiresLogin: true
+        }
+    });
+}).controller('HomeCtrl', function HomeController($rootScope, $scope, $state, $http, store, jwtHelper, Sms, Device, Calls, Sites, CurrentDevice) {
 
-        $scope.jwt = store.get('jwt');
-        $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
+    $scope.jwt = store.get('jwt');
+    $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
 
-        $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
+    $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
 
-            CurrentDevice.setdeviceId(data[0].deviceId);
-            $rootScope.deviceName = data[0].model;
-            $scope.deviceModel = {
+        CurrentDevice.setdeviceId(data[0].deviceId);
+        $rootScope.deviceName = data[0].model;
+        $scope.deviceModel = {
 
-                deviceName: data[0].model
-            }
-
-
-            $scope.sms = Sms.query({device: data[0].deviceId}, function(data) {
-
-                drawUserLineChart(data);
-
-            });
-
-            $scope.calls = Calls.query({device: data[0].deviceId}, function(data) {
-
-            });
-
-            $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
-
-                drawUserDoughnutChart(data);
-
-            });
-
-        });
-
-
-
-        $scope.load_data = function(device_id) {
-
-            $scope.sms = Sms.query({device: device_id}, function(data) {
-
-                drawUserLineChart(data);
-            });
-
-            $scope.calls = Calls.query({device: device_id}, function(data) {
-
-            });
-
-            $scope.sites = Sites.query({device: device_id}, function(data) {
-
-                drawUserDoughnutChart(data);
-            });
-
-            CurrentDevice.setdeviceId(device_id);
-            $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
-
-                    for(var i = 0; i < data.length; i++) {
-
-                        if(device_id == data[i].deviceId)
-                            $rootScope.deviceName = data[i].model;
-                    }
-            });
+            deviceName: data[0].model
         }
 
+
+        $scope.sms = Sms.query({device: data[0].deviceId}, function(data) {
+
+            drawUserLineChart(data);
+
+        });
+
+        $scope.calls = Calls.query({device: data[0].deviceId}, function(data) {
+
+        });
+
+        $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
+
+            var browserTotal = drawUserDoughnutChart(data);
+
+            $scope.chromePercentage = roundToTwo((browserTotal.chromeTotal / data.length) * 100);
+            $scope.defaultPercentage = roundToTwo((browserTotal.defaultTotal / data.length) * 100);
+
+        });
+
     });
+
+
+
+    $scope.load_data = function(device_id) {
+
+        $scope.sms = Sms.query({device: device_id}, function(data) {
+
+            drawUserLineChart(data);
+        });
+
+        $scope.calls = Calls.query({device: device_id}, function(data) {
+
+        });
+
+        $scope.sites = Sites.query({device: device_id}, function(data) {
+
+            drawUserDoughnutChart(data);
+        });
+
+        CurrentDevice.setdeviceId(device_id);
+        $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
+
+            for(var i = 0; i < data.length; i++) {
+
+                if(device_id == data[i].deviceId)
+                    $rootScope.deviceName = data[i].model;
+            }
+        });
+    }
+
+});
 
 
 function drawUserLineChart(data) {
@@ -121,6 +124,7 @@ function drawUserLineChart(data) {
     }
 
     var ctx = $("#lineChart").get(0).getContext("2d");
+    ctx.clearRect(0, 300, 0, 100);
     var lineChart = new Chart(ctx);
 
     var data = {
@@ -188,5 +192,16 @@ function drawUserDoughnutChart(data) {
         }
     ]
 
+    var browser = {
+        chromeTotal: chrome,
+        defaultTotal: default_browser
+    }
+
     doughnutChart.Doughnut(data);
+
+    return browser;
+}
+
+function roundToTwo(value) {
+    return(Math.round(value * 100) / 100);
 }

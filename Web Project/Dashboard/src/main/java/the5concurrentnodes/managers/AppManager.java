@@ -4,6 +4,7 @@ import the5concurrentnodes.entities.Call;
 import the5concurrentnodes.entities.Device;
 import the5concurrentnodes.entities.DeviceApp;
 import the5concurrentnodes.entities.User;
+import the5concurrentnodes.rest.InstalledApps;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -12,6 +13,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.CriteriaUpdate;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
@@ -34,6 +36,24 @@ public class AppManager {
         deviceApp.setDevicetbByDeviceId(device);
 
         em.persist(deviceApp);
+    }
+
+    public void update(String packageName, String status) {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaUpdate<DeviceApp> update = cb.
+                createCriteriaUpdate(DeviceApp.class);
+
+        Root appsRoot = update.from(DeviceApp.class);
+
+        // set upda
+        update.set(appsRoot.get("status"), status).
+        where(cb.equal(appsRoot.get("apppackage"),
+                packageName));
+
+        // perform update
+        em.createQuery(update).executeUpdate();
+        System.out.println("Hello");
     }
 
     public DeviceApp getAppByName(String name) {

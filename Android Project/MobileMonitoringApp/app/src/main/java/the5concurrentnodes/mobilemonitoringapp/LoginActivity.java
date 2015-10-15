@@ -72,25 +72,6 @@ public class LoginActivity extends AppCompatActivity {
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        Location location = new Location(this.getApplicationContext());
-        Log.d("LocationDDDD: ", "Latitute: "+ ((Double.toString(location.getLatitude())) + "Longititute: "+ ((Double.toString(location.getLongitude()))))) ;
-
-
-        //DataUsage dataUsage = new DataUsageHandler().getDataUsageInformation( this.getApplicationContext());
-        PushDataUsage pushDataUsage = new PushDataUsage (this.getApplicationContext());
-         pushDataUsage.execute();
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-        scheduler.schedule
-                (new Runnable() {
-                    @Override
-                    public void run() {
-                        PushDataUsage pushDataUsage = new PushDataUsage(new Activity().getApplicationContext());
-                        pushDataUsage.execute();
-                    }
-                }, 5, TimeUnit.SECONDS);
-
-
-
 
         progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
@@ -187,7 +168,7 @@ public class LoginActivity extends AppCompatActivity {
                         DataPushServiceHandler.getInstance().startService(getApplicationContext());
                         DataMonitorPushServiceHandler.getInstance().startService(getApplicationContext());
 
-                        new PushAppsInfo(getApplicationContext()).execute();
+                        //new PushAppsInfo(getApplicationContext()).execute();
 
 
                     } else {
