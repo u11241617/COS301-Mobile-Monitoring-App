@@ -1,16 +1,12 @@
 package the5concurrentnodes.rest;
 
 
-import org.jose4j.json.internal.json_simple.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import the5concurrentnodes.entities.Call;
 import the5concurrentnodes.entities.Device;
 import the5concurrentnodes.entities.DeviceApp;
-import the5concurrentnodes.entities.User;
 import the5concurrentnodes.managers.AppManager;
 import the5concurrentnodes.managers.DeviceManager;
-import the5concurrentnodes.managers.PermissionManager;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -26,9 +22,6 @@ public class InstalledApps {
 
     @Inject
     AppManager appManager;
-
-    @Inject
-    PermissionManager permissionManager;
 
     @Inject
     DeviceManager deviceManager;

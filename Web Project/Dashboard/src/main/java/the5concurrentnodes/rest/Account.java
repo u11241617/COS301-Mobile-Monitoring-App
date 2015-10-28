@@ -2,6 +2,7 @@ package the5concurrentnodes.rest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import the5concurrentnodes.entities.Device;
 import the5concurrentnodes.entities.User;
 import the5concurrentnodes.managers.AccessLevelManager;
@@ -17,7 +18,7 @@ import javax.ws.rs.core.Response;
 @Path("/")
 @Stateless
 public class Account {
-    //899256
+
     @Inject
     UserManager userManager;
 
@@ -73,7 +74,8 @@ public class Account {
                 status = Response.Status.OK;
             } else {
 
-                User user = userManager.persist(email, password,
+                String securedPasswordHash = BCrypt.hashpw(password, BCrypt.gensalt(12));
+                User user = userManager.persist(email, securedPasswordHash,
                         accessLevelManager.getAccessLevel("admin"));
 
                 Device device = deviceManager.persist(deviceInfo, user);
@@ -124,7 +126,7 @@ public class Account {
                 User user = userManager.getUserByEmail(email);
                 Device device = deviceManager.getDeviceByIMENumber(deviceInfo.getString("imeNumber"));
 
-                if(user != null && password.equals(user.getPassword())) {
+                if(user != null && BCrypt.checkpw(password, user.getPassword())) {
 
                     if(device == null) {
 
@@ -136,10 +138,10 @@ public class Account {
                             jsonWebToken.createJWT(user.getUserId(), device.getImeNumber(), "user", false));
 
                     status = Response.Status.OK;
+
                 }else {
 
                         response = Utility.accountResponse("login", false, "Invalid Email or Password", "null");
-
                         status = Response.Status.OK;
                     }
                 }
@@ -179,7 +181,7 @@ public class Account {
 
                 User user = userManager.getUserByEmail(email);
 
-                if(user != null && password.equals(user.getPassword())) {
+                if(user != null && BCrypt.checkpw(password, user.getPassword())) {
 
                     JSONWebToken jsonWebToken = JSONWebToken.getInstance();
                     response = Utility.accountResponse("login", true, "Logged in",
@@ -196,59 +198,6 @@ public class Account {
 
         }
 
-        return Response.status(status)
-                .type(MediaType.APPLICATION_JSON)
-                .entity(response.toString()).build();
-    }
-
-    @POST @Path("/recoverPassword")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response doRecoverPasswordWeb(String rBody,
-                               @HeaderParam("Content-Type") String cType) {
-
-        JSONObject response = Utility.accountResponse("Recover password", false, "Request forbidden", "null");
-        Response.Status status = Response.Status.FORBIDDEN;
-
-        if(cType.contains(MediaType.APPLICATION_JSON)){
-
-            String email = null;
-            String newPassword = null;
-            try {
-
-                JSONObject jsonObject = new JSONObject(rBody);
-                email = jsonObject.getString("emailRecover");
-
-            }catch(JSONException e){}
-
-            if(email != null) {
-
-                User user = userManager.getUserByEmail(email);
-
-                if(user != null) {
-
-                    newPassword = Email.sendEmail(email,Email.generate());
-
-                    if(newPassword.equals("FAIL"))
-                    {
-                        response = Utility.accountResponse("Recover password", false, "Email was not sent", "null");
-                    }
-                    else
-                    {
-                        user.setPassword(newPassword);
-                        response = Utility.accountResponse("Recover password", true, "Email sent successfully", "null");
-                    }
-
-                    status = Response.Status.OK;
-                }else {
-
-                    response = Utility.accountResponse("Recover passwords", false, "Email was not sent", "null");
-
-                    status = Response.Status.OK;
-                }
-            }
-
-        }
         return Response.status(status)
                 .type(MediaType.APPLICATION_JSON)
                 .entity(response.toString()).build();

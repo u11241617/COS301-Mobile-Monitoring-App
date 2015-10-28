@@ -24,34 +24,32 @@ public class CallManager {
     @Inject
     DeviceManager deviceManager;
 
+    /**
+     * Insert a new entry in the call table.
+     * @param from Source  of the call (i.e mobile number)
+     * @param to Destination of the call
+     * @param type Type of the call log (Missed, Dialed, or Received)
+     * @param duration Duration of the call
+     * @param device The device associated with the call log
+     */
     public void persist(String from, String to, String type, String duration, Device device) {
 
-
-
-        java.util.Date date = new java.util.Date();
-
         Call call = new Call();
-        call.setDatetime(new Timestamp(date.getTime()));
+        call.setDatetime(new Timestamp(new java.util.Date().getTime()));
         call.setType(type);
         call.setDestination(to);
-        call.setDuration(Time.valueOf("00:03:45"));
+        call.setDuration(Time.valueOf(duration));
         call.setSource(from);
         call.setDevicetbByDeviceId(device);
 
-        em.persist(call);
+        em.persist(call); //Execute insert query
     }
 
-    public List<Call> getAllCallLogs() {
-
-        CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Call> query = cb.createQuery(Call.class);
-
-        Root<Call> callRoot = query.from(Call.class);
-        query.select(callRoot);
-
-        return em.createQuery(query).getResultList();
-    }
-
+    /**
+     * Retrieves all call logs associated with a specific device
+     * @param deviceId Device id fo the device to retrieve its call logs
+     * @return List of all the call logs associated with the device if not empty, else null
+     */
     public List<Call> getCallsByDeviceId(int deviceId) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -64,9 +62,10 @@ public class CallManager {
         List<Call> calls = null;
 
         try {
+
             calls = em.createQuery(query).getResultList();
 
-        }catch(NoResultException e){}
+        }catch(NoResultException e){e.printStackTrace();}
 
         return calls;
     }

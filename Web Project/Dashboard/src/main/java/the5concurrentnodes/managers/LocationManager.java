@@ -1,6 +1,5 @@
 package the5concurrentnodes.managers;
 
-import the5concurrentnodes.entities.Call;
 import the5concurrentnodes.entities.Device;
 import the5concurrentnodes.entities.Location;
 
@@ -12,15 +11,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import java.sql.Date;
-import java.sql.Time;
+
 import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 @Stateless
 public class LocationManager {
@@ -31,6 +24,16 @@ public class LocationManager {
     @Inject
     DeviceManager deviceManager;
 
+    /**
+     * Insert a new entry in the locationtb table
+     * @param latitude location latitude coordinates
+     * @param longitude location longitude coordinates
+     * @param postCode location postal code
+     * @param name location street name
+     * @param locality location locality (e.g Pretoria)
+     * @param country location country
+     * @param device The device of which the lacation is associated with
+     */
     public void persist(String latitude, String longitude, int postCode,
                         String name, String locality, String country, Device device) {
 
@@ -45,21 +48,15 @@ public class LocationManager {
         location.setDevicetbByDeviceId(device);
         location.setDate(new Timestamp(new java.util.Date().getTime()));
 
-
         em.persist(location);
     }
 
-    public List<Location> getAllLocationLogs() {
 
-        CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Location> query = cb.createQuery(Location.class);
-
-        Root<Location> locationRoot = query.from(Location.class);
-        query.select(locationRoot);
-
-        return em.createQuery(query).getResultList();
-    }
-
+    /**
+     * Retrieves all location logs based on device id
+     * @param deviceId The id of the device to retrieve the location logs for
+     * @return A List of all the location logs associated with the device, else null
+     */
     public List<Location> getLocationByDeviceId(int deviceId) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -74,7 +71,7 @@ public class LocationManager {
         try {
             locations = em.createQuery(query).getResultList();
 
-        }catch(NoResultException e){}
+        }catch(NoResultException e){e.printStackTrace();}
 
         return locations;
     }
