@@ -1,0 +1,77 @@
+<div class="login-page-header">
+    <ul>
+        <li><a href="http://localhost:8080/Dashboard/"><img src="images/logo.png"/></a></li>
+    </ul>
+</div>
+
+<hgroup>
+    <h1>Welcome, Login to your account</h1>
+</hgroup>
+
+<form>
+        <div class="group">
+            <input type="email" ng-model="user.email" class="input" autofocus="autofocus" />
+            <span class="icon"><i class="fa fa-envelope fa-fw fa-lg"></i></span>
+            <span class="highlight"></span><span class="bar"></span>
+            <label class="label">Email</label>
+            <p class="login-empty-field">{{emptyEmail}}</p>
+        </div>
+        <div class="group">
+            <input type="password" class="input" ng-model="user.password"/>
+            <span class="icon"><i class="fa fa-lock fa-2x"></i></span>
+            <span class="highlight"></span><span class="bar"></span>
+            <label class="label">Password</label>
+            <p class="login-empty-field">{{emptyPassword}}</p>
+            <span class="view-password-icon"><i class="fa fa-eye fa-2x"></i></span>
+        </div>
+        <div class="group">
+            <label id="login-error">{{loginError}}</label>
+        </div>
+        <button type="button" class="button buttonBlue" ng-click="login()">Login
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+
+        <div class="footer">
+            <a  href="privacy.html" class="footers" > <span> Privacy</span></a>
+            <a  href="terms.html" class="footers" > <span> Terms</span></a>
+            <a  href="about.html" class="footers" > <span> About</span></a>
+        </div>
+
+<div id="spinner" class="hide">
+    <div class="loader">Loading...</div>
+</div>
+
+
+        <a href=""ng-click="setupRecoverPassword()" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
+    </form>
+
+<div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">x</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">Recover password</h4>
+            </div>
+            <div class="group"style="margin: 25px">
+                <input class="input" type="email" ng-model="user.emailRecover"  />
+                <span class="icon"><i class="fa fa-envelope fa-fw fa-lg"></i></span>
+                <label class="label">Email</label>
+
+            </div>
+            <p style="margin: 25px; color: red">{{passwordRecoverError}}</p>
+            <p style="margin: 25px; color: blue">{{passwordRecoverPass}}</p>
+            <div class="modal-footer">
+                <center>
+                <button type="button" class="button buttonBlue" data-dismiss="modal" ng-model="btnOk" style="width:120px;background-color:#009688;">{{button}}</button>
+                <button  type="button" class="button buttonBlue" ng-click="recoverPassword()" ng-show="true" style="width:120px">Recover
+                    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                </button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+

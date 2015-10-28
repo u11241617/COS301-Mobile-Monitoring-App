@@ -111,6 +111,7 @@ public class Call {
     }
 
     public void setDevicetbByDeviceId(Device devicetbByDeviceId) {
+
         this.devicetbByDeviceId = devicetbByDeviceId;
     }
 }

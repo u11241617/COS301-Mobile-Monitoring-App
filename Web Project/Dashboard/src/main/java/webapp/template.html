@@ -1,0 +1,125 @@
+<div class="skin-black-light sidebar-mini">
+<div class="wrapper">
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <span class="logo-lg">iCrawler</span>
+        </a>
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear fa-fw"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header"></li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li><!-- start password change -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-key fa-fw"></i>
+                                            </div>
+                                            <h4>
+                                                Change password
+                                            </h4>
+                                        </a>
+                                    </li><!-- end password change -->
+                                    <li><!-- start report -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-bug fa-fw"></i>
+                                            </div>
+                                            <h4>
+                                                Report bug
+                                            </h4>
+                                        </a>
+                                    </li><!-- end report -->
+                                    <li><!-- start deactivate account -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-ban fa-fw"></i>
+                                            </div>
+                                            <h4>
+                                                Deactivate account
+                                            </h4>
+                                        </a>
+                                    </li><!-- end deactivate account -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a ng-click='logout()' class="link"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="images/device.png" class="img-circle" alt="User Image" />
+                </div>
+                <div class="pull-left info">
+                    <p>{{currentDeviceName}}</p>
+                    <a href="#"><i id="currentDeviceStatusId"></i> {{currentDeviceStatus}}</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">NAVIGATION MENU</li>
+                <li class="active">
+                    <a ui-sref="template.dashboard"><i class="fa fa-dashboard fa-fw"></i> <span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a ui-sref="template.calls"><i class="fa fa-phone fa-fw"></i> <span>Call</span></a>
+                </li>
+                <li>
+                    <a ui-sref="template.messages"><i class="fa fa-envelope fa-fw"></i> <span>Messages</span></a>
+                </li>
+                <li>
+                    <a ui-sref="template.browser"><i class="fa fa-globe fa-fw"></i> <span>Browser</span></a>
+                </li>
+                <li>
+                    <a ui-sref="template.wifi"><i class="fa fa-wifi fa-fw"></i> <span>WI-FI</span></a>
+                </li>
+                <li>
+                    <a ui-sref="template.apps"><i class="fa fa-th-large fa-fw"></i> <span>Apps</span></a>
+                </li>
+                <li>
+                    <a ui-sref="template.location"><i class="fa fa-map-marker fa-fw fa-lg"></i> <span>Device Locations</span></a>
+                </li>
+            </ul><!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid" ui-view></div>
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+
+
+</div><!-- ./wrapper -->
+    <script type="text/javascript" src="js/app.min.js" />
+</div>

@@ -16,19 +16,23 @@ public class AccessLevelManager {
     @PersistenceContext
     private EntityManager em;
 
-    public AccessLevel getAccessLevel(String ac) {
+    /**
+     * Get user access level based on access level description
+     * @param description access level description (e.g admin)
+     * @return AccessLevel entity with all the tuple information
+     */
+    public AccessLevel getAccessLevel(String description) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<AccessLevel> query = cb.createQuery(AccessLevel.class);
 
         Root<AccessLevel> userRoot = query.from(AccessLevel.class);
-        query.where(cb.equal(userRoot.get("description"), ac));
+        query.where(cb.equal(userRoot.get("description"), description));
 
         AccessLevel accessLevel = null;
-
         try {
             accessLevel = em.createQuery(query).getSingleResult();
-        }catch(NoResultException e){}
+        }catch(NoResultException e){e.printStackTrace();}
 
         return accessLevel;
     }

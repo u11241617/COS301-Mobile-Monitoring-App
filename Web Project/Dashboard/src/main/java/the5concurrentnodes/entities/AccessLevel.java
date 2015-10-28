@@ -36,10 +36,10 @@ public class AccessLevel {
 
         AccessLevel that = (AccessLevel) o;
 
-        if (accessLevelId != that.accessLevelId) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
+        return accessLevelId == that.accessLevelId &&
+                !(description != null ? !description.equals(that.description) : that.
+                        description != null);
 
-        return true;
     }
 
     @Override

@@ -48,11 +48,10 @@ public class AppPermission {
 
         AppPermission that = (AppPermission) o;
 
-        if (id != that.id) return false;
-        if (label != null ? !label.equals(that.label) : that.label != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
+        return id == that.id && !(label != null ? !label.equals(that.label) :
+                that.label != null) && !(description != null ?
+                !description.equals(that.description) : that.description != null);
 
-        return true;
     }
 
     @Override
@@ -70,6 +69,7 @@ public class AppPermission {
     }
 
     public void setDeviceappsByAppId(DeviceApp deviceappsByAppId) {
+
         this.deviceappsByAppId = deviceappsByAppId;
     }
 }

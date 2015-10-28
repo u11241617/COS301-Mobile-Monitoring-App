@@ -4,7 +4,6 @@ package the5concurrentnodes.managers;
 import org.json.JSONException;
 import org.json.JSONObject;
 import the5concurrentnodes.entities.Device;
-import the5concurrentnodes.entities.DeviceApp;
 import the5concurrentnodes.entities.User;
 
 import javax.ejb.Stateless;
@@ -13,7 +12,6 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.CriteriaUpdate;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
@@ -24,6 +22,12 @@ public class DeviceManager {
     @PersistenceContext
     private EntityManager em;
 
+    /**
+     * Insert a new entry in the devicetb table.
+     * @param deviceInfo JSONObject with all the device information
+     * @param user The user of which the device belongs to
+     * @return The newly inserted Device tuple
+     */
     public Device persist(JSONObject deviceInfo, User user) {
 
         Device device = new Device();
@@ -37,13 +41,18 @@ public class DeviceManager {
             device.setImeNumber(deviceInfo.getString("imeNumber"));
             device.setUsertbByUserId(user);
 
-        }catch(JSONException e){}
+        }catch(JSONException e){e.printStackTrace();}
 
         em.persist(device);
 
         return getDeviceByIMENumber(device.getImeNumber());
     }
 
+    /**
+     * Retrieve a Device entity tuple based on device IMEI number
+     * @param ime Device IMEI number
+     * @return Device entity with all the information associated with the device, else null
+     */
     public Device getDeviceByIMENumber(String ime) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -56,11 +65,16 @@ public class DeviceManager {
 
         try {
             device = em.createQuery(query).getSingleResult();
-        }catch(NoResultException e){}
+        }catch(NoResultException e){e.printStackTrace();}
 
         return device;
     }
 
+    /**
+     * Retrieve a Device entity tuple based on device id
+     * @param id The id of the device to retrieve information for
+     * @return Device entity with all the information associated with the device, else null
+     */
     public Device findDeviceById(int id) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -73,11 +87,16 @@ public class DeviceManager {
 
         try {
             device = em.createQuery(query).getSingleResult();
-        }catch(NoResultException e){}
+        }catch(NoResultException e){e.printStackTrace();}
 
         return device;
     }
 
+    /**
+     * Retrieve all Devices associated with a single user account
+     * @param user The user account to retrieve its list of devices
+     * @return A list of all the devices associated with the user, else null
+     */
     public List<Device> findDeviceByUser(User user) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -90,24 +109,8 @@ public class DeviceManager {
 
         try {
             devices = em.createQuery(query).getResultList();
-        }catch(NoResultException e){}
+        }catch(NoResultException e){e.printStackTrace();}
 
         return devices;
-    }
-
-    public void update(String imeNumber, String status) {
-
-        CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaUpdate<Device> update = cb.
-                createCriteriaUpdate(Device.class);
-
-        Root deviceRoot = update.from(Device.class);
-
-        update.set(deviceRoot.get("status"), status).
-                where(cb.equal(deviceRoot.get("imeNumber"),
-                        imeNumber));
-
-        // perform update
-        em.createQuery(update).executeUpdate();
     }
 }
