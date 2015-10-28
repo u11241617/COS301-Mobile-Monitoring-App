@@ -6,6 +6,11 @@ import android.database.ContentObserver;
 public class WifiInfoObserver extends ContentObserver {
     private WifiInfoHandler wifiInfoHandler;
 
+    /**
+     * WifiInfoObserver is called when ever the wifi state changes and creates a new Wifi object and
+     * a wifiInfoHandler object.
+     * @param context is androids Context instance.
+     */
     public WifiInfoObserver(Context context)
     {
         super(null);
@@ -17,7 +22,6 @@ public class WifiInfoObserver extends ContentObserver {
     @Override
     public void onChange(boolean selfChange) {
         super.onChange(selfChange);
-
     }
 
     @Override

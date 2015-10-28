@@ -21,8 +21,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import the5concurrentnodes.mmaData.Bluetooth.BluetoothConstants;
-import the5concurrentnodes.mmaData.Bluetooth.BluetoothObserver;
 import the5concurrentnodes.mmaData.Browser.BrowserConstants;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
 import the5concurrentnodes.mmaData.call.CallConstants;

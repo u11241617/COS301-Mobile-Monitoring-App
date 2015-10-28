@@ -19,12 +19,18 @@ public class DeviceApps {
     private List<ApplicationInfo> appList;
     private PackageManager packageManager;
 
+    /**
+     * Constructor for DeviceApps
+     * @param context androids Context instance.
+     */
     public DeviceApps(Context context) {
-
-
         packageManager = context.getPackageManager();
     }
 
+    /**
+     * loadAppList retrieves all the installed app ons the device.
+     * @param list is array of list of apps that are installed on the device.
+     */
     public void loadAppList(List<ApplicationInfo> list) {
 
         appList = new ArrayList<>();
@@ -40,6 +46,10 @@ public class DeviceApps {
         }
     }
 
+    /**
+     * getApplist retrieves the list of all the installed apps on the device.
+     * @return return array list of installedApps.
+     */
     public  List<JSONObject> getAppList() {
 
         List<JSONObject> installedApps = new ArrayList<>();

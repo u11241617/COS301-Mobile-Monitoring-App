@@ -28,6 +28,13 @@ public class LocationTracker extends Service {
     @Override
     public IBinder onBind(Intent intent) {return null;}
 
+    /**
+     * onStartCommand initialize location manager when location services are started
+     * @param intent intent of the service
+     * @param flags
+     * @param startId
+     * @return
+     */
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         if(!serviceInitialized) {

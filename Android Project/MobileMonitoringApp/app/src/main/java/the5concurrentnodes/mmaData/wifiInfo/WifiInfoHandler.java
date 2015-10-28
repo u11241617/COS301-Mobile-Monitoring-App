@@ -25,6 +25,11 @@ public class WifiInfoHandler implements LogHandler {
     private String ConnectionStatus;
     private Context context;
 
+    /**
+     * getWifiInfo returns a Wifi object of all the wifi details pertaining to the connection
+     * @param context is android Context instance
+     * @return return a Wifi object
+     */
     public Wifi getWifiInfo (Context context){
 
         this.context = context;
@@ -32,7 +37,11 @@ public class WifiInfoHandler implements LogHandler {
         return new Wifi(context,SSID,MACADDRESS,IPaddress,TimeStamp,ConnectionStatus, BSSID);
     }
 
-
+    /**
+     * getWifiState will get and set all the information pertaining to the connection such as the
+     * Connection status, MAC Address, IP Address, SSID, BSSID, Time stamp.
+     * @param context is androids Context instance.
+     */
     private void GetWifiState(Context context){
 
         ConnectivityManager myConnManager = (ConnectivityManager) context.getSystemService(context.CONNECTIVITY_SERVICE);
@@ -71,8 +80,12 @@ public class WifiInfoHandler implements LogHandler {
             BSSID = "";
             TimeStamp = getTime();
         }
-
     }
+
+    /**
+     * getTime will return a time stamp of the date and time in format yyyy-MM-dd HH-mm-ss.
+     * @return returns the time stamp value
+     */
     public String getTime()
     {
         Calendar c = Calendar.getInstance();
@@ -81,6 +94,12 @@ public class WifiInfoHandler implements LogHandler {
         return formattedDate;
     }
 
+    /**
+     * submitLog overrides the submitLog function of class LogHandler so that it will submit a Wifi
+     * JSON object to a specified url and function on the dashboard.
+     * @param context is androids Context instance.
+     * @param params is the JSON object of a Wifi object
+     */
     @Override
     public void submitLog(Context context, JSONObject params) {
 

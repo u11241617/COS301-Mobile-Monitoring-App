@@ -27,11 +27,19 @@ public class LocationHandler implements LocationListener, LogHandler {
 
     private Context context;
 
+    /**
+     * Constructor for LocationHandler.
+     * @param context is androids Context instance.
+     */
     public LocationHandler(Context context) {
 
         this.context = context;
     }
 
+    /**
+     * onLocationChanged gets the location of the device when the devices location changes.
+     * @param location Location is the location of the device.
+     */
     @Override
     public void onLocationChanged(Location location) {
 
@@ -56,8 +64,6 @@ public class LocationHandler implements LocationListener, LogHandler {
 
             }
 
-           // String  data  = Utility.encryptData(params.toString());
-
             submitLog(context, params);
 
         } catch (Exception e) {
@@ -81,6 +87,12 @@ public class LocationHandler implements LocationListener, LogHandler {
 
     }
 
+    /**
+     * submitLog overrides the submitLog function of class LogHandler so that it will submit a Location
+     * JSON object to a specified url and function on the dashboard.
+     * @param context is androids Context instance.
+     * @param params is the JSON object of a Location object
+     */
     @Override
     public void submitLog(Context context, JSONObject params) {
 

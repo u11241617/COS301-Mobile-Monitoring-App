@@ -15,8 +15,7 @@ import android.provider.Browser;
 
 import java.util.Date;
 
-import the5concurrentnodes.mmaData.Bluetooth.BluetoothConstants;
-import the5concurrentnodes.mmaData.Bluetooth.BluetoothObserver;
+
 import the5concurrentnodes.mmaData.Browser.BrowserConstants;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
 import the5concurrentnodes.mmaData.call.CallConstants;
@@ -32,7 +31,7 @@ public class DataPushService extends Service{
     private SmsObserver smsObserver;
     private CallObserver callObserver;
     private BrowserObserver browserObserver;
-    private BluetoothObserver bluetoothObserver;
+
 
 
     @Override
@@ -46,7 +45,7 @@ public class DataPushService extends Service{
                 smsObserver = new SmsObserver(getApplicationContext());
                 callObserver = new CallObserver(getApplicationContext());
                 browserObserver = new BrowserObserver(getApplicationContext());
-                bluetoothObserver = new BluetoothObserver(getApplicationContext());
+
                 contentResolver = getBaseContext().getContentResolver();
                 contentResolver.registerContentObserver(Uri.parse(SmsConstants.CONTENT_SMS_URI), true, smsObserver);
                 contentResolver.registerContentObserver(Uri.parse(CallConstants.CONTENT_CALL_URI), true,callObserver);
@@ -56,7 +55,7 @@ public class DataPushService extends Service{
                 getContentResolver().registerContentObserver(Browser.BOOKMARKS_URI, true, browserObserver);
                // contentResolver.registerContentObserver(Uri.parse(BrowserConstants.OPERA_CONTENT_URI),true,browserObserver);
                 contentResolver.registerContentObserver(Uri.parse(BrowserConstants.SAMSUNG_CONTENT_URI),true,browserObserver);
-                contentResolver.registerContentObserver(Uri.parse(BluetoothConstants.CONTENT_BLUETOOTH_URI),true, bluetoothObserver);
+
                 serviceInitialized = true;
 
             }
@@ -71,7 +70,7 @@ public class DataPushService extends Service{
             contentResolver.unregisterContentObserver(smsObserver);
             contentResolver.unregisterContentObserver(callObserver);
             //contentResolver.unregisterContentObserver(browserObserver);
-           contentResolver.unregisterContentObserver(bluetoothObserver);
+
             getContentResolver().unregisterContentObserver(browserObserver);
             serviceInitialized = false;
         }
