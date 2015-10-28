@@ -14,6 +14,11 @@ import the5concurrentnodes.mmaData.interfaces.LogHandler;
 
 public class SmsHandler implements LogHandler {
 
+    /**
+     * getSmsInformation gets the details fo the sms e.g. address, date, message and type.
+     * @param cursor object containting sms history.
+     * @return returns sms object.
+     */
     public Sms getSmsInformation(Cursor cursor) {
 
         String address = cursor.getString(cursor.getColumnIndex(SmsConstants.ADDRESS_COLUMN_NAME));
@@ -26,6 +31,13 @@ public class SmsHandler implements LogHandler {
         return new Sms(type, address, msg,date);
     }
 
+
+    /**
+     * submitLog overrides the submitLog function of class LogHandler so that it will submit a Sms
+     * JSON object to a specified url and function on the dashboard.
+     * @param context is androids Context instance.
+     * @param params is the JSON object of a Sms object
+     */
 
     @Override
     public void submitLog(Context context, JSONObject params) {

@@ -48,8 +48,6 @@ import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
-import the5concurrentnodes.mmaData.AppInfo.AppInfo;
-import the5concurrentnodes.mmaData.AppInfo.ProcessAppInfo;
 import the5concurrentnodes.mmaData.Browser.BrowserHandler;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;

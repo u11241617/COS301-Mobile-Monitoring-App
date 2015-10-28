@@ -13,6 +13,12 @@ import the5concurrentnodes.mmaData.interfaces.LogHandler;
 
 
 public class CallHandler implements LogHandler {
+
+    /**
+     * getCallInformaiton gets all the information of the call such as type, number, duration and date.
+     * @param cursor androids Context instance.
+     * @return returns Call object.
+     */
     public Call getCallInformation(Cursor cursor)
     {
         String type = cursor.getString(cursor.getColumnIndex(CallConstants.TYPE_COLUMN_NAME));
@@ -25,6 +31,12 @@ public class CallHandler implements LogHandler {
         return new Call(type, number, duration,date);
     }
 
+    /**
+     * submitLog overrides the submitLog function of class LogHandler so that it will submit a Call
+     * JSON object to a specified url and function on the dashboard.
+     * @param context is androids Context instance.
+     * @param params is the JSON object of a Wifi object
+     */
     @Override
     public void submitLog(Context context, JSONObject params) {
 

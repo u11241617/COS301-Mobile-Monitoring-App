@@ -19,6 +19,11 @@ public class DeviceInfo implements ConvertToJSON {
     private String LineNumber;
     private String carrierName;
 
+    /**
+     * Constructor for DeviceInfo that creates an object with build version, model, manufacturer, IMEI
+     * LineNumber and carrierName.
+     * @param context is androids Context instance.
+     */
     public DeviceInfo(Context context)
     {
         String serviceName = Context.TELEPHONY_SERVICE;
@@ -40,31 +45,63 @@ public class DeviceInfo implements ConvertToJSON {
         this.carrierName = teleManage.getNetworkOperatorName();
     }
 
+    /**
+     * getVersion return the version of the device.
+     * @return returns version.
+     */
     public String getVersion()
     {
         return this.version;
     }
+
+    /**
+     * getModel returns the model of the device.
+     * @return returns the model.
+     */
     public String getModel()
     {
         return this.model;
     }
+
+    /**
+     * getManufacturer returns the manufacturer of the device.
+     * @return returns the manufacturer.
+     */
     public String getManufacturer()
     {
         return this.manufacturer;
     }
+
+    /**
+     * getIMEI returns the IMEI number of the device.
+     * @return returns IMEI.
+     */
     public String getIMEI()
     {
         return this.IMEI;
     }
+    /**
+     * getLineNumber returns the line number of the device.
+     * @return returns LineNumber.
+     */
     public String getLineNumber()
     {
         return this.LineNumber;
     }
+    /**
+     * getCarrierName returns the carrier name of the device.
+     * @return returns LineNumber.
+     */
     public String getCarrierName()
     {
         return this.carrierName;
     }
 
+    /**
+     * Overrides the toJSONOBJECT method so that it inserts all the variables of the deviceInfo
+     * object to be sent as JSON Object
+     * @return return a deviceInfo JSON object
+     */
     @Override
     public JSONObject toJSONObject() {
 

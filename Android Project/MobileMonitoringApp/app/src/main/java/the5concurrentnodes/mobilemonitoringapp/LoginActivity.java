@@ -2,23 +2,20 @@ package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,10 +25,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-
 import the5concurrentnodes.account.Utility;
 import the5concurrentnodes.controllers.DataPushServiceHandler;
 import the5concurrentnodes.controllers.UserSessionStorage;
@@ -39,15 +32,8 @@ import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
 
-import the5concurrentnodes.mmaData.DeviceApps.PushAppsInfo;
 
-import the5concurrentnodes.mmaData.DataUsage.DataUsage;
-import the5concurrentnodes.mmaData.DataUsage.DataUsageHandler;
-import the5concurrentnodes.mmaData.DataUsage.PushDataUsage;
-
-import the5concurrentnodes.mmaData.Location.Location;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
-import the5concurrentnodes.services.DataMonitorPushService;
 import the5concurrentnodes.services.DataMonitorPushServiceHandler;
 
 
@@ -201,6 +187,9 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         RequestQueue requestQueue = VolleyRequestQueue.getRequestQueue();
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(50000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         requestQueue.add(jsonObjectRequest);
 
     }

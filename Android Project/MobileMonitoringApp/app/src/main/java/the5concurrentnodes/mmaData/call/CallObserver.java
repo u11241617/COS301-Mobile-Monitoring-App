@@ -10,6 +10,12 @@ public class CallObserver extends ContentObserver {
     private Context context;
     private CallHandler callHandler;
 
+    /**
+     * CallObserver creates a CallObserver object that creates a object with context and a callHandler
+     * object.
+     * @param context is androids Context instance.
+     */
+
     public CallObserver( Context context)
     {
         super(null);
@@ -18,6 +24,11 @@ public class CallObserver extends ContentObserver {
 
     }
 
+
+    /**
+     * onChange is notified as soon as Calls status changes so when a new call, dialed or received is made.
+     * @param selfChange boolean variable state whether things have changed.
+     */
     @Override
     public void onChange(boolean selfChange) {
         super.onChange(selfChange);

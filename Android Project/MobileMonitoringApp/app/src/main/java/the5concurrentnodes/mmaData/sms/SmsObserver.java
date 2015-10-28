@@ -13,12 +13,20 @@ public class SmsObserver extends ContentObserver {
     private Context context;
     private SmsHandler smsHandler;
 
+    /**
+     * SmsObserver constructor.
+     * @param c androids Context instance.
+     */
     public SmsObserver(final Context c) {
         super(null);
         this.context = c;
         this.smsHandler = new SmsHandler();
     }
 
+    /**
+     * onChange is notified as soon as Calls status changes so when a new sms, sent or received is made.
+     * @param selfChange boolean variable state whether things have changed.
+     */
     @Override
     public void onChange(boolean selfChange) {
         super.onChange(selfChange);
