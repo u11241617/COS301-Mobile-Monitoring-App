@@ -8,9 +8,7 @@ appServices.factory('Sms', ['$resource',
         return $resource(HOST + '/Dashboard/resources/:device/messages/', {
             device: '@device'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -19,9 +17,7 @@ appServices.factory('Device', ['$resource',
         return $resource(HOST + '/Dashboard/resources/:userId/devices/', {
             userId: '@userId'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -30,9 +26,7 @@ appServices.factory('DeviceState', ['$resource',
         return $resource(HOST + '/Dashboard/resources/device/:deviceId/', {
             deviceId: '@deviceId'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -41,9 +35,7 @@ appServices.factory('Calls', ['$resource',
         return $resource(HOST + '/Dashboard/resources/:device/calls/', {
             device: '@device'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -52,9 +44,7 @@ appServices.factory('Sites', ['$resource',
         return $resource(HOST + '/Dashboard/resources/:device/visitedSites/', {
             device: '@device'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -63,9 +53,7 @@ appServices.factory('Apps', ['$resource',
         return $resource(HOST + '/Dashboard/resources/:device/apps/', {
             device: '@device'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -74,9 +62,7 @@ appServices.factory('WIFI', ['$resource',
         return $resource(HOST + '/Dashboard/resources/:device/wifilogs/', {
             device: '@device'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -85,9 +71,7 @@ appServices.factory('Location', ['$resource',
         return $resource(HOST + '/Dashboard/resources/:device/locations/', {
             device: '@device'
         }, {
-            create: {
-                method: 'POST'
-            }
+            create: {method: 'POST'}
         });
     }]);
 
@@ -112,12 +96,3 @@ appServices.factory('CurrentDevice', function () {
     };
 });
 
-
-appServices.factory('Logout', function () {
-
-    return {
-        out: function() {
-            alert("Hello");
-        }
-    };
-});

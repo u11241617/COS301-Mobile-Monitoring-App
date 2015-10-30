@@ -3,9 +3,14 @@ package the5concurrentnodes.mmaData.sms;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.net.Uri;
+import android.os.Message;
 import android.util.Log;
 
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import the5concurrentnodes.controllers.DataHandler;
 import the5concurrentnodes.generic.Config;
@@ -26,8 +31,6 @@ public class SmsHandler implements LogHandler {
         String msg = cursor.getString(cursor.getColumnIndex(SmsConstants.BODY_COLUMN_NAME));
         String type = cursor.getString(cursor.getColumnIndex(SmsConstants.TYPE_COLUMN_NAME));
 
-        Log.d("SHORT SMS", address);
-
         return new Sms(type, address, msg,date);
     }
 
@@ -44,5 +47,39 @@ public class SmsHandler implements LogHandler {
 
         String url = Config.REST_API + "/message";
         DataHandler.submitLog(context, url, params);
+    }
+
+    public List<Sms> getAllMessages(Context context) {
+
+        Cursor cursor = context.getContentResolver().query(Uri.parse(SmsConstants.CONTENT_SMS_URI),
+                null, null, null, "date ASC");
+        List<Sms> messaList = new ArrayList<>();
+
+        if(cursor.moveToFirst()) {
+
+            do {
+
+                Sms sms = getSmsInformation(cursor);
+
+                if(Integer.parseInt(sms.getType()) == SmsConstants.SMS_RECEIVED ||
+                        Integer.parseInt(sms.getType()) == SmsConstants.SMS_SENT) {
+
+                    if (Integer.parseInt(sms.getType()) == SmsConstants.SMS_RECEIVED) {
+
+                        sms.setType("Received");
+
+                    } else {
+
+                        sms.setType("Sent");
+                    }
+
+                    messaList.add(sms);
+                }
+
+            } while(cursor.moveToNext());
+        }
+        cursor.close();
+
+        return messaList;
     }
 }

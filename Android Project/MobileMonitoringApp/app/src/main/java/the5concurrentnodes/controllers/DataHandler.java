@@ -27,11 +27,17 @@ public class DataHandler {
 
         RequestQueue requestQueue = VolleyRequestQueue.getRequestQueue();
 
-       // jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(5000,
-         //       DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-           //     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        if(requestQueue != null) {
 
-        requestQueue.add(jsonObjectRequest);
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(30000,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+            if(jsonObjectRequest != null) {
+
+                requestQueue.add(jsonObjectRequest);
+            }
+        }
 
     }
 }

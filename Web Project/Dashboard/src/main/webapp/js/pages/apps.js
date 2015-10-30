@@ -21,8 +21,6 @@ angular.module('icrawlerApp.apps', [
 
         var device_id = CurrentDevice.getDeviceId();
         $scope.apps_data = Apps.query({device:device_id}, function(data) {
-
-            console.log("I am here: " + data);
         });
 
         $scope.getPermissions = function(appId) {

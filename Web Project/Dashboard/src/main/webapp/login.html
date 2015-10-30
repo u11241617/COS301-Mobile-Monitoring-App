@@ -7,8 +7,8 @@
 <hgroup>
     <h1>Welcome, Login to your account</h1>
 </hgroup>
-
-<form>
+<div id="form-container">
+    <form>
         <div class="group">
             <input type="email" ng-model="user.email" class="input" autofocus="autofocus" />
             <span class="icon"><i class="fa fa-envelope fa-fw fa-lg"></i></span>
@@ -37,13 +37,15 @@
             <a  href="about.html" class="footers" > <span> About</span></a>
         </div>
 
-<div id="spinner" class="hide">
-    <div class="loader">Loading...</div>
-</div>
+        <div id="spinner" class="hide">
+            <div class="loader">Loading...</div>
+        </div>
 
 
         <a href=""ng-click="setupRecoverPassword()" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
     </form>
+</div>
+
 
 <div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">

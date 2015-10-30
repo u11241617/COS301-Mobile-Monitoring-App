@@ -2,19 +2,19 @@
 
 $(document).ready(function() {
 
-/*
+
     var tour = new Tour({
         storage: false,
         backdrop: true,
         steps: [
             {
-                element: "#left-menu",
+                element: "#summary",
                 placement: 'right',
                 title: "Navigation",
                 content: "This section allows you to navigate the site and view different content"
             },
             {
-                element: "#device-list",
+                element: "#summary",
                 placement: 'bottom',
                 title: "Devices",
                 content: "All the devices linked to this account"
@@ -27,7 +27,7 @@ $(document).ready(function() {
             }
         ]});
         tour.init();
-        tour.start();*/
+        tour.start();
 
     $(document).on('click', '.sidebar-menu>li', function(e) {
 
@@ -35,7 +35,5 @@ $(document).ready(function() {
         $(".sidebar-menu>li.active").removeClass("active");
         $(this).addClass("active");
     });
-
-    //$(".modal").modal('hide');
 
 });

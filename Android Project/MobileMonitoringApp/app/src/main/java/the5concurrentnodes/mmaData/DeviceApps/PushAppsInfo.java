@@ -26,13 +26,6 @@ public class PushAppsInfo extends AsyncTask<Void, Void, Void> {
     }
 
     /**
-     *
-     * @param params
-     * @return
-     */
-
-
-    /**
      * submitLog overrides the submitLog function of class LogHandler so that it will submit a app
      * JSON object to a specified url and function on the dashboard.
      * @param params is the JSON object of an app object.

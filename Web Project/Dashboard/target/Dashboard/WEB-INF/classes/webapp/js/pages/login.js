@@ -52,7 +52,7 @@ appLogin.controller('LoginCtrl', function LoginController( $scope, $http, store,
                         $scope.loginError = response.data.message;
                         console.log(response.data.message);
                     }
-                    //console.log(response.data);
+
                 }, function (error) {
                 });
 

@@ -3,6 +3,28 @@
         <h1 class="page-header"> <i class="fa fa-envelope fa-fw"></i>Messages</h1>
     </div>
 
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-xs-12">
+            <div class="box box-solid">
+                <div class="box-header">
+                    <h3 class="box-title">Messages Summary</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                            <input type="text" class="knob" id="totalSent" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgColor="#2196F3" data-readonly="true" />
+                            <div class="knob-label"><h5>Sent(%)</h5></div>
+                        </div><!-- ./col -->
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                            <input type="text" class="knob" id="totalMessagesReceived" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgColor="#4CAF50" data-readonly="true" />
+                            <div class="knob-label"><h5>Received(%)</h5></div>
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+
     <div class="row">
         <div class="col-xs-12">
             <div class="box box-solid">
@@ -16,8 +38,8 @@
                             <thead>
                             <tr>
                                 <th>Type</th>
-                                <th>Source</th>
-                                <th>Destination</th>
+                                <th>Contact Number</th>
+                                <th>Message</th>
                                 <th>DateTime</th>
                             </tr>
                             </thead>

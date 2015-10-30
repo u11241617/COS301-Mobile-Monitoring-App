@@ -18,10 +18,6 @@ angular.module('icrawlerApp.home', [
                                                   jwtHelper, Sms, Device, Calls, Sites,
                                                   DeviceState, CurrentDevice) {
 
-    $scope.jwt = store.get('jwt');
-    $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
-
-
     $scope.device_logs =  Device.query({userId: $scope.decodedJwt.user_id}, function(data) {
 
         CurrentDevice.setdeviceId(data[0].deviceId);
@@ -96,7 +92,6 @@ function drawUserLineChart(data) {
     var charLevel =  ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var current_month = new Date().getMonth();
-    var current_year = new Date().getFullYear();
 
     for(var i  = 0; i <  data.length; i++) {
 

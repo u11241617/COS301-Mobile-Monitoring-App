@@ -25,13 +25,12 @@ angular.module('icrawlerApp.calls', [
         $scope.missed = 0;
         $scope.callHistory = {dialed:0, missed:0, received:0};
 
-        var device_id = CurrentDevice.getDeviceId();
         $scope.calls_data = Calls.query({device:$rootScope.currentDeviceId}, function(data) {
 
             var total = 0;
             for(var i = 0; i < data.length; i++) {
 
-                if(data[i].type == "Dialed") {
+                if(data[i].type == "Dialled") {
                     $scope.callHistory.dialed++;
                 }else if(data[i].type == "Missed") {
                     $scope.callHistory.missed++;
@@ -41,20 +40,31 @@ angular.module('icrawlerApp.calls', [
                 total++;
             }
 
-            angular.element('#totalDialed').attr('value', (( $scope.callHistory.dialed / total) * 100));
-            angular.element('#totalMissed').attr('value', (( $scope.callHistory.missed / total) * 100));
-            angular.element('#totalReceived').attr('value',(( $scope.callHistory.received / total) * 100));
+            if(total != 0 ) {
+
+                angular.element('#totalDialed').attr('value', roundToTwo(( $scope.callHistory.dialed / total) * 100));
+                angular.element('#totalMissed').attr('value', roundToTwo(( $scope.callHistory.missed / total) * 100));
+                angular.element('#totalReceived').attr('value',roundToTwo(( $scope.callHistory.received / total) * 100));
+            }else {
+
+                angular.element('#totalDialed').attr('value', 0);
+                angular.element('#totalMissed').attr('value', 0);
+                angular.element('#totalReceived').attr('value',0);
+            }
+
             loadCallsSummary();
         });
 
 
     });
 
+function roundToTwo(value) {
+    return(Math.round(value * 100) / 100);
+}
+
 function loadCallsSummary() {
 $(".knob").knob({
     draw: function () {
-
-        // "tron" case
         if (this.$.data('skin') == 'tron') {
 
             var a = this.angle(this.cv)  // Angle

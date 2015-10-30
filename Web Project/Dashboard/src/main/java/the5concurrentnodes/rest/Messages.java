@@ -53,7 +53,7 @@ public class Messages {
             if(tokenClaims != null) {
 
                 String source = null;
-                String destination = null;
+                String message = null;
                 String type = null;
                 String date = null;
                 String deviceIME = null;
@@ -63,7 +63,7 @@ public class Messages {
                     JSONObject jsonObject = new JSONObject(rBody);
 
                     source = jsonObject.getString("source");
-                    destination = jsonObject.getString("destination");
+                    message = jsonObject.getString("destination");
                     type = jsonObject.getString("type");
                     date= jsonObject.getString("date");
                     deviceIME = tokenClaims.getString(Constants.KEY_JWT_DEVICE_ID);
@@ -73,7 +73,7 @@ public class Messages {
 
                 Device device = deviceManager.getDeviceByIMENumber(deviceIME);
 
-                smsManager.persist(source, destination, type, device);
+                smsManager.persist(message,source, date, type, device);
                 status = Response.Status.CREATED;
             }
 
@@ -89,13 +89,6 @@ public class Messages {
     public List<Sms> getMessages(@PathParam("deviceId") int deviceId) {
 
         return smsManager.getMessageByDeviceId(deviceId);
-    }
-
-    @GET @Path("/user")
-    @Produces(MediaType.APPLICATION_JSON)
-    public User geUser() {
-
-        return userManager.getUserByEmail("ss@gmail.com");
     }
 
 }

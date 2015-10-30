@@ -15,7 +15,7 @@ angular.module('icrawlerApp.home', [
         }
     });
 }).controller('HomeCtrl', function HomeController($rootScope, $scope, $state, $http, $interval, store,
-                                                  jwtHelper, Sms, Device, Calls, Sites,
+                                                  jwtHelper, Sms, Device, Calls, Sites, Location,
                                                   DeviceState, CurrentDevice) {
 
     $scope.jwt = store.get('jwt');
@@ -35,16 +35,33 @@ angular.module('icrawlerApp.home', [
 
         });
 
+        $scope.locations = Location.query({device: data[0].deviceId}, function (data) {
+
+            $scope.lastLocationName = data[data.length - 1].name;
+            $scope.lastLocationLocality = data[data.length - 1].localicity;
+            $scope.lastLocationCountry = data[data.length - 1].countName;
+
+        })
+
         $scope.calls = Calls.query({device: data[0].deviceId}, function(data) {
 
+            drawCallLineChart(data);
         });
 
         $scope.sites = Sites.query({device: data[0].deviceId}, function(data) {
 
             var browserTotal = drawUserDoughnutChart(data);
 
-            $scope.chromePercentage = roundToTwo((browserTotal.chromeTotal / data.length) * 100);
-            $scope.defaultPercentage = roundToTwo((browserTotal.defaultTotal / data.length) * 100);
+            if(data.length != 0) {
+
+                $scope.chromePercentage = roundToTwo((browserTotal.chromeTotal / data.length) * 100);
+                $scope.defaultPercentage = roundToTwo((browserTotal.defaultTotal / data.length) * 100);
+            }else {
+
+                $scope.chromePercentage = 0;
+                $scope.defaultPercentage = 0;
+            }
+
 
         });
 
@@ -61,6 +78,8 @@ angular.module('icrawlerApp.home', [
 
         $scope.calls = Calls.query({device: device_id}, function(data) {
 
+            drawCallLineChart(data);
+
         });
 
         $scope.sites = Sites.query({device: device_id}, function(data) {
@@ -75,7 +94,7 @@ angular.module('icrawlerApp.home', [
 
                 if(device_id == data[i].deviceId) {
                     $rootScope.currentDeviceName = data[i].model;
-                    $rootScope.currentDeviceStatus = data[1].status;
+                    $rootScope.currentDeviceStatus = data[0].status;
                     $rootScope.currentDeviceId = device_id;
                 }
             }
@@ -164,8 +183,6 @@ function drawUserDoughnutChart(data) {
 
     for(var i  = 0; i <  data.length; i++) {
 
-
-        console.log(data[i].browsertbByBrowserId.name);
         if(data[i].browsertbByBrowserId.name == "Chrome") {
 
             chrome++;
@@ -204,6 +221,91 @@ function drawUserDoughnutChart(data) {
 
     return browser;
 }
+
+function drawCallLineChart(data) {
+    var numR = 0;
+    var numS = 0;
+    var numM = 0;
+    var smsInMonths = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var smsSent = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var smsRe = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var callM = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var charLevel =  ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    var current_month = new Date().getMonth();
+    var current_year = new Date().getFullYear();
+
+    for(var i  = 0; i <  data.length; i++) {
+
+        var date = new Date(data[i].datetime);
+
+        smsInMonths[date.getMonth()] = smsInMonths[date.getMonth()] + 1;
+        if(data[i].type == "Dialled") {
+
+            smsSent[date.getMonth()] =  smsSent[date.getMonth()] + 1;
+            numS++;
+        }else if(data[i].type == "Received") {
+
+            smsRe[date.getMonth()] =  smsRe[date.getMonth()] + 1;
+            numR++;
+        }else {
+            callM[date.getMonth()] =  callM[date.getMonth()] + 1;
+            numM++;
+        }
+    }
+
+    var label = new Array();
+    var sent = new Array();
+    var re = new Array();
+    var missed = new Array();
+
+    for(var j  = current_month - 5; j <= current_month; j++) {
+
+        label.push(charLevel[j]);
+        sent.push(smsSent[j]);
+        re.push(smsRe[j]);
+        missed.push(callM[j]);
+    }
+
+    var ctx = $("#callsLineChart").get(0).getContext("2d");
+    ctx.clearRect(0, 300, 0, 100);
+    var lineChart = new Chart(ctx);
+
+    var data = {
+        labels: label,
+        datasets: [
+            {
+                label: "Calls Dialled",
+                fillColor: "rgba(255,255,255,0.0)",
+                strokeColor: "rgba(213,0,0,1)",
+                pointColor: "rgba(213,0,0,1)",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: sent
+            },
+            {
+                label: "Received Calls",
+                fillColor: "rgba(255,255,255,0)",
+                strokeColor: "rgba(0,150,136,1)",
+                pointColor: "rgba(0,150,136,1)",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: re
+            },
+            {
+                label: "Missed Calls",
+                fillColor: "rgba(255,255,255,0)",
+                strokeColor: "rgba(255,193,7,1)",
+                pointColor: "rgba(255,193,7,1)",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: missed
+            }
+        ]
+    };
+
+
+    lineChart.Line(data);
+
+}
+
 
 function roundToTwo(value) {
     return(Math.round(value * 100) / 100);

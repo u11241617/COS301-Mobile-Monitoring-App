@@ -30,48 +30,98 @@
 
     </div>
 
-    <div class="row" id="summary" style="padding-top: 20px;">
-        <div class="col-md-8">
-            <div class="box box-default">
-                <!-- Tabs within a box -->
-                <div class="box-header with-border">
-                    <h3 class="box-title">Browser Usage</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                    <!-- Morris chart - Sales -->
-                    <canvas style="width: 98%; margin-left: 10px;" id="lineChart" height="120"></canvas>
+    <div id="summary" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="box box-default">
+                    <!-- Tabs within a box -->
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Messages Summary</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <canvas style="width: 98%; margin-left: 10px;" id="lineChart" height="120"></canvas>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <ul class="chart-legend2">
+                                        <li><i class="fa fa-circle-o text-red"></i> Sent</li>
+                                        <li><i class="fa fa-circle-o text-green"></i> Received</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.nav-tabs-custom -->
+            </div>
 
-                </div>
-            </div><!-- /.nav-tabs-custom -->
+            <div class="col-md-4">
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Browser Usage</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="chart-responsive">
+                                    <canvas id="doughnutChart" height="150"></canvas>
+                                </div><!-- ./chart-responsive -->
+                            </div><!-- /.col -->
+                            <div class="col-md-4">
+                                <ul class="chart-legend clearfix">
+                                    <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
+                                    <li><i class="fa fa-circle-o text-green"></i> Default</li>
+                                </ul>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.box-body -->
+                    <div class="box-footer no-padding">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><p class="p-stacked">Chrome  <span class="pull-right text-red"> {{chromePercentage}}%</span></p></li>
+                            <li><p class="p-stacked">Default <span class="pull-right text-green">{{defaultPercentage}}%</span></p></li>
+                        </ul>
+                    </div><!-- /.footer -->
+                </div><!-- /.box -->
+            </div>
         </div>
+        <div class="row">
 
-        <div class="col-md-4">
-            <div class="box box-default">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Browser Usage</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="chart-responsive">
-                                <canvas id="doughnutChart" height="150"></canvas>
-                            </div><!-- ./chart-responsive -->
-                        </div><!-- /.col -->
-                        <div class="col-md-4">
-                            <ul class="chart-legend clearfix">
-                                <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
-                                <li><i class="fa fa-circle-o text-green"></i> Default</li>
-                            </ul>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.box-body -->
-                <div class="box-footer no-padding">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><p class="p-stacked">Chrome  <span class="pull-right text-red"> {{chromePercentage}}%</span></p></li>
-                        <li><p class="p-stacked">Default <span class="pull-right text-green">{{defaultPercentage}}%</span></p></li>
-                    </ul>
-                </div><!-- /.footer -->
-            </div><!-- /.box -->
+            <div class="col-md-8">
+                <div class="box box-default">
+                    <!-- Tabs within a box -->
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Calls Summary</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <canvas style="width: 98%; margin-left: 10px;" id="callsLineChart" height="120"></canvas>
+                            </div>
+                            <div class="col-md-12">
+                                <ul class="chart-legend2">
+                                    <li><i class="fa fa-circle-o text-red"></i> Dialled</li>
+                                    <li><i class="fa fa-circle-o text-green"></i> Received</li>
+                                    <li><i class="fa fa-circle-o text-yellow"></i> Missed</li>
+                                </ul>
+                            </div><!-- /.col -->
+                        </div>
+                    </div>
+                </div><!-- /.nav-tabs-custom -->
+            </div>
+
+            <div class="col-md-4">
+                <div class="box box-default">
+                    <!-- Tabs within a box -->
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Last Seen</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <h3>{{lastLocationName}}, {{lastLocationLocality}}, {{lastLocationCountry}}</h3>
+                    </div>
+                </div><!-- /.nav-tabs-custom -->
+            </div>
+
         </div>
     </div>
 </div>

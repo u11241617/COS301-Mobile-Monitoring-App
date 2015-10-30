@@ -33,5 +33,5 @@ dependencies {
     compile 'com.github.paolorotolo:appintro:3.2.0'
     compile 'com.getbase:floatingactionbutton:1.9.1'
     compile 'com.melnykov:floatingactionbutton:1.3.0'
-
+    compile files ('libs/khandroid-httpclient-4.2.3.jar')
 }

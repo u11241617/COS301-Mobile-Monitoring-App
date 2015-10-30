@@ -17,10 +17,6 @@ angular.module('icrawlerApp.calls', [
     })
     .controller('CallsCtrl', function HomeController($rootScope, $scope, $http, store,
                                                      jwtHelper, Calls, CurrentDevice) {
-
-        $scope.jwt = store.get('jwt');
-        $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
-
         $scope.dialed = 0;
         $scope.missed = 0;
         $scope.callHistory = {dialed:0, missed:0, received:0};

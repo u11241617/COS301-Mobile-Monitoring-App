@@ -107,20 +107,18 @@ public class InstalledApps {
 
             if(tokenClaims != null) {
 
-                String packageName = null;
-                String appStatus = null;
-
                 try {
 
                     JSONObject jsonObject = new JSONObject(rBody);
 
-                    packageName = jsonObject.getString("packageName");
-                    appStatus = jsonObject.getString("status");
+                    String packageName = jsonObject.getString("packageName");
+                    String appStatus = jsonObject.getString("status");
+                    String deviceIME = tokenClaims.getString(Constants.KEY_JWT_DEVICE_ID);
+                    appManager.update(packageName, appStatus,
+                            deviceManager.getDeviceByIMENumber(deviceIME));
 
                 }catch(JSONException e){}
 
-
-                appManager.update(packageName, appStatus);
                 status = Response.Status.OK;
 
             }

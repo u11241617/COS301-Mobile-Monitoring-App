@@ -15,7 +15,6 @@ public class BrowserConstants {
     public static final int BROWSER_URL_BOOKMARK = 1;// Indicates that value is a bookmark Item
 
     public static final String CHROME_CONTENT_URI = "content://com.android.chrome.browser/bookmarks";
-    public static final String OPERA_CONTENT_URI = "com.opera.mini.android.Browser";
     public static final String CONTENT_DEFAULT_URI = "content://browser/bookmarks";
     public static final String SAMSUNG_CONTENT_URI = "content://com.sec.android.app.sbrowser.browser/bookmarks";
 

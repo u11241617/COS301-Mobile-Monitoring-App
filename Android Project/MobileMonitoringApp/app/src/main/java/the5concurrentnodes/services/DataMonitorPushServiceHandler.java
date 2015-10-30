@@ -4,7 +4,6 @@ package the5concurrentnodes.services;
 import android.content.Context;
 import android.content.Intent;
 
-import the5concurrentnodes.controllers.DataPushService;
 import the5concurrentnodes.mmaData.Location.LocationTracker;
 
 public class DataMonitorPushServiceHandler {
@@ -35,5 +34,8 @@ public class DataMonitorPushServiceHandler {
 
         Intent intent  = new Intent(context, LocationTracker.class);
         context.startService(intent);
+
+        Intent intent2  = new Intent(context, DataMonitorPushService.class);
+        context.startService(intent2);
     }
 }

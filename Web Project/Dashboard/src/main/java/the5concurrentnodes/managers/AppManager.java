@@ -8,10 +8,8 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.CriteriaUpdate;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -36,7 +34,7 @@ public class AppManager {
         deviceApp.setName(name);
         deviceApp.setVersion(version);
         deviceApp.setApppackage(packageName);
-        deviceApp.setStatus("Stopped/Closed"); //Default value
+        deviceApp.setStatus("Unknown"); //Default value
         deviceApp.setDevicetbByDeviceId(device);
 
         em.persist(deviceApp);
@@ -47,17 +45,21 @@ public class AppManager {
      * @param packageName Main process package name
      * @param status new application status
      */
-    public void update(String packageName, String status) {
+    public void update(String packageName, String status, Device device) {
 
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaUpdate<DeviceApp> update = cb.
                 createCriteriaUpdate(DeviceApp.class);
 
         Root appsRoot = update.from(DeviceApp.class);
+        List<Predicate> predicates = new ArrayList<Predicate>();
 
+        predicates.add(
+                cb.equal(appsRoot.get("apppackage"), packageName));
+        predicates.add(
+                cb.equal(appsRoot.get("devicetbByDeviceId"), device));
         update.set(appsRoot.get("status"), status).
-        where(cb.equal(appsRoot.get("apppackage"),
-                packageName));
+        where(predicates.toArray(new Predicate[]{}));
 
         // execute update query
         em.createQuery(update).executeUpdate();

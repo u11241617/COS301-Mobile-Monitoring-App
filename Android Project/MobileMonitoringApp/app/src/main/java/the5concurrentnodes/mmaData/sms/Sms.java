@@ -1,6 +1,8 @@
 package the5concurrentnodes.mmaData.sms;
 
 
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -86,7 +88,7 @@ public class Sms  implements ConvertToJSON{
 
             jsonObject.put("type", type);
             jsonObject.put("source", address);
-            jsonObject.put("destination", "");
+            jsonObject.put("destination", content);
             jsonObject.put("date", date);
 
         }catch(JSONException e){}

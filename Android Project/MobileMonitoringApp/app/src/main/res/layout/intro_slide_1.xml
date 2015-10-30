@@ -37,7 +37,7 @@
             android:layout_marginBottom="20dp"
             android:textColor="@color/white"
             android:textSize="28sp"
-            android:text="Welcome to eyeCrawler"/>
+            android:text="Welcome to iCrawler"/>
 
         <TextView
             android:layout_width="wrap_content"

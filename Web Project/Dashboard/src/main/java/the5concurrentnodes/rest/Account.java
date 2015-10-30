@@ -38,7 +38,7 @@ public class Account {
     @POST @Path("/register")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response doTry(String rBody,
+    public Response doRegister(String rBody,
                           @HeaderParam("Content-Type") String cType) {
 
         JSONObject response = Utility.accountResponse("register", false, "Request forbidden", "null");

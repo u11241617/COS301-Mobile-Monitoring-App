@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-/*
+
     var tour = new Tour({
         storage: false,
         backdrop: true,
@@ -27,7 +27,7 @@ $(document).ready(function() {
             }
         ]});
         tour.init();
-        tour.start();*/
+        tour.start();
 
     $(document).on('click', '.sidebar-menu>li', function(e) {
 
@@ -35,7 +35,5 @@ $(document).ready(function() {
         $(".sidebar-menu>li.active").removeClass("active");
         $(this).addClass("active");
     });
-
-    //$(".modal").modal('hide');
 
 });

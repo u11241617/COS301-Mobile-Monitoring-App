@@ -442,5 +442,15 @@ h1
 .angular-google-map-container { height: 300px; }
 
 
+.chart-legend2 {
 
+    list-style: none;
+    margin-top: 20px ;
+}
+
+.chart-legend2 li {
+
+    display: inline-block;
+    margin-right: 20px;
+}
 

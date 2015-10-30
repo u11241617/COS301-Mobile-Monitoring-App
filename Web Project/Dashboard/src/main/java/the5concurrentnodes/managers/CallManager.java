@@ -13,6 +13,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @Stateless
@@ -35,10 +36,10 @@ public class CallManager {
     public void persist(String from, String to, String type, String duration, Device device) {
 
         Call call = new Call();
-        call.setDatetime(new Timestamp(new java.util.Date().getTime()));
+        call.setDatetime(new Timestamp(new Date(Long.parseLong(to)).getTime()));
         call.setType(type);
-        call.setDestination(to);
-        call.setDuration(Time.valueOf(duration));
+        call.setDestination("");
+        call.setDuration(new Time(0,0,Integer.parseInt(duration)));
         call.setSource(from);
         call.setDevicetbByDeviceId(device);
 

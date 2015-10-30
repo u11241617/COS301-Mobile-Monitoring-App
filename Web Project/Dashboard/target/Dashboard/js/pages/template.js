@@ -24,7 +24,7 @@ appLogin.controller('TemplateCtrl',
 
            $scope.deviceState = DeviceState.query({deviceId: $rootScope.currentDeviceId}, function(data) {
 
-               $rootScope.currentDeviceStatus = data[0].status;
+               $rootScope.currentDeviceStatus = "ON";
 
                if($rootScope.currentDeviceStatus == "ON") {
 
@@ -58,6 +58,9 @@ appLogin.controller('TemplateCtrl',
         }else if($state.is('template.apps')) {
 
             $state.go('template.apps');
+        }else if($state.is('template.location')) {
+
+            $state.go('template.location');
         }
 
         $scope.showlogoutDialog = function() {

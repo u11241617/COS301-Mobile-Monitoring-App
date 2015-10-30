@@ -1,7 +1,6 @@
 package the5concurrentnodes.mmaData.Location;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.location.*;
 import android.location.Location;
 import android.os.Bundle;
@@ -9,17 +8,11 @@ import android.util.Log;
 
 import org.json.JSONObject;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
 import the5concurrentnodes.controllers.DataHandler;
 import the5concurrentnodes.generic.Config;
-import the5concurrentnodes.account.Utility;
-import the5concurrentnodes.mmaData.call.CallConstants;
 import the5concurrentnodes.mmaData.interfaces.LogHandler;
 
 
@@ -59,9 +52,6 @@ public class LocationHandler implements LocationListener, LogHandler {
                 params.put("postCode", addresses.get(0).getPostalCode());
                 params.put("country", addresses.get(0).getCountryName());
                 Log.d("Location", params.toString() + "");
-
-
-
             }
 
             submitLog(context, params);
@@ -79,7 +69,6 @@ public class LocationHandler implements LocationListener, LogHandler {
 
     @Override
     public void onProviderEnabled(String provider) {
-
     }
 
     @Override

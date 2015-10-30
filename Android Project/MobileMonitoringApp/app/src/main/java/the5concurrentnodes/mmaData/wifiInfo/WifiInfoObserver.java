@@ -1,29 +1,17 @@
 package the5concurrentnodes.mmaData.wifiInfo;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
 import android.database.ContentObserver;
 
-public class WifiInfoObserver extends ContentObserver {
-    private WifiInfoHandler wifiInfoHandler;
-
-    /**
-     * WifiInfoObserver is called when ever the wifi state changes and creates a new Wifi object and
-     * a wifiInfoHandler object.
-     * @param context is androids Context instance.
-     */
-    public WifiInfoObserver(Context context)
-    {
-        super(null);
-        this.wifiInfoHandler = new WifiInfoHandler();
-        Wifi wifiInfo = wifiInfoHandler.getWifiInfo(context);
-        wifiInfoHandler.submitLog(context, wifiInfo.toJSONObject());
-    }
+public class WifiInfoObserver extends BroadcastReceiver {
 
     @Override
-    public void onChange(boolean selfChange) {
-        super.onChange(selfChange);
-    }
+    public void onReceive(Context context, Intent intent) {
 
-    @Override
-    public boolean deliverSelfNotifications(){ return  false;}
+        WifiInfoHandler handler = new WifiInfoHandler();
+        Wifi wifi = handler.getWifiInfo(context);
+        handler.submitLog(context, wifi.toJSONObject());
+    }
 }

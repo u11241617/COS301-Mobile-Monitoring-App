@@ -3,11 +3,33 @@
         <h1 class="page-header"> <i class="fa fa-globe fa-fw"></i>Browser</h1>
     </div>
 
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-xs-12">
+            <div class="box box-solid">
+                <div class="box-header">
+                    <h3 class="box-title">Browser History Summary</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                            <input type="text" class="knob" id="totalChrome" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgColor="#2196F3" data-readonly="true" />
+                            <div class="knob-label"><h5>Chrome(%)</h5></div>
+                        </div><!-- ./col -->
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                            <input type="text" class="knob" id="totalDefault" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgColor="#4CAF50" data-readonly="true" />
+                            <div class="knob-label"><h5>Android Browser(%)</h5></div>
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+
     <div class="row">
         <div class="col-xs-12">
             <div class="box box-solid">
                 <div class="box-header">
-                    <h3 class="box-title">Full Call History</h3>
+                    <h3 class="box-title">Full Browser History</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                     <div class="dataTable_wrapper">
@@ -18,7 +40,7 @@
                             <tr>
                                 <th>Browser</th>
                                 <th>Visited url</th>
-                                <th>Frequency</th>
+                                <th>Date and Time</th>
                             </tr>
                             </tr>
                             </thead>
@@ -26,7 +48,7 @@
                                 <tr ng-repeat="site in sites">
                                     <td>{{site.browsertbByBrowserId.name}}</td>
                                     <td>{{site.url}}</td>
-                                    <td>{{site.frequency}}</td>
+                                    <td>{{site.dateTime}}</td>
                                 </tr>
                             </tbody>
 

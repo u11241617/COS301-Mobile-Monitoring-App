@@ -38,7 +38,7 @@
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:textSize="28sp"
-            android:text="eyeCrawler"/>
+            android:text="iCrawler"/>
 
         <TextView
             android:layout_width="wrap_content"

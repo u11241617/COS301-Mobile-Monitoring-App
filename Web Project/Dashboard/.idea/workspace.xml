@@ -2,160 +2,336 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33bfc85c-a90a-4324-b3ca-342d2ba998bc" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__com_sun_jersey_jersey_test_framework_jersey_test_framework_grizzly2_1_0_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__javax_annotation_javax_annotation_api_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_grizzly_grizzly_framework_2_3_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_grizzly_grizzly_http_2_3_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_grizzly_grizzly_http_server_2_3_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_grizzly_grizzly_http_servlet_2_3_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_4_0_b31.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_hk2_external_javax_inject_2_4_0_b31.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_hk2_hk2_api_2_4_0_b31.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_hk2_hk2_locator_2_4_0_b31.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_hk2_hk2_utils_2_4_0_b31.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_containers_jersey_container_grizzly2_http_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_containers_jersey_container_grizzly2_servlet_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_containers_jersey_container_servlet_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_containers_jersey_container_servlet_core_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_core_jersey_client_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_core_jersey_common_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_core_jersey_server_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_media_jersey_media_jaxb_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_test_framework_jersey_test_framework_core_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_glassfish_jersey_test_framework_providers_jersey_test_framework_provider_grizzly2_2_22_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__org_ow2_asm_asm_debug_all_5_0_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\beans\CallsBean.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\beans\LoginBean.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\beans\MessagesBean.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\beans\SessionBean.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\beans\UsersBean.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\entities\Data.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\managers\DataUsageManager.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\managers\PermissionManager.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\managers\TestDataInserter.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\rest\DataUsage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\the5concurrentnodes\rest\Email.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\beans\CallsBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\beans\LoginBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\beans\MessagesBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\beans\SessionBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\beans\UsersBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\entities\Data.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\managers\DataUsageManager.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\managers\PermissionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\managers\TestDataInserter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\rest\DataUsage.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\rest\Email.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\classes\the5concurrentnodes\rest\InstalledApps.class.orig" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\aopalliance-repackaged-2.4.0-b31.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\asm-debug-all-5.0.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\grizzly-framework-2.3.23.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\grizzly-http-2.3.23.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\grizzly-http-server-2.3.23.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\grizzly-http-servlet-2.3.23.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\hamcrest-core-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\hk2-api-2.4.0-b31.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\hk2-locator-2.4.0-b31.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\hk2-utils-2.4.0-b31.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\javax.annotation-api-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\javax.inject-2.4.0-b31.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\javax.servlet-api-3.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\javax.ws.rs-api-2.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-client-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-common-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-container-grizzly2-http-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-container-grizzly2-servlet-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-container-servlet-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-container-servlet-core-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-guava-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-media-jaxb-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-server-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-test-framework-core-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\jersey-test-framework-provider-grizzly2-2.22.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\junit-4.12.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\osgi-resource-locator-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\WEB-INF\lib\validation-api-1.1.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\config.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\index.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\jquery-1.11.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\login.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\login.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\resources\images\Logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\beans\CallsBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\beans\LoginBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\beans\MessagesBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\beans\SessionBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\beans\UsersBean.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\entities\Data.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\managers\DataUsageManager.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\managers\PermissionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\managers\TestDataInserter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\rest\DataUsage.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\rest\Email.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\rest\InstalledApps.class.orig" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/AccessLevel.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/AccessLevel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/AccessLevel.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/AccessLevel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AccessLevelManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AccessLevelManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AccessLevelManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AccessLevelManager.class" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\.idea\dictionaries\Matt.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\.idea\runConfigurations.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\DeviceApps\DeviceApps.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\DeviceApps\PushAppsInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\account\Account.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\account\Login.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\account\Register.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\account\Utility.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\controllers\DataPushService.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\controllers\DataPushServiceHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\controllers\DeviceShutDownBroadcastReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\controllers\StartupServicesBroadcastReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\controllers\WifiBroadcastReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\dialogs\RecoverPasswordDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\mobilemonitoringapp\AboutActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\mobilemonitoringapp\DataHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\mobilemonitoringapp\RetrieveCommunicationActivities.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\mobilemonitoringapp\SessionManager.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Android Project\MobileMonitoringApp\app\src\main\java\the5concurrentnodes\splash\SplashActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\.idea\libraries\Maven__javax_activation_activation_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\WEB-INF\beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\WEB-INF\faces-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\WEB-INF\web.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\about.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\apps.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\browser.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\calls.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\AdminLTE.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap-tour-standalone.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap-tour.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\bootstrap\js\npm.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\dataTables.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\dataTables.responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\css\font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\fonts\FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\fonts\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\fonts\fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\fonts\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\fonts\fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\core.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\extras.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\icons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\larger.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\list.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\path.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_extras.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\font-awesome\scss\font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\loader.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\login.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\modal\component.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\nprogress.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\css\skin-blue.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\images\device.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\images\home_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\images\ic_action_phone.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\images\icrawler.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\images\logo2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\Chart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular-bootstrap-tour.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular-bootstrap-tour.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular-google-maps.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular-simple-logger.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular-datatables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular-jwt.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular-route.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular-storage.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular-ui-router.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\angular\angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\app.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\app.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\bootstrap-tour-standalone.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\bootstrap-tour.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\dataTables.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\dataTables.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\jquery-2.1.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\jquery.dataTables.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\jquery.dataTables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\jquery.knob.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\lodash.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\login_form.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\modal\classie.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\modal\css-filters-polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\modal\cssParser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\modal\modalEffects.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\modal\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\nprogress.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\apps.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\browser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\calls.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\location.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\login.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\messages.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\template.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\pages\wifi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\script.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\js\services.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\location.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\login.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\messages.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\css\component.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\css\default.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\fonts\codropsicons\codropsicons.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\fonts\codropsicons\codropsicons.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\fonts\codropsicons\codropsicons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\fonts\codropsicons\codropsicons.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\fonts\codropsicons\license.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\js\classie.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\js\css-filters-polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\js\cssParser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\js\modalEffects.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\modal\js\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\privacy.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\bootstrap\js\npm.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\css\dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\css\dataTables.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\css\dataTables.responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\css\metisMenu.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\images\sort_asc.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\images\sort_asc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\images\sort_both.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\images\sort_desc.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\images\sort_desc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\app.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\dataTables.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\dataTables.bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\jquery.dataTables.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\jquery.dataTables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\resources\js\metisMenu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\template.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\terms.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java\webapp\wifi.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js\modal\classie.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js\modal\css-filters-polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js\modal\cssParser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js\modal\modalEffects.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js\modal\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\js\modal\classie.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\js\modal\css-filters-polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\js\modal\cssParser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\js\modal\modalEffects.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\Dashboard\js\modal\modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\target\classes\the5concurrentnodes\Utils\AESEncryption.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Account.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Account.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Account.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Account.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AppManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/AppManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AppManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/AppManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/AppPermission.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/AppPermission.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/AppPermission.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/AppPermission.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/BrowserManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/BrowserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/BrowserManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/BrowserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/Call.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/Call.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/Call.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/Call.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/CallManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/CallManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/CallManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/CallManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/Device.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/entities/Device.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/Device.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/entities/Device.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Calls.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Calls.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Calls.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Calls.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DeviceManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/DeviceManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DeviceManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/DeviceManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Devices.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Devices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Devices.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Devices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/InstalledApps.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/InstalledApps.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/InstalledApps.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/InstalledApps.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/LocationManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/LocationManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/LocationManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/LocationManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Messages.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/rest/Messages.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Messages.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/rest/Messages.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/SmsManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/SmsManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/SmsManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/SmsManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/WifiManager.class" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/the5concurrentnodes/managers/WifiManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/WifiManager.class" afterPath="$PROJECT_DIR$/target/classes/the5concurrentnodes/managers/WifiManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AccessLevel.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AccessLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AccessLevelManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AccessLevelManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AppPermission.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AppPermission.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/BrowserManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/BrowserManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Call.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Call.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Browser/BrowserConstants.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Browser/BrowserConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Browser/BrowserHandler.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Browser/BrowserHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Browser/BrowserObserver.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Browser/BrowserObserver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/call/Call.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/call/Call.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/call/CallHandler.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/call/CallHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/CallManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/CallManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dashboard.iml" afterPath="$PROJECT_DIR$/Dashboard.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Dashboard_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Dashboard_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Device.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Device.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Calls.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Calls.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/generic/Config.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/generic/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/controllers/DataHandler.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/controllers/DataHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/services/DataMonitorPushService.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/services/DataMonitorPushService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/services/DataMonitorPushServiceHandler.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/services/DataMonitorPushServiceHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/DeviceManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/DeviceManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Devices.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Devices.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/HomeActivity.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/HomeActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/LocationManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/LocationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/Dashboard/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/angular-google-maps.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/angular-google-maps.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/angular-google-maps.min.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/angular-google-maps.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.knob.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.knob.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/jquery.knob.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/jquery.knob.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/lodash.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/lodash.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/lodash.min.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/lodash.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Location/LocationHandler.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/Location/LocationHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/LoginActivity.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/dialogs/LoginRegisterDialog.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/dialogs/LoginRegisterDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/MainActivity.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Messages.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Messages.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/MobileMonitoringApp.iml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/MobileMonitoringApp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/DeviceApps/PushAppsInfo.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/DeviceApps/PushAppsInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/RegisterActivity.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mobilemonitoringapp/RegisterActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/sms/Sms.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/sms/Sms.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/sms/SmsHandler.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/sms/SmsHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/SmsManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/SmsManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/wifiInfo/WifiInfoObserver.java" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/java/the5concurrentnodes/mmaData/wifiInfo/WifiInfoObserver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/WifiManager.java" afterPath="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/WifiManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/res/layout/activity_home.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/res/layout/activity_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/app.iml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/app.js" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/app.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/apps.html" afterPath="$PROJECT_DIR$/src/main/webapp/apps.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/apps.html" afterPath="$PROJECT_DIR$/target/Dashboard/apps.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/apps.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/apps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/apps.js" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/apps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/apps.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/apps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/browser.html" afterPath="$PROJECT_DIR$/src/main/webapp/browser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/browser.html" afterPath="$PROJECT_DIR$/target/Dashboard/browser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/browser.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/browser.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/build.gradle" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/calls.html" afterPath="$PROJECT_DIR$/src/main/webapp/calls.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/calls.html" afterPath="$PROJECT_DIR$/target/Dashboard/calls.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/calls.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/calls.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/calls.js" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/calls.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/calls.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/calls.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/dashboard.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/css/dashboard.css" afterPath="$PROJECT_DIR$/target/Dashboard/css/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/dashboard.html" afterPath="$PROJECT_DIR$/target/Dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/dashboard.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/dashboard.js" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/dashboard.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/index.html" afterPath="$PROJECT_DIR$/target/Dashboard/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/index.html" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/res/layout/intro_slide_1.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/res/layout/intro_slide_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/location.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/location.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/location.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/location.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/css/login.css" afterPath="$PROJECT_DIR$/target/Dashboard/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/login.html" afterPath="$PROJECT_DIR$/target/Dashboard/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/login.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/login.js" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/login.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/messages.html" afterPath="$PROJECT_DIR$/src/main/webapp/messages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/messages.html" afterPath="$PROJECT_DIR$/target/Dashboard/messages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/messages.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/messages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/messages.js" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/pages/messages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/messages.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/messages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/script.js" afterPath="$PROJECT_DIR$/target/Dashboard/WEB-INF/classes/webapp/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/script.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/services.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/services.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/template.html" afterPath="$PROJECT_DIR$/src/main/webapp/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/template.html" afterPath="$PROJECT_DIR$/target/Dashboard/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/pages/template.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/pages/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Dashboard/js/pages/template.js" afterPath="$PROJECT_DIR$/target/Dashboard/js/pages/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../../Android Project/MobileMonitoringApp/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Dashboard.iws" />
@@ -193,6 +369,42 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="iCrawlerDataSource" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="mmadb" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="visitedwebsitetb" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="iCrawlerDataSource" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="mmadb" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="smstb" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -200,8 +412,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mmadb.usertb" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..usertb">
+      <file leaf-file-name="mmadb.smstb" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..smstb">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -215,100 +427,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Devices.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Devices.java">
+      <file leaf-file-name="messages.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/messages.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.448276">
-              <caret line="268" column="12" selection-start-line="268" selection-start-column="12" selection-end-line="268" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.2247191">
+              <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java">
+      <file leaf-file-name="AppManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="179" column="51" selection-start-line="179" selection-start-column="51" selection-end-line="179" selection-end-column="51" />
+              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mmadb.usertb" pinned="false" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..usertb">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
+      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/UserManager.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstalledApps.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
+      <file leaf-file-name="BrowserManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/BrowserManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WifiLogs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/WifiLogs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.076923">
-              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loader.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/loader.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="25.961538">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -337,56 +490,56 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Devices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Utility.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/commons/dashboard.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/messages.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/calls.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/messages.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/browser.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/browser.js" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/JSONWebToken.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/BroswerManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/VisitedWebsiteManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/VisistedSites.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/calls.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/dashboard.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dashboard.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/script.js" />
-        <option value="$PROJECT_DIR$/src/test/java/eyeCrawler/managers/ProductManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/eyeCrawler/managers/UserManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/TestDataInserter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/app.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/template.js" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Calls.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/DeviceApp.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/modal/css/component.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/modal/css/default.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/apps.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/apps.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/template.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/dashboard.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AccessLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AppPermission.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Call.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AccessLevelManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/BrowserManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/CallManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/DeviceManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/LocationManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/login.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/services.js" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/Utils/AESEncryption.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/apps.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/login.css" />
+        <option value="dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..browsertb" />
+        <option value="dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..smstb" />
+        <option value="dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..deviceapps" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/CallManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/template.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/messages.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/browser.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/location.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/dashboard.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/browser.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/calls.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/script.js" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/test/SimpleTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/test/myModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/test/InMemoryRestTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/services.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/test/InMemoryRestServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/test/InMemoryRestWithMockitoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Calls.java" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/script.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/pages/apps.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/pages/calls.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/pages/dashboard.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/pages/login.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/pages/messages.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/pages/wifi.js" />
+        <option value="$PROJECT_DIR$/src/main/java/webapp/js/pages/location.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/template.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/calls.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/pages/apps.js" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/WifiManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/SmsManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Messages.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/messages.html" />
       </list>
     </option>
   </component>
@@ -432,7 +585,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -448,6 +601,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -505,32 +659,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -551,6 +679,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="the5concurrentnodes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -609,11 +741,14 @@
               <option name="myItemId" value="the5concurrentnodes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="managers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -634,11 +769,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js" />
       <recent name="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\java" />
       <recent name="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp" />
       <recent name="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js\modal" />
       <recent name="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\css\modalDialog" />
-      <recent name="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\js\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\GASwipper Gcc\Desktop\Git\COS301-Mobile-Monitoring-App\Web Project\Dashboard\src\main\webapp\images" />
@@ -1190,6 +1325,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Unknown" factoryName="Unknown">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -1445,41 +1583,45 @@
       <workItem from="1445949842451" duration="4231000" />
       <workItem from="1446042373667" duration="5652000" />
       <workItem from="1446051283438" duration="1644000" />
-      <workItem from="1446053813143" duration="2624000" />
+      <workItem from="1446053813143" duration="12969000" />
+      <workItem from="1446101187096" duration="10749000" />
+      <workItem from="1446143607280" duration="10780000" />
+      <workItem from="1446164117713" duration="14978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213325000" />
+    <option name="totallyTimeSpent" value="260177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33724833" sideWeight="0.35222054" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33963692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40359476" sideWeight="0.64777946" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3221726" sideWeight="0.32328767" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32223904" sideWeight="0.67671233" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17246597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16490166" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47549018" sideWeight="0.64777946" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3221726" sideWeight="0.32328767" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32223904" sideWeight="0.67671233" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1487,8 +1629,41 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22385621" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33724833" sideWeight="0.35222054" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33963692" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16490166" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22385621" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47549018" sideWeight="0.64777946" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3221726" sideWeight="0.32328767" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32223904" sideWeight="0.67671233" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1517,7 +1692,7 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1526,305 +1701,146 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
+    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..visitedwebsitetb">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
       </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..locationtb">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..deviceapps">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..calltb">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1528777">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.7307692">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AccessLevel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/AppPermission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Wifi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2034188">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/VisitedWebsite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17435898">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Sms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15726496">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17435898">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/DeviceApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3897436">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AccessLevelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8136752">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/BrowserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61025643">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Browser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17435898">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iCrawler Dashboard/bower_components/flot/examples/series-pie/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.584973">
-          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4068376">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="50" />
+          <caret line="446" column="21" selection-start-line="446" selection-start-column="21" selection-end-line="446" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/CallManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/browser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="44" />
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4991453">
-          <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/LocationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21538462">
-          <caret line="57" column="84" selection-start-line="57" selection-start-column="84" selection-end-line="57" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/SmsManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="101" column="58" selection-start-line="101" selection-start-column="58" selection-end-line="101" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/UserManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/calls.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="5" selection-start-line="75" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/VisitedWebsiteManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/WifiManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..wifitb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..devicetb">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..visitedwebsitetb">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..locationtb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..browsertb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..browserapp">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..apppermissions">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..accessleveltb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..deviceapps">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..calltb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="135" selection-start-line="23" selection-start-column="135" selection-end-line="23" selection-end-column="135" />
+          <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..smstb">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/test/InMemoryRestServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.225256">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/DeviceManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/test/InMemoryRestWithMockitoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.189911">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.6450512">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1832,96 +1848,175 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/entities/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5384617">
+          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#380#381#0" expanded="false" />
-            <element signature="e#409#410#0" expanded="false" />
-            <element signature="e#450#451#0" expanded="false" />
-            <element signature="e#486#487#0" expanded="false" />
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#585#586#0" expanded="false" />
-            <element signature="e#627#628#0" expanded="false" />
-            <element signature="e#661#662#0" expanded="false" />
-            <element signature="e#738#739#0" expanded="false" />
-            <element signature="e#769#770#0" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
-            <element signature="e#857#858#0" expanded="false" />
-            <element signature="e#936#937#0" expanded="false" />
-            <element signature="e#969#970#0" expanded="false" />
-            <element signature="e#1019#1020#0" expanded="false" />
-            <element signature="e#1063#1064#0" expanded="false" />
-            <element signature="e#2048#2049#0" expanded="false" />
-            <element signature="e#2099#2100#0" expanded="false" />
-          </folding>
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..devicetb">
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/wifi.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6f2b5ff/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..usertb">
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/template.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/location.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="77" selection-start-line="23" selection-start-column="16" selection-end-line="25" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/calls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/browser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pages/apps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="159" column="69" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Calls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="93" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Devices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/InstalledApps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webapp/js/modal/classie.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/JSONWebToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/LocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Utility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/VisistedSites.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1934,55 +2029,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.961538">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/nprogress.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/WifiManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/loader.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/VisitedWebsiteManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.076923">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.448276">
-          <caret line="268" column="12" selection-start-line="268" selection-start-column="12" selection-end-line="268" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/DeviceManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="179" column="51" selection-start-line="179" selection-start-column="51" selection-end-line="179" selection-end-column="51" />
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..usertb">
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/CallManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="63" selection-start-line="41" selection-start-column="63" selection-end-line="41" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/BrowserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AppManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/AccessLevelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/LocationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8361775">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/rest/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.058020476">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/SmsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3890785">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/the5concurrentnodes/managers/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/43d2350/26189e8a-7f3e-441a-8a52-e6638f2d251f/mmadb..smstb">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1991,6 +2126,14 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/messages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2247191">
+          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
           <folding />
         </state>
       </provider>

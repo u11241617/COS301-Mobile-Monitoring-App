@@ -16,6 +16,11 @@ import android.provider.Browser;
 import android.util.Log;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Timer;
@@ -23,6 +28,7 @@ import java.util.TimerTask;
 
 import the5concurrentnodes.mmaData.Browser.BrowserConstants;
 import the5concurrentnodes.mmaData.Browser.BrowserObserver;
+import the5concurrentnodes.mmaData.DeviceApps.AppHandler;
 import the5concurrentnodes.mmaData.call.CallConstants;
 import the5concurrentnodes.mmaData.call.CallObserver;
 import the5concurrentnodes.mmaData.wifiInfo.WifiInfoObserver;
@@ -54,6 +60,19 @@ public class DataMonitorPushService extends Service{
                         for (ActivityManager.RunningAppProcessInfo appProcess : runningAppProcessInfo) {
                             if (appProcess.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
                                 //App running
+                                AppHandler appHandler = new AppHandler();
+
+                                try {
+
+                                    JSONObject params = new JSONObject();
+                                    params.put("packageName", appProcess.processName);
+                                    Calendar c = Calendar.getInstance();
+                                    SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                                    String formattedDate = df.format(c.getTime());
+                                    params.put("status", formattedDate);
+                                    appHandler.submitLog(getBaseContext(), params);
+                                }catch (JSONException e){e.getStackTrace();}
+
                             } else {
                                 //App closed
 

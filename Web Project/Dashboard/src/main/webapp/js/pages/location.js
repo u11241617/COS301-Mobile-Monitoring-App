@@ -21,7 +21,6 @@ angular.module('icrawlerApp.location', [
         function updateDeviceLocation() {
             $scope.locations = Location.query({device: $rootScope.currentDeviceId}, function (data) {
 
-
                 $scope.lastLocationName = data[data.length - 1].name;
                 $scope.lastLocationLocality = data[data.length - 1].localicity;
                 $scope.lastLocationCountry = data[data.length - 1].countName;

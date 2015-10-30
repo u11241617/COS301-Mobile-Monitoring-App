@@ -41,17 +41,12 @@
             android:theme="@style/IntroTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name=".AboutActivity"
-            android:label="@string/title_activity_about" >
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -63,24 +58,33 @@
         </activity>
 
         <service
-            android:name="the5concurrentnodes.controllers.DataPushService"
+            android:name="the5concurrentnodes.services.DataPushService"
             android:exported="false" />
         <service
             android:name="the5concurrentnodes.mmaData.Location.LocationTracker"
             android:exported="false" />
 
-        <receiver android:name="the5concurrentnodes.controllers.StartupServicesBroadcastReceiver" >
+        <service
+            android:name="the5concurrentnodes.services.DataMonitorPushService"
+            android:exported="false" />
+
+        <receiver android:name="the5concurrentnodes.services.StartupServicesBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="the5concurrentnodes.controllers.DeviceShutDownBroadcastReceiver">
+        <receiver android:name="the5concurrentnodes.services.DeviceShutDownBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
             </intent-filter>
         </receiver>
 
+        <receiver android:name="the5concurrentnodes.mmaData.wifiInfo.WifiInfoObserver">
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"

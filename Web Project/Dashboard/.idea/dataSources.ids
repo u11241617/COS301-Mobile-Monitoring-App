@@ -56,7 +56,6 @@
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="deviceapps._ibfk_1" columns="device_id" ref-table="devicetb" ref-schema="" ref-catalog="mmadb" ref-columns="deviceID" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="apppermissions._ibfk_1" table="apppermissions" schema="" catalog="mmadb" columns="app_id"/>
-      <index name="unique_name" unique="true" columns="name"/>
       <index name="deviceapps._ibfk_1" unique="false" columns="device_id"/>
     </table>
     <table name="devicetb" schema="" catalog="mmadb" type="TABLE">

@@ -9,6 +9,7 @@ import the5concurrentnodes.managers.DeviceManager;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.swing.text.html.parser.Entity;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -48,7 +49,7 @@ public class Calls {
             if(tokenClaims != null) {
 
                 String source = null;
-                String destination = null;
+                String date = null;
                 String type = null;
                 String deviceIME = null;
                 String duration = null;
@@ -58,7 +59,7 @@ public class Calls {
                     JSONObject jsonObject = new JSONObject(rBody);
 
                     source = jsonObject.getString("source");
-                    destination = jsonObject.getString("destination");
+                    date = jsonObject.getString("date");
                     type = jsonObject.getString("type");
                     deviceIME = tokenClaims.getString(Constants.KEY_JWT_DEVICE_ID);
                     duration = jsonObject.getString("duration");
@@ -69,7 +70,7 @@ public class Calls {
 
                 Device device = deviceManager.getDeviceByIMENumber(deviceIME);
 
-                callManager.persist(source, destination, type, duration, device);
+                callManager.persist(source, date, type, duration, device);
                 status = Response.Status.CREATED;
             }
 
@@ -86,5 +87,15 @@ public class Calls {
 
         return callManager.getCallsByDeviceId(deviceId);
     }
+
+    @GET @Path("/login")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getCall(@PathParam("deviceId") int deviceId) {
+
+        return Response.status(Response.Status.OK)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(callManager.getCallsByDeviceId(deviceId)).build();
+    }
+
 
 }

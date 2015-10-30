@@ -278,3 +278,8 @@ form {
 
     display: none;
 }
+#form-container {
+
+    display: table;
+    width: 100%;
+}

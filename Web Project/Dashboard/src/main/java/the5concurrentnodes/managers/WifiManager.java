@@ -41,16 +41,6 @@ public class WifiManager {
         em.persist(wifi);
     }
 
-    public List<Wifi> getAllWifiLogs() {
-
-        CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Wifi> query = cb.createQuery(Wifi.class);
-
-        Root<Wifi> wifiRoot = query.from(Wifi.class);
-        query.select(wifiRoot);
-
-        return em.createQuery(query).getResultList();
-    }
 
     public List<Wifi> getWifiLogsByDeviceId(int deviceId) {
 

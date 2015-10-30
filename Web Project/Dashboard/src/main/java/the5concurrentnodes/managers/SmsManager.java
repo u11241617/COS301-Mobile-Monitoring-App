@@ -13,6 +13,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @Stateless
@@ -24,15 +25,11 @@ public class SmsManager {
     @Inject
     DeviceManager deviceManager;
 
-    public void persist(String from, String to, String type, Device device) {
-
-
-
-        java.util.Date date = new java.util.Date();
+    public void persist(String msg, String from, String date, String type, Device device) {
 
         Sms sms = new Sms();
-        sms.setDatetime(new Timestamp(date.getTime()));
-        sms.setDestination(to);
+        sms.setDatetime(new Timestamp(new Date(Long.parseLong(date)).getTime()));
+        sms.setDestination(msg);
         sms.setSource(from);
         sms.setDevicetbByDeviceId(device);
         sms.setType(type);
@@ -59,14 +56,4 @@ public class SmsManager {
         return sms;
     }
 
-    public List<Sms> getAllMessages() {
-
-        CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Sms> query = cb.createQuery(Sms.class);
-
-        Root<Sms> smsRoot = query.from(Sms.class);
-        query.select(smsRoot);
-
-        return em.createQuery(query).getResultList();
-    }
 }

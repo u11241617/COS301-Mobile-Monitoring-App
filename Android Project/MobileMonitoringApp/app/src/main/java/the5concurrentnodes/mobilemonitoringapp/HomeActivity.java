@@ -41,23 +41,27 @@ public class HomeActivity extends Activity {
 
     public void toLogin(View view) {
 
+        finish();
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
     }
 
     public void toRegister(View view) {
 
+        finish();
         Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
         startActivity(intent);
     }
 
     public void toTour(View view) {
 
+        finish();
         Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
         startActivity(intent);
     }
 
     public void toTermsPrivacy(View view) {
+        finish();
         Intent intent = new Intent (getApplicationContext(),MainActivity.class);
         startActivity(intent);
     }
